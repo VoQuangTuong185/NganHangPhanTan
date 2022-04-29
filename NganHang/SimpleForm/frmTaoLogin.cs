@@ -76,6 +76,11 @@ namespace NganHang.SimpleForm
             Program.servername = cmbChiNhanh.SelectedValue.ToString();
             if (cmbChiNhanh.SelectedIndex != Program.mChiNhanh)
             {
+                Program.mlogin = Program.remotelogin;
+                Program.password = Program.remotepassword;
+            }
+            else
+            {
                 Program.mlogin = Program.mloginDN;
                 Program.password = Program.passwordDN;
             }
