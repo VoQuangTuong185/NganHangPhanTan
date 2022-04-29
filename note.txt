@@ -14,7 +14,5 @@ NganHang 7.03pm 21.4.22
 
 6. chưa làm được nút lệnh delete của 2 form KHACHHANG và MOTAIKHOAN (thiếu ràng buộc k được xoá khách hàng có tài khoản và tài khoản có giao dịch gởi rút)
 
-7. lỗi không tra cứu được danh sách tài khoản của chi nhánh TANDINH khi đang đăng nhập bằng tài khoản nhóm NGANHANG
-
-8. lỗi tải khoản mới được tạo bằng tài khoản khác ở chi nhánh X chỉ hiển thị danh sách tài khoản của chi nhánh X gồm 1 phần tử là chính nó
+7. lỗi tải khoản mới được tạo bằng tài khoản khác ở chi nhánh X chỉ hiển thị danh sách tài khoản của chi nhánh X gồm 1 phần tử là chính nó
 (SP đg lỗi, chạy bên sql cũng chỉ hiển thị 1 tài khoản là chính nó)
