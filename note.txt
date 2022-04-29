@@ -2,7 +2,7 @@ NganHang 7.03pm 21.4.22
 
 (xem lại video *GIẢI ĐÁP VỀ ĐỀ TÀI NGÂN HÀNG.mp4* phút 47:03 về cách phân tán database NGANHANG)
 
-1. macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
+1. macn = ((DataRowView)bdsNV[0])["MACN"].ToString(); tiềm ẩn lỗi
 
 2. lỗi xoá nhân viên lỗi khi mã nhân viên dạng chuỗi (dòng 241 frmNhanVien.cs)
 
@@ -10,7 +10,5 @@ NganHang 7.03pm 21.4.22
 
 4. --không bắt buộc: chức năng redo (mới ok 2 nút insert, save) còn lại add, delete chưa làm được (dùng stack để khôi phục) 
 
-5. chưa test chức năng kiểm tra KhachHang đã mở TaiKhoan
-
-6. chưa làm được nút lệnh delete của 2 form KHACHHANG và MOTAIKHOAN (thiếu ràng buộc k được xoá khách hàng có tài khoản và tài khoản có giao dịch gởi rút) -
+5. chưa làm được nút lệnh delete của 2 form KHACHHANG và MOTAIKHOAN (thiếu ràng buộc k được xoá khách hàng có tài khoản và tài khoản có giao dịch gởi rút) -
 

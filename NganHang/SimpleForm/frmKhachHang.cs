@@ -188,8 +188,8 @@ namespace NganHang
         }
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)//CHƯA LÀM
         {
-            Int32 cmnd = 0;
-            cmnd = int.Parse(((DataRowView)bdsKH[bdsKH.Position])["CMND"].ToString());
+            Double cmnd = 0;
+            cmnd = Double.Parse(((DataRowView)bdsKH[bdsKH.Position])["CMND"].ToString());
             if (KT_KH_Co_TK())
             {
                 MessageBox.Show("Khách hàng không thể xoá vì đã mở tài khoản!!", "", MessageBoxButtons.OK);

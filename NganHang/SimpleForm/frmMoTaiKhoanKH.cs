@@ -173,12 +173,13 @@ namespace NganHang.SimpleForm
         private void phụcHồiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bdsTK.CancelEdit();//hai trường hợp: đang thêm bỏ thêm, đang sửa bỏ sửa
-            if (btnAdd.Enabled == false) bdsTK.Position = vitri;
+            if (cmsTHEM.Enabled == false) bdsTK.Position = vitri;
             gcTK.Enabled = true;
 
             panelControl2.Enabled = false;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = true;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = false;
+            gcTK.Enabled = gcKH.Enabled = true;
         }
 
         private void cmsTAILAI_Click(object sender, EventArgs e)
@@ -199,7 +200,7 @@ namespace NganHang.SimpleForm
             Close();
         }
 
-        private void gcTK_Click(object sender, EventArgs e)
+        private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
         }
