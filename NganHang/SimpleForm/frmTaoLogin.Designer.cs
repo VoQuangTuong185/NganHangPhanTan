@@ -39,7 +39,7 @@
             this.bdsNV_X_LOGIN = new System.Windows.Forms.BindingSource(this.components);
             this.lay_NV_Chua_Co_LoginTableAdapter = new NganHang.DSTableAdapters.Lay_NV_Chua_Co_LoginTableAdapter();
             this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
-            this.gcNV_CHUA_CO_LOGIN = new DevExpress.XtraGrid.GridControl();
+            this.gcNV_X_LOGIN = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHO = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,7 +50,7 @@
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panInput = new DevExpress.XtraEditors.PanelControl();
-            this.gc_InfoLogin = new DevExpress.XtraGrid.GridControl();
+            this.gc_LGINFO1 = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsXOA = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,7 +77,7 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.label3 = new System.Windows.Forms.Label();
             this.memoLuuY = new DevExpress.XtraEditors.MemoEdit();
-            this.grbLOGIN = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtLoginName = new System.Windows.Forms.TextBox();
             this.nPass = new System.Windows.Forms.Label();
             this.btnCreateLogin = new System.Windows.Forms.Button();
@@ -88,29 +88,27 @@
             this.rOLEToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.rOLEToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.fillToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTrangThai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNV_X_LOGIN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcNV_CHUA_CO_LOGIN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcNV_X_LOGIN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panInput)).BeginInit();
             this.panInput.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gc_InfoLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gc_LGINFO1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bds_LGINFO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoLuuY.Properties)).BeginInit();
-            this.grbLOGIN.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.fillToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.label4);
             this.panelControl1.Controls.Add(this.cmbChiNhanh);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -143,7 +141,7 @@
             this.label2.BackColor = System.Drawing.Color.Gainsboro;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(1, 76);
+            this.label2.Location = new System.Drawing.Point(1, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(448, 22);
             this.label2.TabIndex = 8;
@@ -152,7 +150,7 @@
             // txtTrangThai
             // 
             this.txtTrangThai.Enabled = false;
-            this.txtTrangThai.Location = new System.Drawing.Point(941, 36);
+            this.txtTrangThai.Location = new System.Drawing.Point(941, 34);
             this.txtTrangThai.Name = "txtTrangThai";
             this.txtTrangThai.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTrangThai.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
@@ -186,17 +184,17 @@
             this.tableAdapterManager.TaiKhoanTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = NganHang.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // gcNV_CHUA_CO_LOGIN
+            // gcNV_X_LOGIN
             // 
-            this.gcNV_CHUA_CO_LOGIN.DataSource = this.bdsNV_X_LOGIN;
-            this.gcNV_CHUA_CO_LOGIN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcNV_CHUA_CO_LOGIN.Enabled = false;
-            this.gcNV_CHUA_CO_LOGIN.Location = new System.Drawing.Point(0, 71);
-            this.gcNV_CHUA_CO_LOGIN.MainView = this.gridView1;
-            this.gcNV_CHUA_CO_LOGIN.Name = "gcNV_CHUA_CO_LOGIN";
-            this.gcNV_CHUA_CO_LOGIN.Size = new System.Drawing.Size(1478, 215);
-            this.gcNV_CHUA_CO_LOGIN.TabIndex = 6;
-            this.gcNV_CHUA_CO_LOGIN.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gcNV_X_LOGIN.DataSource = this.bdsNV_X_LOGIN;
+            this.gcNV_X_LOGIN.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gcNV_X_LOGIN.Enabled = false;
+            this.gcNV_X_LOGIN.Location = new System.Drawing.Point(0, 71);
+            this.gcNV_X_LOGIN.MainView = this.gridView1;
+            this.gcNV_X_LOGIN.Name = "gcNV_X_LOGIN";
+            this.gcNV_X_LOGIN.Size = new System.Drawing.Size(1478, 215);
+            this.gcNV_X_LOGIN.TabIndex = 6;
+            this.gcNV_X_LOGIN.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -210,7 +208,7 @@
             this.colSODT,
             this.colMACN,
             this.colTrangThaiXoa});
-            this.gridView1.GridControl = this.gcNV_CHUA_CO_LOGIN;
+            this.gridView1.GridControl = this.gcNV_X_LOGIN;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.gridView1.OptionsBehavior.Editable = false;
@@ -268,7 +266,6 @@
             // 
             // colMACN
             // 
-            this.colMACN.Caption = "Mã Chi Nhánh";
             this.colMACN.FieldName = "MACN";
             this.colMACN.Name = "colMACN";
             this.colMACN.Visible = true;
@@ -284,27 +281,27 @@
             // 
             // panInput
             // 
-            this.panInput.Controls.Add(this.gc_InfoLogin);
+            this.panInput.Controls.Add(this.gc_LGINFO1);
             this.panInput.Controls.Add(this.label3);
             this.panInput.Controls.Add(this.memoLuuY);
-            this.panInput.Controls.Add(this.grbLOGIN);
+            this.panInput.Controls.Add(this.groupBox1);
             this.panInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panInput.Location = new System.Drawing.Point(0, 286);
             this.panInput.Name = "panInput";
             this.panInput.Size = new System.Drawing.Size(1478, 499);
             this.panInput.TabIndex = 7;
             // 
-            // gc_InfoLogin
+            // gc_LGINFO1
             // 
-            this.gc_InfoLogin.ContextMenuStrip = this.contextMenuStrip1;
-            this.gc_InfoLogin.DataSource = this.bds_LGINFO;
-            this.gc_InfoLogin.Location = new System.Drawing.Point(5, 30);
-            this.gc_InfoLogin.MainView = this.gridView2;
-            this.gc_InfoLogin.MenuManager = this.barManager1;
-            this.gc_InfoLogin.Name = "gc_InfoLogin";
-            this.gc_InfoLogin.Size = new System.Drawing.Size(852, 176);
-            this.gc_InfoLogin.TabIndex = 12;
-            this.gc_InfoLogin.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gc_LGINFO1.ContextMenuStrip = this.contextMenuStrip1;
+            this.gc_LGINFO1.DataSource = this.bds_LGINFO;
+            this.gc_LGINFO1.Location = new System.Drawing.Point(5, 30);
+            this.gc_LGINFO1.MainView = this.gridView2;
+            this.gc_LGINFO1.MenuManager = this.barManager1;
+            this.gc_LGINFO1.Name = "gc_LGINFO1";
+            this.gc_LGINFO1.Size = new System.Drawing.Size(852, 176);
+            this.gc_LGINFO1.TabIndex = 12;
+            this.gc_LGINFO1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // contextMenuStrip1
@@ -349,14 +346,12 @@
             this.colMANV1,
             this.colHOTEN,
             this.colROLE});
-            this.gridView2.GridControl = this.gc_InfoLogin;
+            this.gridView2.GridControl = this.gc_LGINFO1;
             this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             // 
             // colTENLOGIN
             // 
-            this.colTENLOGIN.Caption = "Tên Login";
             this.colTENLOGIN.FieldName = "TENLOGIN";
             this.colTENLOGIN.Name = "colTENLOGIN";
             this.colTENLOGIN.Visible = true;
@@ -364,7 +359,6 @@
             // 
             // colMANV1
             // 
-            this.colMANV1.Caption = "Mã Nhân Viên";
             this.colMANV1.FieldName = "MANV";
             this.colMANV1.Name = "colMANV1";
             this.colMANV1.Visible = true;
@@ -372,7 +366,6 @@
             // 
             // colHOTEN
             // 
-            this.colHOTEN.Caption = "Họ Tên";
             this.colHOTEN.FieldName = "HOTEN";
             this.colHOTEN.Name = "colHOTEN";
             this.colHOTEN.Visible = true;
@@ -380,7 +373,6 @@
             // 
             // colROLE
             // 
-            this.colROLE.Caption = "Nhóm";
             this.colROLE.FieldName = "ROLE";
             this.colROLE.Name = "colROLE";
             this.colROLE.Visible = true;
@@ -551,22 +543,22 @@
             this.memoLuuY.Size = new System.Drawing.Size(528, 92);
             this.memoLuuY.TabIndex = 0;
             // 
-            // grbLOGIN
+            // groupBox1
             // 
-            this.grbLOGIN.BackColor = System.Drawing.Color.Gainsboro;
-            this.grbLOGIN.Controls.Add(this.txtLoginName);
-            this.grbLOGIN.Controls.Add(this.nPass);
-            this.grbLOGIN.Controls.Add(this.btnCreateLogin);
-            this.grbLOGIN.Controls.Add(this.nName);
-            this.grbLOGIN.Controls.Add(this.txtPass);
-            this.grbLOGIN.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.grbLOGIN.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbLOGIN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.grbLOGIN.Location = new System.Drawing.Point(889, 15);
-            this.grbLOGIN.Name = "grbLOGIN";
-            this.grbLOGIN.Size = new System.Drawing.Size(549, 206);
-            this.grbLOGIN.TabIndex = 12;
-            this.grbLOGIN.TabStop = false;
+            this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox1.Controls.Add(this.txtLoginName);
+            this.groupBox1.Controls.Add(this.nPass);
+            this.groupBox1.Controls.Add(this.btnCreateLogin);
+            this.groupBox1.Controls.Add(this.nName);
+            this.groupBox1.Controls.Add(this.txtPass);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupBox1.Location = new System.Drawing.Point(889, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(549, 206);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
             // 
             // txtLoginName
             // 
@@ -658,16 +650,6 @@
             this.fillToolStripButton.Text = "Fill";
             this.fillToolStripButton.Click += new System.EventHandler(this.fillToolStripButton_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(858, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 17);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Trạng Thái: ";
-            // 
             // frmTaoLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -677,7 +659,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTrangThai);
             this.Controls.Add(this.panInput);
-            this.Controls.Add(this.gcNV_CHUA_CO_LOGIN);
+            this.Controls.Add(this.gcNV_X_LOGIN);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -695,19 +677,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTrangThai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNV_X_LOGIN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcNV_CHUA_CO_LOGIN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcNV_X_LOGIN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panInput)).EndInit();
             this.panInput.ResumeLayout(false);
             this.panInput.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gc_InfoLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gc_LGINFO1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bds_LGINFO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoLuuY.Properties)).EndInit();
-            this.grbLOGIN.ResumeLayout(false);
-            this.grbLOGIN.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.fillToolStrip.ResumeLayout(false);
             this.fillToolStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -724,7 +706,7 @@
         private System.Windows.Forms.BindingSource bdsNV_X_LOGIN;
         private DSTableAdapters.Lay_NV_Chua_Co_LoginTableAdapter lay_NV_Chua_Co_LoginTableAdapter;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
-        private DevExpress.XtraGrid.GridControl gcNV_CHUA_CO_LOGIN;
+        private DevExpress.XtraGrid.GridControl gcNV_X_LOGIN;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colMANV;
         private DevExpress.XtraGrid.Columns.GridColumn colHO;
@@ -737,7 +719,7 @@
         private DevExpress.XtraEditors.PanelControl panInput;
         private DevExpress.XtraEditors.TextEdit txtTrangThai;
         private DevExpress.XtraEditors.MemoEdit memoLuuY;
-        private System.Windows.Forms.GroupBox grbLOGIN;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtLoginName;
         private System.Windows.Forms.Label nPass;
         private System.Windows.Forms.Button btnCreateLogin;
@@ -769,12 +751,11 @@
         private System.Windows.Forms.ToolStripButton fillToolStripButton;
         private System.Windows.Forms.BindingSource bds_LGINFO;
         private DSTableAdapters.Thong_Tin_LoginName1TableAdapter thong_Tin_LoginName1TableAdapter;
-        private DevExpress.XtraGrid.GridControl gc_InfoLogin;
+        private DevExpress.XtraGrid.GridControl gc_LGINFO1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colTENLOGIN;
         private DevExpress.XtraGrid.Columns.GridColumn colMANV1;
         private DevExpress.XtraGrid.Columns.GridColumn colHOTEN;
         private DevExpress.XtraGrid.Columns.GridColumn colROLE;
-        private System.Windows.Forms.Label label4;
     }
 }

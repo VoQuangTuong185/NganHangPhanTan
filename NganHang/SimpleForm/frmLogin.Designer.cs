@@ -121,7 +121,7 @@ namespace NganHang.SimpleForm
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.White;
+            this.btnLogin.BackColor = System.Drawing.Color.Coral;
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnLogin.FlatAppearance.BorderSize = 2;
             this.btnLogin.ForeColor = System.Drawing.Color.Black;

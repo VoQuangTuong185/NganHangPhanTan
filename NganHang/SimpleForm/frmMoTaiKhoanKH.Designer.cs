@@ -443,13 +443,11 @@
             // 
             // colSOTK
             // 
-            this.colSOTK.Caption = "Số Tài Khoản";
             this.colSOTK.FieldName = "SOTK";
             this.colSOTK.Name = "colSOTK";
             this.colSOTK.OptionsColumn.AllowEdit = false;
             this.colSOTK.Visible = true;
             this.colSOTK.VisibleIndex = 0;
-            this.colSOTK.Width = 125;
             // 
             // colCMND1
             // 
@@ -458,11 +456,9 @@
             this.colCMND1.OptionsColumn.AllowEdit = false;
             this.colCMND1.Visible = true;
             this.colCMND1.VisibleIndex = 1;
-            this.colCMND1.Width = 125;
             // 
             // colSODU
             // 
-            this.colSODU.Caption = "Số Dư";
             this.colSODU.DisplayFormat.FormatString = "n0";
             this.colSODU.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSODU.FieldName = "SODU";
@@ -470,27 +466,22 @@
             this.colSODU.OptionsColumn.AllowEdit = false;
             this.colSODU.Visible = true;
             this.colSODU.VisibleIndex = 2;
-            this.colSODU.Width = 116;
             // 
             // colMACN1
             // 
-            this.colMACN1.Caption = "Mã Chi Nhánh";
             this.colMACN1.FieldName = "MACN";
             this.colMACN1.Name = "colMACN1";
             this.colMACN1.OptionsColumn.AllowEdit = false;
             this.colMACN1.Visible = true;
             this.colMACN1.VisibleIndex = 3;
-            this.colMACN1.Width = 113;
             // 
             // colNGAYMOTK
             // 
-            this.colNGAYMOTK.Caption = "Ngày Mở Tài Khoản";
             this.colNGAYMOTK.FieldName = "NGAYMOTK";
             this.colNGAYMOTK.Name = "colNGAYMOTK";
             this.colNGAYMOTK.OptionsColumn.AllowEdit = false;
             this.colNGAYMOTK.Visible = true;
             this.colNGAYMOTK.VisibleIndex = 4;
-            this.colNGAYMOTK.Width = 148;
             // 
             // panelControl2
             // 
