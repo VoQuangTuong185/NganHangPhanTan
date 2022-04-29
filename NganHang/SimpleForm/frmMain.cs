@@ -130,7 +130,7 @@ namespace NganHang
             {
                 frmTaoLogin f = new frmTaoLogin();
                 f.MdiParent = this;
-                f.Show(); //test github
+                f.Show(); 
             }
         }
     }
