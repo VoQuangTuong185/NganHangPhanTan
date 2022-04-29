@@ -1,0 +1,541 @@
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\NganHang.exe.config
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\NganHang.exe
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\NganHang.pdb
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.BonusSkins.v16.1.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.CodeParser.v16.1.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Data.v16.1.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.DataAccess.v16.1.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Printing.v16.1.Core.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Sparkline.v16.1.Core.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Utils.v16.1.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Xpo.v16.1.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.XtraBars.v16.1.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.XtraEditors.v16.1.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.XtraGrid.v16.1.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.XtraLayout.v16.1.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.XtraPrinting.v16.1.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Core.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.RichEdit.v16.1.Core.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.XtraTreeList.v16.1.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Office.v16.1.Core.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Drawing.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Data.v16.1.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.DataAccess.v16.1.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Printing.v16.1.Core.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Utils.v16.1.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Xpo.v16.1.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.XtraBars.v16.1.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Sparkline.v16.1.Core.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.XtraEditors.v16.1.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.XtraGrid.v16.1.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.XtraLayout.v16.1.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.XtraPrinting.v16.1.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Core.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.RichEdit.v16.1.Core.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.XtraTreeList.v16.1.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Office.v16.1.Core.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Drawing.xml
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.Data.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.Data.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.Data.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.Data.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.DataAccess.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.DataAccess.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.DataAccess.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.DataAccess.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.Printing.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.Printing.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.Printing.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.Printing.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.Utils.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.Utils.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.Utils.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.Utils.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.Xpo.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.Xpo.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.Xpo.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.Xpo.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.XtraBars.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.XtraBars.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraBars.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraBars.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.Sparkline.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.Sparkline.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.Sparkline.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.Sparkline.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.XtraEditors.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.XtraEditors.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraEditors.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraEditors.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.XtraGrid.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.XtraGrid.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraGrid.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraGrid.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.XtraLayout.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.XtraLayout.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraLayout.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraLayout.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.XtraPrinting.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.XtraPrinting.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraPrinting.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraPrinting.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.Pdf.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.Pdf.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.Pdf.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.Pdf.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.RichEdit.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.RichEdit.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.RichEdit.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.RichEdit.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.XtraTreeList.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.XtraTreeList.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraTreeList.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraTreeList.v16.1.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\de\DevExpress.Office.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\es\DevExpress.Office.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ja\DevExpress.Office.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\bin\Debug\ru\DevExpress.Office.v16.1.Core.resources.dll
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\obj\Debug\NganHang.frmNhanvien.resources
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\obj\Debug\NganHang.SimpleForm.frmLogin.resources
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\obj\Debug\NganHang.frmMain.resources
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\obj\Debug\NganHang.Properties.Resources.resources
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\obj\Debug\NganHang.csproj.GenerateResource.Cache
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\obj\Debug\NganHang.exe.licenses
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\obj\Debug\NganHang.exe
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\obj\Debug\NganHang.pdb
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\obj\Debug\NganHang.csprojResolveAssemblyReference.cache
+C:\Users\Vo Quang Tuong\documents\visual studio 2015\Projects\NganHang\NganHang\obj\Debug\NganHang.SimpleForm.frmChuyenNV.resources
+E:\NGANHANG\NganHang\NganHang\bin\Debug\NganHang.exe.config
+E:\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.exe
+E:\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.pdb
+E:\NGANHANG\NganHang\NganHang\bin\Debug\NganHang.exe
+E:\NGANHANG\NganHang\NganHang\bin\Debug\NganHang.pdb
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.BonusSkins.v16.1.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.CodeParser.v16.1.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Data.v16.1.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.DataAccess.v16.1.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Printing.v16.1.Core.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Sparkline.v16.1.Core.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Utils.v16.1.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Xpo.v16.1.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraBars.v16.1.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraEditors.v16.1.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraGrid.v16.1.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraLayout.v16.1.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraPrinting.v16.1.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Core.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.RichEdit.v16.1.Core.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraTreeList.v16.1.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Office.v16.1.Core.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Drawing.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Data.v16.1.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.DataAccess.v16.1.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Printing.v16.1.Core.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Utils.v16.1.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Xpo.v16.1.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraBars.v16.1.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Sparkline.v16.1.Core.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraEditors.v16.1.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraGrid.v16.1.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraLayout.v16.1.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraPrinting.v16.1.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Core.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.RichEdit.v16.1.Core.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraTreeList.v16.1.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Office.v16.1.Core.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Drawing.xml
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Data.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Data.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Data.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Data.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.DataAccess.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.DataAccess.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.DataAccess.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.DataAccess.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Printing.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Printing.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Printing.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Printing.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Utils.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Utils.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Utils.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Utils.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Xpo.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Xpo.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Xpo.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Xpo.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.XtraBars.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.XtraBars.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraBars.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraBars.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.XtraEditors.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.XtraEditors.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraEditors.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraEditors.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.XtraGrid.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.XtraGrid.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraGrid.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraGrid.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.XtraLayout.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.XtraLayout.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraLayout.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraLayout.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Office.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Office.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Office.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Office.v16.1.Core.resources.dll
+E:\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.csprojResolveAssemblyReference.cache
+E:\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.SimpleForm.frmChuyenNV.resources
+E:\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.frmNhanvien.resources
+E:\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.SimpleForm.frmLogin.resources
+E:\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.frmMain.resources
+E:\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.Properties.Resources.resources
+E:\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.csproj.GenerateResource.Cache
+E:\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.exe.licenses
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\NganHang.exe.config
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.exe
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.pdb
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\NganHang.exe
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\NganHang.pdb
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.BonusSkins.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.CodeParser.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Data.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.DataAccess.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Printing.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Sparkline.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Utils.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Xpo.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraBars.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraEditors.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraGrid.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraLayout.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraPrinting.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.RichEdit.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraTreeList.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Office.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Drawing.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Data.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.DataAccess.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Printing.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Utils.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Xpo.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraBars.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Sparkline.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraEditors.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraGrid.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraLayout.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraPrinting.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.RichEdit.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.XtraTreeList.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Office.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Drawing.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Data.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Data.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Data.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Data.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.DataAccess.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.DataAccess.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.DataAccess.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.DataAccess.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Printing.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Printing.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Printing.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Printing.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Utils.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Utils.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Utils.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Utils.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Xpo.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Xpo.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Xpo.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Xpo.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.XtraBars.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.XtraBars.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraBars.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraBars.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.XtraEditors.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.XtraEditors.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraEditors.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraEditors.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.XtraGrid.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.XtraGrid.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraGrid.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraGrid.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.XtraLayout.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.XtraLayout.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraLayout.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraLayout.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\de\DevExpress.Office.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\es\DevExpress.Office.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ja\DevExpress.Office.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\bin\Debug\ru\DevExpress.Office.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.csprojResolveAssemblyReference.cache
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.SimpleForm.frmLogin.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.frmMain.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.Properties.Resources.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.csproj.GenerateResource.Cache
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.exe.licenses
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.SimpleForm.frmNhanvien.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.frmKhachHang.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.SimpleForm.frmMoTaiKhoanKH.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\obj\Debug\NganHang.SimpleForm.frmTaoLogin.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\NganHang.exe.config
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\obj\Debug\NganHang.exe
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\obj\Debug\NganHang.pdb
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\NganHang.exe
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\NganHang.pdb
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.BonusSkins.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.CodeParser.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Data.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.DataAccess.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Printing.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Sparkline.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Utils.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Xpo.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.XtraBars.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.XtraEditors.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.XtraGrid.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.XtraLayout.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.XtraPrinting.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.RichEdit.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.XtraTreeList.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Office.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Drawing.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Data.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.DataAccess.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Printing.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Utils.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Xpo.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.XtraBars.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Sparkline.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.XtraEditors.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.XtraGrid.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.XtraLayout.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.XtraPrinting.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.RichEdit.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.XtraTreeList.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Office.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Drawing.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.Data.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.Data.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.Data.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.Data.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.DataAccess.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.DataAccess.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.DataAccess.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.DataAccess.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.Printing.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.Printing.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.Printing.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.Printing.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.Utils.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.Utils.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.Utils.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.Utils.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.Xpo.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.Xpo.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.Xpo.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.Xpo.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.XtraBars.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.XtraBars.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraBars.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraBars.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.XtraEditors.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.XtraEditors.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraEditors.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraEditors.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.XtraGrid.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.XtraGrid.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraGrid.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraGrid.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.XtraLayout.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.XtraLayout.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraLayout.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraLayout.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\de\DevExpress.Office.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\es\DevExpress.Office.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ja\DevExpress.Office.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\bin\Debug\ru\DevExpress.Office.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\obj\Debug\NganHang.csprojResolveAssemblyReference.cache
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\obj\Debug\NganHang.frmKhachHang.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\obj\Debug\NganHang.SimpleForm.frmLogin.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\obj\Debug\NganHang.frmMain.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\obj\Debug\NganHang.Properties.Resources.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\obj\Debug\NganHang.SimpleForm.frmMoTaiKhoanKH.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\obj\Debug\NganHang.SimpleForm.frmNhanvien.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\obj\Debug\NganHang.SimpleForm.frmTaoLogin.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\obj\Debug\NganHang.csproj.GenerateResource.Cache
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\NGANHANG\NganHang\NganHang\NganHang\obj\Debug\NganHang.exe.licenses
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\NganHang.exe.config
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.exe
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.pdb
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\NganHang.exe
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\NganHang.pdb
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.BonusSkins.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.CodeParser.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Data.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.DataAccess.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Printing.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Sparkline.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Utils.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Xpo.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.XtraBars.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.XtraEditors.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.XtraGrid.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.XtraLayout.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.XtraPrinting.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.RichEdit.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.XtraTreeList.v16.1.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Office.v16.1.Core.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Drawing.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Data.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.DataAccess.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Printing.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Utils.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Xpo.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.XtraBars.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Sparkline.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.XtraEditors.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.XtraGrid.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.XtraLayout.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.XtraPrinting.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.RichEdit.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.XtraTreeList.v16.1.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Office.v16.1.Core.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\DevExpress.Pdf.v16.1.Drawing.xml
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.Data.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.Data.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.Data.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.Data.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.DataAccess.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.DataAccess.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.DataAccess.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.DataAccess.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.Printing.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.Printing.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.Printing.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.Printing.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.Utils.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.Utils.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.Utils.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.Utils.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.Xpo.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.Xpo.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.Xpo.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.Xpo.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.XtraBars.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.XtraBars.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.XtraBars.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.XtraBars.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.Sparkline.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.XtraEditors.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.XtraEditors.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.XtraEditors.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.XtraEditors.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.XtraGrid.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.XtraGrid.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.XtraGrid.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.XtraGrid.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.XtraLayout.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.XtraLayout.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.XtraLayout.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.XtraLayout.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.XtraPrinting.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.Pdf.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.RichEdit.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.XtraTreeList.v16.1.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\de\DevExpress.Office.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\es\DevExpress.Office.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ja\DevExpress.Office.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\ru\DevExpress.Office.v16.1.Core.resources.dll
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.csprojResolveAssemblyReference.cache
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.frmKhachHang.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.SimpleForm.frmLogin.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.frmMain.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.Properties.Resources.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.SimpleForm.frmMoTaiKhoanKH.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.SimpleForm.frmNhanvien.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.SimpleForm.frmTaoLogin.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.csproj.GenerateResource.Cache
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.exe.licenses
