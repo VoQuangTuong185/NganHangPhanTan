@@ -61,6 +61,7 @@
             this.MANV = new System.Windows.Forms.ToolStripStatusLabel();
             this.HOTEN = new System.Windows.Forms.ToolStripStatusLabel();
             this.NHOM = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnChuyenNV = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -84,10 +85,11 @@
             this.btnTransactionReport,
             this.btnOpenedAccountReport,
             this.btnCustomerInfoReport,
-            this.frmLogin});
+            this.frmLogin,
+            this.btnChuyenNV});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl1.MaxItemId = 21;
+            this.ribbonControl1.MaxItemId = 22;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribHeThong,
@@ -241,6 +243,7 @@
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnCustomerManage);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnEmployeeManage);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnChuyenNV);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // rib_NghiepVu
@@ -358,6 +361,15 @@
             this.NHOM.Size = new System.Drawing.Size(63, 23);
             this.NHOM.Text = "NHOM";
             // 
+            // btnChuyenNV
+            // 
+            this.btnChuyenNV.Caption = "Chuyển Nhân Viên";
+            this.btnChuyenNV.Glyph = ((System.Drawing.Image)(resources.GetObject("btnChuyenNV.Glyph")));
+            this.btnChuyenNV.Id = 21;
+            this.btnChuyenNV.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnChuyenNV.LargeGlyph")));
+            this.btnChuyenNV.Name = "btnChuyenNV";
+            this.btnChuyenNV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChuyenNV_ItemClick);
+            // 
             // frmMain
             // 
             this.AccessibleDescription = "s";
@@ -428,6 +440,7 @@
         public System.Windows.Forms.ToolStripStatusLabel MANV;
         public System.Windows.Forms.ToolStripStatusLabel HOTEN;
         public System.Windows.Forms.ToolStripStatusLabel NHOM;
+        private DevExpress.XtraBars.BarButtonItem btnChuyenNV;
     }
 }
 
