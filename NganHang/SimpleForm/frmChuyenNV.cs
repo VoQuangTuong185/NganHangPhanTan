@@ -35,16 +35,17 @@ namespace NganHang.SimpleForm
         private void btnChuyenNV_Click(object sender, EventArgs e)
         {
             int manv = int.Parse(((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString());
+            string MACN = ((DataRowView)bdsNV[0])["MACN"].ToString();
             if (cmbCNFinal.SelectedIndex == Program.mChiNhanh)
             {
                 MessageBox.Show("Chi nhánh chuyển đi phải khác chi nhánh ban đầu", "", MessageBoxButtons.OK);
                 return;
             }
-            if (MessageBox.Show("Bạn muốn chuyển nhân viên " + manv + " sang chi nhánh " + ((DataRowView)bdsNV[0])["MACN"].ToString() + "??", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("Bạn muốn chuyển nhân viên " + manv + " sang chi nhánh " + MACN + "??", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
                 {
-                    if (Program.ExecSqlNonQuery("EXEC SP_Chuyen_NV '" + manv + ((DataRowView)bdsNV[0])["MACN"].ToString() + "'") == 1)
+                    if (Program.ExecSqlNonQuery("EXEC SP_Chuyen_NV '" + manv + "','" + MACN + "'") == 1)
                         MessageBox.Show("Chuyển Nhân Viên Thành Công!!", "", MessageBoxButtons.OK);
                     else
                         MessageBox.Show("Chuyển Nhân Viên Thất Bại!!", "", MessageBoxButtons.OK);
