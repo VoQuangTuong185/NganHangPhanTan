@@ -1,14 +1,15 @@
-NganHang 7.03pm 21.4.22
-
 (xem lại video *GIẢI ĐÁP VỀ ĐỀ TÀI NGÂN HÀNG.mp4* phút 47:03 về cách phân tán database NGANHANG)
 
-1. macn = ((DataRowView)bdsNV[0])["MACN"].ToString(); tiềm ẩn lỗi
+- macn = ((DataRowView)bdsNV[0])["MACN"].ToString(); tiềm ẩn lỗi
 
-2. lỗi xoá nhân viên lỗi khi mã nhân viên dạng chuỗi (dòng 241 frmNhanVien.cs)
+- lỗi xoá nhân viên lỗi khi mã nhân viên dạng chuỗi (dòng 241 frmNhanVien.cs)
 
-3. chức năng chuyển nhân viên chưa làm được
+- chức năng chuyển nhân viên chưa làm được
 
-4. --không bắt buộc: chức năng redo (mới ok 2 nút insert, save) còn lại add, delete chưa làm được (dùng stack để khôi phục) 
+--không bắt buộc: chức năng redo (mới ok 2 nút insert, save) còn lại add, delete chưa làm được (dùng stack để khôi phục) 
 
-5. xem kỹ lại nút delete của form  MOTAIKHOAN (ràng buộc phát sinh từ tài khoản khách hàng như gửi/rút tiền) -
+- xem kỹ lại nút delete của form  MOTAIKHOAN (ràng buộc phát sinh từ tài khoản khách hàng như gửi/rút tiền) -
 
+- thêm quyền 'SecurityAdmin' cho tài khoản HTKN để xem được tài khoản ở site khác với site đã đăng nhập (combobox chi nhánh) khi vào bằng tài khoản nhóm NganHang
+
+- EXEC sp_addsrvrolemember @LGNAME, 'ProcessAdmin'-- Cấp quyền kiểm tra user có login vào server (Dùng khi chuyển nhân viên) 
