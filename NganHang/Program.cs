@@ -87,7 +87,7 @@ namespace NganHang
         }
 
 
-        public static int ExecSqlNonQuery(String cmd)
+        public static void ExecSqlNonQuery(String cmd)
         {
             SqlCommand sqlcmd = new SqlCommand(cmd, Program.conn);
             sqlcmd.CommandType = CommandType.Text;
@@ -96,12 +96,13 @@ namespace NganHang
             try
             {
                 sqlcmd.ExecuteNonQuery(); //conn.Close()
-                return 1;
+                MessageBox.Show("Thao tác thành công!!", "", MessageBoxButtons.OK);
             }
-            catch (SqlException e)
+            catch (SqlException ex)
             {
                 Program.conn.Close();
-                return e.State; // trang thai raiseeror tu sql server
+                MessageBox.Show(ex.Message);
+                return;
             }
         }
         public static void SetEnableOfButton(Form frm, Boolean Active)

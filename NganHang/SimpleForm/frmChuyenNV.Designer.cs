@@ -48,6 +48,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.cmbCNFinal = new System.Windows.Forms.ComboBox();
+            this.dSCHINHANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_CHINHANHTableAdapter = new NganHang.DSTableAdapters.DS_CHINHANHTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
@@ -56,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dSCHINHANHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -178,7 +181,7 @@
             // 
             // btnChuyenNV
             // 
-            this.btnChuyenNV.Location = new System.Drawing.Point(644, 42);
+            this.btnChuyenNV.Location = new System.Drawing.Point(653, 29);
             this.btnChuyenNV.Name = "btnChuyenNV";
             this.btnChuyenNV.Size = new System.Drawing.Size(156, 35);
             this.btnChuyenNV.TabIndex = 7;
@@ -209,12 +212,24 @@
             // 
             // cmbCNFinal
             // 
+            this.cmbCNFinal.DataSource = this.dSCHINHANHBindingSource;
+            this.cmbCNFinal.DisplayMember = "TENCN";
             this.cmbCNFinal.FormattingEnabled = true;
             this.cmbCNFinal.Location = new System.Drawing.Point(420, 35);
             this.cmbCNFinal.Name = "cmbCNFinal";
             this.cmbCNFinal.Size = new System.Drawing.Size(199, 24);
             this.cmbCNFinal.TabIndex = 8;
+            this.cmbCNFinal.ValueMember = "MACN";
             this.cmbCNFinal.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // dSCHINHANHBindingSource
+            // 
+            this.dSCHINHANHBindingSource.DataMember = "DS_CHINHANH";
+            this.dSCHINHANHBindingSource.DataSource = this.DS;
+            // 
+            // dS_CHINHANHTableAdapter
+            // 
+            this.dS_CHINHANHTableAdapter.ClearBeforeFill = true;
             // 
             // frmChuyenNV
             // 
@@ -238,6 +253,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dSCHINHANHBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,5 +279,7 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.ComboBox cmbCNFinal;
+        private System.Windows.Forms.BindingSource dSCHINHANHBindingSource;
+        private DSTableAdapters.DS_CHINHANHTableAdapter dS_CHINHANHTableAdapter;
     }
 }

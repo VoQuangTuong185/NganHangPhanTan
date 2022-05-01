@@ -119,21 +119,11 @@ namespace NganHang.SimpleForm
                 MessageBox.Show("TÊN LOGIN đã tồn tại \nVui lòng nhập lại", "", MessageBoxButtons.OK);
                 return;
             }          
-            try
-            {
-                Program.myReader.Close();
-                string cmd = "EXEC SP_TAOLOGIN '" + txtLoginName.Text + "','" + txtPass.Text + "','" + MANV + "','" + Program.mGroup + "'";
-                MessageBox.Show(cmd, "", MessageBoxButtons.OK);
-                if (Program.ExecSqlNonQuery(cmd) == 1)
-                    MessageBox.Show("Tạo Login '" + txtLoginName.Text + "' Thành Công", "", MessageBoxButtons.OK);
-                else
-                    return;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi tạo login. \n" + ex.Message, "", MessageBoxButtons.OK);
-                return;
-            }
+            Program.myReader.Close();
+            string cmd = "EXEC SP_TAOLOGIN '" + txtLoginName.Text + "','" + txtPass.Text + "','" + MANV + "','" + Program.mGroup + "'";
+            MessageBox.Show(cmd, "", MessageBoxButtons.OK);
+            Program.ExecSqlNonQuery(cmd);
+
             gcNV_X_LOGIN.Enabled =gc_LGINFO1.Enabled = true;
             this.lay_NV_Chua_Co_LoginTableAdapter.Fill(this.DS.Lay_NV_Chua_Co_Login);
             this.thong_Tin_LoginName1TableAdapter.Fill(this.DS.Thong_Tin_LoginName1, Program.mGroup);
@@ -148,19 +138,11 @@ namespace NganHang.SimpleForm
                 MessageBox.Show("Không thể xoá tài khoản '"+ LG_NAME + "' vì bạn đang đăng nhập bằng chính tài khoản này!!", "", MessageBoxButtons.OK);
                 return;
             }
+            
             if (MessageBox.Show("Bạn có thật sự muốn xoá TÊN LOGIN '" + LG_NAME + "' ??", "Xác nhận",MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 string command = "EXEC Xoa_Login '" + LG_NAME + "','" + MANV + "'";
-                if (Program.ExecSqlNonQuery(command) == 1)
-                    try
-                    {
-                        MessageBox.Show("Xoá Login '" + LG_NAME + "' Thành Công", "", MessageBoxButtons.OK);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi tạo login. \n" + ex.Message, "", MessageBoxButtons.OK);
-                        return;
-                    }
+                Program.ExecSqlNonQuery(command);
             }
             gcNV_X_LOGIN.Enabled = true;
             gcNV_X_LOGIN.Enabled = groupBox1.Enabled = gc_LGINFO1.Enabled = true;

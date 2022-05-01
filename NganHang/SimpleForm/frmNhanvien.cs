@@ -149,6 +149,7 @@ namespace NganHang.SimpleForm
                 string strlenh1 = "EXEC Kiem_Tra_MANV_Trung '" + txtMANV.Text + "'";
                 Program.myReader = Program.ExecSqlDataReader(strlenh1);
                 Program.myReader.Read();
+                Program.myReader.Close();
                 if (Program.myReader.HasRows)
                 {
                     MessageBox.Show("Mã nhân viên đã tồn tại \nVui lòng nhập lại", "", MessageBoxButtons.OK);
@@ -196,7 +197,6 @@ namespace NganHang.SimpleForm
             Program.myReader.Read();
             if (Program.myReader.HasRows)
             {
-                Program.myReader.Close();
                 return true;
             }
             Program.myReader.Close();
