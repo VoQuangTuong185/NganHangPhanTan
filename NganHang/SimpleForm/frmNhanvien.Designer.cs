@@ -46,6 +46,7 @@
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
             this.btnReload = new DevExpress.XtraBars.BarButtonItem();
             this.btnUndo = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMoveEmployee = new DevExpress.XtraBars.BarButtonItem();
             this.btnExit = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -83,6 +84,11 @@
             this.gD_GOIRUTTableAdapter = new NganHang.DSTableAdapters.GD_GOIRUTTableAdapter();
             this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
             this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
+            this.cmbCNFinal = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnChuyenEmployee = new System.Windows.Forms.Button();
+            this.bdsChuyenNV = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_CHINHANHTableAdapter = new NganHang.DSTableAdapters.DS_CHINHANHTableAdapter();
             mANVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
@@ -101,6 +107,7 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsChuyenNV)).BeginInit();
             this.SuspendLayout();
             // 
             // mANVLabel
@@ -192,9 +199,10 @@
             this.btnUndo,
             this.btnExit,
             this.btnUpdate,
-            this.btnChuyenNV});
+            this.btnChuyenNV,
+            this.btnMoveEmployee});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 8;
+            this.barManager1.MaxItemId = 9;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar1
@@ -221,6 +229,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDelete, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnReload, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnUndo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnMoveEmployee, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnExit, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
@@ -278,6 +287,15 @@
             this.btnUndo.Name = "btnUndo";
             this.btnUndo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUndo_ItemClick);
             // 
+            // btnMoveEmployee
+            // 
+            this.btnMoveEmployee.Caption = "Chuyển Nhân Viên";
+            this.btnMoveEmployee.Glyph = ((System.Drawing.Image)(resources.GetObject("btnMoveEmployee.Glyph")));
+            this.btnMoveEmployee.Id = 8;
+            this.btnMoveEmployee.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnMoveEmployee.LargeGlyph")));
+            this.btnMoveEmployee.Name = "btnMoveEmployee";
+            this.btnMoveEmployee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMoveEmployee_ItemClick);
+            // 
             // btnExit
             // 
             this.btnExit.Caption = "Thoát";
@@ -305,28 +323,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1200, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1341, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 607);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1200, 25);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 793);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1341, 25);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 577);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 763);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1200, 30);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 577);
+            this.barDockControlRight.Location = new System.Drawing.Point(1341, 30);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 763);
             // 
             // btnChuyenNV
             // 
@@ -338,12 +356,15 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.cmbCNFinal);
+            this.panelControl1.Controls.Add(this.label2);
+            this.panelControl1.Controls.Add(this.btnChuyenEmployee);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.cmbChiNhanh);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 30);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1200, 41);
+            this.panelControl1.Size = new System.Drawing.Size(1341, 41);
             this.panelControl1.TabIndex = 4;
             // 
             // label1
@@ -396,7 +417,7 @@
             this.gcNV.MainView = this.gridView1;
             this.gcNV.MenuManager = this.barManager1;
             this.gcNV.Name = "gcNV";
-            this.gcNV.Size = new System.Drawing.Size(1200, 264);
+            this.gcNV.Size = new System.Drawing.Size(1341, 264);
             this.gcNV.TabIndex = 9;
             this.gcNV.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -501,7 +522,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 335);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1200, 272);
+            this.panelControl2.Size = new System.Drawing.Size(1341, 458);
             this.panelControl2.TabIndex = 14;
             this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
@@ -603,11 +624,50 @@
             // 
             this.gD_CHUYENTIENTableAdapter.ClearBeforeFill = true;
             // 
+            // cmbCNFinal
+            // 
+            this.cmbCNFinal.DataSource = this.bdsChuyenNV;
+            this.cmbCNFinal.DisplayMember = "TENCN";
+            this.cmbCNFinal.FormattingEnabled = true;
+            this.cmbCNFinal.Location = new System.Drawing.Point(809, 9);
+            this.cmbCNFinal.Name = "cmbCNFinal";
+            this.cmbCNFinal.Size = new System.Drawing.Size(199, 24);
+            this.cmbCNFinal.TabIndex = 11;
+            this.cmbCNFinal.ValueMember = "MACN";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(633, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(152, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Chi Nhánh Chuyển Đến";
+            // 
+            // btnChuyenEmployee
+            // 
+            this.btnChuyenEmployee.Location = new System.Drawing.Point(1020, 3);
+            this.btnChuyenEmployee.Name = "btnChuyenEmployee";
+            this.btnChuyenEmployee.Size = new System.Drawing.Size(134, 33);
+            this.btnChuyenEmployee.TabIndex = 10;
+            this.btnChuyenEmployee.Text = "Chuyển Nhân Viên";
+            this.btnChuyenEmployee.UseVisualStyleBackColor = true;
+            this.btnChuyenEmployee.Click += new System.EventHandler(this.btnChuyenEmployee_Click);
+            // 
+            // bdsChuyenNV
+            // 
+            this.bdsChuyenNV.DataMember = "DS_CHINHANH";
+            this.bdsChuyenNV.DataSource = this.DS;
+            // 
+            // dS_CHINHANHTableAdapter
+            // 
+            this.dS_CHINHANHTableAdapter.ClearBeforeFill = true;
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 632);
+            this.ClientSize = new System.Drawing.Size(1341, 818);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.gcNV);
             this.Controls.Add(this.panelControl1);
@@ -632,6 +692,7 @@
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsChuyenNV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -685,5 +746,11 @@
         private System.Windows.Forms.CheckBox trangThaiXoaCheckBox;
         private DevExpress.XtraBars.BarButtonItem btnChuyenNV;
         private System.Windows.Forms.ComboBox cmbPhai;
+        private DevExpress.XtraBars.BarButtonItem btnMoveEmployee;
+        private System.Windows.Forms.ComboBox cmbCNFinal;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnChuyenEmployee;
+        private System.Windows.Forms.BindingSource bdsChuyenNV;
+        private DSTableAdapters.DS_CHINHANHTableAdapter dS_CHINHANHTableAdapter;
     }
 }

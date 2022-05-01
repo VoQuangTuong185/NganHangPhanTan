@@ -216,6 +216,7 @@
             this.label2.Size = new System.Drawing.Size(152, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Chi Nhánh Chuyển Đến";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // groupControl1
             // 

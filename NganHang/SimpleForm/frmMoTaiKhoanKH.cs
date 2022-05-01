@@ -65,8 +65,8 @@ namespace NganHang.SimpleForm
             vitri = bdsTK.Position;
             txtMACN.Text = macn;
             bdsTK.AddNew();
-            ((DataRowView)bdsTK[bdsTK.Position])["CMND"] = teCMND.Text;
-            ((DataRowView)bdsTK[bdsTK.Position])["MACN"] = macn;
+            teCMND.Text = ((DataRowView)bdsTK[bdsTK.Position])["CMND"].ToString();
+            macn = ((DataRowView)bdsTK[bdsTK.Position])["MACN"].ToString();
         }
 
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
@@ -94,11 +94,6 @@ namespace NganHang.SimpleForm
                 this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
                 //macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
             }
-        }
-
-        private void teCMND_EditValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void lưuToolStripMenuItem_Click(object sender, EventArgs e)

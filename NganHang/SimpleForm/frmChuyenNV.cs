@@ -28,7 +28,7 @@ namespace NganHang.SimpleForm
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
-            cmbChiNhanh.Enabled = false;
+            cmbChiNhanh.Enabled =  false;
         }
 
         private void btnChuyenNV_Click(object sender, EventArgs e)
@@ -67,6 +67,11 @@ namespace NganHang.SimpleForm
         private void btnExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

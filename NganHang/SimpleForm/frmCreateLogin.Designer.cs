@@ -47,6 +47,10 @@
             this.nName = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.gc_LGINFO1 = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsXOA = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
             this.bds_LGINFO = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTENLOGIN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -78,10 +82,6 @@
             this.colSODT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmsXOA = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
             this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter = new NganHang.DSTableAdapters.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter();
             this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
             this.frmCreateLogin_GetLoginsOfBranchTableAdapter = new NganHang.DSTableAdapters.frmCreateLogin_GetLoginsOfBranchTableAdapter();
@@ -94,13 +94,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoLuuY.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_LGINFO1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bds_LGINFO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNV_X_LOGIN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -281,6 +281,36 @@
             this.gc_LGINFO1.TabIndex = 12;
             this.gc_LGINFO1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsXOA,
+            this.cmsTAILAI,
+            this.cmsTHOAT});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 76);
+            // 
+            // cmsXOA
+            // 
+            this.cmsXOA.Name = "cmsXOA";
+            this.cmsXOA.Size = new System.Drawing.Size(157, 24);
+            this.cmsXOA.Text = "Xoá";
+            this.cmsXOA.Click += new System.EventHandler(this.cmsXOA_Click);
+            // 
+            // cmsTAILAI
+            // 
+            this.cmsTAILAI.Name = "cmsTAILAI";
+            this.cmsTAILAI.Size = new System.Drawing.Size(157, 24);
+            this.cmsTAILAI.Text = "Tải lại trang";
+            this.cmsTAILAI.Click += new System.EventHandler(this.cmsTAILAI_Click);
+            // 
+            // cmsTHOAT
+            // 
+            this.cmsTHOAT.Name = "cmsTHOAT";
+            this.cmsTHOAT.Size = new System.Drawing.Size(157, 24);
+            this.cmsTHOAT.Text = "Thoát";
             // 
             // bds_LGINFO
             // 
@@ -561,36 +591,6 @@
             this.colTrangThaiXoa.Visible = true;
             this.colTrangThaiXoa.VisibleIndex = 7;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsXOA,
-            this.cmsTAILAI,
-            this.cmsTHOAT});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 76);
-            // 
-            // cmsXOA
-            // 
-            this.cmsXOA.Name = "cmsXOA";
-            this.cmsXOA.Size = new System.Drawing.Size(157, 24);
-            this.cmsXOA.Text = "Xoá";
-            this.cmsXOA.Click += new System.EventHandler(this.cmsXOA_Click);
-            // 
-            // cmsTAILAI
-            // 
-            this.cmsTAILAI.Name = "cmsTAILAI";
-            this.cmsTAILAI.Size = new System.Drawing.Size(157, 24);
-            this.cmsTAILAI.Text = "Tải lại trang";
-            this.cmsTAILAI.Click += new System.EventHandler(this.cmsTAILAI_Click);
-            // 
-            // cmsTHOAT
-            // 
-            this.cmsTHOAT.Name = "cmsTHOAT";
-            this.cmsTHOAT.Size = new System.Drawing.Size(157, 24);
-            this.cmsTHOAT.Text = "Thoát";
-            // 
             // frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter
             // 
             this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.ClearBeforeFill = true;
@@ -640,13 +640,13 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_LGINFO1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bds_LGINFO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNV_X_LOGIN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -56,6 +56,9 @@ namespace NganHang.SimpleForm
         private void frmNhanvien_Load(object sender, EventArgs e)
         {
             DS.EnforceConstraints = false;
+            this.dS_CHINHANHTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.dS_CHINHANHTableAdapter.Fill(this.DS.DS_CHINHANH);
+            
             this.nhanVienTableAdapter.Connection.ConnectionString = Program.connstr;
             this.nhanVienTableAdapter.Fill(this.DS.NhanVien);
 
@@ -70,7 +73,7 @@ namespace NganHang.SimpleForm
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
-            panelControl2.Enabled = btnUndo.Enabled = btnSave.Enabled = false;
+            panelControl2.Enabled = btnUndo.Enabled = btnSave.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = false;
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
@@ -268,6 +271,28 @@ namespace NganHang.SimpleForm
         private void btnExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Close();
+        }
+
+        private void btnMoveEmployee_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = true;
+            panelControl2.Enabled = false;
+        }
+
+        private void btnChuyenEmployee_Click(object sender, EventArgs e)
+        {
+            int manv = int.Parse(((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString());
+            vitri = bdsChuyenNV.Position;
+            string MACN = cmbCNFinal.SelectedValue.ToString();
+            if (cmbCNFinal.SelectedIndex == Program.mChiNhanh)
+            {
+                MessageBox.Show("Chi nhánh chuyển đi phải khác chi nhánh ban đầu", "", MessageBoxButtons.OK);
+                return;
+            }
+            if (MessageBox.Show("Bạn muốn chuyển nhân viên " + manv + " sang chi nhánh " + MACN + "??", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                Program.ExecSqlNonQuery("EXEC frmChuyenNV_MoveEmployee '" + manv + "','" + MACN + "'");
+            }
         }
     }
 }

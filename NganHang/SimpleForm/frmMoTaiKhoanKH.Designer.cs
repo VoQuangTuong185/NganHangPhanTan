@@ -57,7 +57,7 @@
             this.txtMACN = new System.Windows.Forms.TextBox();
             this.dateNgayMoTK = new DevExpress.XtraEditors.DateEdit();
             this.txtSOTK = new System.Windows.Forms.TextBox();
-            this.teCMND = new DevExpress.XtraEditors.TextEdit();
+            this.bdsGR = new System.Windows.Forms.BindingSource(this.components);
             this.gcKH = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCMND = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -74,10 +74,10 @@
             this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsPHUCHOI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
-            this.bdsGR = new System.Windows.Forms.BindingSource(this.components);
             this.gD_GOIRUTTableAdapter = new NganHang.DSTableAdapters.GD_GOIRUTTableAdapter();
             this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
             this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
+            this.teCMND = new System.Windows.Forms.TextBox();
             cMNDLabel = new System.Windows.Forms.Label();
             mACNLabel = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
@@ -98,11 +98,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numbSODU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teCMND.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).BeginInit();
             this.SuspendLayout();
             // 
@@ -234,10 +233,10 @@
             // 
             this.gcTK.DataSource = this.bdsTK;
             this.gcTK.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcTK.Location = new System.Drawing.Point(782, 294);
+            this.gcTK.Location = new System.Drawing.Point(782, 243);
             this.gcTK.MainView = this.gvTK;
             this.gcTK.Name = "gcTK";
-            this.gcTK.Size = new System.Drawing.Size(422, 301);
+            this.gcTK.Size = new System.Drawing.Size(422, 352);
             this.gcTK.TabIndex = 2;
             this.gcTK.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTK});
@@ -310,6 +309,7 @@
             // 
             this.panelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelControl2.Appearance.Options.UseFont = true;
+            this.panelControl2.Controls.Add(this.teCMND);
             this.panelControl2.Controls.Add(this.numbSODU);
             this.panelControl2.Controls.Add(this.label2);
             this.panelControl2.Controls.Add(this.txtMACN);
@@ -320,11 +320,10 @@
             this.panelControl2.Controls.Add(this.txtSOTK);
             this.panelControl2.Controls.Add(mACNLabel);
             this.panelControl2.Controls.Add(cMNDLabel);
-            this.panelControl2.Controls.Add(this.teCMND);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl2.Location = new System.Drawing.Point(2, 294);
+            this.panelControl2.Location = new System.Drawing.Point(2, 243);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(780, 301);
+            this.panelControl2.Size = new System.Drawing.Size(780, 352);
             this.panelControl2.TabIndex = 1;
             // 
             // numbSODU
@@ -387,17 +386,10 @@
             this.txtSOTK.Size = new System.Drawing.Size(245, 29);
             this.txtSOTK.TabIndex = 5;
             // 
-            // teCMND
+            // bdsGR
             // 
-            this.teCMND.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsGR, "MAGD", true));
-            this.teCMND.Location = new System.Drawing.Point(246, 145);
-            this.teCMND.Name = "teCMND";
-            this.teCMND.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teCMND.Properties.Appearance.Options.UseFont = true;
-            this.teCMND.Properties.ReadOnly = true;
-            this.teCMND.Size = new System.Drawing.Size(244, 28);
-            this.teCMND.TabIndex = 1;
-            this.teCMND.EditValueChanged += new System.EventHandler(this.teCMND_EditValueChanged);
+            this.bdsGR.DataMember = "FK_GD_GOIRUT_TaiKhoan";
+            this.bdsGR.DataSource = this.bdsTK;
             // 
             // gcKH
             // 
@@ -406,7 +398,7 @@
             this.gcKH.Location = new System.Drawing.Point(2, 2);
             this.gcKH.MainView = this.gridView1;
             this.gcKH.Name = "gcKH";
-            this.gcKH.Size = new System.Drawing.Size(1202, 292);
+            this.gcKH.Size = new System.Drawing.Size(1202, 241);
             this.gcKH.TabIndex = 0;
             this.gcKH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -531,11 +523,6 @@
             this.cmsTHOAT.Text = "Thoát";
             this.cmsTHOAT.Click += new System.EventHandler(this.cmsTHOAT_Click);
             // 
-            // bdsGR
-            // 
-            this.bdsGR.DataMember = "FK_GD_GOIRUT_TaiKhoan";
-            this.bdsGR.DataSource = this.bdsTK;
-            // 
             // gD_GOIRUTTableAdapter
             // 
             this.gD_GOIRUTTableAdapter.ClearBeforeFill = true;
@@ -548,6 +535,15 @@
             // gD_CHUYENTIENTableAdapter
             // 
             this.gD_CHUYENTIENTableAdapter.ClearBeforeFill = true;
+            // 
+            // teCMND
+            // 
+            this.teCMND.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "CMND", true));
+            this.teCMND.Location = new System.Drawing.Point(245, 145);
+            this.teCMND.Name = "teCMND";
+            this.teCMND.ReadOnly = true;
+            this.teCMND.Size = new System.Drawing.Size(245, 29);
+            this.teCMND.TabIndex = 14;
             // 
             // frmMoTaiKhoanKH
             // 
@@ -579,11 +575,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numbSODU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teCMND.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).EndInit();
             this.ResumeLayout(false);
 
@@ -614,7 +609,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cmsTHEM;
         private System.Windows.Forms.ToolStripMenuItem cmsXOA;
-        private DevExpress.XtraEditors.TextEdit teCMND;
         private System.Windows.Forms.ToolStripMenuItem cmsLUU;
         private System.Windows.Forms.TextBox txtSOTK;
         private System.Windows.Forms.TextBox txtMACN;
@@ -634,5 +628,6 @@
         private DSTableAdapters.GD_GOIRUTTableAdapter gD_GOIRUTTableAdapter;
         private System.Windows.Forms.BindingSource bdsCT;
         private DSTableAdapters.GD_CHUYENTIENTableAdapter gD_CHUYENTIENTableAdapter;
+        private System.Windows.Forms.TextBox teCMND;
     }
 }
