@@ -34,7 +34,6 @@ namespace NganHang.SimpleForm
         {
             int manv = int.Parse(((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString());
             string MACN = cmbCNFinal.SelectedValue.ToString();
-            MessageBox.Show(MACN, "", MessageBoxButtons.OK);
             if (cmbCNFinal.SelectedIndex == Program.mChiNhanh)
             {
                 MessageBox.Show("Chi nhánh chuyển đi phải khác chi nhánh ban đầu", "", MessageBoxButtons.OK);
@@ -42,12 +41,19 @@ namespace NganHang.SimpleForm
             }
             if (MessageBox.Show("Bạn muốn chuyển nhân viên " + manv + " sang chi nhánh " + MACN + "??", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                 Program.ExecSqlNonQuery("EXEC SP_Chuyen_NV '" + manv + "','" + MACN + "'");                 
+                 Program.ExecSqlNonQuery("EXEC SP_Chuyen_NV '" + manv + "','" + MACN + "'");                              
             }
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int manv = int.Parse(((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString());
+            MessageBox.Show("EXEC SP_Xoa_Login_Xoa_Loi '" + manv + "'", "", MessageBoxButtons.OK);
+            Program.ExecSqlNonQuery("EXEC SP_Xoa_Login_Xoa_Loi '" + manv + "'");
         }
     }
 }

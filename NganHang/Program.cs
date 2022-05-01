@@ -96,12 +96,15 @@ namespace NganHang
             try
             {
                 sqlcmd.ExecuteNonQuery(); //conn.Close()
-                MessageBox.Show("Thao tác thành công!!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Thao tác thành công!!", "", MessageBoxButtons.OK);             
             }
             catch (SqlException ex)
             {
-                Program.conn.Close();
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Program.conn.Close();
             }
         }
         public static void SetEnableOfButton(Form frm, Boolean Active)
