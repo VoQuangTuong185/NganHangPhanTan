@@ -146,7 +146,7 @@ namespace NganHang.SimpleForm
             if (btn_Add_clicked == true || manv != txtMANV.Text)
             {
                 Program.myReader.Close();
-                string strlenh1 = "EXEC frmNhanVien_duplicate MANV '" + txtMANV.Text + "'";
+                string strlenh1 = "EXEC frmNhanVien_duplicateMANV '" + txtMANV.Text + "'";
                 Program.myReader = Program.ExecSqlDataReader(strlenh1);
                 Program.myReader.Read();
                 Program.myReader.Close();
@@ -192,7 +192,7 @@ namespace NganHang.SimpleForm
         private bool KT_NV_Co_TK()
         {
             Program.myReader.Close();
-            string strlenh1 = "EXEC frmNhanVien_Exists Account '" + txtMANV.Text + "'";
+            string strlenh1 = "EXEC frmNhanVien_ExistsAccount '" + txtMANV.Text + "'";
             Program.myReader = Program.ExecSqlDataReader(strlenh1);
             Program.myReader.Read();
             if (Program.myReader.HasRows)

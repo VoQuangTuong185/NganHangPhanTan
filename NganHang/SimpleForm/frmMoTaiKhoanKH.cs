@@ -127,7 +127,7 @@ namespace NganHang.SimpleForm
             if (btn_Add_clicked == true || SOTK != txtSOTK.Text)
             {
                 Program.myReader.Close();
-                string strlenh1 = "EXEC frmMoTaiKhoanKH_duplicate SoTK '" + txtSOTK.Text + "'";
+                string strlenh1 = "EXEC frmMoTaiKhoanKH_duplicateSoTK '" + txtSOTK.Text + "'";
                 Program.myReader = Program.ExecSqlDataReader(strlenh1);
                 Program.myReader.Read();
                 if (Program.myReader.HasRows)
@@ -200,7 +200,7 @@ namespace NganHang.SimpleForm
             Close();
         }
 
-        private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
         {
 
         }

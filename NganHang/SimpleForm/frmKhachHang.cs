@@ -144,7 +144,7 @@ namespace NganHang
             if (btn_Add_clicked == true || CMND != txtCMND.Text)//khi click update, MANV mới khác với MANV cũ thì kiểm tra có trùng MANV không
             {
                 Program.myReader.Close();
-                string strlenh1 = "EXEC frmKhachHang_Duplicate CMND '" + txtCMND.Text + "'";
+                string strlenh1 = "EXEC frmKhachHang_DuplicateCMND '" + txtCMND.Text + "'";
                 Program.myReader = Program.ExecSqlDataReader(strlenh1);
                 Program.myReader.Read();
                 if (Program.myReader.HasRows)
@@ -175,7 +175,7 @@ namespace NganHang
         private bool KT_KH_Co_TK()
         {
             Program.myReader.Close();
-            string strlenh1 = "EXEC frmKhachHang_Exists Account '" + txtCMND.Text + "'";
+            string strlenh1 = "EXEC frmKhachHang_ExistsAccount '" + txtCMND.Text + "'";
             Program.myReader = Program.ExecSqlDataReader(strlenh1);
             Program.myReader.Read();
             if (Program.myReader.HasRows)

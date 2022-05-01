@@ -36,9 +36,9 @@ namespace NganHang {
         
         private DS_CHINHANHDataTable tableDS_CHINHANH;
         
-        private frmCreateLogin_Get_Employee_Not_Have_LoginDataTable tablefrmCreateLogin_Get_Employee_Not_Have_Login;
+        private frmCreateLogin_GetEmployeeNotHaveLoginDataTable tablefrmCreateLogin_GetEmployeeNotHaveLogin;
         
-        private frmCreateLogin_Get_Logins_Of_BranchDataTable tablefrmCreateLogin_Get_Logins_Of_Branch;
+        private frmCreateLogin_GetLoginsOfBranchDataTable tablefrmCreateLogin_GetLoginsOfBranch;
         
         private global::System.Data.DataRelation relationFK_GD_CHUYENTIEN_NhanVien;
         
@@ -98,11 +98,11 @@ namespace NganHang {
                 if ((ds.Tables["DS_CHINHANH"] != null)) {
                     base.Tables.Add(new DS_CHINHANHDataTable(ds.Tables["DS_CHINHANH"]));
                 }
-                if ((ds.Tables["frmCreateLogin_Get Employee Not Have Login"] != null)) {
-                    base.Tables.Add(new frmCreateLogin_Get_Employee_Not_Have_LoginDataTable(ds.Tables["frmCreateLogin_Get Employee Not Have Login"]));
+                if ((ds.Tables["frmCreateLogin_GetEmployeeNotHaveLogin"] != null)) {
+                    base.Tables.Add(new frmCreateLogin_GetEmployeeNotHaveLoginDataTable(ds.Tables["frmCreateLogin_GetEmployeeNotHaveLogin"]));
                 }
-                if ((ds.Tables["frmCreateLogin_Get Logins Of Branch"] != null)) {
-                    base.Tables.Add(new frmCreateLogin_Get_Logins_Of_BranchDataTable(ds.Tables["frmCreateLogin_Get Logins Of Branch"]));
+                if ((ds.Tables["frmCreateLogin_GetLoginsOfBranch"] != null)) {
+                    base.Tables.Add(new frmCreateLogin_GetLoginsOfBranchDataTable(ds.Tables["frmCreateLogin_GetLoginsOfBranch"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -186,9 +186,9 @@ namespace NganHang {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public frmCreateLogin_Get_Employee_Not_Have_LoginDataTable frmCreateLogin_Get_Employee_Not_Have_Login {
+        public frmCreateLogin_GetEmployeeNotHaveLoginDataTable frmCreateLogin_GetEmployeeNotHaveLogin {
             get {
-                return this.tablefrmCreateLogin_Get_Employee_Not_Have_Login;
+                return this.tablefrmCreateLogin_GetEmployeeNotHaveLogin;
             }
         }
         
@@ -196,9 +196,9 @@ namespace NganHang {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public frmCreateLogin_Get_Logins_Of_BranchDataTable frmCreateLogin_Get_Logins_Of_Branch {
+        public frmCreateLogin_GetLoginsOfBranchDataTable frmCreateLogin_GetLoginsOfBranch {
             get {
-                return this.tablefrmCreateLogin_Get_Logins_Of_Branch;
+                return this.tablefrmCreateLogin_GetLoginsOfBranch;
             }
         }
         
@@ -287,11 +287,11 @@ namespace NganHang {
                 if ((ds.Tables["DS_CHINHANH"] != null)) {
                     base.Tables.Add(new DS_CHINHANHDataTable(ds.Tables["DS_CHINHANH"]));
                 }
-                if ((ds.Tables["frmCreateLogin_Get Employee Not Have Login"] != null)) {
-                    base.Tables.Add(new frmCreateLogin_Get_Employee_Not_Have_LoginDataTable(ds.Tables["frmCreateLogin_Get Employee Not Have Login"]));
+                if ((ds.Tables["frmCreateLogin_GetEmployeeNotHaveLogin"] != null)) {
+                    base.Tables.Add(new frmCreateLogin_GetEmployeeNotHaveLoginDataTable(ds.Tables["frmCreateLogin_GetEmployeeNotHaveLogin"]));
                 }
-                if ((ds.Tables["frmCreateLogin_Get Logins Of Branch"] != null)) {
-                    base.Tables.Add(new frmCreateLogin_Get_Logins_Of_BranchDataTable(ds.Tables["frmCreateLogin_Get Logins Of Branch"]));
+                if ((ds.Tables["frmCreateLogin_GetLoginsOfBranch"] != null)) {
+                    base.Tables.Add(new frmCreateLogin_GetLoginsOfBranchDataTable(ds.Tables["frmCreateLogin_GetLoginsOfBranch"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -362,16 +362,16 @@ namespace NganHang {
                     this.tableDS_CHINHANH.InitVars();
                 }
             }
-            this.tablefrmCreateLogin_Get_Employee_Not_Have_Login = ((frmCreateLogin_Get_Employee_Not_Have_LoginDataTable)(base.Tables["frmCreateLogin_Get Employee Not Have Login"]));
+            this.tablefrmCreateLogin_GetEmployeeNotHaveLogin = ((frmCreateLogin_GetEmployeeNotHaveLoginDataTable)(base.Tables["frmCreateLogin_GetEmployeeNotHaveLogin"]));
             if ((initTable == true)) {
-                if ((this.tablefrmCreateLogin_Get_Employee_Not_Have_Login != null)) {
-                    this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.InitVars();
+                if ((this.tablefrmCreateLogin_GetEmployeeNotHaveLogin != null)) {
+                    this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.InitVars();
                 }
             }
-            this.tablefrmCreateLogin_Get_Logins_Of_Branch = ((frmCreateLogin_Get_Logins_Of_BranchDataTable)(base.Tables["frmCreateLogin_Get Logins Of Branch"]));
+            this.tablefrmCreateLogin_GetLoginsOfBranch = ((frmCreateLogin_GetLoginsOfBranchDataTable)(base.Tables["frmCreateLogin_GetLoginsOfBranch"]));
             if ((initTable == true)) {
-                if ((this.tablefrmCreateLogin_Get_Logins_Of_Branch != null)) {
-                    this.tablefrmCreateLogin_Get_Logins_Of_Branch.InitVars();
+                if ((this.tablefrmCreateLogin_GetLoginsOfBranch != null)) {
+                    this.tablefrmCreateLogin_GetLoginsOfBranch.InitVars();
                 }
             }
             this.relationFK_GD_CHUYENTIEN_NhanVien = this.Relations["FK_GD_CHUYENTIEN_NhanVien"];
@@ -402,10 +402,10 @@ namespace NganHang {
             base.Tables.Add(this.tableTaiKhoan);
             this.tableDS_CHINHANH = new DS_CHINHANHDataTable();
             base.Tables.Add(this.tableDS_CHINHANH);
-            this.tablefrmCreateLogin_Get_Employee_Not_Have_Login = new frmCreateLogin_Get_Employee_Not_Have_LoginDataTable();
-            base.Tables.Add(this.tablefrmCreateLogin_Get_Employee_Not_Have_Login);
-            this.tablefrmCreateLogin_Get_Logins_Of_Branch = new frmCreateLogin_Get_Logins_Of_BranchDataTable();
-            base.Tables.Add(this.tablefrmCreateLogin_Get_Logins_Of_Branch);
+            this.tablefrmCreateLogin_GetEmployeeNotHaveLogin = new frmCreateLogin_GetEmployeeNotHaveLoginDataTable();
+            base.Tables.Add(this.tablefrmCreateLogin_GetEmployeeNotHaveLogin);
+            this.tablefrmCreateLogin_GetLoginsOfBranch = new frmCreateLogin_GetLoginsOfBranchDataTable();
+            base.Tables.Add(this.tablefrmCreateLogin_GetLoginsOfBranch);
             global::System.Data.ForeignKeyConstraint fkc;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_GD_CHUYENTIEN_NhanVien", new global::System.Data.DataColumn[] {
                         this.tableNhanVien.MANVColumn}, new global::System.Data.DataColumn[] {
@@ -513,13 +513,13 @@ namespace NganHang {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializefrmCreateLogin_Get_Employee_Not_Have_Login() {
+        private bool ShouldSerializefrmCreateLogin_GetEmployeeNotHaveLogin() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializefrmCreateLogin_Get_Logins_Of_Branch() {
+        private bool ShouldSerializefrmCreateLogin_GetLoginsOfBranch() {
             return false;
         }
         
@@ -597,10 +597,10 @@ namespace NganHang {
         public delegate void DS_CHINHANHRowChangeEventHandler(object sender, DS_CHINHANHRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void frmCreateLogin_Get_Employee_Not_Have_LoginRowChangeEventHandler(object sender, frmCreateLogin_Get_Employee_Not_Have_LoginRowChangeEvent e);
+        public delegate void frmCreateLogin_GetEmployeeNotHaveLoginRowChangeEventHandler(object sender, frmCreateLogin_GetEmployeeNotHaveLoginRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void frmCreateLogin_Get_Logins_Of_BranchRowChangeEventHandler(object sender, frmCreateLogin_Get_Logins_Of_BranchRowChangeEvent e);
+        public delegate void frmCreateLogin_GetLoginsOfBranchRowChangeEventHandler(object sender, frmCreateLogin_GetLoginsOfBranchRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2635,7 +2635,7 @@ namespace NganHang {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class frmCreateLogin_Get_Employee_Not_Have_LoginDataTable : global::System.Data.TypedTableBase<frmCreateLogin_Get_Employee_Not_Have_LoginRow> {
+        public partial class frmCreateLogin_GetEmployeeNotHaveLoginDataTable : global::System.Data.TypedTableBase<frmCreateLogin_GetEmployeeNotHaveLoginRow> {
             
             private global::System.Data.DataColumn columnMANV;
             
@@ -2653,12 +2653,10 @@ namespace NganHang {
             
             private global::System.Data.DataColumn columnTrangThaiXoa;
             
-            private global::System.Data.DataColumn columnrowguid;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Employee_Not_Have_LoginDataTable() {
-                this.TableName = "frmCreateLogin_Get Employee Not Have Login";
+            public frmCreateLogin_GetEmployeeNotHaveLoginDataTable() {
+                this.TableName = "frmCreateLogin_GetEmployeeNotHaveLogin";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2666,7 +2664,7 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal frmCreateLogin_Get_Employee_Not_Have_LoginDataTable(global::System.Data.DataTable table) {
+            internal frmCreateLogin_GetEmployeeNotHaveLoginDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2683,7 +2681,7 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected frmCreateLogin_Get_Employee_Not_Have_LoginDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected frmCreateLogin_GetEmployeeNotHaveLoginDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2754,14 +2752,6 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn rowguidColumn {
-                get {
-                    return this.columnrowguid;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2771,34 +2761,34 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Employee_Not_Have_LoginRow this[int index] {
+            public frmCreateLogin_GetEmployeeNotHaveLoginRow this[int index] {
                 get {
-                    return ((frmCreateLogin_Get_Employee_Not_Have_LoginRow)(this.Rows[index]));
+                    return ((frmCreateLogin_GetEmployeeNotHaveLoginRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event frmCreateLogin_Get_Employee_Not_Have_LoginRowChangeEventHandler frmCreateLogin_Get_Employee_Not_Have_LoginRowChanging;
+            public event frmCreateLogin_GetEmployeeNotHaveLoginRowChangeEventHandler frmCreateLogin_GetEmployeeNotHaveLoginRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event frmCreateLogin_Get_Employee_Not_Have_LoginRowChangeEventHandler frmCreateLogin_Get_Employee_Not_Have_LoginRowChanged;
+            public event frmCreateLogin_GetEmployeeNotHaveLoginRowChangeEventHandler frmCreateLogin_GetEmployeeNotHaveLoginRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event frmCreateLogin_Get_Employee_Not_Have_LoginRowChangeEventHandler frmCreateLogin_Get_Employee_Not_Have_LoginRowDeleting;
+            public event frmCreateLogin_GetEmployeeNotHaveLoginRowChangeEventHandler frmCreateLogin_GetEmployeeNotHaveLoginRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event frmCreateLogin_Get_Employee_Not_Have_LoginRowChangeEventHandler frmCreateLogin_Get_Employee_Not_Have_LoginRowDeleted;
+            public event frmCreateLogin_GetEmployeeNotHaveLoginRowChangeEventHandler frmCreateLogin_GetEmployeeNotHaveLoginRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddfrmCreateLogin_Get_Employee_Not_Have_LoginRow(frmCreateLogin_Get_Employee_Not_Have_LoginRow row) {
+            public void AddfrmCreateLogin_GetEmployeeNotHaveLoginRow(frmCreateLogin_GetEmployeeNotHaveLoginRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Employee_Not_Have_LoginRow AddfrmCreateLogin_Get_Employee_Not_Have_LoginRow(string MANV, string HO, string TEN, string DIACHI, string PHAI, string SODT, string MACN, int TrangThaiXoa, System.Guid rowguid) {
-                frmCreateLogin_Get_Employee_Not_Have_LoginRow rowfrmCreateLogin_Get_Employee_Not_Have_LoginRow = ((frmCreateLogin_Get_Employee_Not_Have_LoginRow)(this.NewRow()));
+            public frmCreateLogin_GetEmployeeNotHaveLoginRow AddfrmCreateLogin_GetEmployeeNotHaveLoginRow(string MANV, string HO, string TEN, string DIACHI, string PHAI, string SODT, string MACN, int TrangThaiXoa) {
+                frmCreateLogin_GetEmployeeNotHaveLoginRow rowfrmCreateLogin_GetEmployeeNotHaveLoginRow = ((frmCreateLogin_GetEmployeeNotHaveLoginRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MANV,
                         HO,
@@ -2807,24 +2797,23 @@ namespace NganHang {
                         PHAI,
                         SODT,
                         MACN,
-                        TrangThaiXoa,
-                        rowguid};
-                rowfrmCreateLogin_Get_Employee_Not_Have_LoginRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowfrmCreateLogin_Get_Employee_Not_Have_LoginRow);
-                return rowfrmCreateLogin_Get_Employee_Not_Have_LoginRow;
+                        TrangThaiXoa};
+                rowfrmCreateLogin_GetEmployeeNotHaveLoginRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowfrmCreateLogin_GetEmployeeNotHaveLoginRow);
+                return rowfrmCreateLogin_GetEmployeeNotHaveLoginRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Employee_Not_Have_LoginRow FindByMANV(string MANV) {
-                return ((frmCreateLogin_Get_Employee_Not_Have_LoginRow)(this.Rows.Find(new object[] {
+            public frmCreateLogin_GetEmployeeNotHaveLoginRow FindByMANV(string MANV) {
+                return ((frmCreateLogin_GetEmployeeNotHaveLoginRow)(this.Rows.Find(new object[] {
                             MANV})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                frmCreateLogin_Get_Employee_Not_Have_LoginDataTable cln = ((frmCreateLogin_Get_Employee_Not_Have_LoginDataTable)(base.Clone()));
+                frmCreateLogin_GetEmployeeNotHaveLoginDataTable cln = ((frmCreateLogin_GetEmployeeNotHaveLoginDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2832,7 +2821,7 @@ namespace NganHang {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new frmCreateLogin_Get_Employee_Not_Have_LoginDataTable();
+                return new frmCreateLogin_GetEmployeeNotHaveLoginDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2846,7 +2835,6 @@ namespace NganHang {
                 this.columnSODT = base.Columns["SODT"];
                 this.columnMACN = base.Columns["MACN"];
                 this.columnTrangThaiXoa = base.Columns["TrangThaiXoa"];
-                this.columnrowguid = base.Columns["rowguid"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2868,8 +2856,6 @@ namespace NganHang {
                 base.Columns.Add(this.columnMACN);
                 this.columnTrangThaiXoa = new global::System.Data.DataColumn("TrangThaiXoa", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTrangThaiXoa);
-                this.columnrowguid = new global::System.Data.DataColumn("rowguid", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrowguid);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMANV}, true));
                 this.columnMANV.AllowDBNull = false;
@@ -2884,33 +2870,32 @@ namespace NganHang {
                 this.columnSODT.AllowDBNull = false;
                 this.columnSODT.MaxLength = 15;
                 this.columnMACN.MaxLength = 10;
-                this.columnrowguid.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Employee_Not_Have_LoginRow NewfrmCreateLogin_Get_Employee_Not_Have_LoginRow() {
-                return ((frmCreateLogin_Get_Employee_Not_Have_LoginRow)(this.NewRow()));
+            public frmCreateLogin_GetEmployeeNotHaveLoginRow NewfrmCreateLogin_GetEmployeeNotHaveLoginRow() {
+                return ((frmCreateLogin_GetEmployeeNotHaveLoginRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new frmCreateLogin_Get_Employee_Not_Have_LoginRow(builder);
+                return new frmCreateLogin_GetEmployeeNotHaveLoginRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(frmCreateLogin_Get_Employee_Not_Have_LoginRow);
+                return typeof(frmCreateLogin_GetEmployeeNotHaveLoginRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.frmCreateLogin_Get_Employee_Not_Have_LoginRowChanged != null)) {
-                    this.frmCreateLogin_Get_Employee_Not_Have_LoginRowChanged(this, new frmCreateLogin_Get_Employee_Not_Have_LoginRowChangeEvent(((frmCreateLogin_Get_Employee_Not_Have_LoginRow)(e.Row)), e.Action));
+                if ((this.frmCreateLogin_GetEmployeeNotHaveLoginRowChanged != null)) {
+                    this.frmCreateLogin_GetEmployeeNotHaveLoginRowChanged(this, new frmCreateLogin_GetEmployeeNotHaveLoginRowChangeEvent(((frmCreateLogin_GetEmployeeNotHaveLoginRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2918,8 +2903,8 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.frmCreateLogin_Get_Employee_Not_Have_LoginRowChanging != null)) {
-                    this.frmCreateLogin_Get_Employee_Not_Have_LoginRowChanging(this, new frmCreateLogin_Get_Employee_Not_Have_LoginRowChangeEvent(((frmCreateLogin_Get_Employee_Not_Have_LoginRow)(e.Row)), e.Action));
+                if ((this.frmCreateLogin_GetEmployeeNotHaveLoginRowChanging != null)) {
+                    this.frmCreateLogin_GetEmployeeNotHaveLoginRowChanging(this, new frmCreateLogin_GetEmployeeNotHaveLoginRowChangeEvent(((frmCreateLogin_GetEmployeeNotHaveLoginRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2927,8 +2912,8 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.frmCreateLogin_Get_Employee_Not_Have_LoginRowDeleted != null)) {
-                    this.frmCreateLogin_Get_Employee_Not_Have_LoginRowDeleted(this, new frmCreateLogin_Get_Employee_Not_Have_LoginRowChangeEvent(((frmCreateLogin_Get_Employee_Not_Have_LoginRow)(e.Row)), e.Action));
+                if ((this.frmCreateLogin_GetEmployeeNotHaveLoginRowDeleted != null)) {
+                    this.frmCreateLogin_GetEmployeeNotHaveLoginRowDeleted(this, new frmCreateLogin_GetEmployeeNotHaveLoginRowChangeEvent(((frmCreateLogin_GetEmployeeNotHaveLoginRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2936,14 +2921,14 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.frmCreateLogin_Get_Employee_Not_Have_LoginRowDeleting != null)) {
-                    this.frmCreateLogin_Get_Employee_Not_Have_LoginRowDeleting(this, new frmCreateLogin_Get_Employee_Not_Have_LoginRowChangeEvent(((frmCreateLogin_Get_Employee_Not_Have_LoginRow)(e.Row)), e.Action));
+                if ((this.frmCreateLogin_GetEmployeeNotHaveLoginRowDeleting != null)) {
+                    this.frmCreateLogin_GetEmployeeNotHaveLoginRowDeleting(this, new frmCreateLogin_GetEmployeeNotHaveLoginRowChangeEvent(((frmCreateLogin_GetEmployeeNotHaveLoginRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovefrmCreateLogin_Get_Employee_Not_Have_LoginRow(frmCreateLogin_Get_Employee_Not_Have_LoginRow row) {
+            public void RemovefrmCreateLogin_GetEmployeeNotHaveLoginRow(frmCreateLogin_GetEmployeeNotHaveLoginRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2970,7 +2955,7 @@ namespace NganHang {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "frmCreateLogin_Get_Employee_Not_Have_LoginDataTable";
+                attribute2.FixedValue = "frmCreateLogin_GetEmployeeNotHaveLoginDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3016,7 +3001,7 @@ namespace NganHang {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class frmCreateLogin_Get_Logins_Of_BranchDataTable : global::System.Data.TypedTableBase<frmCreateLogin_Get_Logins_Of_BranchRow> {
+        public partial class frmCreateLogin_GetLoginsOfBranchDataTable : global::System.Data.TypedTableBase<frmCreateLogin_GetLoginsOfBranchRow> {
             
             private global::System.Data.DataColumn columnTENLOGIN;
             
@@ -3028,8 +3013,8 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Logins_Of_BranchDataTable() {
-                this.TableName = "frmCreateLogin_Get Logins Of Branch";
+            public frmCreateLogin_GetLoginsOfBranchDataTable() {
+                this.TableName = "frmCreateLogin_GetLoginsOfBranch";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3037,7 +3022,7 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal frmCreateLogin_Get_Logins_Of_BranchDataTable(global::System.Data.DataTable table) {
+            internal frmCreateLogin_GetLoginsOfBranchDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -3054,7 +3039,7 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected frmCreateLogin_Get_Logins_Of_BranchDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected frmCreateLogin_GetLoginsOfBranchDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -3102,48 +3087,48 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Logins_Of_BranchRow this[int index] {
+            public frmCreateLogin_GetLoginsOfBranchRow this[int index] {
                 get {
-                    return ((frmCreateLogin_Get_Logins_Of_BranchRow)(this.Rows[index]));
+                    return ((frmCreateLogin_GetLoginsOfBranchRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event frmCreateLogin_Get_Logins_Of_BranchRowChangeEventHandler frmCreateLogin_Get_Logins_Of_BranchRowChanging;
+            public event frmCreateLogin_GetLoginsOfBranchRowChangeEventHandler frmCreateLogin_GetLoginsOfBranchRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event frmCreateLogin_Get_Logins_Of_BranchRowChangeEventHandler frmCreateLogin_Get_Logins_Of_BranchRowChanged;
+            public event frmCreateLogin_GetLoginsOfBranchRowChangeEventHandler frmCreateLogin_GetLoginsOfBranchRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event frmCreateLogin_Get_Logins_Of_BranchRowChangeEventHandler frmCreateLogin_Get_Logins_Of_BranchRowDeleting;
+            public event frmCreateLogin_GetLoginsOfBranchRowChangeEventHandler frmCreateLogin_GetLoginsOfBranchRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event frmCreateLogin_Get_Logins_Of_BranchRowChangeEventHandler frmCreateLogin_Get_Logins_Of_BranchRowDeleted;
+            public event frmCreateLogin_GetLoginsOfBranchRowChangeEventHandler frmCreateLogin_GetLoginsOfBranchRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddfrmCreateLogin_Get_Logins_Of_BranchRow(frmCreateLogin_Get_Logins_Of_BranchRow row) {
+            public void AddfrmCreateLogin_GetLoginsOfBranchRow(frmCreateLogin_GetLoginsOfBranchRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Logins_Of_BranchRow AddfrmCreateLogin_Get_Logins_Of_BranchRow(string TENLOGIN, string MANV, string HOTEN, string ROLE) {
-                frmCreateLogin_Get_Logins_Of_BranchRow rowfrmCreateLogin_Get_Logins_Of_BranchRow = ((frmCreateLogin_Get_Logins_Of_BranchRow)(this.NewRow()));
+            public frmCreateLogin_GetLoginsOfBranchRow AddfrmCreateLogin_GetLoginsOfBranchRow(string TENLOGIN, string MANV, string HOTEN, string ROLE) {
+                frmCreateLogin_GetLoginsOfBranchRow rowfrmCreateLogin_GetLoginsOfBranchRow = ((frmCreateLogin_GetLoginsOfBranchRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TENLOGIN,
                         MANV,
                         HOTEN,
                         ROLE};
-                rowfrmCreateLogin_Get_Logins_Of_BranchRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowfrmCreateLogin_Get_Logins_Of_BranchRow);
-                return rowfrmCreateLogin_Get_Logins_Of_BranchRow;
+                rowfrmCreateLogin_GetLoginsOfBranchRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowfrmCreateLogin_GetLoginsOfBranchRow);
+                return rowfrmCreateLogin_GetLoginsOfBranchRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                frmCreateLogin_Get_Logins_Of_BranchDataTable cln = ((frmCreateLogin_Get_Logins_Of_BranchDataTable)(base.Clone()));
+                frmCreateLogin_GetLoginsOfBranchDataTable cln = ((frmCreateLogin_GetLoginsOfBranchDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3151,7 +3136,7 @@ namespace NganHang {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new frmCreateLogin_Get_Logins_Of_BranchDataTable();
+                return new frmCreateLogin_GetLoginsOfBranchDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3184,28 +3169,28 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Logins_Of_BranchRow NewfrmCreateLogin_Get_Logins_Of_BranchRow() {
-                return ((frmCreateLogin_Get_Logins_Of_BranchRow)(this.NewRow()));
+            public frmCreateLogin_GetLoginsOfBranchRow NewfrmCreateLogin_GetLoginsOfBranchRow() {
+                return ((frmCreateLogin_GetLoginsOfBranchRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new frmCreateLogin_Get_Logins_Of_BranchRow(builder);
+                return new frmCreateLogin_GetLoginsOfBranchRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(frmCreateLogin_Get_Logins_Of_BranchRow);
+                return typeof(frmCreateLogin_GetLoginsOfBranchRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.frmCreateLogin_Get_Logins_Of_BranchRowChanged != null)) {
-                    this.frmCreateLogin_Get_Logins_Of_BranchRowChanged(this, new frmCreateLogin_Get_Logins_Of_BranchRowChangeEvent(((frmCreateLogin_Get_Logins_Of_BranchRow)(e.Row)), e.Action));
+                if ((this.frmCreateLogin_GetLoginsOfBranchRowChanged != null)) {
+                    this.frmCreateLogin_GetLoginsOfBranchRowChanged(this, new frmCreateLogin_GetLoginsOfBranchRowChangeEvent(((frmCreateLogin_GetLoginsOfBranchRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3213,8 +3198,8 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.frmCreateLogin_Get_Logins_Of_BranchRowChanging != null)) {
-                    this.frmCreateLogin_Get_Logins_Of_BranchRowChanging(this, new frmCreateLogin_Get_Logins_Of_BranchRowChangeEvent(((frmCreateLogin_Get_Logins_Of_BranchRow)(e.Row)), e.Action));
+                if ((this.frmCreateLogin_GetLoginsOfBranchRowChanging != null)) {
+                    this.frmCreateLogin_GetLoginsOfBranchRowChanging(this, new frmCreateLogin_GetLoginsOfBranchRowChangeEvent(((frmCreateLogin_GetLoginsOfBranchRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3222,8 +3207,8 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.frmCreateLogin_Get_Logins_Of_BranchRowDeleted != null)) {
-                    this.frmCreateLogin_Get_Logins_Of_BranchRowDeleted(this, new frmCreateLogin_Get_Logins_Of_BranchRowChangeEvent(((frmCreateLogin_Get_Logins_Of_BranchRow)(e.Row)), e.Action));
+                if ((this.frmCreateLogin_GetLoginsOfBranchRowDeleted != null)) {
+                    this.frmCreateLogin_GetLoginsOfBranchRowDeleted(this, new frmCreateLogin_GetLoginsOfBranchRowChangeEvent(((frmCreateLogin_GetLoginsOfBranchRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3231,14 +3216,14 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.frmCreateLogin_Get_Logins_Of_BranchRowDeleting != null)) {
-                    this.frmCreateLogin_Get_Logins_Of_BranchRowDeleting(this, new frmCreateLogin_Get_Logins_Of_BranchRowChangeEvent(((frmCreateLogin_Get_Logins_Of_BranchRow)(e.Row)), e.Action));
+                if ((this.frmCreateLogin_GetLoginsOfBranchRowDeleting != null)) {
+                    this.frmCreateLogin_GetLoginsOfBranchRowDeleting(this, new frmCreateLogin_GetLoginsOfBranchRowChangeEvent(((frmCreateLogin_GetLoginsOfBranchRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovefrmCreateLogin_Get_Logins_Of_BranchRow(frmCreateLogin_Get_Logins_Of_BranchRow row) {
+            public void RemovefrmCreateLogin_GetLoginsOfBranchRow(frmCreateLogin_GetLoginsOfBranchRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3265,7 +3250,7 @@ namespace NganHang {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "frmCreateLogin_Get_Logins_Of_BranchDataTable";
+                attribute2.FixedValue = "frmCreateLogin_GetLoginsOfBranchDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4069,25 +4054,25 @@ namespace NganHang {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class frmCreateLogin_Get_Employee_Not_Have_LoginRow : global::System.Data.DataRow {
+        public partial class frmCreateLogin_GetEmployeeNotHaveLoginRow : global::System.Data.DataRow {
             
-            private frmCreateLogin_Get_Employee_Not_Have_LoginDataTable tablefrmCreateLogin_Get_Employee_Not_Have_Login;
+            private frmCreateLogin_GetEmployeeNotHaveLoginDataTable tablefrmCreateLogin_GetEmployeeNotHaveLogin;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal frmCreateLogin_Get_Employee_Not_Have_LoginRow(global::System.Data.DataRowBuilder rb) : 
+            internal frmCreateLogin_GetEmployeeNotHaveLoginRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablefrmCreateLogin_Get_Employee_Not_Have_Login = ((frmCreateLogin_Get_Employee_Not_Have_LoginDataTable)(this.Table));
+                this.tablefrmCreateLogin_GetEmployeeNotHaveLogin = ((frmCreateLogin_GetEmployeeNotHaveLoginDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string MANV {
                 get {
-                    return ((string)(this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.MANVColumn]));
+                    return ((string)(this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.MANVColumn]));
                 }
                 set {
-                    this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.MANVColumn] = value;
+                    this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.MANVColumn] = value;
                 }
             }
             
@@ -4095,10 +4080,10 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string HO {
                 get {
-                    return ((string)(this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.HOColumn]));
+                    return ((string)(this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.HOColumn]));
                 }
                 set {
-                    this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.HOColumn] = value;
+                    this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.HOColumn] = value;
                 }
             }
             
@@ -4106,10 +4091,10 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string TEN {
                 get {
-                    return ((string)(this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.TENColumn]));
+                    return ((string)(this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.TENColumn]));
                 }
                 set {
-                    this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.TENColumn] = value;
+                    this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.TENColumn] = value;
                 }
             }
             
@@ -4118,15 +4103,15 @@ namespace NganHang {
             public string DIACHI {
                 get {
                     try {
-                        return ((string)(this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.DIACHIColumn]));
+                        return ((string)(this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.DIACHIColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DIACHI\' in table \'frmCreateLogin_Get Employee Not Have Logi" +
-                                "n\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DIACHI\' in table \'frmCreateLogin_GetEmployeeNotHaveLogin\' i" +
+                                "s DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.DIACHIColumn] = value;
+                    this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.DIACHIColumn] = value;
                 }
             }
             
@@ -4135,15 +4120,15 @@ namespace NganHang {
             public string PHAI {
                 get {
                     try {
-                        return ((string)(this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.PHAIColumn]));
+                        return ((string)(this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.PHAIColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PHAI\' in table \'frmCreateLogin_Get Employee Not Have Login\'" +
-                                " is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PHAI\' in table \'frmCreateLogin_GetEmployeeNotHaveLogin\' is " +
+                                "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.PHAIColumn] = value;
+                    this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.PHAIColumn] = value;
                 }
             }
             
@@ -4151,10 +4136,10 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string SODT {
                 get {
-                    return ((string)(this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.SODTColumn]));
+                    return ((string)(this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.SODTColumn]));
                 }
                 set {
-                    this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.SODTColumn] = value;
+                    this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.SODTColumn] = value;
                 }
             }
             
@@ -4163,15 +4148,15 @@ namespace NganHang {
             public string MACN {
                 get {
                     try {
-                        return ((string)(this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.MACNColumn]));
+                        return ((string)(this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.MACNColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MACN\' in table \'frmCreateLogin_Get Employee Not Have Login\'" +
-                                " is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'MACN\' in table \'frmCreateLogin_GetEmployeeNotHaveLogin\' is " +
+                                "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.MACNColumn] = value;
+                    this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.MACNColumn] = value;
                 }
             }
             
@@ -4180,100 +4165,89 @@ namespace NganHang {
             public int TrangThaiXoa {
                 get {
                     try {
-                        return ((int)(this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.TrangThaiXoaColumn]));
+                        return ((int)(this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.TrangThaiXoaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TrangThaiXoa\' in table \'frmCreateLogin_Get Employee Not Hav" +
-                                "e Login\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TrangThaiXoa\' in table \'frmCreateLogin_GetEmployeeNotHaveLo" +
+                                "gin\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.TrangThaiXoaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.Guid rowguid {
-                get {
-                    return ((global::System.Guid)(this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.rowguidColumn]));
-                }
-                set {
-                    this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.rowguidColumn] = value;
+                    this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.TrangThaiXoaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDIACHINull() {
-                return this.IsNull(this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.DIACHIColumn);
+                return this.IsNull(this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.DIACHIColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDIACHINull() {
-                this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.DIACHIColumn] = global::System.Convert.DBNull;
+                this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.DIACHIColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPHAINull() {
-                return this.IsNull(this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.PHAIColumn);
+                return this.IsNull(this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.PHAIColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPHAINull() {
-                this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.PHAIColumn] = global::System.Convert.DBNull;
+                this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.PHAIColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMACNNull() {
-                return this.IsNull(this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.MACNColumn);
+                return this.IsNull(this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.MACNColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMACNNull() {
-                this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.MACNColumn] = global::System.Convert.DBNull;
+                this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.MACNColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTrangThaiXoaNull() {
-                return this.IsNull(this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.TrangThaiXoaColumn);
+                return this.IsNull(this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.TrangThaiXoaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTrangThaiXoaNull() {
-                this[this.tablefrmCreateLogin_Get_Employee_Not_Have_Login.TrangThaiXoaColumn] = global::System.Convert.DBNull;
+                this[this.tablefrmCreateLogin_GetEmployeeNotHaveLogin.TrangThaiXoaColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class frmCreateLogin_Get_Logins_Of_BranchRow : global::System.Data.DataRow {
+        public partial class frmCreateLogin_GetLoginsOfBranchRow : global::System.Data.DataRow {
             
-            private frmCreateLogin_Get_Logins_Of_BranchDataTable tablefrmCreateLogin_Get_Logins_Of_Branch;
+            private frmCreateLogin_GetLoginsOfBranchDataTable tablefrmCreateLogin_GetLoginsOfBranch;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal frmCreateLogin_Get_Logins_Of_BranchRow(global::System.Data.DataRowBuilder rb) : 
+            internal frmCreateLogin_GetLoginsOfBranchRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablefrmCreateLogin_Get_Logins_Of_Branch = ((frmCreateLogin_Get_Logins_Of_BranchDataTable)(this.Table));
+                this.tablefrmCreateLogin_GetLoginsOfBranch = ((frmCreateLogin_GetLoginsOfBranchDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string TENLOGIN {
                 get {
-                    return ((string)(this[this.tablefrmCreateLogin_Get_Logins_Of_Branch.TENLOGINColumn]));
+                    return ((string)(this[this.tablefrmCreateLogin_GetLoginsOfBranch.TENLOGINColumn]));
                 }
                 set {
-                    this[this.tablefrmCreateLogin_Get_Logins_Of_Branch.TENLOGINColumn] = value;
+                    this[this.tablefrmCreateLogin_GetLoginsOfBranch.TENLOGINColumn] = value;
                 }
             }
             
@@ -4282,15 +4256,15 @@ namespace NganHang {
             public string MANV {
                 get {
                     try {
-                        return ((string)(this[this.tablefrmCreateLogin_Get_Logins_Of_Branch.MANVColumn]));
+                        return ((string)(this[this.tablefrmCreateLogin_GetLoginsOfBranch.MANVColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MANV\' in table \'frmCreateLogin_Get Logins Of Branch\' is DBN" +
-                                "ull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'MANV\' in table \'frmCreateLogin_GetLoginsOfBranch\' is DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tablefrmCreateLogin_Get_Logins_Of_Branch.MANVColumn] = value;
+                    this[this.tablefrmCreateLogin_GetLoginsOfBranch.MANVColumn] = value;
                 }
             }
             
@@ -4299,15 +4273,15 @@ namespace NganHang {
             public string HOTEN {
                 get {
                     try {
-                        return ((string)(this[this.tablefrmCreateLogin_Get_Logins_Of_Branch.HOTENColumn]));
+                        return ((string)(this[this.tablefrmCreateLogin_GetLoginsOfBranch.HOTENColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'HOTEN\' in table \'frmCreateLogin_Get Logins Of Branch\' is DB" +
-                                "Null.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'HOTEN\' in table \'frmCreateLogin_GetLoginsOfBranch\' is DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tablefrmCreateLogin_Get_Logins_Of_Branch.HOTENColumn] = value;
+                    this[this.tablefrmCreateLogin_GetLoginsOfBranch.HOTENColumn] = value;
                 }
             }
             
@@ -4316,52 +4290,52 @@ namespace NganHang {
             public string ROLE {
                 get {
                     try {
-                        return ((string)(this[this.tablefrmCreateLogin_Get_Logins_Of_Branch.ROLEColumn]));
+                        return ((string)(this[this.tablefrmCreateLogin_GetLoginsOfBranch.ROLEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ROLE\' in table \'frmCreateLogin_Get Logins Of Branch\' is DBN" +
-                                "ull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ROLE\' in table \'frmCreateLogin_GetLoginsOfBranch\' is DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tablefrmCreateLogin_Get_Logins_Of_Branch.ROLEColumn] = value;
+                    this[this.tablefrmCreateLogin_GetLoginsOfBranch.ROLEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMANVNull() {
-                return this.IsNull(this.tablefrmCreateLogin_Get_Logins_Of_Branch.MANVColumn);
+                return this.IsNull(this.tablefrmCreateLogin_GetLoginsOfBranch.MANVColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMANVNull() {
-                this[this.tablefrmCreateLogin_Get_Logins_Of_Branch.MANVColumn] = global::System.Convert.DBNull;
+                this[this.tablefrmCreateLogin_GetLoginsOfBranch.MANVColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsHOTENNull() {
-                return this.IsNull(this.tablefrmCreateLogin_Get_Logins_Of_Branch.HOTENColumn);
+                return this.IsNull(this.tablefrmCreateLogin_GetLoginsOfBranch.HOTENColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetHOTENNull() {
-                this[this.tablefrmCreateLogin_Get_Logins_Of_Branch.HOTENColumn] = global::System.Convert.DBNull;
+                this[this.tablefrmCreateLogin_GetLoginsOfBranch.HOTENColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsROLENull() {
-                return this.IsNull(this.tablefrmCreateLogin_Get_Logins_Of_Branch.ROLEColumn);
+                return this.IsNull(this.tablefrmCreateLogin_GetLoginsOfBranch.ROLEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetROLENull() {
-                this[this.tablefrmCreateLogin_Get_Logins_Of_Branch.ROLEColumn] = global::System.Convert.DBNull;
+                this[this.tablefrmCreateLogin_GetLoginsOfBranch.ROLEColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4573,22 +4547,22 @@ namespace NganHang {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class frmCreateLogin_Get_Employee_Not_Have_LoginRowChangeEvent : global::System.EventArgs {
+        public class frmCreateLogin_GetEmployeeNotHaveLoginRowChangeEvent : global::System.EventArgs {
             
-            private frmCreateLogin_Get_Employee_Not_Have_LoginRow eventRow;
+            private frmCreateLogin_GetEmployeeNotHaveLoginRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Employee_Not_Have_LoginRowChangeEvent(frmCreateLogin_Get_Employee_Not_Have_LoginRow row, global::System.Data.DataRowAction action) {
+            public frmCreateLogin_GetEmployeeNotHaveLoginRowChangeEvent(frmCreateLogin_GetEmployeeNotHaveLoginRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Employee_Not_Have_LoginRow Row {
+            public frmCreateLogin_GetEmployeeNotHaveLoginRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4607,22 +4581,22 @@ namespace NganHang {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class frmCreateLogin_Get_Logins_Of_BranchRowChangeEvent : global::System.EventArgs {
+        public class frmCreateLogin_GetLoginsOfBranchRowChangeEvent : global::System.EventArgs {
             
-            private frmCreateLogin_Get_Logins_Of_BranchRow eventRow;
+            private frmCreateLogin_GetLoginsOfBranchRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Logins_Of_BranchRowChangeEvent(frmCreateLogin_Get_Logins_Of_BranchRow row, global::System.Data.DataRowAction action) {
+            public frmCreateLogin_GetLoginsOfBranchRowChangeEvent(frmCreateLogin_GetLoginsOfBranchRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public frmCreateLogin_Get_Logins_Of_BranchRow Row {
+            public frmCreateLogin_GetLoginsOfBranchRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7104,7 +7078,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter : global::System.ComponentModel.Component {
+    public partial class frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -7118,7 +7092,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter() {
+        public frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -7215,7 +7189,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "frmCreateLogin_Get Employee Not Have Login";
+            tableMapping.DataSetTable = "frmCreateLogin_GetEmployeeNotHaveLogin";
             tableMapping.ColumnMappings.Add("MANV", "MANV");
             tableMapping.ColumnMappings.Add("HO", "HO");
             tableMapping.ColumnMappings.Add("TEN", "TEN");
@@ -7224,7 +7198,6 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
             tableMapping.ColumnMappings.Add("SODT", "SODT");
             tableMapping.ColumnMappings.Add("MACN", "MACN");
             tableMapping.ColumnMappings.Add("TrangThaiXoa", "TrangThaiXoa");
-            tableMapping.ColumnMappings.Add("rowguid", "rowguid");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -7241,7 +7214,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.[frmCreateLogin_Get Employee Not Have Login]";
+            this._commandCollection[0].CommandText = "dbo.frmCreateLogin_GetEmployeeNotHaveLogin";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -7250,7 +7223,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DS.frmCreateLogin_Get_Employee_Not_Have_LoginDataTable dataTable) {
+        public virtual int Fill(DS.frmCreateLogin_GetEmployeeNotHaveLoginDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7263,9 +7236,9 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DS.frmCreateLogin_Get_Employee_Not_Have_LoginDataTable GetData() {
+        public virtual DS.frmCreateLogin_GetEmployeeNotHaveLoginDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DS.frmCreateLogin_Get_Employee_Not_Have_LoginDataTable dataTable = new DS.frmCreateLogin_Get_Employee_Not_Have_LoginDataTable();
+            DS.frmCreateLogin_GetEmployeeNotHaveLoginDataTable dataTable = new DS.frmCreateLogin_GetEmployeeNotHaveLoginDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7280,7 +7253,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class frmCreateLogin_Get_Logins_Of_BranchTableAdapter : global::System.ComponentModel.Component {
+    public partial class frmCreateLogin_GetLoginsOfBranchTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -7294,7 +7267,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public frmCreateLogin_Get_Logins_Of_BranchTableAdapter() {
+        public frmCreateLogin_GetLoginsOfBranchTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -7391,7 +7364,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "frmCreateLogin_Get Logins Of Branch";
+            tableMapping.DataSetTable = "frmCreateLogin_GetLoginsOfBranch";
             tableMapping.ColumnMappings.Add("TENLOGIN", "TENLOGIN");
             tableMapping.ColumnMappings.Add("MANV", "MANV");
             tableMapping.ColumnMappings.Add("HOTEN", "HOTEN");
@@ -7412,7 +7385,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.[frmCreateLogin_Get Logins Of Branch]";
+            this._commandCollection[0].CommandText = "dbo.frmCreateLogin_GetLoginsOfBranch";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ROLE", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7422,7 +7395,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DS.frmCreateLogin_Get_Logins_Of_BranchDataTable dataTable, string ROLE) {
+        public virtual int Fill(DS.frmCreateLogin_GetLoginsOfBranchDataTable dataTable, string ROLE) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((ROLE == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -7441,7 +7414,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DS.frmCreateLogin_Get_Logins_Of_BranchDataTable GetData(string ROLE) {
+        public virtual DS.frmCreateLogin_GetLoginsOfBranchDataTable GetData(string ROLE) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((ROLE == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -7449,7 +7422,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(ROLE));
             }
-            DS.frmCreateLogin_Get_Logins_Of_BranchDataTable dataTable = new DS.frmCreateLogin_Get_Logins_Of_BranchDataTable();
+            DS.frmCreateLogin_GetLoginsOfBranchDataTable dataTable = new DS.frmCreateLogin_GetLoginsOfBranchDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

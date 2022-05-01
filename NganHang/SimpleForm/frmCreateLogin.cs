@@ -24,12 +24,12 @@ namespace NganHang.SimpleForm
             if (bdsNV_X_LOGIN.Count > 0)
             {
                 txtTrangThai.EditValue = "Chọn nhân viên để tạo tài khoản đăng nhập hệ thống!!";
-                panInput.Enabled = gcNV_X_LOGIN.Enabled = true;
+                panInput.Enabled = gc_LGINFO1.Enabled = true;
             }
             else
             {
                 txtTrangThai.EditValue = "Hiện tất cả nhân viên trong chi nhánh đã có tài khoản đăng nhập!!";
-                panInput.Enabled = gcNV_X_LOGIN.Enabled = false;
+                panInput.Enabled = gc_LGINFO1.Enabled = false;
             }
             txtLoginName.Clear();
             txtPass.Clear();
@@ -38,17 +38,18 @@ namespace NganHang.SimpleForm
         {
             DS.EnforceConstraints = false;
             {
-                this.frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter.Fill(this.DS.frmCreateLogin_Get_Employee_Not_Have_Login);
-                this.frmCreateLogin_Get_Logins_Of_BranchTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.frmCreateLogin_Get_Logins_Of_BranchTableAdapter.Fill(this.DS.frmCreateLogin_Get_Logins_Of_Branch, Program.mGroup);
+                this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Fill(this.DS.frmCreateLogin_GetEmployeeNotHaveLogin);
+                this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
                 macn = ((DataRowView)bdsNV_X_LOGIN[0])["MACN"].ToString(); //**VẪN CÒN TIỀM ẨN LỖI CHƯA FIX**
                 cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
                 cmbChiNhanh.DisplayMember = "TENCN";
                 cmbChiNhanh.ValueMember = "TENSERVER";
                 cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
-                gcNV_X_LOGIN.Enabled = true;
+                gc_LGINFO1.Enabled = true;
                 groupBox1.Enabled = false;
+                btnCreateAccount.Enabled = cmsXOA.Enabled = false;
                 if (Program.mGroup == "NganHang")
                 {
                     cmbChiNhanh.Enabled = true;
@@ -59,6 +60,7 @@ namespace NganHang.SimpleForm
                 }
                 else
                 {
+                    btnCreateAccount.Enabled = cmsXOA.Enabled = true;
                     memoLuuY.EditValue += "Tài khoản có thể: \r\n";
                     memoLuuY.EditValue += "- Toàn quyền cập nhật dữ liệu trên chi nhánh thuộc về\r\n";
                     memoLuuY.EditValue += "- Tra cứu dữ liệu trên chi nhánh thuộc về\r\n";
@@ -88,10 +90,10 @@ namespace NganHang.SimpleForm
             else
             {
                 DS.EnforceConstraints = false;
-                this.frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter.Fill(this.DS.frmCreateLogin_Get_Employee_Not_Have_Login);
-                this.frmCreateLogin_Get_Logins_Of_BranchTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.frmCreateLogin_Get_Logins_Of_BranchTableAdapter.Fill(this.DS.frmCreateLogin_Get_Logins_Of_Branch, Program.mGroup);
+                this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Fill(this.DS.frmCreateLogin_GetEmployeeNotHaveLogin);
+                this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
             }
         }
         private bool CHECK_LOGIN_TRUNG(string txtLoginName)
@@ -125,9 +127,9 @@ namespace NganHang.SimpleForm
             MessageBox.Show(cmd, "", MessageBoxButtons.OK);
             Program.ExecSqlNonQuery(cmd);
 
-            gcNV_X_LOGIN.Enabled =gc_LGINFO1.Enabled = true;
-            this.frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter.Fill(this.DS.frmCreateLogin_Get_Employee_Not_Have_Login);
-            this.frmCreateLogin_Get_Logins_Of_BranchTableAdapter.Fill(this.DS.frmCreateLogin_Get_Logins_Of_Branch, Program.mGroup);
+            gc_LGINFO1.Enabled =gc_LGINFO1.Enabled = true;
+            this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Fill(this.DS.frmCreateLogin_GetEmployeeNotHaveLogin);
+            this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
             groupBox1.Enabled = false;
         }
         private void cmsXOA_Click(object sender, EventArgs e)
@@ -145,17 +147,17 @@ namespace NganHang.SimpleForm
                 string command = "EXEC frmCreateLogin_DeleteLoginForEmployee '" + LG_NAME + "','" + MANV + "'";
                 Program.ExecSqlNonQuery(command);
             }
-            gcNV_X_LOGIN.Enabled = true;
-            gcNV_X_LOGIN.Enabled = groupBox1.Enabled = gc_LGINFO1.Enabled = true;
-            this.frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter.Fill(this.DS.frmCreateLogin_Get_Employee_Not_Have_Login);
-            this.frmCreateLogin_Get_Logins_Of_BranchTableAdapter.Fill(this.DS.frmCreateLogin_Get_Logins_Of_Branch, Program.mGroup);
+            gc_LGINFO1.Enabled = true;
+            gc_LGINFO1.Enabled = groupBox1.Enabled = gc_LGINFO1.Enabled = true;
+            this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Fill(this.DS.frmCreateLogin_GetEmployeeNotHaveLogin);
+            this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
         }
 
         private void cmsTAILAI_Click(object sender, EventArgs e)
         {
             try
             {
-                this.frmCreateLogin_Get_Logins_Of_BranchTableAdapter.Fill(this.DS.frmCreateLogin_Get_Logins_Of_Branch, Program.mGroup);
+                this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
             }
             catch (Exception ex)
             {
@@ -168,7 +170,7 @@ namespace NganHang.SimpleForm
         {
             try
             {
-                this.frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter.Fill(this.DS.frmCreateLogin_Get_Employee_Not_Have_Login);
+                this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Fill(this.DS.frmCreateLogin_GetEmployeeNotHaveLogin);
             }
             catch (Exception ex)
             {
@@ -188,14 +190,14 @@ namespace NganHang.SimpleForm
             vitri = bdsNV_X_LOGIN.Position;
             txtTrangThai.EditValue = "Mã nhân viên được chọn để tạo login: '" + MANV+" '";
             groupBox1.Enabled = true;
-            gcNV_X_LOGIN.Enabled = gc_LGINFO1.Enabled = false;
+            gc_LGINFO1.Enabled = gc_LGINFO1.Enabled = false;
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bdsNV_X_LOGIN.CancelEdit();
             bds_LGINFO.CancelEdit();
-            gcNV_X_LOGIN.Enabled = gc_LGINFO1.Enabled = true;
+            gc_LGINFO1.Enabled = gc_LGINFO1.Enabled = true;
             bdsNV_X_LOGIN.Position = vitri;
             txtTrangThai.EditValue = "Chọn nhân viên để tạo tài khoản đăng nhập hệ thống!!";
         }
@@ -215,17 +217,21 @@ namespace NganHang.SimpleForm
 
         }
 
-        private void fillToolStripButton1_Click(object sender, EventArgs e)
+        private void fillToolStripButton_Click(object sender, EventArgs e)
         {
             try
             {
-                this.frmCreateLogin_Get_Logins_Of_BranchTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.frmCreateLogin_Get_Logins_Of_BranchTableAdapter.Fill(this.DS.frmCreateLogin_Get_Logins_Of_Branch, Program.mGroup);
+                this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void panInput_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

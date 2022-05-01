@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateLogin));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,7 +38,21 @@
             this.txtTrangThai = new DevExpress.XtraEditors.TextEdit();
             this.DS = new NganHang.DS();
             this.panInput = new DevExpress.XtraEditors.PanelControl();
+            this.label3 = new System.Windows.Forms.Label();
+            this.memoLuuY = new DevExpress.XtraEditors.MemoEdit();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtLoginName = new System.Windows.Forms.TextBox();
+            this.nPass = new System.Windows.Forms.Label();
+            this.btnCreateLogin = new System.Windows.Forms.Button();
+            this.nName = new System.Windows.Forms.Label();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.gc_LGINFO1 = new DevExpress.XtraGrid.GridControl();
             this.bds_LGINFO = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colTENLOGIN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMANV1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colROLE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -52,24 +67,9 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.gcNV_X_LOGIN = new DevExpress.XtraGrid.GridControl();
+            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl = new DevExpress.XtraGrid.GridControl();
             this.bdsNV_X_LOGIN = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.memoLuuY = new DevExpress.XtraEditors.MemoEdit();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtLoginName = new System.Windows.Forms.TextBox();
-            this.nPass = new System.Windows.Forms.Label();
-            this.btnCreateLogin = new System.Windows.Forms.Button();
-            this.nName = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmsXOA = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
-            this.frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter = new NganHang.DSTableAdapters.frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter();
-            this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
-            this.frmCreateLogin_Get_Logins_Of_BranchTableAdapter = new NganHang.DSTableAdapters.frmCreateLogin_Get_Logins_Of_BranchTableAdapter();
             this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTEN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -78,29 +78,29 @@
             this.colSODT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colrowguid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gc_LGINFO1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colTENLOGIN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMANV1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colROLE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsXOA = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter = new NganHang.DSTableAdapters.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter();
+            this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
+            this.frmCreateLogin_GetLoginsOfBranchTableAdapter = new NganHang.DSTableAdapters.frmCreateLogin_GetLoginsOfBranchTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTrangThai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panInput)).BeginInit();
             this.panInput.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bds_LGINFO)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcNV_X_LOGIN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsNV_X_LOGIN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoLuuY.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_LGINFO1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bds_LGINFO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsNV_X_LOGIN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -137,7 +137,7 @@
             this.label2.BackColor = System.Drawing.Color.Gainsboro;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(5, 15);
+            this.label2.Location = new System.Drawing.Point(10, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(448, 22);
             this.label2.TabIndex = 8;
@@ -162,22 +162,171 @@
             // 
             // panInput
             // 
-            this.panInput.Controls.Add(this.gc_LGINFO1);
-            this.panInput.Controls.Add(this.gcNV_X_LOGIN);
             this.panInput.Controls.Add(this.label3);
             this.panInput.Controls.Add(this.memoLuuY);
             this.panInput.Controls.Add(this.label2);
             this.panInput.Controls.Add(this.groupBox1);
+            this.panInput.Controls.Add(this.gc_LGINFO1);
+            this.panInput.Controls.Add(this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl);
             this.panInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panInput.Location = new System.Drawing.Point(0, 71);
             this.panInput.Name = "panInput";
             this.panInput.Size = new System.Drawing.Size(1523, 714);
             this.panInput.TabIndex = 7;
+            this.panInput.Paint += new System.Windows.Forms.PaintEventHandler(this.panInput_Paint);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Gainsboro;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 235);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(296, 22);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Danh sách tài khoản của chi nhánh";
+            // 
+            // memoLuuY
+            // 
+            this.memoLuuY.EditValue = "";
+            this.memoLuuY.Enabled = false;
+            this.memoLuuY.Location = new System.Drawing.Point(507, 459);
+            this.memoLuuY.Name = "memoLuuY";
+            this.memoLuuY.Properties.Appearance.BackColor = System.Drawing.Color.Gainsboro;
+            this.memoLuuY.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memoLuuY.Properties.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.memoLuuY.Properties.Appearance.Options.UseBackColor = true;
+            this.memoLuuY.Properties.Appearance.Options.UseFont = true;
+            this.memoLuuY.Properties.Appearance.Options.UseForeColor = true;
+            this.memoLuuY.Size = new System.Drawing.Size(528, 92);
+            this.memoLuuY.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox1.Controls.Add(this.txtLoginName);
+            this.groupBox1.Controls.Add(this.nPass);
+            this.groupBox1.Controls.Add(this.btnCreateLogin);
+            this.groupBox1.Controls.Add(this.nName);
+            this.groupBox1.Controls.Add(this.txtPass);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupBox1.Location = new System.Drawing.Point(952, 228);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(549, 206);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            // 
+            // txtLoginName
+            // 
+            this.txtLoginName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoginName.Location = new System.Drawing.Point(161, 21);
+            this.txtLoginName.Name = "txtLoginName";
+            this.txtLoginName.Size = new System.Drawing.Size(361, 34);
+            this.txtLoginName.TabIndex = 10;
+            // 
+            // nPass
+            // 
+            this.nPass.AutoSize = true;
+            this.nPass.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nPass.ForeColor = System.Drawing.Color.Black;
+            this.nPass.Location = new System.Drawing.Point(20, 105);
+            this.nPass.Name = "nPass";
+            this.nPass.Size = new System.Drawing.Size(109, 27);
+            this.nPass.TabIndex = 10;
+            this.nPass.Text = "Mật Khẩu";
+            // 
+            // btnCreateLogin
+            // 
+            this.btnCreateLogin.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateLogin.ForeColor = System.Drawing.Color.Green;
+            this.btnCreateLogin.Location = new System.Drawing.Point(224, 157);
+            this.btnCreateLogin.Name = "btnCreateLogin";
+            this.btnCreateLogin.Size = new System.Drawing.Size(166, 38);
+            this.btnCreateLogin.TabIndex = 12;
+            this.btnCreateLogin.Text = "TẠO LOGIN";
+            this.btnCreateLogin.UseVisualStyleBackColor = true;
+            this.btnCreateLogin.Click += new System.EventHandler(this.btnCreateLogin_Click);
+            // 
+            // nName
+            // 
+            this.nName.AutoSize = true;
+            this.nName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nName.ForeColor = System.Drawing.Color.Black;
+            this.nName.Location = new System.Drawing.Point(14, 30);
+            this.nName.Name = "nName";
+            this.nName.Size = new System.Drawing.Size(108, 27);
+            this.nName.TabIndex = 8;
+            this.nName.Text = "Tài khoản";
+            // 
+            // txtPass
+            // 
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(161, 100);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(361, 34);
+            this.txtPass.TabIndex = 11;
+            this.txtPass.UseSystemPasswordChar = true;
+            // 
+            // gc_LGINFO1
+            // 
+            this.gc_LGINFO1.ContextMenuStrip = this.contextMenuStrip1;
+            this.gc_LGINFO1.DataSource = this.bds_LGINFO;
+            this.gc_LGINFO1.Location = new System.Drawing.Point(5, 228);
+            this.gc_LGINFO1.MainView = this.gridView2;
+            this.gc_LGINFO1.MenuManager = this.barManager1;
+            this.gc_LGINFO1.Name = "gc_LGINFO1";
+            this.gc_LGINFO1.Size = new System.Drawing.Size(796, 206);
+            this.gc_LGINFO1.TabIndex = 12;
+            this.gc_LGINFO1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
             // 
             // bds_LGINFO
             // 
-            this.bds_LGINFO.DataMember = "frmCreateLogin_Get Logins Of Branch";
+            this.bds_LGINFO.DataMember = "frmCreateLogin_GetLoginsOfBranch";
             this.bds_LGINFO.DataSource = this.DS;
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colTENLOGIN,
+            this.colMANV1,
+            this.colHOTEN,
+            this.colROLE});
+            this.gridView2.GridControl = this.gc_LGINFO1;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
+            this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            // 
+            // colTENLOGIN
+            // 
+            this.colTENLOGIN.FieldName = "TENLOGIN";
+            this.colTENLOGIN.Name = "colTENLOGIN";
+            this.colTENLOGIN.Visible = true;
+            this.colTENLOGIN.VisibleIndex = 0;
+            // 
+            // colMANV1
+            // 
+            this.colMANV1.FieldName = "MANV";
+            this.colMANV1.Name = "colMANV1";
+            this.colMANV1.Visible = true;
+            this.colMANV1.VisibleIndex = 1;
+            // 
+            // colHOTEN
+            // 
+            this.colHOTEN.FieldName = "HOTEN";
+            this.colHOTEN.Name = "colHOTEN";
+            this.colHOTEN.Visible = true;
+            this.colHOTEN.VisibleIndex = 2;
+            // 
+            // colROLE
+            // 
+            this.colROLE.FieldName = "ROLE";
+            this.colROLE.Name = "colROLE";
+            this.colROLE.Visible = true;
+            this.colROLE.VisibleIndex = 3;
             // 
             // barManager1
             // 
@@ -318,22 +467,25 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1523, 30);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 755);
             // 
-            // gcNV_X_LOGIN
+            // frmCreateLogin_GetEmployeeNotHaveLoginGridControl
             // 
-            this.gcNV_X_LOGIN.DataSource = this.bdsNV_X_LOGIN;
-            this.gcNV_X_LOGIN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcNV_X_LOGIN.Location = new System.Drawing.Point(2, 2);
-            this.gcNV_X_LOGIN.MainView = this.gridView1;
-            this.gcNV_X_LOGIN.MenuManager = this.barManager1;
-            this.gcNV_X_LOGIN.Name = "gcNV_X_LOGIN";
-            this.gcNV_X_LOGIN.Size = new System.Drawing.Size(1519, 220);
-            this.gcNV_X_LOGIN.TabIndex = 12;
-            this.gcNV_X_LOGIN.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.DataSource = this.bdsNV_X_LOGIN;
+            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Dock = System.Windows.Forms.DockStyle.Top;
+            gridLevelNode1.RelationName = "Level1";
+            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
+            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Location = new System.Drawing.Point(2, 2);
+            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.MainView = this.gridView1;
+            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.MenuManager = this.barManager1;
+            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Name = "frmCreateLogin_GetEmployeeNotHaveLoginGridControl";
+            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Size = new System.Drawing.Size(1519, 220);
+            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.TabIndex = 12;
+            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // bdsNV_X_LOGIN
             // 
-            this.bdsNV_X_LOGIN.DataMember = "frmCreateLogin_Get Employee Not Have Login";
+            this.bdsNV_X_LOGIN.DataMember = "frmCreateLogin_GetEmployeeNotHaveLogin";
             this.bdsNV_X_LOGIN.DataSource = this.DS;
             // 
             // gridView1
@@ -346,154 +498,12 @@
             this.colPHAI,
             this.colSODT,
             this.colMACN,
-            this.colTrangThaiXoa,
-            this.colrowguid});
-            this.gridView1.GridControl = this.gcNV_X_LOGIN;
+            this.colTrangThaiXoa});
+            this.gridView1.GridControl = this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Gainsboro;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(726, 254);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(296, 22);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Danh sách tài khoản của chi nhánh";
-            // 
-            // memoLuuY
-            // 
-            this.memoLuuY.EditValue = "";
-            this.memoLuuY.Enabled = false;
-            this.memoLuuY.Location = new System.Drawing.Point(466, 396);
-            this.memoLuuY.Name = "memoLuuY";
-            this.memoLuuY.Properties.Appearance.BackColor = System.Drawing.Color.Gainsboro;
-            this.memoLuuY.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memoLuuY.Properties.Appearance.ForeColor = System.Drawing.Color.Green;
-            this.memoLuuY.Properties.Appearance.Options.UseBackColor = true;
-            this.memoLuuY.Properties.Appearance.Options.UseFont = true;
-            this.memoLuuY.Properties.Appearance.Options.UseForeColor = true;
-            this.memoLuuY.Size = new System.Drawing.Size(528, 92);
-            this.memoLuuY.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox1.Controls.Add(this.txtLoginName);
-            this.groupBox1.Controls.Add(this.nPass);
-            this.groupBox1.Controls.Add(this.btnCreateLogin);
-            this.groupBox1.Controls.Add(this.nName);
-            this.groupBox1.Controls.Add(this.txtPass);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.groupBox1.Location = new System.Drawing.Point(954, 368);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(549, 206);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            // 
-            // txtLoginName
-            // 
-            this.txtLoginName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginName.Location = new System.Drawing.Point(161, 21);
-            this.txtLoginName.Name = "txtLoginName";
-            this.txtLoginName.Size = new System.Drawing.Size(361, 34);
-            this.txtLoginName.TabIndex = 10;
-            // 
-            // nPass
-            // 
-            this.nPass.AutoSize = true;
-            this.nPass.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nPass.ForeColor = System.Drawing.Color.Black;
-            this.nPass.Location = new System.Drawing.Point(20, 105);
-            this.nPass.Name = "nPass";
-            this.nPass.Size = new System.Drawing.Size(109, 27);
-            this.nPass.TabIndex = 10;
-            this.nPass.Text = "Mật Khẩu";
-            // 
-            // btnCreateLogin
-            // 
-            this.btnCreateLogin.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateLogin.ForeColor = System.Drawing.Color.Green;
-            this.btnCreateLogin.Location = new System.Drawing.Point(224, 157);
-            this.btnCreateLogin.Name = "btnCreateLogin";
-            this.btnCreateLogin.Size = new System.Drawing.Size(166, 38);
-            this.btnCreateLogin.TabIndex = 12;
-            this.btnCreateLogin.Text = "TẠO LOGIN";
-            this.btnCreateLogin.UseVisualStyleBackColor = true;
-            this.btnCreateLogin.Click += new System.EventHandler(this.btnCreateLogin_Click);
-            // 
-            // nName
-            // 
-            this.nName.AutoSize = true;
-            this.nName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nName.ForeColor = System.Drawing.Color.Black;
-            this.nName.Location = new System.Drawing.Point(14, 30);
-            this.nName.Name = "nName";
-            this.nName.Size = new System.Drawing.Size(108, 27);
-            this.nName.TabIndex = 8;
-            this.nName.Text = "Tài khoản";
-            // 
-            // txtPass
-            // 
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(161, 100);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(361, 34);
-            this.txtPass.TabIndex = 11;
-            this.txtPass.UseSystemPasswordChar = true;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsXOA,
-            this.cmsTAILAI,
-            this.cmsTHOAT});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 76);
-            // 
-            // cmsXOA
-            // 
-            this.cmsXOA.Name = "cmsXOA";
-            this.cmsXOA.Size = new System.Drawing.Size(157, 24);
-            this.cmsXOA.Text = "Xoá";
-            this.cmsXOA.Click += new System.EventHandler(this.cmsXOA_Click);
-            // 
-            // cmsTAILAI
-            // 
-            this.cmsTAILAI.Name = "cmsTAILAI";
-            this.cmsTAILAI.Size = new System.Drawing.Size(157, 24);
-            this.cmsTAILAI.Text = "Tải lại trang";
-            this.cmsTAILAI.Click += new System.EventHandler(this.cmsTAILAI_Click);
-            // 
-            // cmsTHOAT
-            // 
-            this.cmsTHOAT.Name = "cmsTHOAT";
-            this.cmsTHOAT.Size = new System.Drawing.Size(157, 24);
-            this.cmsTHOAT.Text = "Thoát";
-            // 
-            // frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter
-            // 
-            this.frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.GD_CHUYENTIENTableAdapter = null;
-            this.tableAdapterManager.GD_GOIRUTTableAdapter = null;
-            this.tableAdapterManager.KhachHangTableAdapter = null;
-            this.tableAdapterManager.NhanVienTableAdapter = null;
-            this.tableAdapterManager.TaiKhoanTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = NganHang.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // frmCreateLogin_Get_Logins_Of_BranchTableAdapter
-            // 
-            this.frmCreateLogin_Get_Logins_Of_BranchTableAdapter.ClearBeforeFill = true;
             // 
             // colMANV
             // 
@@ -551,63 +561,54 @@
             this.colTrangThaiXoa.Visible = true;
             this.colTrangThaiXoa.VisibleIndex = 7;
             // 
-            // colrowguid
+            // contextMenuStrip1
             // 
-            this.colrowguid.FieldName = "rowguid";
-            this.colrowguid.Name = "colrowguid";
-            this.colrowguid.Visible = true;
-            this.colrowguid.VisibleIndex = 8;
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsXOA,
+            this.cmsTAILAI,
+            this.cmsTHOAT});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 76);
             // 
-            // gc_LGINFO1
+            // cmsXOA
             // 
-            this.gc_LGINFO1.DataSource = this.bds_LGINFO;
-            this.gc_LGINFO1.Location = new System.Drawing.Point(9, 228);
-            this.gc_LGINFO1.MainView = this.gridView2;
-            this.gc_LGINFO1.MenuManager = this.barManager1;
-            this.gc_LGINFO1.Name = "gc_LGINFO1";
-            this.gc_LGINFO1.Size = new System.Drawing.Size(772, 220);
-            this.gc_LGINFO1.TabIndex = 12;
-            this.gc_LGINFO1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.cmsXOA.Name = "cmsXOA";
+            this.cmsXOA.Size = new System.Drawing.Size(157, 24);
+            this.cmsXOA.Text = "Xoá";
+            this.cmsXOA.Click += new System.EventHandler(this.cmsXOA_Click);
             // 
-            // gridView2
+            // cmsTAILAI
             // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colTENLOGIN,
-            this.colMANV1,
-            this.colHOTEN,
-            this.colROLE});
-            this.gridView2.GridControl = this.gc_LGINFO1;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.cmsTAILAI.Name = "cmsTAILAI";
+            this.cmsTAILAI.Size = new System.Drawing.Size(157, 24);
+            this.cmsTAILAI.Text = "Tải lại trang";
+            this.cmsTAILAI.Click += new System.EventHandler(this.cmsTAILAI_Click);
             // 
-            // colTENLOGIN
+            // cmsTHOAT
             // 
-            this.colTENLOGIN.FieldName = "TENLOGIN";
-            this.colTENLOGIN.Name = "colTENLOGIN";
-            this.colTENLOGIN.Visible = true;
-            this.colTENLOGIN.VisibleIndex = 0;
+            this.cmsTHOAT.Name = "cmsTHOAT";
+            this.cmsTHOAT.Size = new System.Drawing.Size(157, 24);
+            this.cmsTHOAT.Text = "Thoát";
             // 
-            // colMANV1
+            // frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter
             // 
-            this.colMANV1.FieldName = "MANV";
-            this.colMANV1.Name = "colMANV1";
-            this.colMANV1.Visible = true;
-            this.colMANV1.VisibleIndex = 1;
+            this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.ClearBeforeFill = true;
             // 
-            // colHOTEN
+            // tableAdapterManager
             // 
-            this.colHOTEN.FieldName = "HOTEN";
-            this.colHOTEN.Name = "colHOTEN";
-            this.colHOTEN.Visible = true;
-            this.colHOTEN.VisibleIndex = 2;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.GD_CHUYENTIENTableAdapter = null;
+            this.tableAdapterManager.GD_GOIRUTTableAdapter = null;
+            this.tableAdapterManager.KhachHangTableAdapter = null;
+            this.tableAdapterManager.NhanVienTableAdapter = null;
+            this.tableAdapterManager.TaiKhoanTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = NganHang.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // colROLE
+            // frmCreateLogin_GetLoginsOfBranchTableAdapter
             // 
-            this.colROLE.FieldName = "ROLE";
-            this.colROLE.Name = "colROLE";
-            this.colROLE.Visible = true;
-            this.colROLE.VisibleIndex = 3;
+            this.frmCreateLogin_GetLoginsOfBranchTableAdapter.ClearBeforeFill = true;
             // 
             // frmCreateLogin
             // 
@@ -635,17 +636,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.panInput)).EndInit();
             this.panInput.ResumeLayout(false);
             this.panInput.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bds_LGINFO)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcNV_X_LOGIN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsNV_X_LOGIN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoLuuY.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gc_LGINFO1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bds_LGINFO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsNV_X_LOGIN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -684,15 +685,14 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnReload;
         private DevExpress.XtraBars.BarButtonItem btnExit;
-        private DevExpress.XtraBars.BarButtonItem btnCreateAccount;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private System.Windows.Forms.BindingSource bdsNV_X_LOGIN;
-        private DSTableAdapters.frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter frmCreateLogin_Get_Employee_Not_Have_LoginTableAdapter;
+        private DSTableAdapters.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
-        private DevExpress.XtraGrid.GridControl gcNV_X_LOGIN;
+        private DevExpress.XtraGrid.GridControl frmCreateLogin_GetEmployeeNotHaveLoginGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.BindingSource bds_LGINFO;
-        private DSTableAdapters.frmCreateLogin_Get_Logins_Of_BranchTableAdapter frmCreateLogin_Get_Logins_Of_BranchTableAdapter;
+        private DSTableAdapters.frmCreateLogin_GetLoginsOfBranchTableAdapter frmCreateLogin_GetLoginsOfBranchTableAdapter;
         private DevExpress.XtraGrid.GridControl gc_LGINFO1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colTENLOGIN;
@@ -707,6 +707,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSODT;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
         private DevExpress.XtraGrid.Columns.GridColumn colTrangThaiXoa;
-        private DevExpress.XtraGrid.Columns.GridColumn colrowguid;
+        private DevExpress.XtraBars.BarButtonItem btnCreateAccount;
     }
 }
