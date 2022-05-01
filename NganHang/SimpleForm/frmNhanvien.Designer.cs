@@ -55,9 +55,13 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnChuyenNV = new DevExpress.XtraBars.BarButtonItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.cmbCNFinal = new System.Windows.Forms.ComboBox();
+            this.bdsChuyenNV = new System.Windows.Forms.BindingSource(this.components);
+            this.DS = new NganHang.DS();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnChuyenEmployee = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
-            this.DS = new NganHang.DS();
             this.bdsNV = new System.Windows.Forms.BindingSource(this.components);
             this.nhanVienTableAdapter = new NganHang.DSTableAdapters.NhanVienTableAdapter();
             this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
@@ -84,10 +88,6 @@
             this.gD_GOIRUTTableAdapter = new NganHang.DSTableAdapters.GD_GOIRUTTableAdapter();
             this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
             this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
-            this.cmbCNFinal = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnChuyenEmployee = new System.Windows.Forms.Button();
-            this.bdsChuyenNV = new System.Windows.Forms.BindingSource(this.components);
             this.dS_CHINHANHTableAdapter = new NganHang.DSTableAdapters.DS_CHINHANHTableAdapter();
             mANVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
@@ -99,6 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsChuyenNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcNV)).BeginInit();
@@ -107,7 +108,6 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsChuyenNV)).BeginInit();
             this.SuspendLayout();
             // 
             // mANVLabel
@@ -356,6 +356,8 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelControl1.Appearance.Options.UseFont = true;
             this.panelControl1.Controls.Add(this.cmbCNFinal);
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.btnChuyenEmployee);
@@ -367,28 +369,63 @@
             this.panelControl1.Size = new System.Drawing.Size(1341, 41);
             this.panelControl1.TabIndex = 4;
             // 
+            // cmbCNFinal
+            // 
+            this.cmbCNFinal.DataSource = this.bdsChuyenNV;
+            this.cmbCNFinal.DisplayMember = "TENCN";
+            this.cmbCNFinal.FormattingEnabled = true;
+            this.cmbCNFinal.Location = new System.Drawing.Point(998, 5);
+            this.cmbCNFinal.Name = "cmbCNFinal";
+            this.cmbCNFinal.Size = new System.Drawing.Size(199, 29);
+            this.cmbCNFinal.TabIndex = 11;
+            this.cmbCNFinal.ValueMember = "MACN";
+            // 
+            // bdsChuyenNV
+            // 
+            this.bdsChuyenNV.DataMember = "DS_CHINHANH";
+            this.bdsChuyenNV.DataSource = this.DS;
+            // 
+            // DS
+            // 
+            this.DS.DataSetName = "DS";
+            this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(813, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(179, 21);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Chi Nhánh Chuyển Đến";
+            // 
+            // btnChuyenEmployee
+            // 
+            this.btnChuyenEmployee.Location = new System.Drawing.Point(1216, 2);
+            this.btnChuyenEmployee.Name = "btnChuyenEmployee";
+            this.btnChuyenEmployee.Size = new System.Drawing.Size(120, 33);
+            this.btnChuyenEmployee.TabIndex = 10;
+            this.btnChuyenEmployee.Text = "Xác nhận";
+            this.btnChuyenEmployee.UseVisualStyleBackColor = true;
+            this.btnChuyenEmployee.Click += new System.EventHandler(this.btnChuyenEmployee_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 12);
+            this.label1.Location = new System.Drawing.Point(24, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.Size = new System.Drawing.Size(85, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chi Nhánh";
             // 
             // cmbChiNhanh
             // 
             this.cmbChiNhanh.FormattingEnabled = true;
-            this.cmbChiNhanh.Location = new System.Drawing.Point(134, 9);
+            this.cmbChiNhanh.Location = new System.Drawing.Point(138, 6);
             this.cmbChiNhanh.Name = "cmbChiNhanh";
-            this.cmbChiNhanh.Size = new System.Drawing.Size(325, 24);
+            this.cmbChiNhanh.Size = new System.Drawing.Size(325, 29);
             this.cmbChiNhanh.TabIndex = 0;
             this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
-            // 
-            // DS
-            // 
-            this.DS.DataSetName = "DS";
-            this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bdsNV
             // 
@@ -624,41 +661,6 @@
             // 
             this.gD_CHUYENTIENTableAdapter.ClearBeforeFill = true;
             // 
-            // cmbCNFinal
-            // 
-            this.cmbCNFinal.DataSource = this.bdsChuyenNV;
-            this.cmbCNFinal.DisplayMember = "TENCN";
-            this.cmbCNFinal.FormattingEnabled = true;
-            this.cmbCNFinal.Location = new System.Drawing.Point(809, 9);
-            this.cmbCNFinal.Name = "cmbCNFinal";
-            this.cmbCNFinal.Size = new System.Drawing.Size(199, 24);
-            this.cmbCNFinal.TabIndex = 11;
-            this.cmbCNFinal.ValueMember = "MACN";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(633, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 17);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Chi Nhánh Chuyển Đến";
-            // 
-            // btnChuyenEmployee
-            // 
-            this.btnChuyenEmployee.Location = new System.Drawing.Point(1020, 3);
-            this.btnChuyenEmployee.Name = "btnChuyenEmployee";
-            this.btnChuyenEmployee.Size = new System.Drawing.Size(134, 33);
-            this.btnChuyenEmployee.TabIndex = 10;
-            this.btnChuyenEmployee.Text = "Chuyển Nhân Viên";
-            this.btnChuyenEmployee.UseVisualStyleBackColor = true;
-            this.btnChuyenEmployee.Click += new System.EventHandler(this.btnChuyenEmployee_Click);
-            // 
-            // bdsChuyenNV
-            // 
-            this.bdsChuyenNV.DataMember = "DS_CHINHANH";
-            this.bdsChuyenNV.DataSource = this.DS;
-            // 
             // dS_CHINHANHTableAdapter
             // 
             this.dS_CHINHANHTableAdapter.ClearBeforeFill = true;
@@ -683,6 +685,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsChuyenNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcNV)).EndInit();
@@ -692,7 +695,6 @@
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsChuyenNV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

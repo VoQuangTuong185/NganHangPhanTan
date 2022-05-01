@@ -260,13 +260,14 @@ namespace NganHang.SimpleForm
 
         private void btnUndo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            bdsNV.Position = vitri;
             bdsNV.CancelEdit();//hai trường hợp: đang thêm bỏ thêm, đang sửa bỏ sửa
             gcNV.Enabled = true;
             panelControl2.Enabled = false;
             btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled = btnExit.Enabled = true;
             btnSave.Enabled = btnUndo.Enabled = false;
         }
-
+    
         private void btnExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Close();
@@ -275,11 +276,12 @@ namespace NganHang.SimpleForm
         private void btnMoveEmployee_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             btnUndo.Enabled = btnExit.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = true;
-            panelControl2.Enabled = btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled  = btnSave.Enabled = false;
+            panelControl2.Enabled = btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled  = btnSave.Enabled = gcNV.Enabled = false;
         }
 
         private void btnChuyenEmployee_Click(object sender, EventArgs e)
         {
+            vitri = bdsNV.Position;
             int manv = int.Parse(((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString());
             string MACN = cmbCNFinal.SelectedValue.ToString();
             if (cmbCNFinal.SelectedIndex == Program.mChiNhanh)
@@ -291,9 +293,8 @@ namespace NganHang.SimpleForm
             {
                 Program.ExecSqlNonQuery("EXEC frmChuyenNV_MoveEmployee '" + manv + "','" + MACN + "'");
             }
-            btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled = btnExit.Enabled = true;
-            btnSave.Enabled = btnUndo.Enabled = false;
-            cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = false;
+            btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled = btnExit.Enabled = gcNV.Enabled = true;
+            btnSave.Enabled = btnUndo.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = false;
             this.nhanVienTableAdapter.Fill(this.DS.NhanVien);
         }
     }
