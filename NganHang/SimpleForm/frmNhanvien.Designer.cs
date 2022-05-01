@@ -603,7 +603,7 @@
             // 
             this.gD_CHUYENTIENTableAdapter.ClearBeforeFill = true;
             // 
-            // frmNhanvien
+            // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -615,7 +615,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Name = "frmNhanvien";
+            this.Name = "frmNhanVien";
             this.Text = "Quản Lý Nhân Viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmNhanvien_Load);

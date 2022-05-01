@@ -30,6 +30,10 @@ namespace NganHang.SimpleForm
         private void frmMoTaiKhoanKH_Load(object sender, EventArgs e)
         {
             DS.EnforceConstraints = false;
+            this.gD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.gD_CHUYENTIENTableAdapter.Fill(this.DS.GD_CHUYENTIEN);
+            this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);        
             this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
             this.khachHangTableAdapter.Fill(this.DS.KhachHang);
             this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
@@ -167,7 +171,36 @@ namespace NganHang.SimpleForm
 
         private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            int SOTK = int.Parse(((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString());
+            if (bdsGR.Count > 0)
+            {
+                MessageBox.Show("Không thể xoá tài khoản này vì đã giao dịch phiếu gửi rút tiền", "", MessageBoxButtons.OK);
+                return;
+            }
+            if (bdsCT.Count > 0)
+            {
+                MessageBox.Show("Không thể xoá tài khoản này vì đã giao dịch phiếu chuyển tiền", "", MessageBoxButtons.OK);
+                return;
+            }
+            if (MessageBox.Show("Bạn có thật sự muốn xoá nhân viên " + SOTK + " ??", "Xác nhận",
+                MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                try
+                {
+                    bdsTK.RemoveCurrent();
+                    this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
+                    MessageBox.Show("Xoá thành công tài khoản " + SOTK, "", MessageBoxButtons.OK);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi xoá tài khoản. Bạn hãy xoá lại\n" + ex.Message, "", MessageBoxButtons.OK);
+                    this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
+                    bdsTK.Position = bdsTK.Find("MANV", SOTK);
+                    return;
+                }
+            }
+            if (bdsTK.Count == 0) cmsXOA.Enabled = false; //hết nhân viên rồi thì k xoá đc nữa
         }
 
         private void phụcHồiToolStripMenuItem_Click(object sender, EventArgs e)

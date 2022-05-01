@@ -74,6 +74,10 @@
             this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsPHUCHOI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
+            this.bdsGR = new System.Windows.Forms.BindingSource(this.components);
+            this.gD_GOIRUTTableAdapter = new NganHang.DSTableAdapters.GD_GOIRUTTableAdapter();
+            this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
+            this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
             cMNDLabel = new System.Windows.Forms.Label();
             mACNLabel = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
@@ -98,6 +102,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gcKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).BeginInit();
             this.SuspendLayout();
             // 
             // cMNDLabel
@@ -221,17 +227,17 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 71);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1206, 656);
+            this.panelControl3.Size = new System.Drawing.Size(1206, 597);
             this.panelControl3.TabIndex = 20;
             // 
             // gcTK
             // 
             this.gcTK.DataSource = this.bdsTK;
             this.gcTK.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcTK.Location = new System.Drawing.Point(557, 294);
+            this.gcTK.Location = new System.Drawing.Point(782, 294);
             this.gcTK.MainView = this.gvTK;
             this.gcTK.Name = "gcTK";
-            this.gcTK.Size = new System.Drawing.Size(647, 360);
+            this.gcTK.Size = new System.Drawing.Size(422, 301);
             this.gcTK.TabIndex = 2;
             this.gcTK.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTK});
@@ -318,7 +324,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl2.Location = new System.Drawing.Point(2, 294);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(555, 360);
+            this.panelControl2.Size = new System.Drawing.Size(780, 301);
             this.panelControl2.TabIndex = 1;
             // 
             // numbSODU
@@ -383,7 +389,7 @@
             // 
             // teCMND
             // 
-            this.teCMND.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKH, "CMND", true));
+            this.teCMND.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsGR, "MAGD", true));
             this.teCMND.Location = new System.Drawing.Point(246, 145);
             this.teCMND.Name = "teCMND";
             this.teCMND.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -525,11 +531,29 @@
             this.cmsTHOAT.Text = "Thoát";
             this.cmsTHOAT.Click += new System.EventHandler(this.cmsTHOAT_Click);
             // 
+            // bdsGR
+            // 
+            this.bdsGR.DataMember = "FK_GD_GOIRUT_TaiKhoan";
+            this.bdsGR.DataSource = this.bdsTK;
+            // 
+            // gD_GOIRUTTableAdapter
+            // 
+            this.gD_GOIRUTTableAdapter.ClearBeforeFill = true;
+            // 
+            // bdsCT
+            // 
+            this.bdsCT.DataMember = "FK_GD_CHUYENTIEN_TaiKhoan1";
+            this.bdsCT.DataSource = this.bdsTK;
+            // 
+            // gD_CHUYENTIENTableAdapter
+            // 
+            this.gD_CHUYENTIENTableAdapter.ClearBeforeFill = true;
+            // 
             // frmMoTaiKhoanKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1206, 727);
+            this.ClientSize = new System.Drawing.Size(1206, 668);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.groupControl1);
@@ -559,6 +583,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gcKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -604,5 +630,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTEN;
         private DevExpress.XtraGrid.Columns.GridColumn colSODT;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
+        private System.Windows.Forms.BindingSource bdsGR;
+        private DSTableAdapters.GD_GOIRUTTableAdapter gD_GOIRUTTableAdapter;
+        private System.Windows.Forms.BindingSource bdsCT;
+        private DSTableAdapters.GD_CHUYENTIENTableAdapter gD_CHUYENTIENTableAdapter;
     }
 }
