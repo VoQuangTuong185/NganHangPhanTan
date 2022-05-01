@@ -127,7 +127,7 @@ namespace NganHang.SimpleForm
             MessageBox.Show(cmd, "", MessageBoxButtons.OK);
             Program.ExecSqlNonQuery(cmd);
 
-            gc_LGINFO1.Enabled =gc_LGINFO1.Enabled = true;
+            frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Enabled = gc_LGINFO1.Enabled = true;
             this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Fill(this.DS.frmCreateLogin_GetEmployeeNotHaveLogin);
             this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
             groupBox1.Enabled = false;
@@ -190,7 +190,7 @@ namespace NganHang.SimpleForm
             vitri = bdsNV_X_LOGIN.Position;
             txtTrangThai.EditValue = "Mã nhân viên được chọn để tạo login: '" + MANV+" '";
             groupBox1.Enabled = true;
-            gc_LGINFO1.Enabled = gc_LGINFO1.Enabled = false;
+            frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Enabled = gc_LGINFO1.Enabled = false;
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

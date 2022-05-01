@@ -12,7 +12,7 @@ namespace NganHang.SimpleForm
 {
     public partial class frmNhanVien : Form
     {
-        int vitri = 0;
+        int vitri ;
         String macn = "";
         bool btn_Add_clicked = false;
         public frmNhanVien()
@@ -261,7 +261,6 @@ namespace NganHang.SimpleForm
         private void btnUndo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bdsNV.CancelEdit();//hai trường hợp: đang thêm bỏ thêm, đang sửa bỏ sửa
-            if (btnAdd.Enabled == false) bdsNV.Position = vitri;
             gcNV.Enabled = true;
             panelControl2.Enabled = false;
             btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled = btnExit.Enabled = true;
@@ -275,14 +274,13 @@ namespace NganHang.SimpleForm
 
         private void btnMoveEmployee_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = true;
-            panelControl2.Enabled = false;
+            btnUndo.Enabled = btnExit.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = true;
+            panelControl2.Enabled = btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled  = btnSave.Enabled = false;
         }
 
         private void btnChuyenEmployee_Click(object sender, EventArgs e)
         {
             int manv = int.Parse(((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString());
-            vitri = bdsChuyenNV.Position;
             string MACN = cmbCNFinal.SelectedValue.ToString();
             if (cmbCNFinal.SelectedIndex == Program.mChiNhanh)
             {
@@ -293,6 +291,10 @@ namespace NganHang.SimpleForm
             {
                 Program.ExecSqlNonQuery("EXEC frmChuyenNV_MoveEmployee '" + manv + "','" + MACN + "'");
             }
+            btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled = btnExit.Enabled = true;
+            btnSave.Enabled = btnUndo.Enabled = false;
+            cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = false;
+            this.nhanVienTableAdapter.Fill(this.DS.NhanVien);
         }
     }
 }
