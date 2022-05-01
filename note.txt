@@ -10,5 +10,5 @@ NganHang 7.03pm 21.4.22
 
 4. --không bắt buộc: chức năng redo (mới ok 2 nút insert, save) còn lại add, delete chưa làm được (dùng stack để khôi phục) 
 
-5. chưa làm được nút lệnh delete của 2 form  MOTAIKHOAN (thiếu ràng buộc k được xoá tài khoản có giao dịch gởi rút) -
+5. xem kỹ lại nút delete của form  MOTAIKHOAN (ràng buộc phát sinh từ tài khoản khách hàng như gửi/rút tiền) -
 
