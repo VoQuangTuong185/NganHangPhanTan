@@ -102,17 +102,17 @@
     <Compile Include="SimpleForm\frmMoTaiKhoanKH.Designer.cs">
       <DependentUpon>frmMoTaiKhoanKH.cs</DependentUpon>
     </Compile>
-    <Compile Include="SimpleForm\frmNhanvien.cs">
+    <Compile Include="SimpleForm\frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SimpleForm\frmNhanvien.Designer.cs">
-      <DependentUpon>frmNhanvien.cs</DependentUpon>
+    <Compile Include="SimpleForm\frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="SimpleForm\frmTaoLogin.cs">
+    <Compile Include="SimpleForm\frmCreateLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SimpleForm\frmTaoLogin.Designer.cs">
-      <DependentUpon>frmTaoLogin.cs</DependentUpon>
+    <Compile Include="SimpleForm\frmCreateLogin.Designer.cs">
+      <DependentUpon>frmCreateLogin.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="SimpleForm\frmChuyenNV.resx">
       <DependentUpon>frmChuyenNV.cs</DependentUpon>
@@ -140,11 +140,11 @@
     <EmbeddedResource Include="SimpleForm\frmMoTaiKhoanKH.resx">
       <DependentUpon>frmMoTaiKhoanKH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SimpleForm\frmNhanvien.resx">
-      <DependentUpon>frmNhanvien.cs</DependentUpon>
+    <EmbeddedResource Include="SimpleForm\frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SimpleForm\frmTaoLogin.resx">
-      <DependentUpon>frmTaoLogin.cs</DependentUpon>
+    <EmbeddedResource Include="SimpleForm\frmCreateLogin.resx">
+      <DependentUpon>frmCreateLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>

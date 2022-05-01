@@ -1,6 +1,6 @@
 ﻿namespace NganHang.SimpleForm
 {
-    partial class frmNhanvien
+    partial class frmNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@
             System.Windows.Forms.Label mACNLabel;
             System.Windows.Forms.Label trangThaiXoaLabel;
             System.Windows.Forms.Label pHAILabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanvien));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.bar2 = new DevExpress.XtraBars.Bar();

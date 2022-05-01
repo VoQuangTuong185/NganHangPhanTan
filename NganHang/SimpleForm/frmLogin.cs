@@ -73,7 +73,7 @@ namespace NganHang.SimpleForm
             Program.mloginDN = Program.mlogin;
             Program.passwordDN = Program.password;
 
-            string strlenh = "EXEC SP_Lay_Thong_Tin_NV_Tu_Login '" + Program.mlogin + "'";
+            string strlenh = "EXEC frmLogin_GetEmployeeInfoFromLoginName '" + Program.mlogin + "'";
 
             Program.myReader = Program.ExecSqlDataReader(strlenh);
             if (Program.myReader == null) return;

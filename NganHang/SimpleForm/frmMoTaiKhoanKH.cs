@@ -127,7 +127,7 @@ namespace NganHang.SimpleForm
             if (btn_Add_clicked == true || SOTK != txtSOTK.Text)
             {
                 Program.myReader.Close();
-                string strlenh1 = "EXEC Kiem_Tra_SOTK_Trung '" + txtSOTK.Text + "'";
+                string strlenh1 = "EXEC frmMoTaiKhoanKH_duplicate SoTK '" + txtSOTK.Text + "'";
                 Program.myReader = Program.ExecSqlDataReader(strlenh1);
                 Program.myReader.Read();
                 if (Program.myReader.HasRows)

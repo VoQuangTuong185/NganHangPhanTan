@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace NganHang.SimpleForm
 {
-    public partial class frmNhanvien : Form
+    public partial class frmNhanVien : Form
     {
         int vitri = 0;
         String macn = "";
         bool btn_Add_clicked = false;
-        public frmNhanvien()
+        public frmNhanVien()
         {
             InitializeComponent();
         }
@@ -146,7 +146,7 @@ namespace NganHang.SimpleForm
             if (btn_Add_clicked == true || manv != txtMANV.Text)
             {
                 Program.myReader.Close();
-                string strlenh1 = "EXEC Kiem_Tra_MANV_Trung '" + txtMANV.Text + "'";
+                string strlenh1 = "EXEC frmNhanVien_duplicate MANV '" + txtMANV.Text + "'";
                 Program.myReader = Program.ExecSqlDataReader(strlenh1);
                 Program.myReader.Read();
                 Program.myReader.Close();
@@ -192,7 +192,7 @@ namespace NganHang.SimpleForm
         private bool KT_NV_Co_TK()
         {
             Program.myReader.Close();
-            string strlenh1 = "EXEC KT_NV_Co_Login '" + txtMANV.Text + "'";
+            string strlenh1 = "EXEC frmNhanVien_Exists Account '" + txtMANV.Text + "'";
             Program.myReader = Program.ExecSqlDataReader(strlenh1);
             Program.myReader.Read();
             if (Program.myReader.HasRows)

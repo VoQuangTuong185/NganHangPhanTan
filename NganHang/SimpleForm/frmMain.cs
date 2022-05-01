@@ -89,11 +89,11 @@ namespace NganHang
 
         private void btnEmployeeManage_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = this.CheckExists(typeof(frmNhanvien));
+            Form frm = this.CheckExists(typeof(frmNhanVien));
             if (frm != null) frm.Activate();
             else
             {
-                frmNhanvien f = new frmNhanvien();
+                frmNhanVien f = new frmNhanVien();
                 f.MdiParent = this;
                 f.Show();
             }
@@ -124,11 +124,11 @@ namespace NganHang
 
         private void btnCreateLogin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = this.CheckExists(typeof(frmTaoLogin));
+            Form frm = this.CheckExists(typeof(frmCreateLogin));
             if (frm != null) frm.Activate();
             else
             {
-                frmTaoLogin f = new frmTaoLogin();
+                frmCreateLogin f = new frmCreateLogin();
                 f.MdiParent = this;
                 f.Show();
             }

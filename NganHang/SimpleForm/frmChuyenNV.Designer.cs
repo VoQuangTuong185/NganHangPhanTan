@@ -50,7 +50,6 @@
             this.cmbCNFinal = new System.Windows.Forms.ComboBox();
             this.dSCHINHANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dS_CHINHANHTableAdapter = new NganHang.DSTableAdapters.DS_CHINHANHTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
@@ -201,7 +200,6 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.button1);
             this.groupControl1.Controls.Add(this.cmbCNFinal);
             this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.btnChuyenNV);
@@ -232,16 +230,6 @@
             // dS_CHINHANHTableAdapter
             // 
             this.dS_CHINHANHTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(932, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmChuyenNV
             // 
@@ -293,6 +281,5 @@
         private System.Windows.Forms.ComboBox cmbCNFinal;
         private System.Windows.Forms.BindingSource dSCHINHANHBindingSource;
         private DSTableAdapters.DS_CHINHANHTableAdapter dS_CHINHANHTableAdapter;
-        private System.Windows.Forms.Button button1;
     }
 }
