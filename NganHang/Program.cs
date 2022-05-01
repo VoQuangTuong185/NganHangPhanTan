@@ -102,7 +102,6 @@ namespace NganHang
             {
                 Program.conn.Close();
                 MessageBox.Show(ex.Message);
-                return;
             }
         }
         public static void SetEnableOfButton(Form frm, Boolean Active)
