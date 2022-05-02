@@ -538,5 +538,4 @@ E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.SimpleFor
 E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.SimpleForm.frmNhanvien.resources
 E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.csproj.GenerateResource.Cache
 E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.exe.licenses
-E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.SimpleForm.frmChuyenNV.resources
 E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.SimpleForm.frmCreateLogin.resources

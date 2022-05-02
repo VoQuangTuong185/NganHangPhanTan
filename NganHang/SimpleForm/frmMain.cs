@@ -133,17 +133,5 @@ namespace NganHang
                 f.Show();
             }
         }
-
-        private void btnChuyenNV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(frmChuyenNV));
-            if (frm != null) frm.Activate();
-            else
-            {
-                frmChuyenNV f = new frmChuyenNV();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }
     }
 }
