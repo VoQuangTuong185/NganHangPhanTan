@@ -91,6 +91,7 @@
             this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
             this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
             this.dS_CHINHANHTableAdapter = new NganHang.DSTableAdapters.DS_CHINHANHTableAdapter();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             mANVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
@@ -110,75 +111,77 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // mANVLabel
             // 
             mANVLabel.AutoSize = true;
-            mANVLabel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mANVLabel.Location = new System.Drawing.Point(252, 60);
+            mANVLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mANVLabel.Location = new System.Drawing.Point(54, 32);
             mANVLabel.Name = "mANVLabel";
-            mANVLabel.Size = new System.Drawing.Size(109, 21);
+            mANVLabel.Size = new System.Drawing.Size(130, 25);
             mANVLabel.TabIndex = 0;
             mANVLabel.Text = "Mã nhân viên";
             // 
             // hOLabel
             // 
             hOLabel.AutoSize = true;
-            hOLabel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            hOLabel.Location = new System.Drawing.Point(739, 60);
+            hOLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            hOLabel.Location = new System.Drawing.Point(541, 32);
             hOLabel.Name = "hOLabel";
-            hOLabel.Size = new System.Drawing.Size(60, 21);
+            hOLabel.Size = new System.Drawing.Size(69, 25);
             hOLabel.TabIndex = 2;
             hOLabel.Text = "Họ tên";
             // 
             // dIACHILabel
             // 
             dIACHILabel.AutoSize = true;
-            dIACHILabel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dIACHILabel.Location = new System.Drawing.Point(252, 120);
+            dIACHILabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dIACHILabel.Location = new System.Drawing.Point(54, 92);
             dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(65, 21);
+            dIACHILabel.Size = new System.Drawing.Size(71, 25);
             dIACHILabel.TabIndex = 6;
             dIACHILabel.Text = "Địa chỉ";
             // 
             // sODTLabel
             // 
             sODTLabel.AutoSize = true;
-            sODTLabel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sODTLabel.Location = new System.Drawing.Point(739, 120);
+            sODTLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sODTLabel.Location = new System.Drawing.Point(541, 92);
             sODTLabel.Name = "sODTLabel";
-            sODTLabel.Size = new System.Drawing.Size(108, 21);
+            sODTLabel.Size = new System.Drawing.Size(126, 25);
             sODTLabel.TabIndex = 8;
             sODTLabel.Text = "Số điện thoại";
             // 
             // mACNLabel
             // 
             mACNLabel.AutoSize = true;
-            mACNLabel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mACNLabel.Location = new System.Drawing.Point(739, 174);
+            mACNLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mACNLabel.Location = new System.Drawing.Point(541, 146);
             mACNLabel.Name = "mACNLabel";
-            mACNLabel.Size = new System.Drawing.Size(110, 21);
+            mACNLabel.Size = new System.Drawing.Size(130, 25);
             mACNLabel.TabIndex = 10;
             mACNLabel.Text = "Mã chi nhánh";
             // 
             // trangThaiXoaLabel
             // 
             trangThaiXoaLabel.AutoSize = true;
-            trangThaiXoaLabel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            trangThaiXoaLabel.Location = new System.Drawing.Point(252, 229);
+            trangThaiXoaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            trangThaiXoaLabel.Location = new System.Drawing.Point(54, 201);
             trangThaiXoaLabel.Name = "trangThaiXoaLabel";
-            trangThaiXoaLabel.Size = new System.Drawing.Size(116, 21);
+            trangThaiXoaLabel.Size = new System.Drawing.Size(137, 25);
             trangThaiXoaLabel.TabIndex = 11;
             trangThaiXoaLabel.Text = "Trạng thái xoá";
             // 
             // pHAILabel
             // 
             pHAILabel.AutoSize = true;
-            pHAILabel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pHAILabel.Location = new System.Drawing.Point(252, 174);
+            pHAILabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            pHAILabel.Location = new System.Drawing.Point(54, 146);
             pHAILabel.Name = "pHAILabel";
-            pHAILabel.Size = new System.Drawing.Size(42, 21);
+            pHAILabel.Size = new System.Drawing.Size(51, 25);
             pHAILabel.TabIndex = 13;
             pHAILabel.Text = "Phái";
             // 
@@ -325,14 +328,14 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1341, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1556, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 793);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1341, 25);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1556, 25);
             // 
             // barDockControlLeft
             // 
@@ -345,7 +348,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1341, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1556, 30);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 763);
             // 
             // btnChuyenNV
@@ -370,13 +373,13 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 30);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1341, 41);
+            this.panelControl1.Size = new System.Drawing.Size(1556, 41);
             this.panelControl1.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(966, 8);
+            this.label3.Location = new System.Drawing.Point(1141, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 21);
             this.label3.TabIndex = 13;
@@ -384,7 +387,7 @@
             // 
             // txtMANVMOI
             // 
-            this.txtMANVMOI.Location = new System.Drawing.Point(1073, 5);
+            this.txtMANVMOI.Location = new System.Drawing.Point(1248, 5);
             this.txtMANVMOI.Name = "txtMANVMOI";
             this.txtMANVMOI.Size = new System.Drawing.Size(137, 28);
             this.txtMANVMOI.TabIndex = 12;
@@ -421,7 +424,7 @@
             // 
             // btnChuyenEmployee
             // 
-            this.btnChuyenEmployee.Location = new System.Drawing.Point(1216, 2);
+            this.btnChuyenEmployee.Location = new System.Drawing.Point(1412, 2);
             this.btnChuyenEmployee.Name = "btnChuyenEmployee";
             this.btnChuyenEmployee.Size = new System.Drawing.Size(120, 33);
             this.btnChuyenEmployee.TabIndex = 10;
@@ -443,7 +446,7 @@
             this.cmbChiNhanh.FormattingEnabled = true;
             this.cmbChiNhanh.Location = new System.Drawing.Point(138, 6);
             this.cmbChiNhanh.Name = "cmbChiNhanh";
-            this.cmbChiNhanh.Size = new System.Drawing.Size(325, 29);
+            this.cmbChiNhanh.Size = new System.Drawing.Size(199, 29);
             this.cmbChiNhanh.TabIndex = 0;
             this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
             // 
@@ -474,7 +477,7 @@
             this.gcNV.MainView = this.gridView1;
             this.gcNV.MenuManager = this.barManager1;
             this.gcNV.Name = "gcNV";
-            this.gcNV.Size = new System.Drawing.Size(1341, 264);
+            this.gcNV.Size = new System.Drawing.Size(1556, 264);
             this.gcNV.TabIndex = 9;
             this.gcNV.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -561,25 +564,11 @@
             // 
             // panelControl2
             // 
-            this.panelControl2.Controls.Add(pHAILabel);
-            this.panelControl2.Controls.Add(this.cmbPhai);
-            this.panelControl2.Controls.Add(trangThaiXoaLabel);
-            this.panelControl2.Controls.Add(this.trangThaiXoaCheckBox);
-            this.panelControl2.Controls.Add(mACNLabel);
-            this.panelControl2.Controls.Add(this.txtMACN);
-            this.panelControl2.Controls.Add(sODTLabel);
-            this.panelControl2.Controls.Add(this.txtSODT);
-            this.panelControl2.Controls.Add(dIACHILabel);
-            this.panelControl2.Controls.Add(this.txtDIACHI);
-            this.panelControl2.Controls.Add(this.txtTEN);
-            this.panelControl2.Controls.Add(hOLabel);
-            this.panelControl2.Controls.Add(this.txtHO);
-            this.panelControl2.Controls.Add(mANVLabel);
-            this.panelControl2.Controls.Add(this.txtMANV);
+            this.panelControl2.Controls.Add(this.panelControl3);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 335);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1341, 458);
+            this.panelControl2.Size = new System.Drawing.Size(1556, 458);
             this.panelControl2.TabIndex = 14;
             this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
@@ -588,21 +577,21 @@
             this.cmbPhai.AutoCompleteCustomSource.AddRange(new string[] {
             "Nam"});
             this.cmbPhai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "PHAI", true));
-            this.cmbPhai.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPhai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPhai.FormattingEnabled = true;
             this.cmbPhai.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cmbPhai.Location = new System.Drawing.Point(380, 167);
+            this.cmbPhai.Location = new System.Drawing.Point(206, 140);
             this.cmbPhai.Name = "cmbPhai";
-            this.cmbPhai.Size = new System.Drawing.Size(121, 28);
+            this.cmbPhai.Size = new System.Drawing.Size(121, 33);
             this.cmbPhai.TabIndex = 14;
             // 
             // trangThaiXoaCheckBox
             // 
             this.trangThaiXoaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsNV, "TrangThaiXoa", true));
-            this.trangThaiXoaCheckBox.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trangThaiXoaCheckBox.Location = new System.Drawing.Point(389, 228);
+            this.trangThaiXoaCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trangThaiXoaCheckBox.Location = new System.Drawing.Point(215, 201);
             this.trangThaiXoaCheckBox.Name = "trangThaiXoaCheckBox";
             this.trangThaiXoaCheckBox.Size = new System.Drawing.Size(104, 24);
             this.trangThaiXoaCheckBox.TabIndex = 12;
@@ -612,55 +601,55 @@
             // txtMACN
             // 
             this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "MACN", true));
-            this.txtMACN.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMACN.Location = new System.Drawing.Point(867, 167);
+            this.txtMACN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMACN.Location = new System.Drawing.Point(693, 140);
             this.txtMACN.Name = "txtMACN";
-            this.txtMACN.Size = new System.Drawing.Size(114, 28);
+            this.txtMACN.Size = new System.Drawing.Size(114, 30);
             this.txtMACN.TabIndex = 11;
             // 
             // txtSODT
             // 
             this.txtSODT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "SODT", true));
-            this.txtSODT.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSODT.Location = new System.Drawing.Point(858, 117);
+            this.txtSODT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSODT.Location = new System.Drawing.Point(684, 90);
             this.txtSODT.Name = "txtSODT";
-            this.txtSODT.Size = new System.Drawing.Size(191, 28);
+            this.txtSODT.Size = new System.Drawing.Size(191, 30);
             this.txtSODT.TabIndex = 9;
             // 
             // txtDIACHI
             // 
             this.txtDIACHI.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "DIACHI", true));
-            this.txtDIACHI.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDIACHI.Location = new System.Drawing.Point(380, 117);
+            this.txtDIACHI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDIACHI.Location = new System.Drawing.Point(206, 90);
             this.txtDIACHI.Name = "txtDIACHI";
-            this.txtDIACHI.Size = new System.Drawing.Size(294, 28);
+            this.txtDIACHI.Size = new System.Drawing.Size(294, 30);
             this.txtDIACHI.TabIndex = 7;
             // 
             // txtTEN
             // 
             this.txtTEN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "TEN", true));
-            this.txtTEN.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTEN.Location = new System.Drawing.Point(1037, 53);
+            this.txtTEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTEN.Location = new System.Drawing.Point(863, 26);
             this.txtTEN.Name = "txtTEN";
-            this.txtTEN.Size = new System.Drawing.Size(100, 28);
+            this.txtTEN.Size = new System.Drawing.Size(100, 30);
             this.txtTEN.TabIndex = 5;
             // 
             // txtHO
             // 
             this.txtHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "HO", true));
-            this.txtHO.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHO.Location = new System.Drawing.Point(858, 53);
+            this.txtHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHO.Location = new System.Drawing.Point(684, 26);
             this.txtHO.Name = "txtHO";
-            this.txtHO.Size = new System.Drawing.Size(145, 28);
+            this.txtHO.Size = new System.Drawing.Size(145, 30);
             this.txtHO.TabIndex = 3;
             // 
             // txtMANV
             // 
             this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "MANV", true));
-            this.txtMANV.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMANV.Location = new System.Drawing.Point(380, 57);
+            this.txtMANV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMANV.Location = new System.Drawing.Point(206, 30);
             this.txtMANV.Name = "txtMANV";
-            this.txtMANV.Size = new System.Drawing.Size(142, 28);
+            this.txtMANV.Size = new System.Drawing.Size(142, 30);
             this.txtMANV.TabIndex = 1;
             // 
             // bdsGR
@@ -685,11 +674,35 @@
             // 
             this.dS_CHINHANHTableAdapter.ClearBeforeFill = true;
             // 
+            // panelControl3
+            // 
+            this.panelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelControl3.Appearance.Options.UseFont = true;
+            this.panelControl3.Controls.Add(pHAILabel);
+            this.panelControl3.Controls.Add(this.txtDIACHI);
+            this.panelControl3.Controls.Add(this.cmbPhai);
+            this.panelControl3.Controls.Add(this.txtMANV);
+            this.panelControl3.Controls.Add(trangThaiXoaLabel);
+            this.panelControl3.Controls.Add(mANVLabel);
+            this.panelControl3.Controls.Add(this.trangThaiXoaCheckBox);
+            this.panelControl3.Controls.Add(this.txtHO);
+            this.panelControl3.Controls.Add(mACNLabel);
+            this.panelControl3.Controls.Add(hOLabel);
+            this.panelControl3.Controls.Add(this.txtMACN);
+            this.panelControl3.Controls.Add(this.txtTEN);
+            this.panelControl3.Controls.Add(sODTLabel);
+            this.panelControl3.Controls.Add(dIACHILabel);
+            this.panelControl3.Controls.Add(this.txtSODT);
+            this.panelControl3.Location = new System.Drawing.Point(201, 23);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(1070, 243);
+            this.panelControl3.TabIndex = 19;
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1341, 818);
+            this.ClientSize = new System.Drawing.Size(1556, 818);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.gcNV);
             this.Controls.Add(this.panelControl1);
@@ -712,9 +725,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
+            this.panelControl3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -776,5 +791,6 @@
         private DSTableAdapters.DS_CHINHANHTableAdapter dS_CHINHANHTableAdapter;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMANVMOI;
+        private DevExpress.XtraEditors.PanelControl panelControl3;
     }
 }
