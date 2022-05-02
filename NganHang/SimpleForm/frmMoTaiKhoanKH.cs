@@ -30,6 +30,8 @@ namespace NganHang.SimpleForm
         private void frmMoTaiKhoanKH_Load(object sender, EventArgs e)
         {
             DS.EnforceConstraints = false;
+            this.dS_CHINHANHTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.dS_CHINHANHTableAdapter.Fill(this.DS.DS_CHINHANH);
             this.gD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gD_CHUYENTIENTableAdapter.Fill(this.DS.GD_CHUYENTIEN);
             this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
@@ -63,7 +65,6 @@ namespace NganHang.SimpleForm
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
             btn_Add_clicked = cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
             vitri = bdsTK.Position;
-            txtMACN.Text = macn;
             bdsTK.AddNew();
             teCMND.Text = ((DataRowView)bdsTK[bdsTK.Position])["CMND"].ToString();
             macn = ((DataRowView)bdsTK[bdsTK.Position])["MACN"].ToString();
@@ -88,6 +89,8 @@ namespace NganHang.SimpleForm
             else
             {
                 DS.EnforceConstraints = false;
+                this.dS_CHINHANHTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.dS_CHINHANHTableAdapter.Fill(this.DS.DS_CHINHANH);
                 this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.khachHangTableAdapter.Fill(this.DS.KhachHang);
                 this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
@@ -99,6 +102,7 @@ namespace NganHang.SimpleForm
         private void lưuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             String SOTK = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
+            string MACN = cmbCNFinal.SelectedValue.ToString();
             if (txtSOTK.Text.Trim() == "")
             {
                 MessageBox.Show("Mã nhân viên không được trống", "", MessageBoxButtons.OK);
@@ -138,11 +142,12 @@ namespace NganHang.SimpleForm
             }
             try
             {
-                bdsTK.EndEdit(); //kết thúc quá trình hiệu chỉnh (ghi vào datasource)
-                bdsTK.ResetCurrentItem();//đưa thông tin lên lưới
+
+                MessageBox.Show("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + numbSODU.Value + "','" + teCMND.Text + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'", "", MessageBoxButtons.OK);
+                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'");
                 this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
-                MessageBox.Show("Lưu thành công!!", "", MessageBoxButtons.OK);               
+                //MessageBox.Show("Lưu thành công!!", "", MessageBoxButtons.OK);               
             }
             catch (Exception ex)
             {
@@ -161,7 +166,7 @@ namespace NganHang.SimpleForm
             panelControl2.Enabled = true;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
-            gcTK.Enabled = gcKH.Enabled = txtMACN.Enabled = false; 
+            gcTK.Enabled = gcKH.Enabled = cmbCNFinal.Enabled = false; 
         }
 
         private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
@@ -229,6 +234,21 @@ namespace NganHang.SimpleForm
         }
 
         private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gcTK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMACN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCNFinal_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

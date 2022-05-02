@@ -52,12 +52,13 @@
             this.colMACN1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNGAYMOTK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.cmbCNFinal = new System.Windows.Forms.ComboBox();
+            this.bds_DSPM = new System.Windows.Forms.BindingSource(this.components);
+            this.teCMND = new System.Windows.Forms.TextBox();
             this.numbSODU = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMACN = new System.Windows.Forms.TextBox();
             this.dateNgayMoTK = new DevExpress.XtraEditors.DateEdit();
             this.txtSOTK = new System.Windows.Forms.TextBox();
-            this.bdsGR = new System.Windows.Forms.BindingSource(this.components);
             this.gcKH = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCMND = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,6 +66,8 @@
             this.colTEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSODT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.bdsGR = new System.Windows.Forms.BindingSource(this.components);
             this.taiKhoanTableAdapter = new NganHang.DSTableAdapters.TaiKhoanTableAdapter();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsTHEM = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,7 +80,7 @@
             this.gD_GOIRUTTableAdapter = new NganHang.DSTableAdapters.GD_GOIRUTTableAdapter();
             this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
             this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
-            this.teCMND = new System.Windows.Forms.TextBox();
+            this.dS_CHINHANHTableAdapter = new NganHang.DSTableAdapters.DS_CHINHANHTableAdapter();
             cMNDLabel = new System.Windows.Forms.Label();
             mACNLabel = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
@@ -95,12 +98,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvTK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bds_DSPM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numbSODU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).BeginInit();
             this.SuspendLayout();
@@ -109,48 +114,48 @@
             // 
             cMNDLabel.AutoSize = true;
             cMNDLabel.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cMNDLabel.Location = new System.Drawing.Point(61, 148);
+            cMNDLabel.Location = new System.Drawing.Point(49, 121);
             cMNDLabel.Name = "cMNDLabel";
-            cMNDLabel.Size = new System.Drawing.Size(62, 23);
+            cMNDLabel.Size = new System.Drawing.Size(69, 23);
             cMNDLabel.TabIndex = 0;
-            cMNDLabel.Text = "CMND";
+            cMNDLabel.Text = "CMND:";
             // 
             // mACNLabel
             // 
             mACNLabel.AutoSize = true;
             mACNLabel.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mACNLabel.Location = new System.Drawing.Point(59, 200);
+            mACNLabel.Location = new System.Drawing.Point(47, 160);
             mACNLabel.Name = "mACNLabel";
-            mACNLabel.Size = new System.Drawing.Size(125, 23);
+            mACNLabel.Size = new System.Drawing.Size(132, 23);
             mACNLabel.TabIndex = 2;
-            mACNLabel.Text = "Mã chi nhánh";
+            mACNLabel.Text = "Mã chi nhánh:";
             // 
             // sOTKLabel
             // 
             sOTKLabel.AutoSize = true;
-            sOTKLabel.Location = new System.Drawing.Point(61, 49);
+            sOTKLabel.Location = new System.Drawing.Point(49, 45);
             sOTKLabel.Name = "sOTKLabel";
-            sOTKLabel.Size = new System.Drawing.Size(114, 23);
+            sOTKLabel.Size = new System.Drawing.Size(121, 23);
             sOTKLabel.TabIndex = 4;
-            sOTKLabel.Text = "Số tài khoản";
+            sOTKLabel.Text = "Số tài khoản:";
             // 
             // sODULabel
             // 
             sODULabel.AutoSize = true;
-            sODULabel.Location = new System.Drawing.Point(61, 97);
+            sODULabel.Location = new System.Drawing.Point(49, 81);
             sODULabel.Name = "sODULabel";
-            sODULabel.Size = new System.Drawing.Size(60, 23);
+            sODULabel.Size = new System.Drawing.Size(67, 23);
             sODULabel.TabIndex = 6;
-            sODULabel.Text = "Số dư";
+            sODULabel.Text = "Số dư:";
             // 
             // nGAYMOTKLabel
             // 
             nGAYMOTKLabel.AutoSize = true;
-            nGAYMOTKLabel.Location = new System.Drawing.Point(61, 257);
+            nGAYMOTKLabel.Location = new System.Drawing.Point(47, 201);
             nGAYMOTKLabel.Name = "nGAYMOTKLabel";
-            nGAYMOTKLabel.Size = new System.Drawing.Size(168, 23);
+            nGAYMOTKLabel.Size = new System.Drawing.Size(175, 23);
             nGAYMOTKLabel.TabIndex = 8;
-            nGAYMOTKLabel.Text = "Ngày mở tài khoản";
+            nGAYMOTKLabel.Text = "Ngày mở tài khoản:";
             // 
             // panelControl1
             // 
@@ -223,6 +228,7 @@
             this.panelControl3.Controls.Add(this.gcTK);
             this.panelControl3.Controls.Add(this.panelControl2);
             this.panelControl3.Controls.Add(this.gcKH);
+            this.panelControl3.Controls.Add(this.panelControl4);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 71);
             this.panelControl3.Name = "panelControl3";
@@ -233,13 +239,14 @@
             // 
             this.gcTK.DataSource = this.bdsTK;
             this.gcTK.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcTK.Location = new System.Drawing.Point(782, 243);
+            this.gcTK.Location = new System.Drawing.Point(782, 313);
             this.gcTK.MainView = this.gvTK;
             this.gcTK.Name = "gcTK";
-            this.gcTK.Size = new System.Drawing.Size(422, 352);
+            this.gcTK.Size = new System.Drawing.Size(422, 282);
             this.gcTK.TabIndex = 2;
             this.gcTK.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTK});
+            this.gcTK.Click += new System.EventHandler(this.gcTK_Click);
             // 
             // bdsTK
             // 
@@ -258,6 +265,7 @@
             this.gvTK.Name = "gvTK";
             this.gvTK.OptionsBehavior.ReadOnly = true;
             this.gvTK.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gvTK.OptionsView.ShowGroupPanel = false;
             // 
             // colSOTK
             // 
@@ -309,10 +317,10 @@
             // 
             this.panelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelControl2.Appearance.Options.UseFont = true;
+            this.panelControl2.Controls.Add(this.cmbCNFinal);
             this.panelControl2.Controls.Add(this.teCMND);
             this.panelControl2.Controls.Add(this.numbSODU);
             this.panelControl2.Controls.Add(this.label2);
-            this.panelControl2.Controls.Add(this.txtMACN);
             this.panelControl2.Controls.Add(nGAYMOTKLabel);
             this.panelControl2.Controls.Add(this.dateNgayMoTK);
             this.panelControl2.Controls.Add(sODULabel);
@@ -321,10 +329,36 @@
             this.panelControl2.Controls.Add(mACNLabel);
             this.panelControl2.Controls.Add(cMNDLabel);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl2.Location = new System.Drawing.Point(2, 243);
+            this.panelControl2.Location = new System.Drawing.Point(2, 313);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(780, 352);
+            this.panelControl2.Size = new System.Drawing.Size(780, 282);
             this.panelControl2.TabIndex = 1;
+            // 
+            // cmbCNFinal
+            // 
+            this.cmbCNFinal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "MACN", true));
+            this.cmbCNFinal.DataSource = this.bds_DSPM;
+            this.cmbCNFinal.DisplayMember = "MACN";
+            this.cmbCNFinal.FormattingEnabled = true;
+            this.cmbCNFinal.Location = new System.Drawing.Point(234, 153);
+            this.cmbCNFinal.Name = "cmbCNFinal";
+            this.cmbCNFinal.Size = new System.Drawing.Size(243, 30);
+            this.cmbCNFinal.TabIndex = 15;
+            this.cmbCNFinal.ValueMember = "MACN";
+            // 
+            // bds_DSPM
+            // 
+            this.bds_DSPM.DataMember = "DS_CHINHANH";
+            this.bds_DSPM.DataSource = this.DS;
+            // 
+            // teCMND
+            // 
+            this.teCMND.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "CMND", true));
+            this.teCMND.Location = new System.Drawing.Point(233, 118);
+            this.teCMND.Name = "teCMND";
+            this.teCMND.ReadOnly = true;
+            this.teCMND.Size = new System.Drawing.Size(245, 29);
+            this.teCMND.TabIndex = 14;
             // 
             // numbSODU
             // 
@@ -334,7 +368,7 @@
             0,
             0,
             0});
-            this.numbSODU.Location = new System.Drawing.Point(246, 95);
+            this.numbSODU.Location = new System.Drawing.Point(234, 79);
             this.numbSODU.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -348,26 +382,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 13);
+            this.label2.Location = new System.Drawing.Point(10, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 23);
             this.label2.TabIndex = 12;
             this.label2.Text = "Thông tin tài khoản";
             // 
-            // txtMACN
-            // 
-            this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "MACN", true));
-            this.txtMACN.Location = new System.Drawing.Point(246, 197);
-            this.txtMACN.Name = "txtMACN";
-            this.txtMACN.ReadOnly = true;
-            this.txtMACN.Size = new System.Drawing.Size(243, 29);
-            this.txtMACN.TabIndex = 10;
-            // 
             // dateNgayMoTK
             // 
             this.dateNgayMoTK.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsTK, "NGAYMOTK", true));
             this.dateNgayMoTK.EditValue = null;
-            this.dateNgayMoTK.Location = new System.Drawing.Point(245, 252);
+            this.dateNgayMoTK.Location = new System.Drawing.Point(233, 196);
             this.dateNgayMoTK.Name = "dateNgayMoTK";
             this.dateNgayMoTK.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayMoTK.Properties.Appearance.Options.UseFont = true;
@@ -381,15 +406,10 @@
             // txtSOTK
             // 
             this.txtSOTK.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "SOTK", true));
-            this.txtSOTK.Location = new System.Drawing.Point(245, 46);
+            this.txtSOTK.Location = new System.Drawing.Point(233, 42);
             this.txtSOTK.Name = "txtSOTK";
             this.txtSOTK.Size = new System.Drawing.Size(245, 29);
             this.txtSOTK.TabIndex = 5;
-            // 
-            // bdsGR
-            // 
-            this.bdsGR.DataMember = "FK_GD_GOIRUT_TaiKhoan";
-            this.bdsGR.DataSource = this.bdsTK;
             // 
             // gcKH
             // 
@@ -398,7 +418,7 @@
             this.gcKH.Location = new System.Drawing.Point(2, 2);
             this.gcKH.MainView = this.gridView1;
             this.gcKH.Name = "gcKH";
-            this.gcKH.Size = new System.Drawing.Size(1202, 241);
+            this.gcKH.Size = new System.Drawing.Size(1202, 311);
             this.gcKH.TabIndex = 0;
             this.gcKH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -415,6 +435,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colCMND
             // 
@@ -422,6 +443,7 @@
             this.colCMND.Name = "colCMND";
             this.colCMND.Visible = true;
             this.colCMND.VisibleIndex = 0;
+            this.colCMND.Width = 323;
             // 
             // colHO
             // 
@@ -430,7 +452,7 @@
             this.colHO.Name = "colHO";
             this.colHO.Visible = true;
             this.colHO.VisibleIndex = 1;
-            this.colHO.Width = 157;
+            this.colHO.Width = 279;
             // 
             // colTEN
             // 
@@ -439,6 +461,7 @@
             this.colTEN.Name = "colTEN";
             this.colTEN.Visible = true;
             this.colTEN.VisibleIndex = 2;
+            this.colTEN.Width = 164;
             // 
             // colSODT
             // 
@@ -447,14 +470,28 @@
             this.colSODT.Name = "colSODT";
             this.colSODT.Visible = true;
             this.colSODT.VisibleIndex = 3;
+            this.colSODT.Width = 204;
             // 
             // colMACN
             // 
-            this.colMACN.Caption = "Mã Chi Nhánh";
+            this.colMACN.Caption = "Chi Nhánh Đăng Ký";
             this.colMACN.FieldName = "MACN";
             this.colMACN.Name = "colMACN";
             this.colMACN.Visible = true;
             this.colMACN.VisibleIndex = 4;
+            this.colMACN.Width = 212;
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Location = new System.Drawing.Point(789, 313);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(415, 100);
+            this.panelControl4.TabIndex = 3;
+            // 
+            // bdsGR
+            // 
+            this.bdsGR.DataMember = "FK_GD_GOIRUT_TaiKhoan";
+            this.bdsGR.DataSource = this.bdsTK;
             // 
             // taiKhoanTableAdapter
             // 
@@ -536,14 +573,9 @@
             // 
             this.gD_CHUYENTIENTableAdapter.ClearBeforeFill = true;
             // 
-            // teCMND
+            // dS_CHINHANHTableAdapter
             // 
-            this.teCMND.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "CMND", true));
-            this.teCMND.Location = new System.Drawing.Point(245, 145);
-            this.teCMND.Name = "teCMND";
-            this.teCMND.ReadOnly = true;
-            this.teCMND.Size = new System.Drawing.Size(245, 29);
-            this.teCMND.TabIndex = 14;
+            this.dS_CHINHANHTableAdapter.ClearBeforeFill = true;
             // 
             // frmMoTaiKhoanKH
             // 
@@ -572,12 +604,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bds_DSPM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numbSODU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).EndInit();
             this.ResumeLayout(false);
@@ -611,7 +645,6 @@
         private System.Windows.Forms.ToolStripMenuItem cmsXOA;
         private System.Windows.Forms.ToolStripMenuItem cmsLUU;
         private System.Windows.Forms.TextBox txtSOTK;
-        private System.Windows.Forms.TextBox txtMACN;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.DateEdit dateNgayMoTK;
         private System.Windows.Forms.ToolStripMenuItem cmsHIEUCHINH;
@@ -629,5 +662,9 @@
         private System.Windows.Forms.BindingSource bdsCT;
         private DSTableAdapters.GD_CHUYENTIENTableAdapter gD_CHUYENTIENTableAdapter;
         private System.Windows.Forms.TextBox teCMND;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
+        private System.Windows.Forms.BindingSource bds_DSPM;
+        private DSTableAdapters.DS_CHINHANHTableAdapter dS_CHINHANHTableAdapter;
+        private System.Windows.Forms.ComboBox cmbCNFinal;
     }
 }

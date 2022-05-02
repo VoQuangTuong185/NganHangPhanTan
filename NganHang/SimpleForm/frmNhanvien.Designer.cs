@@ -55,6 +55,8 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnChuyenNV = new DevExpress.XtraBars.BarButtonItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtMANVMOI = new System.Windows.Forms.TextBox();
             this.cmbCNFinal = new System.Windows.Forms.ComboBox();
             this.bdsChuyenNV = new System.Windows.Forms.BindingSource(this.components);
             this.DS = new NganHang.DS();
@@ -89,8 +91,6 @@
             this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
             this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
             this.dS_CHINHANHTableAdapter = new NganHang.DSTableAdapters.DS_CHINHANHTableAdapter();
-            this.txtMANVMOI = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             mANVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
@@ -372,6 +372,22 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1341, 41);
             this.panelControl1.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(966, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 21);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Mã NV mới: ";
+            // 
+            // txtMANVMOI
+            // 
+            this.txtMANVMOI.Location = new System.Drawing.Point(1073, 5);
+            this.txtMANVMOI.Name = "txtMANVMOI";
+            this.txtMANVMOI.Size = new System.Drawing.Size(137, 28);
+            this.txtMANVMOI.TabIndex = 12;
             // 
             // cmbCNFinal
             // 
@@ -668,22 +684,6 @@
             // dS_CHINHANHTableAdapter
             // 
             this.dS_CHINHANHTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtMANVMOI
-            // 
-            this.txtMANVMOI.Location = new System.Drawing.Point(1073, 5);
-            this.txtMANVMOI.Name = "txtMANVMOI";
-            this.txtMANVMOI.Size = new System.Drawing.Size(137, 28);
-            this.txtMANVMOI.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(966, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 21);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Mã NV mới: ";
             // 
             // frmNhanVien
             // 
