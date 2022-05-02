@@ -129,7 +129,15 @@ namespace NganHang.SimpleForm
                 dateNgayMoTK.Focus();
                 return;
             }
-            if (btn_Add_clicked == true || SOTK != txtSOTK.Text)
+            if (btn_Add_clicked == true || SOTK == txtSOTK.Text)
+            {
+                MessageBox.Show("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'", "", MessageBoxButtons.OK);
+                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'");
+                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
+                btn_Add_clicked = false;
+            }
+            else
             {
                 Program.myReader.Close();
                 string strlenh1 = "EXEC frmMoTaiKhoanKH_duplicateSoTK '" + txtSOTK.Text + "'";
@@ -141,14 +149,6 @@ namespace NganHang.SimpleForm
                     return;
                 }
                 Program.myReader.Close();
-            }
-            else
-            {
-                MessageBox.Show("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'", "", MessageBoxButtons.OK);
-                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'");
-                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
-                btn_Add_clicked = false;
             }
             gcTK.Enabled = gcKH.Enabled = cmbCNFinal.Enabled = true;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = true;
@@ -162,7 +162,7 @@ namespace NganHang.SimpleForm
             panelControl2.Enabled = true;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
-            gcTK.Enabled = gcKH.Enabled = cmbCNFinal.Enabled = false; 
+            gcTK.Enabled = gcKH.Enabled = false; 
         }
 
         private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
