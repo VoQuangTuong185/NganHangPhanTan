@@ -17,11 +17,20 @@ namespace NganHang
         {
             InitializeComponent();
             rib_BaoCao.Visible = rib_DanhMuc.Visible = rib_NghiepVu.Visible = false;
+
+            Form frm = this.CheckExists(typeof(frmLogin));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmLogin f = new frmLogin();
+                f.MdiParent = this;
+                f.Show();
+            }
         }
 
         private void fMain_Load(object sender, EventArgs e)
         {
-            btnCreateLogin.Enabled = false;
+            btnCreateLogin.Enabled = btnLogout.Enabled = false;
         }
 
         private Form CheckExists(Type ftype)
