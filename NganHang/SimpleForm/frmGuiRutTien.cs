@@ -40,15 +40,16 @@ namespace NganHang.SimpleForm
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
+            pnlGD.Enabled = false;
             //panelControl2.Enabled = cmsPHUCHOI.Enabled = cmsLUU.Enabled = false;
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
-                //cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = false;
+                cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = false;
             }
             else
             {
-                //cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = true;
+                cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = true;
                 cmbChiNhanh.Enabled = false;
             }
         }
@@ -79,6 +80,12 @@ namespace NganHang.SimpleForm
                 this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
             }
+        }
+
+        private void cmsTHEM_Click(object sender, EventArgs e)
+        {
+            taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = false;
+            pnlGD.Enabled = true;
         }
     }
 }
