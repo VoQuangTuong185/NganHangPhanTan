@@ -191,14 +191,15 @@
             // 
             this.memoLuuY.EditValue = "";
             this.memoLuuY.Enabled = false;
-            this.memoLuuY.Location = new System.Drawing.Point(506, 440);
+            this.memoLuuY.Location = new System.Drawing.Point(511, 414);
             this.memoLuuY.Name = "memoLuuY";
-            this.memoLuuY.Properties.Appearance.BackColor = System.Drawing.Color.Gainsboro;
+            this.memoLuuY.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.memoLuuY.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memoLuuY.Properties.Appearance.ForeColor = System.Drawing.Color.Green;
             this.memoLuuY.Properties.Appearance.Options.UseBackColor = true;
             this.memoLuuY.Properties.Appearance.Options.UseFont = true;
             this.memoLuuY.Properties.Appearance.Options.UseForeColor = true;
+            this.memoLuuY.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.memoLuuY.Size = new System.Drawing.Size(528, 92);
             this.memoLuuY.TabIndex = 0;
             // 
@@ -213,16 +214,16 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.groupBox1.Location = new System.Drawing.Point(952, 228);
+            this.groupBox1.Location = new System.Drawing.Point(974, 228);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(549, 206);
+            this.groupBox1.Size = new System.Drawing.Size(549, 179);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
             // txtLoginName
             // 
             this.txtLoginName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginName.Location = new System.Drawing.Point(161, 21);
+            this.txtLoginName.Location = new System.Drawing.Point(161, 14);
             this.txtLoginName.Name = "txtLoginName";
             this.txtLoginName.Size = new System.Drawing.Size(361, 34);
             this.txtLoginName.TabIndex = 10;
@@ -232,7 +233,7 @@
             this.nPass.AutoSize = true;
             this.nPass.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nPass.ForeColor = System.Drawing.Color.Black;
-            this.nPass.Location = new System.Drawing.Point(20, 105);
+            this.nPass.Location = new System.Drawing.Point(20, 98);
             this.nPass.Name = "nPass";
             this.nPass.Size = new System.Drawing.Size(109, 27);
             this.nPass.TabIndex = 10;
@@ -242,7 +243,7 @@
             // 
             this.btnCreateLogin.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateLogin.ForeColor = System.Drawing.Color.Green;
-            this.btnCreateLogin.Location = new System.Drawing.Point(224, 157);
+            this.btnCreateLogin.Location = new System.Drawing.Point(224, 136);
             this.btnCreateLogin.Name = "btnCreateLogin";
             this.btnCreateLogin.Size = new System.Drawing.Size(166, 38);
             this.btnCreateLogin.TabIndex = 12;
@@ -255,7 +256,7 @@
             this.nName.AutoSize = true;
             this.nName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nName.ForeColor = System.Drawing.Color.Black;
-            this.nName.Location = new System.Drawing.Point(14, 30);
+            this.nName.Location = new System.Drawing.Point(14, 23);
             this.nName.Name = "nName";
             this.nName.Size = new System.Drawing.Size(108, 27);
             this.nName.TabIndex = 8;
@@ -264,7 +265,7 @@
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(161, 100);
+            this.txtPass.Location = new System.Drawing.Point(161, 93);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(361, 34);
             this.txtPass.TabIndex = 11;
@@ -278,7 +279,7 @@
             this.gc_LGINFO1.MainView = this.gridView2;
             this.gc_LGINFO1.MenuManager = this.barManager1;
             this.gc_LGINFO1.Name = "gc_LGINFO1";
-            this.gc_LGINFO1.Size = new System.Drawing.Size(796, 152);
+            this.gc_LGINFO1.Size = new System.Drawing.Size(796, 138);
             this.gc_LGINFO1.TabIndex = 12;
             this.gc_LGINFO1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
