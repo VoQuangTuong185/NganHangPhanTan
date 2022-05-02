@@ -61,9 +61,10 @@ namespace NganHang.SimpleForm
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelControl2.Enabled = true;
+            btn_Add_clicked = true;
             gcTK.Enabled = gcKH.Enabled = false;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
-            btn_Add_clicked = cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
+            cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
             vitri = bdsTK.Position;
             bdsTK.AddNew();
             teCMND.Text = ((DataRowView)bdsTK[bdsTK.Position])["CMND"].ToString();
@@ -141,24 +142,18 @@ namespace NganHang.SimpleForm
                 }
                 Program.myReader.Close();
             }
-            try
+            else
             {
                 MessageBox.Show("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'", "", MessageBoxButtons.OK);
                 Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'");
                 this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
                 btn_Add_clicked = false;
-                //MessageBox.Show("Lưu thành công!!", "", MessageBoxButtons.OK);               
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi ghi nhân viên. \n" + ex.Message, "", MessageBoxButtons.OK);
-                return;
-            }
-            gcTK.Enabled = gcKH.Enabled = true;
+            gcTK.Enabled = gcKH.Enabled = cmbCNFinal.Enabled = true;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = true;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = false;
-            panelControl2.Enabled = false;
+            panelControl2.Enabled = false;            
         }
 
         private void hiệuChỉnhToolStripMenuItem_Click(object sender, EventArgs e)
@@ -232,31 +227,6 @@ namespace NganHang.SimpleForm
         private void cmsTHOAT_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void gcTK_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMACN_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbCNFinal_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void teCMND_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

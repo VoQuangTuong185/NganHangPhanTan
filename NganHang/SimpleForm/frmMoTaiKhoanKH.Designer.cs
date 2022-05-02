@@ -204,7 +204,6 @@
             this.groupControl1.Size = new System.Drawing.Size(1206, 30);
             this.groupControl1.TabIndex = 11;
             this.groupControl1.Text = "Danh sách khách hàng thuộc chi nhánh";
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // DS
             // 
@@ -264,7 +263,6 @@
             this.gcTK.TabIndex = 2;
             this.gcTK.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTK});
-            this.gcTK.Click += new System.EventHandler(this.gcTK_Click);
             // 
             // bdsTK
             // 
@@ -389,7 +387,6 @@
             this.teCMND.ReadOnly = true;
             this.teCMND.Size = new System.Drawing.Size(245, 27);
             this.teCMND.TabIndex = 14;
-            this.teCMND.TextChanged += new System.EventHandler(this.teCMND_TextChanged);
             // 
             // numbSODU
             // 
