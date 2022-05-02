@@ -73,7 +73,7 @@ namespace NganHang.SimpleForm
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
-            panelControl2.Enabled = btnUndo.Enabled = btnSave.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = false;
+            panelControl2.Enabled = btnUndo.Enabled = btnSave.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = txtMANVMOI.Enabled = false;
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
@@ -275,7 +275,7 @@ namespace NganHang.SimpleForm
 
         private void btnMoveEmployee_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            btnUndo.Enabled = btnExit.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = true;
+            btnUndo.Enabled = btnExit.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = txtMANVMOI.Enabled = true;
             panelControl2.Enabled = btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled  = btnSave.Enabled = gcNV.Enabled = false;
         }
 
@@ -289,11 +289,22 @@ namespace NganHang.SimpleForm
                 MessageBox.Show("Chi nhánh chuyển đi phải khác chi nhánh ban đầu", "", MessageBoxButtons.OK);
                 return;
             }
+            if (txtMANVMOI.Text.Trim() == "")
+            {
+                MessageBox.Show("Mã nhân viên không được trống", "", MessageBoxButtons.OK);
+                txtMANV.Focus();
+                return;
+            }
+            if (txtMANVMOI.Text == manv.ToString())
+            {
+                MessageBox.Show("Mã nhân viên đã tồn tại\nVui lòng nhập mã nhân viên khác!!", "", MessageBoxButtons.OK);
+                return;
+            }
             if (MessageBox.Show("Bạn muốn chuyển nhân viên " + manv + " sang chi nhánh " + MACN + "??", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                Program.ExecSqlNonQuery("EXEC frmChuyenNV_MoveEmployee '" + manv + "','" + MACN + "'");
+                Program.ExecSqlNonQuery("EXEC frmChuyenNV_MoveEmployee '" + manv + "','" + MACN + "','" + txtMANVMOI.Text + "'");   
             }
-            btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled = btnExit.Enabled = gcNV.Enabled = true;
+            btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled = btnExit.Enabled = gcNV.Enabled = txtMANVMOI.Enabled = true;
             btnSave.Enabled = btnUndo.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = false;
             this.nhanVienTableAdapter.Fill(this.DS.NhanVien);
         }

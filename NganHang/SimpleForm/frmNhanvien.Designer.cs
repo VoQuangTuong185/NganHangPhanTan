@@ -89,6 +89,8 @@
             this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
             this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
             this.dS_CHINHANHTableAdapter = new NganHang.DSTableAdapters.DS_CHINHANHTableAdapter();
+            this.txtMANVMOI = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             mANVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
@@ -358,6 +360,8 @@
             // 
             this.panelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelControl1.Appearance.Options.UseFont = true;
+            this.panelControl1.Controls.Add(this.label3);
+            this.panelControl1.Controls.Add(this.txtMANVMOI);
             this.panelControl1.Controls.Add(this.cmbCNFinal);
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.btnChuyenEmployee);
@@ -374,7 +378,7 @@
             this.cmbCNFinal.DataSource = this.bdsChuyenNV;
             this.cmbCNFinal.DisplayMember = "TENCN";
             this.cmbCNFinal.FormattingEnabled = true;
-            this.cmbCNFinal.Location = new System.Drawing.Point(998, 5);
+            this.cmbCNFinal.Location = new System.Drawing.Point(747, 5);
             this.cmbCNFinal.Name = "cmbCNFinal";
             this.cmbCNFinal.Size = new System.Drawing.Size(199, 29);
             this.cmbCNFinal.TabIndex = 11;
@@ -393,11 +397,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(813, 10);
+            this.label2.Location = new System.Drawing.Point(562, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 21);
+            this.label2.Size = new System.Drawing.Size(190, 21);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Chi Nhánh Chuyển Đến";
+            this.label2.Text = "Chi Nhánh Chuyển Đến: ";
             // 
             // btnChuyenEmployee
             // 
@@ -412,11 +416,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 12);
+            this.label1.Location = new System.Drawing.Point(36, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 21);
+            this.label1.Size = new System.Drawing.Size(96, 21);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Chi Nhánh";
+            this.label1.Text = "Chi Nhánh: ";
             // 
             // cmbChiNhanh
             // 
@@ -665,6 +669,22 @@
             // 
             this.dS_CHINHANHTableAdapter.ClearBeforeFill = true;
             // 
+            // txtMANVMOI
+            // 
+            this.txtMANVMOI.Location = new System.Drawing.Point(1073, 5);
+            this.txtMANVMOI.Name = "txtMANVMOI";
+            this.txtMANVMOI.Size = new System.Drawing.Size(137, 28);
+            this.txtMANVMOI.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(966, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 21);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Mã NV mới: ";
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -754,5 +774,7 @@
         private System.Windows.Forms.Button btnChuyenEmployee;
         private System.Windows.Forms.BindingSource bdsChuyenNV;
         private DSTableAdapters.DS_CHINHANHTableAdapter dS_CHINHANHTableAdapter;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtMANVMOI;
     }
 }
