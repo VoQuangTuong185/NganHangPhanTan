@@ -4,15 +4,13 @@
 
 - lỗi xoá nhân viên lỗi khi mã nhân viên dạng chuỗi (dòng 241 frmNhanVien.cs)
 
-- chức năng chuyển nhân viên chưa làm được
+- xem kỹ lại chức năng chuyển nhân viên
 
---không bắt buộc: chức năng redo (mới ok 2 nút insert, save) còn lại add, delete chưa làm được (dùng stack để khôi phục) 
+-không bắt buộc: chức năng redo (mới ok 2 nút insert, save) còn lại add, delete chưa làm được (dùng stack để khôi phục) 
 
 - xem kỹ lại nút delete của form  MOTAIKHOAN (ràng buộc phát sinh từ tài khoản khách hàng như gửi/rút tiền) -
 
 - thêm quyền 'SecurityAdmin' cho tài khoản HTKN để xem được tài khoản ở site khác với site đã đăng nhập (combobox chi nhánh) khi vào bằng tài khoản nhóm NganHang
-
-- EXEC sp_addsrvrolemember @LGNAME, 'ProcessAdmin'-- Cấp quyền kiểm tra user có login vào server (Dùng khi chuyển nhân viên) 
 
 -Còn các chức năng chưa làm: 
   + Gửi và rút tiền
