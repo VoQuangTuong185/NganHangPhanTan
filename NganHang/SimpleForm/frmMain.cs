@@ -142,5 +142,17 @@ namespace NganHang
                 f.Show();
             }
         }
+
+        private void btnSaveCashService_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmGuiRutTien));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmGuiRutTien f = new frmGuiRutTien();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

@@ -40,15 +40,15 @@ namespace NganHang {
         
         private frmCreateLogin_GetLoginsOfBranchDataTable tablefrmCreateLogin_GetLoginsOfBranch;
         
-        private global::System.Data.DataRelation relationFK_GD_CHUYENTIEN_NhanVien;
+        private global::System.Data.DataRelation relationFK_GD_CHUYENTIEN_TaiKhoan;
         
         private global::System.Data.DataRelation relationFK_GD_CHUYENTIEN_TaiKhoan1;
         
-        private global::System.Data.DataRelation relationFK_GD_CHUYENTIEN_TaiKhoan;
-        
-        private global::System.Data.DataRelation relationFK_GD_GOIRUT_TaiKhoan;
+        private global::System.Data.DataRelation relationFK_GD_CHUYENTIEN_NhanVien;
         
         private global::System.Data.DataRelation relationFK_GD_GOIRUT_NhanVien;
+        
+        private global::System.Data.DataRelation relationFK_GD_GOIRUT_TaiKhoan;
         
         private global::System.Data.DataRelation relationFK_KhachHang_TaiKhoan;
         
@@ -374,11 +374,11 @@ namespace NganHang {
                     this.tablefrmCreateLogin_GetLoginsOfBranch.InitVars();
                 }
             }
-            this.relationFK_GD_CHUYENTIEN_NhanVien = this.Relations["FK_GD_CHUYENTIEN_NhanVien"];
-            this.relationFK_GD_CHUYENTIEN_TaiKhoan1 = this.Relations["FK_GD_CHUYENTIEN_TaiKhoan1"];
             this.relationFK_GD_CHUYENTIEN_TaiKhoan = this.Relations["FK_GD_CHUYENTIEN_TaiKhoan"];
-            this.relationFK_GD_GOIRUT_TaiKhoan = this.Relations["FK_GD_GOIRUT_TaiKhoan"];
+            this.relationFK_GD_CHUYENTIEN_TaiKhoan1 = this.Relations["FK_GD_CHUYENTIEN_TaiKhoan1"];
+            this.relationFK_GD_CHUYENTIEN_NhanVien = this.Relations["FK_GD_CHUYENTIEN_NhanVien"];
             this.relationFK_GD_GOIRUT_NhanVien = this.Relations["FK_GD_GOIRUT_NhanVien"];
+            this.relationFK_GD_GOIRUT_TaiKhoan = this.Relations["FK_GD_GOIRUT_TaiKhoan"];
             this.relationFK_KhachHang_TaiKhoan = this.Relations["FK_KhachHang_TaiKhoan"];
         }
         
@@ -407,9 +407,9 @@ namespace NganHang {
             this.tablefrmCreateLogin_GetLoginsOfBranch = new frmCreateLogin_GetLoginsOfBranchDataTable();
             base.Tables.Add(this.tablefrmCreateLogin_GetLoginsOfBranch);
             global::System.Data.ForeignKeyConstraint fkc;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_GD_CHUYENTIEN_NhanVien", new global::System.Data.DataColumn[] {
-                        this.tableNhanVien.MANVColumn}, new global::System.Data.DataColumn[] {
-                        this.tableGD_CHUYENTIEN.MANVColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_GD_CHUYENTIEN_TaiKhoan", new global::System.Data.DataColumn[] {
+                        this.tableTaiKhoan.SOTKColumn}, new global::System.Data.DataColumn[] {
+                        this.tableGD_CHUYENTIEN.SOTK_CHUYENColumn});
             this.tableGD_CHUYENTIEN.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -421,23 +421,23 @@ namespace NganHang {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_GD_CHUYENTIEN_TaiKhoan", new global::System.Data.DataColumn[] {
-                        this.tableTaiKhoan.SOTKColumn}, new global::System.Data.DataColumn[] {
-                        this.tableGD_CHUYENTIEN.SOTK_CHUYENColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_GD_CHUYENTIEN_NhanVien", new global::System.Data.DataColumn[] {
+                        this.tableNhanVien.MANVColumn}, new global::System.Data.DataColumn[] {
+                        this.tableGD_CHUYENTIEN.MANVColumn});
             this.tableGD_CHUYENTIEN.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_GD_GOIRUT_TaiKhoan", new global::System.Data.DataColumn[] {
-                        this.tableTaiKhoan.SOTKColumn}, new global::System.Data.DataColumn[] {
-                        this.tableGD_GOIRUT.SOTKColumn});
-            this.tableGD_GOIRUT.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_GD_GOIRUT_NhanVien", new global::System.Data.DataColumn[] {
                         this.tableNhanVien.MANVColumn}, new global::System.Data.DataColumn[] {
                         this.tableGD_GOIRUT.MANVColumn});
+            this.tableGD_GOIRUT.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_GD_GOIRUT_TaiKhoan", new global::System.Data.DataColumn[] {
+                        this.tableTaiKhoan.SOTKColumn}, new global::System.Data.DataColumn[] {
+                        this.tableGD_GOIRUT.SOTKColumn});
             this.tableGD_GOIRUT.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -449,26 +449,26 @@ namespace NganHang {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            this.relationFK_GD_CHUYENTIEN_NhanVien = new global::System.Data.DataRelation("FK_GD_CHUYENTIEN_NhanVien", new global::System.Data.DataColumn[] {
-                        this.tableNhanVien.MANVColumn}, new global::System.Data.DataColumn[] {
-                        this.tableGD_CHUYENTIEN.MANVColumn}, false);
-            this.Relations.Add(this.relationFK_GD_CHUYENTIEN_NhanVien);
-            this.relationFK_GD_CHUYENTIEN_TaiKhoan1 = new global::System.Data.DataRelation("FK_GD_CHUYENTIEN_TaiKhoan1", new global::System.Data.DataColumn[] {
-                        this.tableTaiKhoan.SOTKColumn}, new global::System.Data.DataColumn[] {
-                        this.tableGD_CHUYENTIEN.SOTK_NHANColumn}, false);
-            this.Relations.Add(this.relationFK_GD_CHUYENTIEN_TaiKhoan1);
             this.relationFK_GD_CHUYENTIEN_TaiKhoan = new global::System.Data.DataRelation("FK_GD_CHUYENTIEN_TaiKhoan", new global::System.Data.DataColumn[] {
                         this.tableTaiKhoan.SOTKColumn}, new global::System.Data.DataColumn[] {
                         this.tableGD_CHUYENTIEN.SOTK_CHUYENColumn}, false);
             this.Relations.Add(this.relationFK_GD_CHUYENTIEN_TaiKhoan);
-            this.relationFK_GD_GOIRUT_TaiKhoan = new global::System.Data.DataRelation("FK_GD_GOIRUT_TaiKhoan", new global::System.Data.DataColumn[] {
+            this.relationFK_GD_CHUYENTIEN_TaiKhoan1 = new global::System.Data.DataRelation("FK_GD_CHUYENTIEN_TaiKhoan1", new global::System.Data.DataColumn[] {
                         this.tableTaiKhoan.SOTKColumn}, new global::System.Data.DataColumn[] {
-                        this.tableGD_GOIRUT.SOTKColumn}, false);
-            this.Relations.Add(this.relationFK_GD_GOIRUT_TaiKhoan);
+                        this.tableGD_CHUYENTIEN.SOTK_NHANColumn}, false);
+            this.Relations.Add(this.relationFK_GD_CHUYENTIEN_TaiKhoan1);
+            this.relationFK_GD_CHUYENTIEN_NhanVien = new global::System.Data.DataRelation("FK_GD_CHUYENTIEN_NhanVien", new global::System.Data.DataColumn[] {
+                        this.tableNhanVien.MANVColumn}, new global::System.Data.DataColumn[] {
+                        this.tableGD_CHUYENTIEN.MANVColumn}, false);
+            this.Relations.Add(this.relationFK_GD_CHUYENTIEN_NhanVien);
             this.relationFK_GD_GOIRUT_NhanVien = new global::System.Data.DataRelation("FK_GD_GOIRUT_NhanVien", new global::System.Data.DataColumn[] {
                         this.tableNhanVien.MANVColumn}, new global::System.Data.DataColumn[] {
                         this.tableGD_GOIRUT.MANVColumn}, false);
             this.Relations.Add(this.relationFK_GD_GOIRUT_NhanVien);
+            this.relationFK_GD_GOIRUT_TaiKhoan = new global::System.Data.DataRelation("FK_GD_GOIRUT_TaiKhoan", new global::System.Data.DataColumn[] {
+                        this.tableTaiKhoan.SOTKColumn}, new global::System.Data.DataColumn[] {
+                        this.tableGD_GOIRUT.SOTKColumn}, false);
+            this.Relations.Add(this.relationFK_GD_GOIRUT_TaiKhoan);
             this.relationFK_KhachHang_TaiKhoan = new global::System.Data.DataRelation("FK_KhachHang_TaiKhoan", new global::System.Data.DataColumn[] {
                         this.tableKhachHang.CMNDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTaiKhoan.CMNDColumn}, false);
@@ -1686,8 +1686,6 @@ namespace NganHang {
             
             private global::System.Data.DataColumn columnPHAI;
             
-            private global::System.Data.DataColumn columnrowguid;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public KhachHangDataTable() {
@@ -1787,14 +1785,6 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn rowguidColumn {
-                get {
-                    return this.columnrowguid;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1830,7 +1820,7 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public KhachHangRow AddKhachHangRow(string CMND, string HO, string TEN, string DIACHI, System.DateTime NGAYCAP, string SODT, string MACN, string PHAI, System.Guid rowguid) {
+            public KhachHangRow AddKhachHangRow(string CMND, string HO, string TEN, string DIACHI, System.DateTime NGAYCAP, string SODT, string MACN, string PHAI) {
                 KhachHangRow rowKhachHangRow = ((KhachHangRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CMND,
@@ -1840,8 +1830,7 @@ namespace NganHang {
                         NGAYCAP,
                         SODT,
                         MACN,
-                        PHAI,
-                        rowguid};
+                        PHAI};
                 rowKhachHangRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKhachHangRow);
                 return rowKhachHangRow;
@@ -1879,7 +1868,6 @@ namespace NganHang {
                 this.columnSODT = base.Columns["SODT"];
                 this.columnMACN = base.Columns["MACN"];
                 this.columnPHAI = base.Columns["PHAI"];
-                this.columnrowguid = base.Columns["rowguid"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1901,8 +1889,6 @@ namespace NganHang {
                 base.Columns.Add(this.columnMACN);
                 this.columnPHAI = new global::System.Data.DataColumn("PHAI", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPHAI);
-                this.columnrowguid = new global::System.Data.DataColumn("rowguid", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrowguid);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCMND}, true));
                 this.columnCMND.AllowDBNull = false;
@@ -1918,7 +1904,6 @@ namespace NganHang {
                 this.columnSODT.MaxLength = 15;
                 this.columnMACN.MaxLength = 10;
                 this.columnPHAI.MaxLength = 3;
-                this.columnrowguid.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3388,12 +3373,12 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NhanVienRow NhanVienRow {
+            public TaiKhoanRow TaiKhoanRowByFK_GD_CHUYENTIEN_TaiKhoan {
                 get {
-                    return ((NhanVienRow)(this.GetParentRow(this.Table.ParentRelations["FK_GD_CHUYENTIEN_NhanVien"])));
+                    return ((TaiKhoanRow)(this.GetParentRow(this.Table.ParentRelations["FK_GD_CHUYENTIEN_TaiKhoan"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_GD_CHUYENTIEN_NhanVien"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_GD_CHUYENTIEN_TaiKhoan"]);
                 }
             }
             
@@ -3410,12 +3395,12 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TaiKhoanRow TaiKhoanRowByFK_GD_CHUYENTIEN_TaiKhoan {
+            public NhanVienRow NhanVienRow {
                 get {
-                    return ((TaiKhoanRow)(this.GetParentRow(this.Table.ParentRelations["FK_GD_CHUYENTIEN_TaiKhoan"])));
+                    return ((NhanVienRow)(this.GetParentRow(this.Table.ParentRelations["FK_GD_CHUYENTIEN_NhanVien"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_GD_CHUYENTIEN_TaiKhoan"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_GD_CHUYENTIEN_NhanVien"]);
                 }
             }
         }
@@ -3502,23 +3487,23 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TaiKhoanRow TaiKhoanRow {
-                get {
-                    return ((TaiKhoanRow)(this.GetParentRow(this.Table.ParentRelations["FK_GD_GOIRUT_TaiKhoan"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_GD_GOIRUT_TaiKhoan"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public NhanVienRow NhanVienRow {
                 get {
                     return ((NhanVienRow)(this.GetParentRow(this.Table.ParentRelations["FK_GD_GOIRUT_NhanVien"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_GD_GOIRUT_NhanVien"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TaiKhoanRow TaiKhoanRow {
+                get {
+                    return ((TaiKhoanRow)(this.GetParentRow(this.Table.ParentRelations["FK_GD_GOIRUT_TaiKhoan"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_GD_GOIRUT_TaiKhoan"]);
                 }
             }
         }
@@ -3835,17 +3820,6 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.Guid rowguid {
-                get {
-                    return ((global::System.Guid)(this[this.tableKhachHang.rowguidColumn]));
-                }
-                set {
-                    this[this.tableKhachHang.rowguidColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDIACHINull() {
                 return this.IsNull(this.tableKhachHang.DIACHIColumn);
             }
@@ -4019,23 +3993,23 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GD_CHUYENTIENRow[] GetGD_CHUYENTIENRowsByFK_GD_CHUYENTIEN_TaiKhoan1() {
-                if ((this.Table.ChildRelations["FK_GD_CHUYENTIEN_TaiKhoan1"] == null)) {
-                    return new GD_CHUYENTIENRow[0];
-                }
-                else {
-                    return ((GD_CHUYENTIENRow[])(base.GetChildRows(this.Table.ChildRelations["FK_GD_CHUYENTIEN_TaiKhoan1"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public GD_CHUYENTIENRow[] GetGD_CHUYENTIENRowsByFK_GD_CHUYENTIEN_TaiKhoan() {
                 if ((this.Table.ChildRelations["FK_GD_CHUYENTIEN_TaiKhoan"] == null)) {
                     return new GD_CHUYENTIENRow[0];
                 }
                 else {
                     return ((GD_CHUYENTIENRow[])(base.GetChildRows(this.Table.ChildRelations["FK_GD_CHUYENTIEN_TaiKhoan"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GD_CHUYENTIENRow[] GetGD_CHUYENTIENRowsByFK_GD_CHUYENTIEN_TaiKhoan1() {
+                if ((this.Table.ChildRelations["FK_GD_CHUYENTIEN_TaiKhoan1"] == null)) {
+                    return new GD_CHUYENTIENRow[0];
+                }
+                else {
+                    return ((GD_CHUYENTIENRow[])(base.GetChildRows(this.Table.ChildRelations["FK_GD_CHUYENTIEN_TaiKhoan1"])));
                 }
             }
         }
@@ -5179,8 +5153,8 @@ SELECT MAGD, SOTK_CHUYEN, NGAYGD, SOTIEN, SOTK_NHAN, MANV FROM GD_CHUYENTIEN WHE
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GD_GOIRUT] ([SOTK], [LOAIGD], [NGAYGD], [SOTIEN], [MANV]) VALU" +
-                "ES (@SOTK, @LOAIGD, @NGAYGD, @SOTIEN, @MANV);\r\nSELECT MAGD, SOTK, LOAIGD, NGAYGD" +
-                ", SOTIEN, MANV FROM GD_GOIRUT WHERE (MAGD = SCOPE_IDENTITY())";
+                "ES (@SOTK, @LOAIGD, @NGAYGD, @SOTIEN, @MANV);\nSELECT MAGD, SOTK, LOAIGD, NGAYGD," +
+                " SOTIEN, MANV FROM GD_GOIRUT WHERE (MAGD = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SOTK", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SOTK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LOAIGD", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LOAIGD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6112,11 +6086,10 @@ SELECT MANV, HO, TEN, DIACHI, PHAI, SODT, MACN, TrangThaiXoa FROM NhanVien WHERE
             tableMapping.ColumnMappings.Add("SODT", "SODT");
             tableMapping.ColumnMappings.Add("MACN", "MACN");
             tableMapping.ColumnMappings.Add("PHAI", "PHAI");
-            tableMapping.ColumnMappings.Add("rowguid", "rowguid");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[KhachHang] WHERE (([CMND] = @Original_CMND) AND ([HO] = @Original_HO) AND ([TEN] = @Original_TEN) AND ((@IsNull_DIACHI = 1 AND [DIACHI] IS NULL) OR ([DIACHI] = @Original_DIACHI)) AND ((@IsNull_PHAI = 1 AND [PHAI] IS NULL) OR ([PHAI] = @Original_PHAI)) AND ([NGAYCAP] = @Original_NGAYCAP) AND ([SODT] = @Original_SODT) AND ((@IsNull_MACN = 1 AND [MACN] IS NULL) OR ([MACN] = @Original_MACN)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [KhachHang] WHERE (([CMND] = @Original_CMND) AND ([HO] = @Original_HO) AND ([TEN] = @Original_TEN) AND ((@IsNull_DIACHI = 1 AND [DIACHI] IS NULL) OR ([DIACHI] = @Original_DIACHI)) AND ((@IsNull_PHAI = 1 AND [PHAI] IS NULL) OR ([PHAI] = @Original_PHAI)) AND ([NGAYCAP] = @Original_NGAYCAP) AND ([SODT] = @Original_SODT) AND ((@IsNull_MACN = 1 AND [MACN] IS NULL) OR ([MACN] = @Original_MACN)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CMND", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CMND", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -6131,8 +6104,10 @@ SELECT MANV, HO, TEN, DIACHI, PHAI, SODT, MACN, TrangThaiXoa FROM NhanVien WHERE
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MACN", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MACN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[KhachHang] ([CMND], [HO], [TEN], [DIACHI], [PHAI], [NGAYCAP], [SODT], [MACN]) VALUES (@CMND, @HO, @TEN, @DIACHI, @PHAI, @NGAYCAP, @SODT, @MACN);
-SELECT CMND, HO, TEN, DIACHI, PHAI, NGAYCAP, SODT, MACN FROM KhachHang WHERE (CMND = @CMND)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [KhachHang] ([CMND], [HO], [TEN], [DIACHI], [PHAI], [NGAYCAP], [SODT]" +
+                ", [MACN]) VALUES (@CMND, @HO, @TEN, @DIACHI, @PHAI, @NGAYCAP, @SODT, @MACN);\r\nSE" +
+                "LECT CMND, HO, TEN, DIACHI, PHAI, NGAYCAP, SODT, MACN FROM KhachHang WHERE (CMND" +
+                " = @CMND)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CMND", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CMND", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6144,7 +6119,7 @@ SELECT CMND, HO, TEN, DIACHI, PHAI, NGAYCAP, SODT, MACN FROM KhachHang WHERE (CM
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MACN", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MACN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[KhachHang] SET [CMND] = @CMND, [HO] = @HO, [TEN] = @TEN, [DIACHI] = @DIACHI, [PHAI] = @PHAI, [NGAYCAP] = @NGAYCAP, [SODT] = @SODT, [MACN] = @MACN WHERE (([CMND] = @Original_CMND) AND ([HO] = @Original_HO) AND ([TEN] = @Original_TEN) AND ((@IsNull_DIACHI = 1 AND [DIACHI] IS NULL) OR ([DIACHI] = @Original_DIACHI)) AND ((@IsNull_PHAI = 1 AND [PHAI] IS NULL) OR ([PHAI] = @Original_PHAI)) AND ([NGAYCAP] = @Original_NGAYCAP) AND ([SODT] = @Original_SODT) AND ((@IsNull_MACN = 1 AND [MACN] IS NULL) OR ([MACN] = @Original_MACN)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [KhachHang] SET [CMND] = @CMND, [HO] = @HO, [TEN] = @TEN, [DIACHI] = @DIACHI, [PHAI] = @PHAI, [NGAYCAP] = @NGAYCAP, [SODT] = @SODT, [MACN] = @MACN WHERE (([CMND] = @Original_CMND) AND ([HO] = @Original_HO) AND ([TEN] = @Original_TEN) AND ((@IsNull_DIACHI = 1 AND [DIACHI] IS NULL) OR ([DIACHI] = @Original_DIACHI)) AND ((@IsNull_PHAI = 1 AND [PHAI] IS NULL) OR ([PHAI] = @Original_PHAI)) AND ([NGAYCAP] = @Original_NGAYCAP) AND ([SODT] = @Original_SODT) AND ((@IsNull_MACN = 1 AND [MACN] IS NULL) OR ([MACN] = @Original_MACN)));
 SELECT CMND, HO, TEN, DIACHI, PHAI, NGAYCAP, SODT, MACN FROM KhachHang WHERE (CMND = @CMND)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CMND", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CMND", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6181,7 +6156,7 @@ SELECT CMND, HO, TEN, DIACHI, PHAI, NGAYCAP, SODT, MACN FROM KhachHang WHERE (CM
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM DBO.KhachHang";
+            this._commandCollection[0].CommandText = "SELECT CMND, HO, TEN, DIACHI, PHAI, NGAYCAP, SODT, MACN FROM KhachHang";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

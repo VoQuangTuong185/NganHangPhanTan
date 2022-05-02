@@ -166,6 +166,7 @@
             this.btnSaveCashService.LargeWidth = 110;
             this.btnSaveCashService.Name = "btnSaveCashService";
             this.btnSaveCashService.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnSaveCashService.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSaveCashService_ItemClick);
             // 
             // btnTransferService
             // 

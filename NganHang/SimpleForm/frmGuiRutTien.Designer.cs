@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGuiRutTien));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
@@ -38,19 +37,6 @@
             this.bdsKH = new System.Windows.Forms.BindingSource(this.components);
             this.khachHangTableAdapter = new NganHang.DSTableAdapters.KhachHangTableAdapter();
             this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
-            this.khachHangBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.khachHangBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.khachHangGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCMND = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,18 +45,33 @@
             this.colDIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNGAYCAP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSODT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.bdsTK = new System.Windows.Forms.BindingSource(this.components);
+            this.taiKhoanTableAdapter = new NganHang.DSTableAdapters.TaiKhoanTableAdapter();
+            this.taiKhoanGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colSOTK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCMND1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSODU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPHAI = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colrowguid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.gD_GOIRUTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gD_GOIRUTTableAdapter = new NganHang.DSTableAdapters.GD_GOIRUTTableAdapter();
+            this.gD_GOIRUTGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingNavigator)).BeginInit();
-            this.khachHangBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -80,7 +81,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1660, 41);
+            this.panelControl1.Size = new System.Drawing.Size(1708, 41);
             this.panelControl1.TabIndex = 6;
             // 
             // label1
@@ -99,6 +100,7 @@
             this.cmbChiNhanh.Name = "cmbChiNhanh";
             this.cmbChiNhanh.Size = new System.Drawing.Size(325, 24);
             this.cmbChiNhanh.TabIndex = 0;
+            this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
             // 
             // groupControl1
             // 
@@ -109,7 +111,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 41);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1660, 30);
+            this.groupControl1.Size = new System.Drawing.Size(1708, 30);
             this.groupControl1.TabIndex = 12;
             this.groupControl1.Text = "Danh sách khách hàng thuộc chi nhánh";
             // 
@@ -131,153 +133,37 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.GD_CHUYENTIENTableAdapter = null;
-            this.tableAdapterManager.GD_GOIRUTTableAdapter = null;
+            this.tableAdapterManager.GD_GOIRUTTableAdapter = this.gD_GOIRUTTableAdapter;
             this.tableAdapterManager.KhachHangTableAdapter = this.khachHangTableAdapter;
             this.tableAdapterManager.NhanVienTableAdapter = null;
-            this.tableAdapterManager.TaiKhoanTableAdapter = null;
+            this.tableAdapterManager.TaiKhoanTableAdapter = this.taiKhoanTableAdapter;
             this.tableAdapterManager.UpdateOrder = NganHang.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // khachHangBindingNavigator
-            // 
-            this.khachHangBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.khachHangBindingNavigator.BindingSource = this.bdsKH;
-            this.khachHangBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.khachHangBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.khachHangBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.khachHangBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.khachHangBindingNavigatorSaveItem});
-            this.khachHangBindingNavigator.Location = new System.Drawing.Point(0, 71);
-            this.khachHangBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.khachHangBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.khachHangBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.khachHangBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.khachHangBindingNavigator.Name = "khachHangBindingNavigator";
-            this.khachHangBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.khachHangBindingNavigator.Size = new System.Drawing.Size(1660, 27);
-            this.khachHangBindingNavigator.TabIndex = 13;
-            this.khachHangBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // khachHangBindingNavigatorSaveItem
-            // 
-            this.khachHangBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.khachHangBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("khachHangBindingNavigatorSaveItem.Image")));
-            this.khachHangBindingNavigatorSaveItem.Name = "khachHangBindingNavigatorSaveItem";
-            this.khachHangBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
-            this.khachHangBindingNavigatorSaveItem.Text = "Save Data";
-            this.khachHangBindingNavigatorSaveItem.Click += new System.EventHandler(this.khachHangBindingNavigatorSaveItem_Click);
             // 
             // khachHangGridControl
             // 
             this.khachHangGridControl.DataSource = this.bdsKH;
             this.khachHangGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.khachHangGridControl.Location = new System.Drawing.Point(0, 98);
+            this.khachHangGridControl.Location = new System.Drawing.Point(0, 71);
             this.khachHangGridControl.MainView = this.gridView1;
             this.khachHangGridControl.Name = "khachHangGridControl";
-            this.khachHangGridControl.Size = new System.Drawing.Size(1660, 220);
+            this.khachHangGridControl.Size = new System.Drawing.Size(1708, 174);
             this.khachHangGridControl.TabIndex = 13;
             this.khachHangGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colCMND,
+            this.colHO,
+            this.colTEN,
+            this.colDIACHI,
+            this.colNGAYCAP,
+            this.colSODT});
             this.gridView1.GridControl = this.khachHangGridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
@@ -285,54 +171,150 @@
             // 
             this.colCMND.FieldName = "CMND";
             this.colCMND.Name = "colCMND";
+            this.colCMND.Visible = true;
+            this.colCMND.VisibleIndex = 0;
             // 
             // colHO
             // 
             this.colHO.FieldName = "HO";
             this.colHO.Name = "colHO";
+            this.colHO.Visible = true;
+            this.colHO.VisibleIndex = 1;
             // 
             // colTEN
             // 
             this.colTEN.FieldName = "TEN";
             this.colTEN.Name = "colTEN";
+            this.colTEN.Visible = true;
+            this.colTEN.VisibleIndex = 2;
             // 
             // colDIACHI
             // 
             this.colDIACHI.FieldName = "DIACHI";
             this.colDIACHI.Name = "colDIACHI";
+            this.colDIACHI.Visible = true;
+            this.colDIACHI.VisibleIndex = 3;
             // 
             // colNGAYCAP
             // 
             this.colNGAYCAP.FieldName = "NGAYCAP";
             this.colNGAYCAP.Name = "colNGAYCAP";
+            this.colNGAYCAP.Visible = true;
+            this.colNGAYCAP.VisibleIndex = 4;
             // 
             // colSODT
             // 
             this.colSODT.FieldName = "SODT";
             this.colSODT.Name = "colSODT";
+            this.colSODT.Visible = true;
+            this.colSODT.VisibleIndex = 5;
+            // 
+            // bdsTK
+            // 
+            this.bdsTK.DataMember = "FK_KhachHang_TaiKhoan";
+            this.bdsTK.DataSource = this.bdsKH;
+            // 
+            // taiKhoanTableAdapter
+            // 
+            this.taiKhoanTableAdapter.ClearBeforeFill = true;
+            // 
+            // taiKhoanGridControl
+            // 
+            this.taiKhoanGridControl.DataSource = this.bdsTK;
+            this.taiKhoanGridControl.Location = new System.Drawing.Point(0, 290);
+            this.taiKhoanGridControl.MainView = this.gridView2;
+            this.taiKhoanGridControl.Name = "taiKhoanGridControl";
+            this.taiKhoanGridControl.Size = new System.Drawing.Size(827, 172);
+            this.taiKhoanGridControl.TabIndex = 13;
+            this.taiKhoanGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colSOTK,
+            this.colCMND1,
+            this.colSODU,
+            this.colMACN});
+            this.gridView2.GridControl = this.taiKhoanGridControl;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
+            this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // colSOTK
+            // 
+            this.colSOTK.FieldName = "SOTK";
+            this.colSOTK.Name = "colSOTK";
+            this.colSOTK.Visible = true;
+            this.colSOTK.VisibleIndex = 0;
+            // 
+            // colCMND1
+            // 
+            this.colCMND1.FieldName = "CMND";
+            this.colCMND1.Name = "colCMND1";
+            this.colCMND1.Visible = true;
+            this.colCMND1.VisibleIndex = 1;
+            // 
+            // colSODU
+            // 
+            this.colSODU.FieldName = "SODU";
+            this.colSODU.Name = "colSODU";
+            this.colSODU.Visible = true;
+            this.colSODU.VisibleIndex = 2;
             // 
             // colMACN
             // 
             this.colMACN.FieldName = "MACN";
             this.colMACN.Name = "colMACN";
+            this.colMACN.Visible = true;
+            this.colMACN.VisibleIndex = 3;
             // 
-            // colPHAI
+            // panelControl2
             // 
-            this.colPHAI.FieldName = "PHAI";
-            this.colPHAI.Name = "colPHAI";
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl2.Location = new System.Drawing.Point(0, 245);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(1708, 39);
+            this.panelControl2.TabIndex = 14;
             // 
-            // colrowguid
+            // gD_GOIRUTBindingSource
             // 
-            this.colrowguid.FieldName = "rowguid";
-            this.colrowguid.Name = "colrowguid";
+            this.gD_GOIRUTBindingSource.DataMember = "FK_GD_GOIRUT_TaiKhoan";
+            this.gD_GOIRUTBindingSource.DataSource = this.bdsTK;
+            // 
+            // gD_GOIRUTTableAdapter
+            // 
+            this.gD_GOIRUTTableAdapter.ClearBeforeFill = true;
+            // 
+            // gD_GOIRUTGridControl
+            // 
+            this.gD_GOIRUTGridControl.DataSource = this.gD_GOIRUTBindingSource;
+            this.gD_GOIRUTGridControl.Location = new System.Drawing.Point(1038, 290);
+            this.gD_GOIRUTGridControl.MainView = this.gridView3;
+            this.gD_GOIRUTGridControl.Name = "gD_GOIRUTGridControl";
+            this.gD_GOIRUTGridControl.Size = new System.Drawing.Size(670, 172);
+            this.gD_GOIRUTGridControl.TabIndex = 14;
+            this.gD_GOIRUTGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            // 
+            // gridView3
+            // 
+            this.gridView3.GridControl = this.gD_GOIRUTGridControl;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
             // 
             // frmGuiRutTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1660, 683);
+            this.ClientSize = new System.Drawing.Size(1708, 618);
+            this.Controls.Add(this.gD_GOIRUTGridControl);
+            this.Controls.Add(this.panelControl2);
+            this.Controls.Add(this.taiKhoanGridControl);
             this.Controls.Add(this.khachHangGridControl);
-            this.Controls.Add(this.khachHangBindingNavigator);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);
             this.Name = "frmGuiRutTien";
@@ -345,13 +327,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingNavigator)).EndInit();
-            this.khachHangBindingNavigator.ResumeLayout(false);
-            this.khachHangBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -365,19 +350,6 @@
         private System.Windows.Forms.BindingSource bdsKH;
         private DSTableAdapters.KhachHangTableAdapter khachHangTableAdapter;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator khachHangBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton khachHangBindingNavigatorSaveItem;
         private DevExpress.XtraGrid.GridControl khachHangGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colCMND;
@@ -386,8 +358,18 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDIACHI;
         private DevExpress.XtraGrid.Columns.GridColumn colNGAYCAP;
         private DevExpress.XtraGrid.Columns.GridColumn colSODT;
+        private DSTableAdapters.TaiKhoanTableAdapter taiKhoanTableAdapter;
+        private System.Windows.Forms.BindingSource bdsTK;
+        private DevExpress.XtraGrid.GridControl taiKhoanGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn colSOTK;
+        private DevExpress.XtraGrid.Columns.GridColumn colCMND1;
+        private DevExpress.XtraGrid.Columns.GridColumn colSODU;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
-        private DevExpress.XtraGrid.Columns.GridColumn colPHAI;
-        private DevExpress.XtraGrid.Columns.GridColumn colrowguid;
+        private DSTableAdapters.GD_GOIRUTTableAdapter gD_GOIRUTTableAdapter;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private System.Windows.Forms.BindingSource gD_GOIRUTBindingSource;
+        private DevExpress.XtraGrid.GridControl gD_GOIRUTGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
     }
 }
