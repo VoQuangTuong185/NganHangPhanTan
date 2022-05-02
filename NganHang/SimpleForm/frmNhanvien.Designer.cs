@@ -78,20 +78,20 @@
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.cmbPhai = new System.Windows.Forms.ComboBox();
-            this.trangThaiXoaCheckBox = new System.Windows.Forms.CheckBox();
-            this.txtMACN = new System.Windows.Forms.TextBox();
-            this.txtSODT = new System.Windows.Forms.TextBox();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.txtDIACHI = new System.Windows.Forms.TextBox();
-            this.txtTEN = new System.Windows.Forms.TextBox();
-            this.txtHO = new System.Windows.Forms.TextBox();
+            this.cmbPhai = new System.Windows.Forms.ComboBox();
             this.txtMANV = new System.Windows.Forms.TextBox();
+            this.trangThaiXoaCheckBox = new System.Windows.Forms.CheckBox();
+            this.txtHO = new System.Windows.Forms.TextBox();
+            this.txtMACN = new System.Windows.Forms.TextBox();
+            this.txtTEN = new System.Windows.Forms.TextBox();
+            this.txtSODT = new System.Windows.Forms.TextBox();
             this.bdsGR = new System.Windows.Forms.BindingSource(this.components);
             this.gD_GOIRUTTableAdapter = new NganHang.DSTableAdapters.GD_GOIRUTTableAdapter();
             this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
             this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
             this.dS_CHINHANHTableAdapter = new NganHang.DSTableAdapters.DS_CHINHANHTableAdapter();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             mANVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
@@ -109,10 +109,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).BeginInit();
             this.SuspendLayout();
             // 
             // mANVLabel
@@ -572,108 +572,6 @@
             this.panelControl2.TabIndex = 14;
             this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
-            // cmbPhai
-            // 
-            this.cmbPhai.AutoCompleteCustomSource.AddRange(new string[] {
-            "Nam"});
-            this.cmbPhai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "PHAI", true));
-            this.cmbPhai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPhai.FormattingEnabled = true;
-            this.cmbPhai.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cmbPhai.Location = new System.Drawing.Point(206, 140);
-            this.cmbPhai.Name = "cmbPhai";
-            this.cmbPhai.Size = new System.Drawing.Size(121, 33);
-            this.cmbPhai.TabIndex = 14;
-            // 
-            // trangThaiXoaCheckBox
-            // 
-            this.trangThaiXoaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsNV, "TrangThaiXoa", true));
-            this.trangThaiXoaCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trangThaiXoaCheckBox.Location = new System.Drawing.Point(215, 201);
-            this.trangThaiXoaCheckBox.Name = "trangThaiXoaCheckBox";
-            this.trangThaiXoaCheckBox.Size = new System.Drawing.Size(104, 24);
-            this.trangThaiXoaCheckBox.TabIndex = 12;
-            this.trangThaiXoaCheckBox.Text = "có";
-            this.trangThaiXoaCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // txtMACN
-            // 
-            this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "MACN", true));
-            this.txtMACN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMACN.Location = new System.Drawing.Point(693, 140);
-            this.txtMACN.Name = "txtMACN";
-            this.txtMACN.Size = new System.Drawing.Size(114, 30);
-            this.txtMACN.TabIndex = 11;
-            // 
-            // txtSODT
-            // 
-            this.txtSODT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "SODT", true));
-            this.txtSODT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSODT.Location = new System.Drawing.Point(684, 90);
-            this.txtSODT.Name = "txtSODT";
-            this.txtSODT.Size = new System.Drawing.Size(191, 30);
-            this.txtSODT.TabIndex = 9;
-            // 
-            // txtDIACHI
-            // 
-            this.txtDIACHI.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "DIACHI", true));
-            this.txtDIACHI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDIACHI.Location = new System.Drawing.Point(206, 90);
-            this.txtDIACHI.Name = "txtDIACHI";
-            this.txtDIACHI.Size = new System.Drawing.Size(294, 30);
-            this.txtDIACHI.TabIndex = 7;
-            // 
-            // txtTEN
-            // 
-            this.txtTEN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "TEN", true));
-            this.txtTEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTEN.Location = new System.Drawing.Point(863, 26);
-            this.txtTEN.Name = "txtTEN";
-            this.txtTEN.Size = new System.Drawing.Size(100, 30);
-            this.txtTEN.TabIndex = 5;
-            // 
-            // txtHO
-            // 
-            this.txtHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "HO", true));
-            this.txtHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHO.Location = new System.Drawing.Point(684, 26);
-            this.txtHO.Name = "txtHO";
-            this.txtHO.Size = new System.Drawing.Size(145, 30);
-            this.txtHO.TabIndex = 3;
-            // 
-            // txtMANV
-            // 
-            this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "MANV", true));
-            this.txtMANV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMANV.Location = new System.Drawing.Point(206, 30);
-            this.txtMANV.Name = "txtMANV";
-            this.txtMANV.Size = new System.Drawing.Size(142, 30);
-            this.txtMANV.TabIndex = 1;
-            // 
-            // bdsGR
-            // 
-            this.bdsGR.DataMember = "FK_GD_GOIRUT_NhanVien";
-            this.bdsGR.DataSource = this.bdsNV;
-            // 
-            // gD_GOIRUTTableAdapter
-            // 
-            this.gD_GOIRUTTableAdapter.ClearBeforeFill = true;
-            // 
-            // bdsCT
-            // 
-            this.bdsCT.DataMember = "FK_GD_CHUYENTIEN_NhanVien";
-            this.bdsCT.DataSource = this.bdsNV;
-            // 
-            // gD_CHUYENTIENTableAdapter
-            // 
-            this.gD_CHUYENTIENTableAdapter.ClearBeforeFill = true;
-            // 
-            // dS_CHINHANHTableAdapter
-            // 
-            this.dS_CHINHANHTableAdapter.ClearBeforeFill = true;
-            // 
             // panelControl3
             // 
             this.panelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -697,6 +595,108 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(1070, 243);
             this.panelControl3.TabIndex = 19;
+            // 
+            // txtDIACHI
+            // 
+            this.txtDIACHI.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "DIACHI", true));
+            this.txtDIACHI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDIACHI.Location = new System.Drawing.Point(206, 90);
+            this.txtDIACHI.Name = "txtDIACHI";
+            this.txtDIACHI.Size = new System.Drawing.Size(294, 30);
+            this.txtDIACHI.TabIndex = 7;
+            // 
+            // cmbPhai
+            // 
+            this.cmbPhai.AutoCompleteCustomSource.AddRange(new string[] {
+            "Nam"});
+            this.cmbPhai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "PHAI", true));
+            this.cmbPhai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPhai.FormattingEnabled = true;
+            this.cmbPhai.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cmbPhai.Location = new System.Drawing.Point(206, 140);
+            this.cmbPhai.Name = "cmbPhai";
+            this.cmbPhai.Size = new System.Drawing.Size(121, 33);
+            this.cmbPhai.TabIndex = 14;
+            // 
+            // txtMANV
+            // 
+            this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "MANV", true));
+            this.txtMANV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMANV.Location = new System.Drawing.Point(206, 30);
+            this.txtMANV.Name = "txtMANV";
+            this.txtMANV.Size = new System.Drawing.Size(142, 30);
+            this.txtMANV.TabIndex = 1;
+            // 
+            // trangThaiXoaCheckBox
+            // 
+            this.trangThaiXoaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsNV, "TrangThaiXoa", true));
+            this.trangThaiXoaCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trangThaiXoaCheckBox.Location = new System.Drawing.Point(215, 201);
+            this.trangThaiXoaCheckBox.Name = "trangThaiXoaCheckBox";
+            this.trangThaiXoaCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.trangThaiXoaCheckBox.TabIndex = 12;
+            this.trangThaiXoaCheckBox.Text = "có";
+            this.trangThaiXoaCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // txtHO
+            // 
+            this.txtHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "HO", true));
+            this.txtHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHO.Location = new System.Drawing.Point(684, 26);
+            this.txtHO.Name = "txtHO";
+            this.txtHO.Size = new System.Drawing.Size(145, 30);
+            this.txtHO.TabIndex = 3;
+            // 
+            // txtMACN
+            // 
+            this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "MACN", true));
+            this.txtMACN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMACN.Location = new System.Drawing.Point(693, 140);
+            this.txtMACN.Name = "txtMACN";
+            this.txtMACN.Size = new System.Drawing.Size(114, 30);
+            this.txtMACN.TabIndex = 11;
+            // 
+            // txtTEN
+            // 
+            this.txtTEN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "TEN", true));
+            this.txtTEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTEN.Location = new System.Drawing.Point(863, 26);
+            this.txtTEN.Name = "txtTEN";
+            this.txtTEN.Size = new System.Drawing.Size(100, 30);
+            this.txtTEN.TabIndex = 5;
+            // 
+            // txtSODT
+            // 
+            this.txtSODT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsNV, "SODT", true));
+            this.txtSODT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSODT.Location = new System.Drawing.Point(684, 90);
+            this.txtSODT.Name = "txtSODT";
+            this.txtSODT.Size = new System.Drawing.Size(191, 30);
+            this.txtSODT.TabIndex = 9;
+            // 
+            // bdsGR
+            // 
+            this.bdsGR.DataMember = "FK_GD_GOIRUT_NhanVien";
+            this.bdsGR.DataSource = this.bdsNV;
+            // 
+            // gD_GOIRUTTableAdapter
+            // 
+            this.gD_GOIRUTTableAdapter.ClearBeforeFill = true;
+            // 
+            // bdsCT
+            // 
+            this.bdsCT.DataMember = "FK_GD_CHUYENTIEN_NhanVien";
+            this.bdsCT.DataSource = this.bdsNV;
+            // 
+            // gD_CHUYENTIENTableAdapter
+            // 
+            this.gD_CHUYENTIENTableAdapter.ClearBeforeFill = true;
+            // 
+            // dS_CHINHANHTableAdapter
+            // 
+            this.dS_CHINHANHTableAdapter.ClearBeforeFill = true;
             // 
             // frmNhanVien
             // 
@@ -725,11 +725,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
