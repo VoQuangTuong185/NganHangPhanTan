@@ -41,6 +41,8 @@
             this.bdsKH = new System.Windows.Forms.BindingSource(this.components);
             this.khachHangTableAdapter = new NganHang.DSTableAdapters.KhachHangTableAdapter();
             this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
+            this.gD_GOIRUTTableAdapter = new NganHang.DSTableAdapters.GD_GOIRUTTableAdapter();
+            this.taiKhoanTableAdapter = new NganHang.DSTableAdapters.TaiKhoanTableAdapter();
             this.khachHangGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCMND = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,7 +52,6 @@
             this.colNGAYCAP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSODT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bdsTK = new System.Windows.Forms.BindingSource(this.components);
-            this.taiKhoanTableAdapter = new NganHang.DSTableAdapters.TaiKhoanTableAdapter();
             this.taiKhoanGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSOTK = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,18 +60,7 @@
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.gD_GOIRUTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gD_GOIRUTTableAdapter = new NganHang.DSTableAdapters.GD_GOIRUTTableAdapter();
             this.gD_GOIRUTGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMAGD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSOTK1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLOAIGD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNGAYGD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSOTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.pnlGD = new DevExpress.XtraEditors.PanelControl();
-            this.cmbLoaiGD = new System.Windows.Forms.ComboBox();
-            this.txtSoTien = new System.Windows.Forms.NumericUpDown();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsTHEM = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsHIEUCHINH = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,9 +69,19 @@
             this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsPHUCHOI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnXacNhan = new System.Windows.Forms.Button();
-            this.txtMANV = new DevExpress.XtraEditors.TextEdit();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colMAGD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSOTK1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLOAIGD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNGAYGD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSOTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.pnlGD = new DevExpress.XtraEditors.PanelControl();
             this.txtSOTK = new DevExpress.XtraEditors.TextEdit();
+            this.txtMANV = new DevExpress.XtraEditors.TextEdit();
+            this.btnXacNhan = new System.Windows.Forms.Button();
+            this.txtSoTien = new System.Windows.Forms.NumericUpDown();
+            this.cmbLoaiGD = new System.Windows.Forms.ComboBox();
             sOTKLabel = new System.Windows.Forms.Label();
             lOAIGDLabel = new System.Windows.Forms.Label();
             sOTIENLabel = new System.Windows.Forms.Label();
@@ -99,14 +99,54 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTGridControl)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlGD)).BeginInit();
             this.pnlGD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoTien)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMANV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSOTK.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMANV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTien)).BeginInit();
             this.SuspendLayout();
+            // 
+            // sOTKLabel
+            // 
+            sOTKLabel.AutoSize = true;
+            sOTKLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sOTKLabel.Location = new System.Drawing.Point(37, 26);
+            sOTKLabel.Name = "sOTKLabel";
+            sOTKLabel.Size = new System.Drawing.Size(59, 20);
+            sOTKLabel.TabIndex = 2;
+            sOTKLabel.Text = "SOTK:";
+            // 
+            // lOAIGDLabel
+            // 
+            lOAIGDLabel.AutoSize = true;
+            lOAIGDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lOAIGDLabel.Location = new System.Drawing.Point(37, 66);
+            lOAIGDLabel.Name = "lOAIGDLabel";
+            lOAIGDLabel.Size = new System.Drawing.Size(78, 20);
+            lOAIGDLabel.TabIndex = 4;
+            lOAIGDLabel.Text = "LOAIGD:";
+            // 
+            // sOTIENLabel
+            // 
+            sOTIENLabel.AutoSize = true;
+            sOTIENLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sOTIENLabel.Location = new System.Drawing.Point(403, 26);
+            sOTIENLabel.Name = "sOTIENLabel";
+            sOTIENLabel.Size = new System.Drawing.Size(75, 20);
+            sOTIENLabel.TabIndex = 8;
+            sOTIENLabel.Text = "SOTIEN:";
+            // 
+            // mANVLabel
+            // 
+            mANVLabel.AutoSize = true;
+            mANVLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mANVLabel.Location = new System.Drawing.Point(403, 66);
+            mANVLabel.Name = "mANVLabel";
+            mANVLabel.Size = new System.Drawing.Size(62, 20);
+            mANVLabel.TabIndex = 10;
+            mANVLabel.Text = "MANV:";
             // 
             // panelControl1
             // 
@@ -172,6 +212,14 @@
             this.tableAdapterManager.NhanVienTableAdapter = null;
             this.tableAdapterManager.TaiKhoanTableAdapter = this.taiKhoanTableAdapter;
             this.tableAdapterManager.UpdateOrder = NganHang.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // gD_GOIRUTTableAdapter
+            // 
+            this.gD_GOIRUTTableAdapter.ClearBeforeFill = true;
+            // 
+            // taiKhoanTableAdapter
+            // 
+            this.taiKhoanTableAdapter.ClearBeforeFill = true;
             // 
             // khachHangGridControl
             // 
@@ -248,10 +296,6 @@
             this.bdsTK.DataMember = "FK_KhachHang_TaiKhoan";
             this.bdsTK.DataSource = this.bdsKH;
             // 
-            // taiKhoanTableAdapter
-            // 
-            this.taiKhoanTableAdapter.ClearBeforeFill = true;
-            // 
             // taiKhoanGridControl
             // 
             this.taiKhoanGridControl.DataSource = this.bdsTK;
@@ -322,10 +366,6 @@
             this.gD_GOIRUTBindingSource.DataMember = "FK_GD_GOIRUT_TaiKhoan";
             this.gD_GOIRUTBindingSource.DataSource = this.bdsTK;
             // 
-            // gD_GOIRUTTableAdapter
-            // 
-            this.gD_GOIRUTTableAdapter.ClearBeforeFill = true;
-            // 
             // gD_GOIRUTGridControl
             // 
             this.gD_GOIRUTGridControl.ContextMenuStrip = this.contextMenuStrip1;
@@ -337,6 +377,67 @@
             this.gD_GOIRUTGridControl.TabIndex = 14;
             this.gD_GOIRUTGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsTHEM,
+            this.cmsHIEUCHINH,
+            this.cmsLUU,
+            this.cmsXOA,
+            this.cmsTAILAI,
+            this.cmsPHUCHOI,
+            this.cmsTHOAT});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(176, 200);
+            // 
+            // cmsTHEM
+            // 
+            this.cmsTHEM.Name = "cmsTHEM";
+            this.cmsTHEM.Size = new System.Drawing.Size(175, 24);
+            this.cmsTHEM.Text = "Thêm";
+            this.cmsTHEM.Click += new System.EventHandler(this.cmsTHEM_Click);
+            // 
+            // cmsHIEUCHINH
+            // 
+            this.cmsHIEUCHINH.Name = "cmsHIEUCHINH";
+            this.cmsHIEUCHINH.Size = new System.Drawing.Size(175, 24);
+            this.cmsHIEUCHINH.Text = "Hiệu chỉnh";
+            // 
+            // cmsLUU
+            // 
+            this.cmsLUU.Name = "cmsLUU";
+            this.cmsLUU.Size = new System.Drawing.Size(175, 24);
+            this.cmsLUU.Text = "Lưu";
+            this.cmsLUU.Click += new System.EventHandler(this.cmsLUU_Click);
+            // 
+            // cmsXOA
+            // 
+            this.cmsXOA.Name = "cmsXOA";
+            this.cmsXOA.Size = new System.Drawing.Size(175, 24);
+            this.cmsXOA.Text = "Xoá";
+            // 
+            // cmsTAILAI
+            // 
+            this.cmsTAILAI.Name = "cmsTAILAI";
+            this.cmsTAILAI.Size = new System.Drawing.Size(175, 24);
+            this.cmsTAILAI.Text = "Tải lại trang";
+            this.cmsTAILAI.Click += new System.EventHandler(this.cmsTAILAI_Click);
+            // 
+            // cmsPHUCHOI
+            // 
+            this.cmsPHUCHOI.Name = "cmsPHUCHOI";
+            this.cmsPHUCHOI.Size = new System.Drawing.Size(175, 24);
+            this.cmsPHUCHOI.Text = "Phục hồi";
+            this.cmsPHUCHOI.Click += new System.EventHandler(this.cmsPHUCHOI_Click);
+            // 
+            // cmsTHOAT
+            // 
+            this.cmsTHOAT.Name = "cmsTHOAT";
+            this.cmsTHOAT.Size = new System.Drawing.Size(175, 24);
+            this.cmsTHOAT.Text = "Thoát";
+            this.cmsTHOAT.Click += new System.EventHandler(this.cmsTHOAT_Click);
             // 
             // gridView3
             // 
@@ -414,50 +515,37 @@
             this.pnlGD.Size = new System.Drawing.Size(631, 151);
             this.pnlGD.TabIndex = 15;
             // 
-            // sOTKLabel
+            // txtSOTK
             // 
-            sOTKLabel.AutoSize = true;
-            sOTKLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sOTKLabel.Location = new System.Drawing.Point(37, 26);
-            sOTKLabel.Name = "sOTKLabel";
-            sOTKLabel.Size = new System.Drawing.Size(59, 20);
-            sOTKLabel.TabIndex = 2;
-            sOTKLabel.Text = "SOTK:";
+            this.txtSOTK.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gD_GOIRUTBindingSource, "SOTK", true));
+            this.txtSOTK.Location = new System.Drawing.Point(126, 21);
+            this.txtSOTK.Name = "txtSOTK";
+            this.txtSOTK.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSOTK.Properties.Appearance.Options.UseFont = true;
+            this.txtSOTK.Properties.ReadOnly = true;
+            this.txtSOTK.Size = new System.Drawing.Size(121, 26);
+            this.txtSOTK.TabIndex = 14;
             // 
-            // lOAIGDLabel
+            // txtMANV
             // 
-            lOAIGDLabel.AutoSize = true;
-            lOAIGDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lOAIGDLabel.Location = new System.Drawing.Point(37, 66);
-            lOAIGDLabel.Name = "lOAIGDLabel";
-            lOAIGDLabel.Size = new System.Drawing.Size(78, 20);
-            lOAIGDLabel.TabIndex = 4;
-            lOAIGDLabel.Text = "LOAIGD:";
+            this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gD_GOIRUTBindingSource, "MANV", true));
+            this.txtMANV.Location = new System.Drawing.Point(497, 63);
+            this.txtMANV.Name = "txtMANV";
+            this.txtMANV.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMANV.Properties.Appearance.Options.UseFont = true;
+            this.txtMANV.Properties.ReadOnly = true;
+            this.txtMANV.Size = new System.Drawing.Size(100, 26);
+            this.txtMANV.TabIndex = 13;
             // 
-            // cmbLoaiGD
+            // btnXacNhan
             // 
-            this.cmbLoaiGD.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gD_GOIRUTBindingSource, "LOAIGD", true));
-            this.cmbLoaiGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLoaiGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbLoaiGD.FormattingEnabled = true;
-            this.cmbLoaiGD.Items.AddRange(new object[] {
-            "Gửi tiền",
-            "Rút tiền"});
-            this.cmbLoaiGD.Location = new System.Drawing.Point(126, 63);
-            this.cmbLoaiGD.Name = "cmbLoaiGD";
-            this.cmbLoaiGD.Size = new System.Drawing.Size(121, 28);
-            this.cmbLoaiGD.TabIndex = 5;
-            this.cmbLoaiGD.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiGD_SelectedIndexChanged);
-            // 
-            // sOTIENLabel
-            // 
-            sOTIENLabel.AutoSize = true;
-            sOTIENLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sOTIENLabel.Location = new System.Drawing.Point(403, 26);
-            sOTIENLabel.Name = "sOTIENLabel";
-            sOTIENLabel.Size = new System.Drawing.Size(75, 20);
-            sOTIENLabel.TabIndex = 8;
-            sOTIENLabel.Text = "SOTIEN:";
+            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.Location = new System.Drawing.Point(250, 107);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(140, 39);
+            this.btnXacNhan.TabIndex = 12;
+            this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // txtSoTien
             // 
@@ -479,106 +567,20 @@
             this.txtSoTien.TabIndex = 9;
             this.txtSoTien.ThousandsSeparator = true;
             // 
-            // mANVLabel
+            // cmbLoaiGD
             // 
-            mANVLabel.AutoSize = true;
-            mANVLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mANVLabel.Location = new System.Drawing.Point(403, 66);
-            mANVLabel.Name = "mANVLabel";
-            mANVLabel.Size = new System.Drawing.Size(62, 20);
-            mANVLabel.TabIndex = 10;
-            mANVLabel.Text = "MANV:";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsTHEM,
-            this.cmsHIEUCHINH,
-            this.cmsLUU,
-            this.cmsXOA,
-            this.cmsTAILAI,
-            this.cmsPHUCHOI,
-            this.cmsTHOAT});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 172);
-            // 
-            // cmsTHEM
-            // 
-            this.cmsTHEM.Name = "cmsTHEM";
-            this.cmsTHEM.Size = new System.Drawing.Size(157, 24);
-            this.cmsTHEM.Text = "Thêm";
-            this.cmsTHEM.Click += new System.EventHandler(this.cmsTHEM_Click);
-            // 
-            // cmsHIEUCHINH
-            // 
-            this.cmsHIEUCHINH.Name = "cmsHIEUCHINH";
-            this.cmsHIEUCHINH.Size = new System.Drawing.Size(157, 24);
-            this.cmsHIEUCHINH.Text = "Hiệu chỉnh";
-            // 
-            // cmsLUU
-            // 
-            this.cmsLUU.Name = "cmsLUU";
-            this.cmsLUU.Size = new System.Drawing.Size(157, 24);
-            this.cmsLUU.Text = "Lưu";
-            this.cmsLUU.Click += new System.EventHandler(this.cmsLUU_Click);
-            // 
-            // cmsXOA
-            // 
-            this.cmsXOA.Name = "cmsXOA";
-            this.cmsXOA.Size = new System.Drawing.Size(157, 24);
-            this.cmsXOA.Text = "Xoá";
-            // 
-            // cmsTAILAI
-            // 
-            this.cmsTAILAI.Name = "cmsTAILAI";
-            this.cmsTAILAI.Size = new System.Drawing.Size(157, 24);
-            this.cmsTAILAI.Text = "Tải lại trang";
-            // 
-            // cmsPHUCHOI
-            // 
-            this.cmsPHUCHOI.Name = "cmsPHUCHOI";
-            this.cmsPHUCHOI.Size = new System.Drawing.Size(157, 24);
-            this.cmsPHUCHOI.Text = "Phục hồi";
-            // 
-            // cmsTHOAT
-            // 
-            this.cmsTHOAT.Name = "cmsTHOAT";
-            this.cmsTHOAT.Size = new System.Drawing.Size(157, 24);
-            this.cmsTHOAT.Text = "Thoát";
-            this.cmsTHOAT.Click += new System.EventHandler(this.cmsTHOAT_Click);
-            // 
-            // btnXacNhan
-            // 
-            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXacNhan.Location = new System.Drawing.Point(250, 107);
-            this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(140, 39);
-            this.btnXacNhan.TabIndex = 12;
-            this.btnXacNhan.UseVisualStyleBackColor = true;
-            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
-            // 
-            // txtMANV
-            // 
-            this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gD_GOIRUTBindingSource, "MANV", true));
-            this.txtMANV.Location = new System.Drawing.Point(497, 63);
-            this.txtMANV.Name = "txtMANV";
-            this.txtMANV.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMANV.Properties.Appearance.Options.UseFont = true;
-            this.txtMANV.Properties.ReadOnly = true;
-            this.txtMANV.Size = new System.Drawing.Size(100, 26);
-            this.txtMANV.TabIndex = 13;
-            // 
-            // txtSOTK
-            // 
-            this.txtSOTK.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gD_GOIRUTBindingSource, "SOTK", true));
-            this.txtSOTK.Location = new System.Drawing.Point(126, 21);
-            this.txtSOTK.Name = "txtSOTK";
-            this.txtSOTK.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSOTK.Properties.Appearance.Options.UseFont = true;
-            this.txtSOTK.Properties.ReadOnly = true;
-            this.txtSOTK.Size = new System.Drawing.Size(121, 26);
-            this.txtSOTK.TabIndex = 14;
+            this.cmbLoaiGD.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gD_GOIRUTBindingSource, "LOAIGD", true));
+            this.cmbLoaiGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLoaiGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLoaiGD.FormattingEnabled = true;
+            this.cmbLoaiGD.Items.AddRange(new object[] {
+            "Gửi tiền",
+            "Rút tiền"});
+            this.cmbLoaiGD.Location = new System.Drawing.Point(126, 63);
+            this.cmbLoaiGD.Name = "cmbLoaiGD";
+            this.cmbLoaiGD.Size = new System.Drawing.Size(121, 28);
+            this.cmbLoaiGD.TabIndex = 5;
+            this.cmbLoaiGD.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiGD_SelectedIndexChanged);
             // 
             // frmGuiRutTien
             // 
@@ -610,14 +612,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTGridControl)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlGD)).EndInit();
             this.pnlGD.ResumeLayout(false);
             this.pnlGD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoTien)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtMANV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSOTK.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMANV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTien)).EndInit();
             this.ResumeLayout(false);
 
         }

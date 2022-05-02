@@ -148,5 +148,26 @@ namespace NganHang.SimpleForm
         {
 
         }
+
+        private void cmsTAILAI_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi reload: " + ex.Message, "", MessageBoxButtons.OK);
+                return;
+            }
+        }
+
+        private void cmsPHUCHOI_Click(object sender, EventArgs e)
+        {
+            bdsTK.CancelEdit();//hai trường hợp: đang thêm bỏ thêm, đang sửa bỏ sửa
+            if (cmsTHEM.Enabled == false) bdsTK.Position = vitri;
+            taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
+            pnlGD.Enabled = false;
+        }
     }
 }
