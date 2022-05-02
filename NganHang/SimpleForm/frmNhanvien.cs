@@ -308,5 +308,10 @@ namespace NganHang.SimpleForm
             btnSave.Enabled = btnUndo.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = false;
             this.nhanVienTableAdapter.Fill(this.DS.NhanVien);
         }
+
+        private void txtMANVMOI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

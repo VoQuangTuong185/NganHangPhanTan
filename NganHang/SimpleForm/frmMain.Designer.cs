@@ -37,7 +37,7 @@
             this.btnCustomerManage = new DevExpress.XtraBars.BarButtonItem();
             this.btnEmployeeManage = new DevExpress.XtraBars.BarButtonItem();
             this.btnOpenCustomerAccount = new DevExpress.XtraBars.BarButtonItem();
-            this.btnSaveCashService = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGuiRutTien = new DevExpress.XtraBars.BarButtonItem();
             this.btnTransferService = new DevExpress.XtraBars.BarButtonItem();
             this.btnTransactionReport = new DevExpress.XtraBars.BarButtonItem();
             this.btnOpenedAccountReport = new DevExpress.XtraBars.BarButtonItem();
@@ -79,7 +79,7 @@
             this.btnCustomerManage,
             this.btnEmployeeManage,
             this.btnOpenCustomerAccount,
-            this.btnSaveCashService,
+            this.btnGuiRutTien,
             this.btnTransferService,
             this.btnTransactionReport,
             this.btnOpenedAccountReport,
@@ -157,15 +157,16 @@
             this.btnOpenCustomerAccount.Name = "btnOpenCustomerAccount";
             this.btnOpenCustomerAccount.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnOpenCustomerAccount_ItemClick);
             // 
-            // btnSaveCashService
+            // btnGuiRutTien
             // 
-            this.btnSaveCashService.Caption = "Gửi và rút tiền";
-            this.btnSaveCashService.Glyph = ((System.Drawing.Image)(resources.GetObject("btnSaveCashService.Glyph")));
-            this.btnSaveCashService.Id = 14;
-            this.btnSaveCashService.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnSaveCashService.LargeGlyph")));
-            this.btnSaveCashService.LargeWidth = 110;
-            this.btnSaveCashService.Name = "btnSaveCashService";
-            this.btnSaveCashService.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnGuiRutTien.Caption = "Gửi và rút tiền";
+            this.btnGuiRutTien.Glyph = ((System.Drawing.Image)(resources.GetObject("btnGuiRutTien.Glyph")));
+            this.btnGuiRutTien.Id = 14;
+            this.btnGuiRutTien.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnGuiRutTien.LargeGlyph")));
+            this.btnGuiRutTien.LargeWidth = 110;
+            this.btnGuiRutTien.Name = "btnGuiRutTien";
+            this.btnGuiRutTien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnGuiRutTien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGuiRutTien_ItemClick);
             // 
             // btnTransferService
             // 
@@ -255,7 +256,7 @@
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.btnOpenCustomerAccount);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnSaveCashService);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnGuiRutTien);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnTransferService);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
@@ -416,7 +417,7 @@
         private DevExpress.XtraBars.BarButtonItem btnCustomerManage;
         private DevExpress.XtraBars.BarButtonItem btnEmployeeManage;
         private DevExpress.XtraBars.BarButtonItem btnOpenCustomerAccount;
-        private DevExpress.XtraBars.BarButtonItem btnSaveCashService;
+        private DevExpress.XtraBars.BarButtonItem btnGuiRutTien;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem btnTransferService;
         private DevExpress.XtraBars.BarButtonItem btnTransactionReport;

@@ -81,6 +81,8 @@
             this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
             this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
             this.dS_CHINHANHTableAdapter = new NganHang.DSTableAdapters.DS_CHINHANHTableAdapter();
+            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.label3 = new System.Windows.Forms.Label();
             cMNDLabel = new System.Windows.Forms.Label();
             mACNLabel = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
@@ -108,52 +110,57 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
+            this.panelControl5.SuspendLayout();
             this.SuspendLayout();
             // 
             // cMNDLabel
             // 
             cMNDLabel.AutoSize = true;
-            cMNDLabel.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cMNDLabel.Location = new System.Drawing.Point(49, 121);
+            cMNDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cMNDLabel.Location = new System.Drawing.Point(89, 116);
             cMNDLabel.Name = "cMNDLabel";
-            cMNDLabel.Size = new System.Drawing.Size(69, 23);
+            cMNDLabel.Size = new System.Drawing.Size(58, 18);
             cMNDLabel.TabIndex = 0;
             cMNDLabel.Text = "CMND:";
             // 
             // mACNLabel
             // 
             mACNLabel.AutoSize = true;
-            mACNLabel.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mACNLabel.Location = new System.Drawing.Point(47, 160);
+            mACNLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mACNLabel.Location = new System.Drawing.Point(87, 155);
             mACNLabel.Name = "mACNLabel";
-            mACNLabel.Size = new System.Drawing.Size(132, 23);
+            mACNLabel.Size = new System.Drawing.Size(100, 18);
             mACNLabel.TabIndex = 2;
             mACNLabel.Text = "Mã chi nhánh:";
             // 
             // sOTKLabel
             // 
             sOTKLabel.AutoSize = true;
-            sOTKLabel.Location = new System.Drawing.Point(49, 45);
+            sOTKLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sOTKLabel.Location = new System.Drawing.Point(89, 40);
             sOTKLabel.Name = "sOTKLabel";
-            sOTKLabel.Size = new System.Drawing.Size(121, 23);
+            sOTKLabel.Size = new System.Drawing.Size(95, 18);
             sOTKLabel.TabIndex = 4;
             sOTKLabel.Text = "Số tài khoản:";
             // 
             // sODULabel
             // 
             sODULabel.AutoSize = true;
-            sODULabel.Location = new System.Drawing.Point(49, 81);
+            sODULabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sODULabel.Location = new System.Drawing.Point(89, 76);
             sODULabel.Name = "sODULabel";
-            sODULabel.Size = new System.Drawing.Size(67, 23);
+            sODULabel.Size = new System.Drawing.Size(51, 18);
             sODULabel.TabIndex = 6;
             sODULabel.Text = "Số dư:";
             // 
             // nGAYMOTKLabel
             // 
             nGAYMOTKLabel.AutoSize = true;
-            nGAYMOTKLabel.Location = new System.Drawing.Point(47, 201);
+            nGAYMOTKLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nGAYMOTKLabel.Location = new System.Drawing.Point(87, 196);
             nGAYMOTKLabel.Name = "nGAYMOTKLabel";
-            nGAYMOTKLabel.Size = new System.Drawing.Size(175, 23);
+            nGAYMOTKLabel.Size = new System.Drawing.Size(136, 18);
             nGAYMOTKLabel.TabIndex = 8;
             nGAYMOTKLabel.Text = "Ngày mở tài khoản:";
             // 
@@ -225,6 +232,7 @@
             // 
             // panelControl3
             // 
+            this.panelControl3.Controls.Add(this.label3);
             this.panelControl3.Controls.Add(this.gcTK);
             this.panelControl3.Controls.Add(this.panelControl2);
             this.panelControl3.Controls.Add(this.gcKH);
@@ -239,10 +247,10 @@
             // 
             this.gcTK.DataSource = this.bdsTK;
             this.gcTK.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcTK.Location = new System.Drawing.Point(782, 313);
+            this.gcTK.Location = new System.Drawing.Point(715, 307);
             this.gcTK.MainView = this.gvTK;
             this.gcTK.Name = "gcTK";
-            this.gcTK.Size = new System.Drawing.Size(422, 282);
+            this.gcTK.Size = new System.Drawing.Size(489, 288);
             this.gcTK.TabIndex = 2;
             this.gcTK.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTK});
@@ -317,21 +325,11 @@
             // 
             this.panelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelControl2.Appearance.Options.UseFont = true;
-            this.panelControl2.Controls.Add(this.cmbCNFinal);
-            this.panelControl2.Controls.Add(this.teCMND);
-            this.panelControl2.Controls.Add(this.numbSODU);
-            this.panelControl2.Controls.Add(this.label2);
-            this.panelControl2.Controls.Add(nGAYMOTKLabel);
-            this.panelControl2.Controls.Add(this.dateNgayMoTK);
-            this.panelControl2.Controls.Add(sODULabel);
-            this.panelControl2.Controls.Add(sOTKLabel);
-            this.panelControl2.Controls.Add(this.txtSOTK);
-            this.panelControl2.Controls.Add(mACNLabel);
-            this.panelControl2.Controls.Add(cMNDLabel);
+            this.panelControl2.Controls.Add(this.panelControl5);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl2.Location = new System.Drawing.Point(2, 313);
+            this.panelControl2.Location = new System.Drawing.Point(2, 307);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(780, 282);
+            this.panelControl2.Size = new System.Drawing.Size(713, 288);
             this.panelControl2.TabIndex = 1;
             // 
             // cmbCNFinal
@@ -339,10 +337,11 @@
             this.cmbCNFinal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "MACN", true));
             this.cmbCNFinal.DataSource = this.bds_DSPM;
             this.cmbCNFinal.DisplayMember = "MACN";
+            this.cmbCNFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCNFinal.FormattingEnabled = true;
-            this.cmbCNFinal.Location = new System.Drawing.Point(234, 153);
+            this.cmbCNFinal.Location = new System.Drawing.Point(274, 148);
             this.cmbCNFinal.Name = "cmbCNFinal";
-            this.cmbCNFinal.Size = new System.Drawing.Size(243, 30);
+            this.cmbCNFinal.Size = new System.Drawing.Size(243, 26);
             this.cmbCNFinal.TabIndex = 15;
             this.cmbCNFinal.ValueMember = "MACN";
             // 
@@ -354,35 +353,37 @@
             // teCMND
             // 
             this.teCMND.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "CMND", true));
-            this.teCMND.Location = new System.Drawing.Point(233, 118);
+            this.teCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teCMND.Location = new System.Drawing.Point(273, 113);
             this.teCMND.Name = "teCMND";
             this.teCMND.ReadOnly = true;
-            this.teCMND.Size = new System.Drawing.Size(245, 29);
+            this.teCMND.Size = new System.Drawing.Size(245, 24);
             this.teCMND.TabIndex = 14;
             // 
             // numbSODU
             // 
             this.numbSODU.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdsTK, "SODU", true));
+            this.numbSODU.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numbSODU.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numbSODU.Location = new System.Drawing.Point(234, 79);
+            this.numbSODU.Location = new System.Drawing.Point(274, 74);
             this.numbSODU.Maximum = new decimal(new int[] {
             1000000000,
             0,
             0,
             0});
             this.numbSODU.Name = "numbSODU";
-            this.numbSODU.Size = new System.Drawing.Size(243, 29);
+            this.numbSODU.Size = new System.Drawing.Size(243, 24);
             this.numbSODU.TabIndex = 13;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 13);
+            this.label2.Location = new System.Drawing.Point(50, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 23);
             this.label2.TabIndex = 12;
@@ -392,23 +393,24 @@
             // 
             this.dateNgayMoTK.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsTK, "NGAYMOTK", true));
             this.dateNgayMoTK.EditValue = null;
-            this.dateNgayMoTK.Location = new System.Drawing.Point(233, 196);
+            this.dateNgayMoTK.Location = new System.Drawing.Point(273, 191);
             this.dateNgayMoTK.Name = "dateNgayMoTK";
-            this.dateNgayMoTK.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateNgayMoTK.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayMoTK.Properties.Appearance.Options.UseFont = true;
             this.dateNgayMoTK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateNgayMoTK.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgayMoTK.Size = new System.Drawing.Size(244, 28);
+            this.dateNgayMoTK.Size = new System.Drawing.Size(244, 24);
             this.dateNgayMoTK.TabIndex = 9;
             // 
             // txtSOTK
             // 
             this.txtSOTK.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "SOTK", true));
-            this.txtSOTK.Location = new System.Drawing.Point(233, 42);
+            this.txtSOTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSOTK.Location = new System.Drawing.Point(273, 37);
             this.txtSOTK.Name = "txtSOTK";
-            this.txtSOTK.Size = new System.Drawing.Size(245, 29);
+            this.txtSOTK.Size = new System.Drawing.Size(245, 24);
             this.txtSOTK.TabIndex = 5;
             // 
             // gcKH
@@ -418,7 +420,7 @@
             this.gcKH.Location = new System.Drawing.Point(2, 2);
             this.gcKH.MainView = this.gridView1;
             this.gcKH.Name = "gcKH";
-            this.gcKH.Size = new System.Drawing.Size(1202, 311);
+            this.gcKH.Size = new System.Drawing.Size(1202, 305);
             this.gcKH.TabIndex = 0;
             this.gcKH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -435,6 +437,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colCMND
@@ -577,6 +580,36 @@
             // 
             this.dS_CHINHANHTableAdapter.ClearBeforeFill = true;
             // 
+            // panelControl5
+            // 
+            this.panelControl5.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelControl5.Appearance.Options.UseFont = true;
+            this.panelControl5.Controls.Add(this.cmbCNFinal);
+            this.panelControl5.Controls.Add(sODULabel);
+            this.panelControl5.Controls.Add(this.teCMND);
+            this.panelControl5.Controls.Add(cMNDLabel);
+            this.panelControl5.Controls.Add(this.numbSODU);
+            this.panelControl5.Controls.Add(mACNLabel);
+            this.panelControl5.Controls.Add(this.label2);
+            this.panelControl5.Controls.Add(this.txtSOTK);
+            this.panelControl5.Controls.Add(nGAYMOTKLabel);
+            this.panelControl5.Controls.Add(sOTKLabel);
+            this.panelControl5.Controls.Add(this.dateNgayMoTK);
+            this.panelControl5.Location = new System.Drawing.Point(37, 6);
+            this.panelControl5.Name = "panelControl5";
+            this.panelControl5.Size = new System.Drawing.Size(598, 228);
+            this.panelControl5.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(713, 278);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(257, 23);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Tài khoản của khách hàng";
+            // 
             // frmMoTaiKhoanKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -598,12 +631,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
+            this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcTK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bds_DSPM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numbSODU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties.CalendarTimeProperties)).EndInit();
@@ -614,6 +647,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
+            this.panelControl5.ResumeLayout(false);
+            this.panelControl5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -666,5 +702,7 @@
         private System.Windows.Forms.BindingSource bds_DSPM;
         private DSTableAdapters.DS_CHINHANHTableAdapter dS_CHINHANHTableAdapter;
         private System.Windows.Forms.ComboBox cmbCNFinal;
+        private DevExpress.XtraEditors.PanelControl panelControl5;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -70,6 +70,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SimpleForm\frmGuiRutTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimpleForm\frmGuiRutTien.Designer.cs">
+      <DependentUpon>frmGuiRutTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="SimpleForm\frmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     <Compile Include="SimpleForm\frmCreateLogin.Designer.cs">
       <DependentUpon>frmCreateLogin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SimpleForm\frmGuiRutTien.resx">
+      <DependentUpon>frmGuiRutTien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SimpleForm\frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </EmbeddedResource>

@@ -71,14 +71,15 @@
             this.colSODT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.txtMACN = new System.Windows.Forms.TextBox();
-            this.txtSODT = new System.Windows.Forms.TextBox();
-            this.dateNgayCap = new DevExpress.XtraEditors.DateEdit();
-            this.cmbPhai = new System.Windows.Forms.ComboBox();
-            this.txtDIACHI = new System.Windows.Forms.TextBox();
-            this.txtTEN = new System.Windows.Forms.TextBox();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtHO = new System.Windows.Forms.TextBox();
+            this.txtMACN = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
+            this.txtSODT = new System.Windows.Forms.TextBox();
+            this.txtTEN = new System.Windows.Forms.TextBox();
+            this.dateNgayCap = new DevExpress.XtraEditors.DateEdit();
+            this.txtDIACHI = new System.Windows.Forms.TextBox();
+            this.cmbPhai = new System.Windows.Forms.ComboBox();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             mACNLabel = new System.Windows.Forms.Label();
             sODTLabel = new System.Windows.Forms.Label();
@@ -96,6 +97,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties)).BeginInit();
             this.SuspendLayout();
@@ -103,63 +106,70 @@
             // mACNLabel
             // 
             mACNLabel.AutoSize = true;
-            mACNLabel.Location = new System.Drawing.Point(267, 269);
+            mACNLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mACNLabel.Location = new System.Drawing.Point(39, 246);
             mACNLabel.Name = "mACNLabel";
-            mACNLabel.Size = new System.Drawing.Size(115, 22);
+            mACNLabel.Size = new System.Drawing.Size(130, 25);
             mACNLabel.TabIndex = 54;
             mACNLabel.Text = "Mã chi nhánh";
             // 
             // sODTLabel
             // 
             sODTLabel.AutoSize = true;
-            sODTLabel.Location = new System.Drawing.Point(872, 215);
+            sODTLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sODTLabel.Location = new System.Drawing.Point(644, 192);
             sODTLabel.Name = "sODTLabel";
-            sODTLabel.Size = new System.Drawing.Size(114, 22);
+            sODTLabel.Size = new System.Drawing.Size(126, 25);
             sODTLabel.TabIndex = 52;
             sODTLabel.Text = "Số điện thoại";
             // 
             // nGAYCAPLabel
             // 
             nGAYCAPLabel.AutoSize = true;
-            nGAYCAPLabel.Location = new System.Drawing.Point(872, 45);
+            nGAYCAPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nGAYCAPLabel.Location = new System.Drawing.Point(644, 24);
             nGAYCAPLabel.Name = "nGAYCAPLabel";
-            nGAYCAPLabel.Size = new System.Drawing.Size(84, 22);
+            nGAYCAPLabel.Size = new System.Drawing.Size(95, 25);
             nGAYCAPLabel.TabIndex = 50;
             nGAYCAPLabel.Text = "Ngày cấp";
             // 
             // pHAILabel
             // 
             pHAILabel.AutoSize = true;
-            pHAILabel.Location = new System.Drawing.Point(267, 153);
+            pHAILabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            pHAILabel.Location = new System.Drawing.Point(39, 135);
             pHAILabel.Name = "pHAILabel";
-            pHAILabel.Size = new System.Drawing.Size(45, 22);
+            pHAILabel.Size = new System.Drawing.Size(51, 25);
             pHAILabel.TabIndex = 48;
             pHAILabel.Text = "Phái";
             // 
             // dIACHILabel
             // 
             dIACHILabel.AutoSize = true;
-            dIACHILabel.Location = new System.Drawing.Point(267, 215);
+            dIACHILabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dIACHILabel.Location = new System.Drawing.Point(39, 192);
             dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(68, 22);
+            dIACHILabel.Size = new System.Drawing.Size(71, 25);
             dIACHILabel.TabIndex = 46;
             dIACHILabel.Text = "Địa chỉ";
             // 
             // hOLabel
             // 
             hOLabel.AutoSize = true;
-            hOLabel.Location = new System.Drawing.Point(267, 97);
+            hOLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            hOLabel.Location = new System.Drawing.Point(39, 79);
             hOLabel.Name = "hOLabel";
-            hOLabel.Size = new System.Drawing.Size(62, 22);
+            hOLabel.Size = new System.Drawing.Size(69, 25);
             hOLabel.TabIndex = 43;
             hOLabel.Text = "Họ tên";
             // 
             // cMNDLabel
             // 
             cMNDLabel.AutoSize = true;
-            cMNDLabel.Location = new System.Drawing.Point(267, 50);
+            cMNDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cMNDLabel.Location = new System.Drawing.Point(39, 29);
             cMNDLabel.Name = "cMNDLabel";
-            cMNDLabel.Size = new System.Drawing.Size(68, 22);
+            cMNDLabel.Size = new System.Drawing.Size(72, 25);
             cMNDLabel.TabIndex = 41;
             cMNDLabel.Text = "CMND";
             // 
@@ -381,6 +391,7 @@
             // 
             this.gcKH.DataSource = this.bdsKH;
             this.gcKH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gcKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gcKH.Location = new System.Drawing.Point(0, 71);
             this.gcKH.MainView = this.gridView1;
             this.gcKH.MenuManager = this.barManager1;
@@ -392,6 +403,8 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.ColumnFilterButton.Options.UseFont = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colCMND,
             this.colHO,
@@ -405,6 +418,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colCMND
             // 
@@ -473,21 +487,7 @@
             // 
             this.panelControl2.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelControl2.Appearance.Options.UseFont = true;
-            this.panelControl2.Controls.Add(mACNLabel);
-            this.panelControl2.Controls.Add(this.txtMACN);
-            this.panelControl2.Controls.Add(sODTLabel);
-            this.panelControl2.Controls.Add(this.txtSODT);
-            this.panelControl2.Controls.Add(nGAYCAPLabel);
-            this.panelControl2.Controls.Add(this.dateNgayCap);
-            this.panelControl2.Controls.Add(pHAILabel);
-            this.panelControl2.Controls.Add(this.cmbPhai);
-            this.panelControl2.Controls.Add(dIACHILabel);
-            this.panelControl2.Controls.Add(this.txtDIACHI);
-            this.panelControl2.Controls.Add(this.txtTEN);
-            this.panelControl2.Controls.Add(hOLabel);
-            this.panelControl2.Controls.Add(this.txtHO);
-            this.panelControl2.Controls.Add(cMNDLabel);
-            this.panelControl2.Controls.Add(this.txtCMND);
+            this.panelControl2.Controls.Add(this.groupControl1);
             this.panelControl2.Controls.Add(this.barDockControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 291);
@@ -495,82 +495,113 @@
             this.panelControl2.Size = new System.Drawing.Size(1309, 333);
             this.panelControl2.TabIndex = 32;
             // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(mACNLabel);
+            this.groupControl1.Controls.Add(this.txtHO);
+            this.groupControl1.Controls.Add(this.txtMACN);
+            this.groupControl1.Controls.Add(this.txtCMND);
+            this.groupControl1.Controls.Add(sODTLabel);
+            this.groupControl1.Controls.Add(cMNDLabel);
+            this.groupControl1.Controls.Add(this.txtSODT);
+            this.groupControl1.Controls.Add(hOLabel);
+            this.groupControl1.Controls.Add(nGAYCAPLabel);
+            this.groupControl1.Controls.Add(this.txtTEN);
+            this.groupControl1.Controls.Add(this.dateNgayCap);
+            this.groupControl1.Controls.Add(this.txtDIACHI);
+            this.groupControl1.Controls.Add(pHAILabel);
+            this.groupControl1.Controls.Add(dIACHILabel);
+            this.groupControl1.Controls.Add(this.cmbPhai);
+            this.groupControl1.Location = new System.Drawing.Point(185, 15);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.ShowCaption = false;
+            this.groupControl1.Size = new System.Drawing.Size(1045, 289);
+            this.groupControl1.TabIndex = 58;
+            this.groupControl1.Text = "groupControl1";
+            // 
+            // txtHO
+            // 
+            this.txtHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "HO", true));
+            this.txtHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHO.Location = new System.Drawing.Point(170, 77);
+            this.txtHO.Name = "txtHO";
+            this.txtHO.Size = new System.Drawing.Size(265, 30);
+            this.txtHO.TabIndex = 44;
+            // 
             // txtMACN
             // 
             this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "MACN", true));
-            this.txtMACN.Location = new System.Drawing.Point(389, 261);
+            this.txtMACN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMACN.Location = new System.Drawing.Point(170, 241);
             this.txtMACN.Name = "txtMACN";
             this.txtMACN.Size = new System.Drawing.Size(216, 30);
             this.txtMACN.TabIndex = 56;
             // 
+            // txtCMND
+            // 
+            this.txtCMND.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "CMND", true));
+            this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCMND.Location = new System.Drawing.Point(170, 27);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(265, 30);
+            this.txtCMND.TabIndex = 42;
+            // 
             // txtSODT
             // 
             this.txtSODT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "SODT", true));
-            this.txtSODT.Location = new System.Drawing.Point(1006, 212);
+            this.txtSODT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSODT.Location = new System.Drawing.Point(787, 192);
             this.txtSODT.Name = "txtSODT";
             this.txtSODT.Size = new System.Drawing.Size(211, 30);
             this.txtSODT.TabIndex = 55;
+            // 
+            // txtTEN
+            // 
+            this.txtTEN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "TEN", true));
+            this.txtTEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTEN.Location = new System.Drawing.Point(472, 74);
+            this.txtTEN.Name = "txtTEN";
+            this.txtTEN.Size = new System.Drawing.Size(100, 30);
+            this.txtTEN.TabIndex = 47;
             // 
             // dateNgayCap
             // 
             this.dateNgayCap.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKH, "NGAYCAP", true));
             this.dateNgayCap.EditValue = null;
-            this.dateNgayCap.Location = new System.Drawing.Point(994, 39);
+            this.dateNgayCap.Location = new System.Drawing.Point(775, 21);
             this.dateNgayCap.MenuManager = this.barManager1;
             this.dateNgayCap.Name = "dateNgayCap";
-            this.dateNgayCap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateNgayCap.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayCap.Properties.Appearance.Options.UseFont = true;
             this.dateNgayCap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateNgayCap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgayCap.Size = new System.Drawing.Size(223, 30);
+            this.dateNgayCap.Size = new System.Drawing.Size(223, 32);
             this.dateNgayCap.TabIndex = 53;
-            // 
-            // cmbPhai
-            // 
-            this.cmbPhai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "PHAI", true));
-            this.cmbPhai.FormattingEnabled = true;
-            this.cmbPhai.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cmbPhai.Location = new System.Drawing.Point(389, 153);
-            this.cmbPhai.Name = "cmbPhai";
-            this.cmbPhai.Size = new System.Drawing.Size(121, 30);
-            this.cmbPhai.TabIndex = 51;
-            this.cmbPhai.Tag = "";
             // 
             // txtDIACHI
             // 
             this.txtDIACHI.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "DIACHI", true));
-            this.txtDIACHI.Location = new System.Drawing.Point(389, 210);
+            this.txtDIACHI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDIACHI.Location = new System.Drawing.Point(170, 190);
             this.txtDIACHI.Name = "txtDIACHI";
             this.txtDIACHI.Size = new System.Drawing.Size(360, 30);
             this.txtDIACHI.TabIndex = 49;
             // 
-            // txtTEN
+            // cmbPhai
             // 
-            this.txtTEN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "TEN", true));
-            this.txtTEN.Location = new System.Drawing.Point(691, 89);
-            this.txtTEN.Name = "txtTEN";
-            this.txtTEN.Size = new System.Drawing.Size(100, 30);
-            this.txtTEN.TabIndex = 47;
-            // 
-            // txtHO
-            // 
-            this.txtHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "HO", true));
-            this.txtHO.Location = new System.Drawing.Point(389, 92);
-            this.txtHO.Name = "txtHO";
-            this.txtHO.Size = new System.Drawing.Size(265, 30);
-            this.txtHO.TabIndex = 44;
-            // 
-            // txtCMND
-            // 
-            this.txtCMND.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "CMND", true));
-            this.txtCMND.Location = new System.Drawing.Point(389, 45);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(265, 30);
-            this.txtCMND.TabIndex = 42;
+            this.cmbPhai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "PHAI", true));
+            this.cmbPhai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPhai.FormattingEnabled = true;
+            this.cmbPhai.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cmbPhai.Location = new System.Drawing.Point(170, 132);
+            this.cmbPhai.Name = "cmbPhai";
+            this.cmbPhai.Size = new System.Drawing.Size(121, 33);
+            this.cmbPhai.TabIndex = 51;
+            this.cmbPhai.Tag = "";
             // 
             // barDockControl1
             // 
@@ -608,6 +639,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -660,5 +694,6 @@
         private System.Windows.Forms.TextBox txtHO;
         private System.Windows.Forms.TextBox txtCMND;
         private DevExpress.XtraBars.BarDockControl barDockControl1;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
     }
 }
