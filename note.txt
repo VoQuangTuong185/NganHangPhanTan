@@ -13,3 +13,10 @@
 - thêm quyền 'SecurityAdmin' cho tài khoản HTKN để xem được tài khoản ở site khác với site đã đăng nhập (combobox chi nhánh) khi vào bằng tài khoản nhóm NganHang
 
 - EXEC sp_addsrvrolemember @LGNAME, 'ProcessAdmin'-- Cấp quyền kiểm tra user có login vào server (Dùng khi chuyển nhân viên) 
+
+-Còn các chức năng chưa làm: 
+  + Gửi và rút tiền
+  + Chuyển khoản
+  + Sao kê tài khoản (Sao kê giao dịch của 1 tài khoản trong 1 khoảng thời gian)
+  + Danh sách tài khoản mở (Liệt kê các tài khoản mở trong 1 khoảng thời gian của chi nhánh, của tất cả các chi nhánh)
+  + Thống kê thông tin khách hàng (Liệt kê các khách hàng theo từng chi nhánh, trong từng chi nhánh thì in tăng dần theo họ tên)
