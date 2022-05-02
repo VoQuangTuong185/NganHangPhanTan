@@ -142,8 +142,7 @@ namespace NganHang.SimpleForm
             }
             try
             {
-
-                MessageBox.Show("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + numbSODU.Value + "','" + teCMND.Text + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'", "", MessageBoxButtons.OK);
+                MessageBox.Show("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'", "", MessageBoxButtons.OK);
                 Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'");
                 this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
@@ -249,6 +248,11 @@ namespace NganHang.SimpleForm
         }
 
         private void cmbCNFinal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void teCMND_TextChanged(object sender, EventArgs e)
         {
 
         }

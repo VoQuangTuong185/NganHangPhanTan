@@ -86,6 +86,61 @@ namespace NganHang.SimpleForm
         {
             taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = false;
             pnlGD.Enabled = true;
+            txtMANV.EditValue = Program.username;
+            txtSOTK.EditValue = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
+        }
+
+        private void cmsTHOAT_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+           
+            String dt = String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
+            String loaiGD = (cmbLoaiGD.SelectedIndex == 0) ? "GT" : "RT";
+            if (txtSoTien.Value <= 0)
+            {
+                MessageBox.Show("Số dư không được trống hoặc bằng 0", "", MessageBoxButtons.OK);
+                txtSoTien.Focus();
+                return;
+            }
+            try
+            {
+                MessageBox.Show("EXEC frmGuiRutTien '" + txtSOTK.EditValue + "','" + loaiGD + "','" + dt + "','" + txtSoTien.Value + "','" + txtMANV.EditValue + "'", "", MessageBoxButtons.OK);
+                //Program.ExecSqlNonQuery("EXEC frmGuiRutTien '" + txtSOTK.EditValue + "','" + loaiGD + "','" + dt + "','" + txtSoTien.Value + "','" + txtMANV.EditValue + "'");
+                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
+                //MessageBox.Show("Lưu thành công!!", "", MessageBoxButtons.OK);               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi ghi nhân viên. \n" + ex.Message, "", MessageBoxButtons.OK);
+                return;
+            }
+        }
+
+        private void cmsLUU_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbLoaiGD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbLoaiGD.Text == "Gửi tiền")
+            {
+                btnXacNhan.Text = "GT";
+            }
+            else if (cmbLoaiGD.Text == "Rút tiền")
+            {
+                btnXacNhan.Text = "RT";
+            }
+        }
+
+        private void mANVTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

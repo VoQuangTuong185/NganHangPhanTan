@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label mAGDLabel;
             System.Windows.Forms.Label sOTKLabel;
             System.Windows.Forms.Label lOAIGDLabel;
-            System.Windows.Forms.Label nGAYGDLabel;
             System.Windows.Forms.Label sOTIENLabel;
             System.Windows.Forms.Label mANVLabel;
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -71,12 +69,8 @@
             this.colSOTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnlGD = new DevExpress.XtraEditors.PanelControl();
-            this.mAGDTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.sOTKTextBox = new System.Windows.Forms.TextBox();
             this.cmbLoaiGD = new System.Windows.Forms.ComboBox();
-            this.nGAYGDDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.sOTIENNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.mANVTextBox = new System.Windows.Forms.TextBox();
+            this.txtSoTien = new System.Windows.Forms.NumericUpDown();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsTHEM = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsHIEUCHINH = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,10 +79,11 @@
             this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsPHUCHOI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
-            mAGDLabel = new System.Windows.Forms.Label();
+            this.btnXacNhan = new System.Windows.Forms.Button();
+            this.txtMANV = new DevExpress.XtraEditors.TextEdit();
+            this.txtSOTK = new DevExpress.XtraEditors.TextEdit();
             sOTKLabel = new System.Windows.Forms.Label();
             lOAIGDLabel = new System.Windows.Forms.Label();
-            nGAYGDLabel = new System.Windows.Forms.Label();
             sOTIENLabel = new System.Windows.Forms.Label();
             mANVLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -107,11 +102,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlGD)).BeginInit();
             this.pnlGD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mAGDTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nGAYGDDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nGAYGDDateEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sOTIENNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTien)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMANV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSOTK.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -398,67 +392,35 @@
             // 
             // pnlGD
             // 
+            this.pnlGD.Controls.Add(this.txtSOTK);
+            this.pnlGD.Controls.Add(this.txtMANV);
+            this.pnlGD.Controls.Add(this.btnXacNhan);
             this.pnlGD.Controls.Add(mANVLabel);
-            this.pnlGD.Controls.Add(this.mANVTextBox);
             this.pnlGD.Controls.Add(sOTIENLabel);
-            this.pnlGD.Controls.Add(this.sOTIENNumericUpDown);
-            this.pnlGD.Controls.Add(nGAYGDLabel);
-            this.pnlGD.Controls.Add(this.nGAYGDDateEdit);
+            this.pnlGD.Controls.Add(this.txtSoTien);
             this.pnlGD.Controls.Add(lOAIGDLabel);
             this.pnlGD.Controls.Add(this.cmbLoaiGD);
             this.pnlGD.Controls.Add(sOTKLabel);
-            this.pnlGD.Controls.Add(this.sOTKTextBox);
-            this.pnlGD.Controls.Add(mAGDLabel);
-            this.pnlGD.Controls.Add(this.mAGDTextEdit);
             this.pnlGD.Location = new System.Drawing.Point(430, 457);
             this.pnlGD.Name = "pnlGD";
-            this.pnlGD.Size = new System.Drawing.Size(765, 175);
+            this.pnlGD.Size = new System.Drawing.Size(806, 151);
             this.pnlGD.TabIndex = 15;
-            // 
-            // mAGDLabel
-            // 
-            mAGDLabel.AutoSize = true;
-            mAGDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mAGDLabel.Location = new System.Drawing.Point(37, 14);
-            mAGDLabel.Name = "mAGDLabel";
-            mAGDLabel.Size = new System.Drawing.Size(53, 17);
-            mAGDLabel.TabIndex = 0;
-            mAGDLabel.Text = "MAGD:";
-            // 
-            // mAGDTextEdit
-            // 
-            this.mAGDTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gD_GOIRUTBindingSource, "MAGD", true));
-            this.mAGDTextEdit.Location = new System.Drawing.Point(104, 11);
-            this.mAGDTextEdit.Name = "mAGDTextEdit";
-            this.mAGDTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mAGDTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.mAGDTextEdit.Size = new System.Drawing.Size(100, 22);
-            this.mAGDTextEdit.TabIndex = 1;
             // 
             // sOTKLabel
             // 
             sOTKLabel.AutoSize = true;
             sOTKLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sOTKLabel.Location = new System.Drawing.Point(37, 48);
+            sOTKLabel.Location = new System.Drawing.Point(37, 26);
             sOTKLabel.Name = "sOTKLabel";
             sOTKLabel.Size = new System.Drawing.Size(50, 17);
             sOTKLabel.TabIndex = 2;
             sOTKLabel.Text = "SOTK:";
             // 
-            // sOTKTextBox
-            // 
-            this.sOTKTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gD_GOIRUTBindingSource, "SOTK", true));
-            this.sOTKTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sOTKTextBox.Location = new System.Drawing.Point(104, 45);
-            this.sOTKTextBox.Name = "sOTKTextBox";
-            this.sOTKTextBox.Size = new System.Drawing.Size(100, 22);
-            this.sOTKTextBox.TabIndex = 3;
-            // 
             // lOAIGDLabel
             // 
             lOAIGDLabel.AutoSize = true;
             lOAIGDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lOAIGDLabel.Location = new System.Drawing.Point(37, 88);
+            lOAIGDLabel.Location = new System.Drawing.Point(37, 66);
             lOAIGDLabel.Name = "lOAIGDLabel";
             lOAIGDLabel.Size = new System.Drawing.Size(64, 17);
             lOAIGDLabel.TabIndex = 4;
@@ -470,75 +432,42 @@
             this.cmbLoaiGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLoaiGD.FormattingEnabled = true;
             this.cmbLoaiGD.Items.AddRange(new object[] {
-            "Gửi ",
-            "Rút"});
-            this.cmbLoaiGD.Location = new System.Drawing.Point(104, 85);
+            "Gửi tiền",
+            "Rút tiền"});
+            this.cmbLoaiGD.Location = new System.Drawing.Point(104, 63);
             this.cmbLoaiGD.Name = "cmbLoaiGD";
             this.cmbLoaiGD.Size = new System.Drawing.Size(121, 24);
             this.cmbLoaiGD.TabIndex = 5;
-            // 
-            // nGAYGDLabel
-            // 
-            nGAYGDLabel.AutoSize = true;
-            nGAYGDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nGAYGDLabel.Location = new System.Drawing.Point(552, 16);
-            nGAYGDLabel.Name = "nGAYGDLabel";
-            nGAYGDLabel.Size = new System.Drawing.Size(72, 17);
-            nGAYGDLabel.TabIndex = 6;
-            nGAYGDLabel.Text = "NGAYGD:";
-            // 
-            // nGAYGDDateEdit
-            // 
-            this.nGAYGDDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gD_GOIRUTBindingSource, "NGAYGD", true));
-            this.nGAYGDDateEdit.EditValue = null;
-            this.nGAYGDDateEdit.Location = new System.Drawing.Point(624, 13);
-            this.nGAYGDDateEdit.Name = "nGAYGDDateEdit";
-            this.nGAYGDDateEdit.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nGAYGDDateEdit.Properties.Appearance.Options.UseFont = true;
-            this.nGAYGDDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.nGAYGDDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.nGAYGDDateEdit.Size = new System.Drawing.Size(100, 22);
-            this.nGAYGDDateEdit.TabIndex = 7;
+            this.cmbLoaiGD.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiGD_SelectedIndexChanged);
             // 
             // sOTIENLabel
             // 
             sOTIENLabel.AutoSize = true;
             sOTIENLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sOTIENLabel.Location = new System.Drawing.Point(553, 51);
+            sOTIENLabel.Location = new System.Drawing.Point(553, 29);
             sOTIENLabel.Name = "sOTIENLabel";
             sOTIENLabel.Size = new System.Drawing.Size(63, 17);
             sOTIENLabel.TabIndex = 8;
             sOTIENLabel.Text = "SOTIEN:";
             // 
-            // sOTIENNumericUpDown
+            // txtSoTien
             // 
-            this.sOTIENNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.gD_GOIRUTBindingSource, "SOTIEN", true));
-            this.sOTIENNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sOTIENNumericUpDown.Location = new System.Drawing.Point(625, 49);
-            this.sOTIENNumericUpDown.Name = "sOTIENNumericUpDown";
-            this.sOTIENNumericUpDown.Size = new System.Drawing.Size(120, 22);
-            this.sOTIENNumericUpDown.TabIndex = 9;
+            this.txtSoTien.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.gD_GOIRUTBindingSource, "SOTIEN", true));
+            this.txtSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTien.Location = new System.Drawing.Point(625, 27);
+            this.txtSoTien.Name = "txtSoTien";
+            this.txtSoTien.Size = new System.Drawing.Size(120, 22);
+            this.txtSoTien.TabIndex = 9;
             // 
             // mANVLabel
             // 
             mANVLabel.AutoSize = true;
             mANVLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mANVLabel.Location = new System.Drawing.Point(553, 91);
+            mANVLabel.Location = new System.Drawing.Point(553, 69);
             mANVLabel.Name = "mANVLabel";
             mANVLabel.Size = new System.Drawing.Size(51, 17);
             mANVLabel.TabIndex = 10;
             mANVLabel.Text = "MANV:";
-            // 
-            // mANVTextBox
-            // 
-            this.mANVTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gD_GOIRUTBindingSource, "MANV", true));
-            this.mANVTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mANVTextBox.Location = new System.Drawing.Point(625, 88);
-            this.mANVTextBox.Name = "mANVTextBox";
-            this.mANVTextBox.Size = new System.Drawing.Size(100, 22);
-            this.mANVTextBox.TabIndex = 11;
             // 
             // contextMenuStrip1
             // 
@@ -572,6 +501,7 @@
             this.cmsLUU.Name = "cmsLUU";
             this.cmsLUU.Size = new System.Drawing.Size(157, 24);
             this.cmsLUU.Text = "Lưu";
+            this.cmsLUU.Click += new System.EventHandler(this.cmsLUU_Click);
             // 
             // cmsXOA
             // 
@@ -596,6 +526,32 @@
             this.cmsTHOAT.Name = "cmsTHOAT";
             this.cmsTHOAT.Size = new System.Drawing.Size(157, 24);
             this.cmsTHOAT.Text = "Thoát";
+            this.cmsTHOAT.Click += new System.EventHandler(this.cmsTHOAT_Click);
+            // 
+            // btnXacNhan
+            // 
+            this.btnXacNhan.Location = new System.Drawing.Point(322, 103);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(104, 27);
+            this.btnXacNhan.TabIndex = 12;
+            this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
+            // 
+            // txtMANV
+            // 
+            this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gD_GOIRUTBindingSource, "MANV", true));
+            this.txtMANV.Location = new System.Drawing.Point(625, 66);
+            this.txtMANV.Name = "txtMANV";
+            this.txtMANV.Size = new System.Drawing.Size(100, 22);
+            this.txtMANV.TabIndex = 13;
+            // 
+            // txtSOTK
+            // 
+            this.txtSOTK.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gD_GOIRUTBindingSource, "SOTK", true));
+            this.txtSOTK.Location = new System.Drawing.Point(104, 21);
+            this.txtSOTK.Name = "txtSOTK";
+            this.txtSOTK.Size = new System.Drawing.Size(121, 22);
+            this.txtSOTK.TabIndex = 14;
             // 
             // frmGuiRutTien
             // 
@@ -631,11 +587,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlGD)).EndInit();
             this.pnlGD.ResumeLayout(false);
             this.pnlGD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mAGDTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nGAYGDDateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nGAYGDDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sOTIENNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTien)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtMANV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSOTK.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -678,12 +633,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSOTIEN;
         private DevExpress.XtraGrid.Columns.GridColumn colMANV;
         private DevExpress.XtraEditors.PanelControl pnlGD;
-        private System.Windows.Forms.TextBox mANVTextBox;
-        private System.Windows.Forms.NumericUpDown sOTIENNumericUpDown;
-        private DevExpress.XtraEditors.DateEdit nGAYGDDateEdit;
+        private System.Windows.Forms.NumericUpDown txtSoTien;
         private System.Windows.Forms.ComboBox cmbLoaiGD;
-        private System.Windows.Forms.TextBox sOTKTextBox;
-        private DevExpress.XtraEditors.TextEdit mAGDTextEdit;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cmsTHEM;
         private System.Windows.Forms.ToolStripMenuItem cmsHIEUCHINH;
@@ -692,5 +643,8 @@
         private System.Windows.Forms.ToolStripMenuItem cmsTAILAI;
         private System.Windows.Forms.ToolStripMenuItem cmsPHUCHOI;
         private System.Windows.Forms.ToolStripMenuItem cmsTHOAT;
+        private System.Windows.Forms.Button btnXacNhan;
+        private DevExpress.XtraEditors.TextEdit txtMANV;
+        private DevExpress.XtraEditors.TextEdit txtSOTK;
     }
 }

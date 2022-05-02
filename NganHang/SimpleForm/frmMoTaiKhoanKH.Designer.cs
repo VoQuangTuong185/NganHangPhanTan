@@ -388,6 +388,7 @@
             this.teCMND.ReadOnly = true;
             this.teCMND.Size = new System.Drawing.Size(245, 27);
             this.teCMND.TabIndex = 14;
+            this.teCMND.TextChanged += new System.EventHandler(this.teCMND_TextChanged);
             // 
             // numbSODU
             // 
