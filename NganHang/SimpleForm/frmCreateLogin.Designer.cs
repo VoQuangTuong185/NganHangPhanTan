@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateLogin));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.label4 = new System.Windows.Forms.Label();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -106,25 +105,13 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.label4);
             this.panelControl1.Controls.Add(this.cmbChiNhanh);
             this.panelControl1.Controls.Add(this.label1);
-            this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 30);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1523, 72);
+            this.panelControl1.Size = new System.Drawing.Size(1523, 41);
             this.panelControl1.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(841, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 17);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Trạng thái:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // cmbChiNhanh
             // 
@@ -147,12 +134,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.Gainsboro;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(5, 42);
+            this.label2.Location = new System.Drawing.Point(10, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(532, 25);
+            this.label2.Size = new System.Drawing.Size(448, 22);
             this.label2.TabIndex = 8;
             this.label2.Text = "Danh sách nhân viên chưa có tài khoản của chi nhánh";
             // 
@@ -177,24 +164,25 @@
             // 
             this.panInput.Controls.Add(this.label3);
             this.panInput.Controls.Add(this.memoLuuY);
+            this.panInput.Controls.Add(this.label2);
             this.panInput.Controls.Add(this.groupBox1);
             this.panInput.Controls.Add(this.gc_LGINFO1);
             this.panInput.Controls.Add(this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl);
             this.panInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panInput.Location = new System.Drawing.Point(0, 102);
+            this.panInput.Location = new System.Drawing.Point(0, 71);
             this.panInput.Name = "panInput";
-            this.panInput.Size = new System.Drawing.Size(1523, 683);
+            this.panInput.Size = new System.Drawing.Size(1523, 714);
             this.panInput.TabIndex = 7;
             this.panInput.Paint += new System.Windows.Forms.PaintEventHandler(this.panInput_Paint);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 230);
+            this.label3.BackColor = System.Drawing.Color.Gainsboro;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 235);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(350, 25);
+            this.label3.Size = new System.Drawing.Size(296, 22);
             this.label3.TabIndex = 9;
             this.label3.Text = "Danh sách tài khoản của chi nhánh";
             // 
@@ -202,21 +190,20 @@
             // 
             this.memoLuuY.EditValue = "";
             this.memoLuuY.Enabled = false;
-            this.memoLuuY.Location = new System.Drawing.Point(507, 413);
+            this.memoLuuY.Location = new System.Drawing.Point(507, 459);
             this.memoLuuY.Name = "memoLuuY";
-            this.memoLuuY.Properties.Appearance.BackColor = System.Drawing.Color.Beige;
+            this.memoLuuY.Properties.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.memoLuuY.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memoLuuY.Properties.Appearance.ForeColor = System.Drawing.Color.Green;
             this.memoLuuY.Properties.Appearance.Options.UseBackColor = true;
             this.memoLuuY.Properties.Appearance.Options.UseFont = true;
             this.memoLuuY.Properties.Appearance.Options.UseForeColor = true;
-            this.memoLuuY.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.memoLuuY.Size = new System.Drawing.Size(540, 99);
+            this.memoLuuY.Size = new System.Drawing.Size(528, 92);
             this.memoLuuY.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.YellowGreen;
+            this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox1.Controls.Add(this.txtLoginName);
             this.groupBox1.Controls.Add(this.nPass);
             this.groupBox1.Controls.Add(this.btnCreateLogin);
@@ -225,16 +212,16 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.groupBox1.Location = new System.Drawing.Point(973, 230);
+            this.groupBox1.Location = new System.Drawing.Point(952, 228);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(549, 179);
+            this.groupBox1.Size = new System.Drawing.Size(549, 206);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
             // txtLoginName
             // 
             this.txtLoginName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginName.Location = new System.Drawing.Point(161, 9);
+            this.txtLoginName.Location = new System.Drawing.Point(161, 21);
             this.txtLoginName.Name = "txtLoginName";
             this.txtLoginName.Size = new System.Drawing.Size(361, 34);
             this.txtLoginName.TabIndex = 10;
@@ -244,7 +231,7 @@
             this.nPass.AutoSize = true;
             this.nPass.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nPass.ForeColor = System.Drawing.Color.Black;
-            this.nPass.Location = new System.Drawing.Point(20, 93);
+            this.nPass.Location = new System.Drawing.Point(20, 105);
             this.nPass.Name = "nPass";
             this.nPass.Size = new System.Drawing.Size(109, 27);
             this.nPass.TabIndex = 10;
@@ -253,8 +240,8 @@
             // btnCreateLogin
             // 
             this.btnCreateLogin.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateLogin.ForeColor = System.Drawing.Color.Red;
-            this.btnCreateLogin.Location = new System.Drawing.Point(224, 133);
+            this.btnCreateLogin.ForeColor = System.Drawing.Color.Green;
+            this.btnCreateLogin.Location = new System.Drawing.Point(224, 157);
             this.btnCreateLogin.Name = "btnCreateLogin";
             this.btnCreateLogin.Size = new System.Drawing.Size(166, 38);
             this.btnCreateLogin.TabIndex = 12;
@@ -267,7 +254,7 @@
             this.nName.AutoSize = true;
             this.nName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nName.ForeColor = System.Drawing.Color.Black;
-            this.nName.Location = new System.Drawing.Point(14, 18);
+            this.nName.Location = new System.Drawing.Point(14, 30);
             this.nName.Name = "nName";
             this.nName.Size = new System.Drawing.Size(108, 27);
             this.nName.TabIndex = 8;
@@ -276,7 +263,7 @@
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(161, 88);
+            this.txtPass.Location = new System.Drawing.Point(161, 100);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(361, 34);
             this.txtPass.TabIndex = 11;
@@ -286,11 +273,11 @@
             // 
             this.gc_LGINFO1.ContextMenuStrip = this.contextMenuStrip1;
             this.gc_LGINFO1.DataSource = this.bds_LGINFO;
-            this.gc_LGINFO1.Location = new System.Drawing.Point(5, 258);
+            this.gc_LGINFO1.Location = new System.Drawing.Point(5, 228);
             this.gc_LGINFO1.MainView = this.gridView2;
             this.gc_LGINFO1.MenuManager = this.barManager1;
             this.gc_LGINFO1.Name = "gc_LGINFO1";
-            this.gc_LGINFO1.Size = new System.Drawing.Size(712, 135);
+            this.gc_LGINFO1.Size = new System.Drawing.Size(796, 206);
             this.gc_LGINFO1.TabIndex = 12;
             this.gc_LGINFO1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -342,7 +329,6 @@
             this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // colTENLOGIN
             // 
@@ -548,7 +534,6 @@
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colMANV
             // 
@@ -723,6 +708,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
         private DevExpress.XtraGrid.Columns.GridColumn colTrangThaiXoa;
         private DevExpress.XtraBars.BarButtonItem btnCreateAccount;
-        private System.Windows.Forms.Label label4;
     }
 }
