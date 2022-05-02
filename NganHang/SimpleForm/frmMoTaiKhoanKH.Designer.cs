@@ -366,6 +366,7 @@
             this.cmbCNFinal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "MACN", true));
             this.cmbCNFinal.DataSource = this.bds_DSPM;
             this.cmbCNFinal.DisplayMember = "MACN";
+            this.cmbCNFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCNFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCNFinal.FormattingEnabled = true;
             this.cmbCNFinal.Location = new System.Drawing.Point(247, 146);

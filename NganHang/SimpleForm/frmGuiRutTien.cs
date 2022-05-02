@@ -109,10 +109,13 @@ namespace NganHang.SimpleForm
             try
             {
                 MessageBox.Show("EXEC frmGuiRutTien '" + txtSOTK.EditValue + "','" + loaiGD + "','" + dt + "','" + txtSoTien.Value + "','" + txtMANV.EditValue + "'", "", MessageBoxButtons.OK);
-                //Program.ExecSqlNonQuery("EXEC frmGuiRutTien '" + txtSOTK.EditValue + "','" + loaiGD + "','" + dt + "','" + txtSoTien.Value + "','" + txtMANV.EditValue + "'");
+                Program.ExecSqlNonQuery("EXEC frmGuiRutTien '" + txtSOTK.EditValue + "','" + loaiGD + "','" + dt + "','" + txtSoTien.Value + "','" + txtMANV.EditValue + "'");
                 this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
-                //MessageBox.Show("Lưu thành công!!", "", MessageBoxButtons.OK);               
+                this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
+                this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
+                taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
+                pnlGD.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -130,11 +133,11 @@ namespace NganHang.SimpleForm
         {
             if (cmbLoaiGD.Text == "Gửi tiền")
             {
-                btnXacNhan.Text = "GT";
+                btnXacNhan.Text = "Gửi tiền";
             }
             else if (cmbLoaiGD.Text == "Rút tiền")
             {
-                btnXacNhan.Text = "RT";
+                btnXacNhan.Text = "Rút tiền";
             }
         }
 

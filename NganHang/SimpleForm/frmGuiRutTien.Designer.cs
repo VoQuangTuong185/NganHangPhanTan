@@ -293,7 +293,11 @@
             // 
             // colSODU
             // 
+            this.colSODU.DisplayFormat.FormatString = "n0";
+            this.colSODU.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSODU.FieldName = "SODU";
+            this.colSODU.GroupFormat.FormatString = "n0";
+            this.colSODU.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSODU.Name = "colSODU";
             this.colSODU.Visible = true;
             this.colSODU.VisibleIndex = 2;
@@ -378,7 +382,11 @@
             // 
             // colSOTIEN
             // 
+            this.colSOTIEN.DisplayFormat.FormatString = "n0";
+            this.colSOTIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSOTIEN.FieldName = "SOTIEN";
+            this.colSOTIEN.GroupFormat.FormatString = "n0";
+            this.colSOTIEN.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSOTIEN.Name = "colSOTIEN";
             this.colSOTIEN.Visible = true;
             this.colSOTIEN.VisibleIndex = 4;
@@ -401,71 +409,83 @@
             this.pnlGD.Controls.Add(lOAIGDLabel);
             this.pnlGD.Controls.Add(this.cmbLoaiGD);
             this.pnlGD.Controls.Add(sOTKLabel);
-            this.pnlGD.Location = new System.Drawing.Point(430, 457);
+            this.pnlGD.Location = new System.Drawing.Point(534, 457);
             this.pnlGD.Name = "pnlGD";
-            this.pnlGD.Size = new System.Drawing.Size(806, 151);
+            this.pnlGD.Size = new System.Drawing.Size(631, 151);
             this.pnlGD.TabIndex = 15;
             // 
             // sOTKLabel
             // 
             sOTKLabel.AutoSize = true;
-            sOTKLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sOTKLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             sOTKLabel.Location = new System.Drawing.Point(37, 26);
             sOTKLabel.Name = "sOTKLabel";
-            sOTKLabel.Size = new System.Drawing.Size(50, 17);
+            sOTKLabel.Size = new System.Drawing.Size(59, 20);
             sOTKLabel.TabIndex = 2;
             sOTKLabel.Text = "SOTK:";
             // 
             // lOAIGDLabel
             // 
             lOAIGDLabel.AutoSize = true;
-            lOAIGDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lOAIGDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lOAIGDLabel.Location = new System.Drawing.Point(37, 66);
             lOAIGDLabel.Name = "lOAIGDLabel";
-            lOAIGDLabel.Size = new System.Drawing.Size(64, 17);
+            lOAIGDLabel.Size = new System.Drawing.Size(78, 20);
             lOAIGDLabel.TabIndex = 4;
             lOAIGDLabel.Text = "LOAIGD:";
             // 
             // cmbLoaiGD
             // 
             this.cmbLoaiGD.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gD_GOIRUTBindingSource, "LOAIGD", true));
-            this.cmbLoaiGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLoaiGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLoaiGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLoaiGD.FormattingEnabled = true;
             this.cmbLoaiGD.Items.AddRange(new object[] {
             "Gửi tiền",
             "Rút tiền"});
-            this.cmbLoaiGD.Location = new System.Drawing.Point(104, 63);
+            this.cmbLoaiGD.Location = new System.Drawing.Point(126, 63);
             this.cmbLoaiGD.Name = "cmbLoaiGD";
-            this.cmbLoaiGD.Size = new System.Drawing.Size(121, 24);
+            this.cmbLoaiGD.Size = new System.Drawing.Size(121, 28);
             this.cmbLoaiGD.TabIndex = 5;
             this.cmbLoaiGD.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiGD_SelectedIndexChanged);
             // 
             // sOTIENLabel
             // 
             sOTIENLabel.AutoSize = true;
-            sOTIENLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sOTIENLabel.Location = new System.Drawing.Point(553, 29);
+            sOTIENLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sOTIENLabel.Location = new System.Drawing.Point(403, 26);
             sOTIENLabel.Name = "sOTIENLabel";
-            sOTIENLabel.Size = new System.Drawing.Size(63, 17);
+            sOTIENLabel.Size = new System.Drawing.Size(75, 20);
             sOTIENLabel.TabIndex = 8;
             sOTIENLabel.Text = "SOTIEN:";
             // 
             // txtSoTien
             // 
             this.txtSoTien.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.gD_GOIRUTBindingSource, "SOTIEN", true));
-            this.txtSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoTien.Location = new System.Drawing.Point(625, 27);
+            this.txtSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTien.Increment = new decimal(new int[] {
+            50000,
+            0,
+            0,
+            0});
+            this.txtSoTien.Location = new System.Drawing.Point(497, 24);
+            this.txtSoTien.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.txtSoTien.Name = "txtSoTien";
-            this.txtSoTien.Size = new System.Drawing.Size(120, 22);
+            this.txtSoTien.Size = new System.Drawing.Size(120, 27);
             this.txtSoTien.TabIndex = 9;
+            this.txtSoTien.ThousandsSeparator = true;
             // 
             // mANVLabel
             // 
             mANVLabel.AutoSize = true;
-            mANVLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mANVLabel.Location = new System.Drawing.Point(553, 69);
+            mANVLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mANVLabel.Location = new System.Drawing.Point(403, 66);
             mANVLabel.Name = "mANVLabel";
-            mANVLabel.Size = new System.Drawing.Size(51, 17);
+            mANVLabel.Size = new System.Drawing.Size(62, 20);
             mANVLabel.TabIndex = 10;
             mANVLabel.Text = "MANV:";
             // 
@@ -530,9 +550,10 @@
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.Location = new System.Drawing.Point(322, 103);
+            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.Location = new System.Drawing.Point(250, 107);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(104, 27);
+            this.btnXacNhan.Size = new System.Drawing.Size(140, 39);
             this.btnXacNhan.TabIndex = 12;
             this.btnXacNhan.UseVisualStyleBackColor = true;
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
@@ -540,17 +561,23 @@
             // txtMANV
             // 
             this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gD_GOIRUTBindingSource, "MANV", true));
-            this.txtMANV.Location = new System.Drawing.Point(625, 66);
+            this.txtMANV.Location = new System.Drawing.Point(497, 63);
             this.txtMANV.Name = "txtMANV";
-            this.txtMANV.Size = new System.Drawing.Size(100, 22);
+            this.txtMANV.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMANV.Properties.Appearance.Options.UseFont = true;
+            this.txtMANV.Properties.ReadOnly = true;
+            this.txtMANV.Size = new System.Drawing.Size(100, 26);
             this.txtMANV.TabIndex = 13;
             // 
             // txtSOTK
             // 
             this.txtSOTK.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gD_GOIRUTBindingSource, "SOTK", true));
-            this.txtSOTK.Location = new System.Drawing.Point(104, 21);
+            this.txtSOTK.Location = new System.Drawing.Point(126, 21);
             this.txtSOTK.Name = "txtSOTK";
-            this.txtSOTK.Size = new System.Drawing.Size(121, 22);
+            this.txtSOTK.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSOTK.Properties.Appearance.Options.UseFont = true;
+            this.txtSOTK.Properties.ReadOnly = true;
+            this.txtSOTK.Size = new System.Drawing.Size(121, 26);
             this.txtSOTK.TabIndex = 14;
             // 
             // frmGuiRutTien
