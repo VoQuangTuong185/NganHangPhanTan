@@ -409,6 +409,7 @@
             this.numbSODU.Name = "numbSODU";
             this.numbSODU.Size = new System.Drawing.Size(243, 27);
             this.numbSODU.TabIndex = 13;
+            this.numbSODU.ThousandsSeparator = true;
             // 
             // label2
             // 

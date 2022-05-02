@@ -68,6 +68,7 @@ namespace NganHang.SimpleForm
             bdsTK.AddNew();
             teCMND.Text = ((DataRowView)bdsTK[bdsTK.Position])["CMND"].ToString();
             macn = ((DataRowView)bdsTK[bdsTK.Position])["MACN"].ToString();
+            numbSODU.Value = 0;
         }
 
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
@@ -146,6 +147,7 @@ namespace NganHang.SimpleForm
                 Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'");
                 this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
+                btn_Add_clicked = false;
                 //MessageBox.Show("Lưu thành công!!", "", MessageBoxButtons.OK);               
             }
             catch (Exception ex)

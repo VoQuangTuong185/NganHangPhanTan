@@ -13,6 +13,7 @@ namespace NganHang.SimpleForm
     public partial class frmGuiRutTien : Form
     {
         String macn = "";
+        int vitri = 0;
         public frmGuiRutTien()
         {
             InitializeComponent();
@@ -88,6 +89,7 @@ namespace NganHang.SimpleForm
             pnlGD.Enabled = true;
             txtMANV.EditValue = Program.username;
             txtSOTK.EditValue = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
+            vitri = bdsTK.Position;
         }
 
         private void cmsTHOAT_Click(object sender, EventArgs e)
@@ -116,6 +118,7 @@ namespace NganHang.SimpleForm
                 this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
                 taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
                 pnlGD.Enabled = false;
+                bdsTK.Position = vitri;
             }
             catch (Exception ex)
             {
