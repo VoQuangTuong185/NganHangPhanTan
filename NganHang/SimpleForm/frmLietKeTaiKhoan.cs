@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,6 @@ namespace NganHang.SimpleForm
     public partial class frmLietKeTaiKhoan : Form
     {
         int manv;
-        String macn = "";
         public frmLietKeTaiKhoan()
         {
             InitializeComponent();
@@ -21,9 +21,8 @@ namespace NganHang.SimpleForm
 
         private void frmLietKeTaiKhoan_Load(object sender, EventArgs e)
         {
-            this.nhanVien1TableAdapter.Connection.ConnectionString = Program.connstr;
-            this.nhanVien1TableAdapter.Fill(this.DS.NhanVien1);
-            macn = ((DataRowView)bdsNV[0])["MACN"].ToString(); //**VẪN CÒN TIỀM ẨN LỖI CHƯA FIX**
+            this.khachHang1TableAdapter.Connection.ConnectionString = Program.connstr;
+            this.khachHang1TableAdapter.Fill(this.DS.KhachHang1);
             cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
@@ -39,27 +38,14 @@ namespace NganHang.SimpleForm
 
         }
 
-        private void hOTENComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                manv = int.Parse(cmbHOTEN.SelectedValue.ToString());
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            manv = int.Parse(txtManv.Text);
-            Xtrp_LietKeTaiKhoan rpt = new Xtrp_LietKeTaiKhoan(manv, cmbLoai.Text.Substring(0, 1), int.Parse(cmbNam.Text));
-            rpt.lb_batdau.Text = batdau;
-
+            Xtrp_LietKeTaiKhoan rpt = new Xtrp_LietKeTaiKhoan(batdau.DateTime.ToString(), ketthuc.DateTime.ToString(), cmbLoai.Text.Substring(0,1));
+            rpt.lb_batdau.Text = batdau.DateTime.ToString();
+            rpt.lb_ketthuc.Text = ketthuc.DateTime.ToString();
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();
-
         }
     }
 }

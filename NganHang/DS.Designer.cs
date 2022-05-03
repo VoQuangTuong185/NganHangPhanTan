@@ -40,7 +40,7 @@ namespace NganHang {
         
         private TaiKhoanDataTable tableTaiKhoan;
         
-        private NhanVien1DataTable tableNhanVien1;
+        private KhachHang1DataTable tableKhachHang1;
         
         private global::System.Data.DataRelation relationFK_GD_CHUYENTIEN_NhanVien;
         
@@ -106,8 +106,8 @@ namespace NganHang {
                 if ((ds.Tables["TaiKhoan"] != null)) {
                     base.Tables.Add(new TaiKhoanDataTable(ds.Tables["TaiKhoan"]));
                 }
-                if ((ds.Tables["NhanVien1"] != null)) {
-                    base.Tables.Add(new NhanVien1DataTable(ds.Tables["NhanVien1"]));
+                if ((ds.Tables["KhachHang1"] != null)) {
+                    base.Tables.Add(new KhachHang1DataTable(ds.Tables["KhachHang1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -211,9 +211,9 @@ namespace NganHang {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public NhanVien1DataTable NhanVien1 {
+        public KhachHang1DataTable KhachHang1 {
             get {
-                return this.tableNhanVien1;
+                return this.tableKhachHang1;
             }
         }
         
@@ -308,8 +308,8 @@ namespace NganHang {
                 if ((ds.Tables["TaiKhoan"] != null)) {
                     base.Tables.Add(new TaiKhoanDataTable(ds.Tables["TaiKhoan"]));
                 }
-                if ((ds.Tables["NhanVien1"] != null)) {
-                    base.Tables.Add(new NhanVien1DataTable(ds.Tables["NhanVien1"]));
+                if ((ds.Tables["KhachHang1"] != null)) {
+                    base.Tables.Add(new KhachHang1DataTable(ds.Tables["KhachHang1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -392,10 +392,10 @@ namespace NganHang {
                     this.tableTaiKhoan.InitVars();
                 }
             }
-            this.tableNhanVien1 = ((NhanVien1DataTable)(base.Tables["NhanVien1"]));
+            this.tableKhachHang1 = ((KhachHang1DataTable)(base.Tables["KhachHang1"]));
             if ((initTable == true)) {
-                if ((this.tableNhanVien1 != null)) {
-                    this.tableNhanVien1.InitVars();
+                if ((this.tableKhachHang1 != null)) {
+                    this.tableKhachHang1.InitVars();
                 }
             }
             this.relationFK_GD_CHUYENTIEN_NhanVien = this.Relations["FK_GD_CHUYENTIEN_NhanVien"];
@@ -430,8 +430,8 @@ namespace NganHang {
             base.Tables.Add(this.tablefrmCreateLogin_GetLoginsOfBranch);
             this.tableTaiKhoan = new TaiKhoanDataTable();
             base.Tables.Add(this.tableTaiKhoan);
-            this.tableNhanVien1 = new NhanVien1DataTable();
-            base.Tables.Add(this.tableNhanVien1);
+            this.tableKhachHang1 = new KhachHang1DataTable();
+            base.Tables.Add(this.tableKhachHang1);
             global::System.Data.ForeignKeyConstraint fkc;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_GD_CHUYENTIEN_NhanVien", new global::System.Data.DataColumn[] {
                         this.tableNhanVien.MANVColumn}, new global::System.Data.DataColumn[] {
@@ -530,7 +530,7 @@ namespace NganHang {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeNhanVien1() {
+        private bool ShouldSerializeKhachHang1() {
             return false;
         }
         
@@ -614,7 +614,7 @@ namespace NganHang {
         public delegate void TaiKhoanRowChangeEventHandler(object sender, TaiKhoanRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void NhanVien1RowChangeEventHandler(object sender, NhanVien1RowChangeEvent e);
+        public delegate void KhachHang1RowChangeEventHandler(object sender, KhachHang1RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3307,16 +3307,16 @@ namespace NganHang {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class NhanVien1DataTable : global::System.Data.TypedTableBase<NhanVien1Row> {
+        public partial class KhachHang1DataTable : global::System.Data.TypedTableBase<KhachHang1Row> {
             
             private global::System.Data.DataColumn columnHOTEN;
             
-            private global::System.Data.DataColumn columnMANV;
+            private global::System.Data.DataColumn columnCMND;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NhanVien1DataTable() {
-                this.TableName = "NhanVien1";
+            public KhachHang1DataTable() {
+                this.TableName = "KhachHang1";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3324,7 +3324,7 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal NhanVien1DataTable(global::System.Data.DataTable table) {
+            internal KhachHang1DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -3341,7 +3341,7 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected NhanVien1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected KhachHang1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -3356,9 +3356,9 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MANVColumn {
+            public global::System.Data.DataColumn CMNDColumn {
                 get {
-                    return this.columnMANV;
+                    return this.columnCMND;
                 }
             }
             
@@ -3373,53 +3373,53 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NhanVien1Row this[int index] {
+            public KhachHang1Row this[int index] {
                 get {
-                    return ((NhanVien1Row)(this.Rows[index]));
+                    return ((KhachHang1Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event NhanVien1RowChangeEventHandler NhanVien1RowChanging;
+            public event KhachHang1RowChangeEventHandler KhachHang1RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event NhanVien1RowChangeEventHandler NhanVien1RowChanged;
+            public event KhachHang1RowChangeEventHandler KhachHang1RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event NhanVien1RowChangeEventHandler NhanVien1RowDeleting;
+            public event KhachHang1RowChangeEventHandler KhachHang1RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event NhanVien1RowChangeEventHandler NhanVien1RowDeleted;
+            public event KhachHang1RowChangeEventHandler KhachHang1RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddNhanVien1Row(NhanVien1Row row) {
+            public void AddKhachHang1Row(KhachHang1Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NhanVien1Row AddNhanVien1Row(string HOTEN, string MANV) {
-                NhanVien1Row rowNhanVien1Row = ((NhanVien1Row)(this.NewRow()));
+            public KhachHang1Row AddKhachHang1Row(string HOTEN, string CMND) {
+                KhachHang1Row rowKhachHang1Row = ((KhachHang1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         HOTEN,
-                        MANV};
-                rowNhanVien1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowNhanVien1Row);
-                return rowNhanVien1Row;
+                        CMND};
+                rowKhachHang1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowKhachHang1Row);
+                return rowKhachHang1Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NhanVien1Row FindByMANV(string MANV) {
-                return ((NhanVien1Row)(this.Rows.Find(new object[] {
-                            MANV})));
+            public KhachHang1Row FindByCMND(string CMND) {
+                return ((KhachHang1Row)(this.Rows.Find(new object[] {
+                            CMND})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                NhanVien1DataTable cln = ((NhanVien1DataTable)(base.Clone()));
+                KhachHang1DataTable cln = ((KhachHang1DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3427,14 +3427,14 @@ namespace NganHang {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new NhanVien1DataTable();
+                return new KhachHang1DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnHOTEN = base.Columns["HOTEN"];
-                this.columnMANV = base.Columns["MANV"];
+                this.columnCMND = base.Columns["CMND"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3442,41 +3442,41 @@ namespace NganHang {
             private void InitClass() {
                 this.columnHOTEN = new global::System.Data.DataColumn("HOTEN", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHOTEN);
-                this.columnMANV = new global::System.Data.DataColumn("MANV", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMANV);
+                this.columnCMND = new global::System.Data.DataColumn("CMND", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCMND);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnMANV}, true));
+                                this.columnCMND}, true));
                 this.columnHOTEN.ReadOnly = true;
                 this.columnHOTEN.MaxLength = 51;
-                this.columnMANV.AllowDBNull = false;
-                this.columnMANV.Unique = true;
-                this.columnMANV.MaxLength = 10;
+                this.columnCMND.AllowDBNull = false;
+                this.columnCMND.Unique = true;
+                this.columnCMND.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NhanVien1Row NewNhanVien1Row() {
-                return ((NhanVien1Row)(this.NewRow()));
+            public KhachHang1Row NewKhachHang1Row() {
+                return ((KhachHang1Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new NhanVien1Row(builder);
+                return new KhachHang1Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(NhanVien1Row);
+                return typeof(KhachHang1Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.NhanVien1RowChanged != null)) {
-                    this.NhanVien1RowChanged(this, new NhanVien1RowChangeEvent(((NhanVien1Row)(e.Row)), e.Action));
+                if ((this.KhachHang1RowChanged != null)) {
+                    this.KhachHang1RowChanged(this, new KhachHang1RowChangeEvent(((KhachHang1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -3484,8 +3484,8 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.NhanVien1RowChanging != null)) {
-                    this.NhanVien1RowChanging(this, new NhanVien1RowChangeEvent(((NhanVien1Row)(e.Row)), e.Action));
+                if ((this.KhachHang1RowChanging != null)) {
+                    this.KhachHang1RowChanging(this, new KhachHang1RowChangeEvent(((KhachHang1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -3493,8 +3493,8 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.NhanVien1RowDeleted != null)) {
-                    this.NhanVien1RowDeleted(this, new NhanVien1RowChangeEvent(((NhanVien1Row)(e.Row)), e.Action));
+                if ((this.KhachHang1RowDeleted != null)) {
+                    this.KhachHang1RowDeleted(this, new KhachHang1RowChangeEvent(((KhachHang1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -3502,14 +3502,14 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.NhanVien1RowDeleting != null)) {
-                    this.NhanVien1RowDeleting(this, new NhanVien1RowChangeEvent(((NhanVien1Row)(e.Row)), e.Action));
+                if ((this.KhachHang1RowDeleting != null)) {
+                    this.KhachHang1RowDeleting(this, new KhachHang1RowChangeEvent(((KhachHang1Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveNhanVien1Row(NhanVien1Row row) {
+            public void RemoveKhachHang1Row(KhachHang1Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -3536,7 +3536,7 @@ namespace NganHang {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "NhanVien1DataTable";
+                attribute2.FixedValue = "KhachHang1DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4628,15 +4628,15 @@ namespace NganHang {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class NhanVien1Row : global::System.Data.DataRow {
+        public partial class KhachHang1Row : global::System.Data.DataRow {
             
-            private NhanVien1DataTable tableNhanVien1;
+            private KhachHang1DataTable tableKhachHang1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal NhanVien1Row(global::System.Data.DataRowBuilder rb) : 
+            internal KhachHang1Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableNhanVien1 = ((NhanVien1DataTable)(this.Table));
+                this.tableKhachHang1 = ((KhachHang1DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4644,38 +4644,38 @@ namespace NganHang {
             public string HOTEN {
                 get {
                     try {
-                        return ((string)(this[this.tableNhanVien1.HOTENColumn]));
+                        return ((string)(this[this.tableKhachHang1.HOTENColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'HOTEN\' in table \'NhanVien1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'HOTEN\' in table \'KhachHang1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableNhanVien1.HOTENColumn] = value;
+                    this[this.tableKhachHang1.HOTENColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string MANV {
+            public string CMND {
                 get {
-                    return ((string)(this[this.tableNhanVien1.MANVColumn]));
+                    return ((string)(this[this.tableKhachHang1.CMNDColumn]));
                 }
                 set {
-                    this[this.tableNhanVien1.MANVColumn] = value;
+                    this[this.tableKhachHang1.CMNDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsHOTENNull() {
-                return this.IsNull(this.tableNhanVien1.HOTENColumn);
+                return this.IsNull(this.tableKhachHang1.HOTENColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetHOTENNull() {
-                this[this.tableNhanVien1.HOTENColumn] = global::System.Convert.DBNull;
+                this[this.tableKhachHang1.HOTENColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4955,22 +4955,22 @@ namespace NganHang {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class NhanVien1RowChangeEvent : global::System.EventArgs {
+        public class KhachHang1RowChangeEvent : global::System.EventArgs {
             
-            private NhanVien1Row eventRow;
+            private KhachHang1Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NhanVien1RowChangeEvent(NhanVien1Row row, global::System.Data.DataRowAction action) {
+            public KhachHang1RowChangeEvent(KhachHang1Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NhanVien1Row Row {
+            public KhachHang1Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -7813,7 +7813,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class NhanVien1TableAdapter : global::System.ComponentModel.Component {
+    public partial class KhachHang1TableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -7827,7 +7827,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public NhanVien1TableAdapter() {
+        public KhachHang1TableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -7924,9 +7924,9 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "NhanVien1";
+            tableMapping.DataSetTable = "KhachHang1";
             tableMapping.ColumnMappings.Add("HOTEN", "HOTEN");
-            tableMapping.ColumnMappings.Add("MANV", "MANV");
+            tableMapping.ColumnMappings.Add("CMND", "CMND");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -7943,7 +7943,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select HO+ \' \' + TEN AS HOTEN, MANV\r\nFROM NhanVien";
+            this._commandCollection[0].CommandText = "select HO+ \' \' + TEN AS HOTEN, CMND\r \nFROM KhachHang";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7951,7 +7951,7 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DS.NhanVien1DataTable dataTable) {
+        public virtual int Fill(DS.KhachHang1DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7964,9 +7964,9 @@ SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan WHERE (SOTK = @SOTK)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DS.NhanVien1DataTable GetData() {
+        public virtual DS.KhachHang1DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DS.NhanVien1DataTable dataTable = new DS.NhanVien1DataTable();
+            DS.KhachHang1DataTable dataTable = new DS.KhachHang1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
