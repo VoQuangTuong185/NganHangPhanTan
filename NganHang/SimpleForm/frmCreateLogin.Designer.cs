@@ -537,6 +537,9 @@
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsFind.FindFilterColumns = "MANV";
+            this.gridView1.OptionsFind.FindNullPrompt = "Nhập mã nhân viên....";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colMANV

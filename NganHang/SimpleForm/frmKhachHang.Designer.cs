@@ -71,16 +71,16 @@
             this.colSODT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.txtMACN = new System.Windows.Forms.TextBox();
-            this.txtSODT = new System.Windows.Forms.TextBox();
-            this.dateNgayCap = new DevExpress.XtraEditors.DateEdit();
-            this.cmbPhai = new System.Windows.Forms.ComboBox();
-            this.txtDIACHI = new System.Windows.Forms.TextBox();
-            this.txtTEN = new System.Windows.Forms.TextBox();
-            this.txtHO = new System.Windows.Forms.TextBox();
-            this.txtCMND = new System.Windows.Forms.TextBox();
-            this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.txtMACN = new System.Windows.Forms.TextBox();
+            this.txtCMND = new System.Windows.Forms.TextBox();
+            this.txtHO = new System.Windows.Forms.TextBox();
+            this.txtSODT = new System.Windows.Forms.TextBox();
+            this.txtTEN = new System.Windows.Forms.TextBox();
+            this.dateNgayCap = new DevExpress.XtraEditors.DateEdit();
+            this.txtDIACHI = new System.Windows.Forms.TextBox();
+            this.cmbPhai = new System.Windows.Forms.ComboBox();
+            this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             mACNLabel = new System.Windows.Forms.Label();
             sODTLabel = new System.Windows.Forms.Label();
             nGAYCAPLabel = new System.Windows.Forms.Label();
@@ -97,10 +97,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // mACNLabel
@@ -408,6 +408,9 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsFind.FindFilterColumns = "CMND";
+            this.gridView1.OptionsFind.FindNullPrompt = "Nhập CMND khách hàng...";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colCMND
@@ -485,90 +488,6 @@
             this.panelControl2.Size = new System.Drawing.Size(1486, 347);
             this.panelControl2.TabIndex = 32;
             // 
-            // txtMACN
-            // 
-            this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "MACN", true));
-            this.txtMACN.Location = new System.Drawing.Point(217, 222);
-            this.txtMACN.Name = "txtMACN";
-            this.txtMACN.Size = new System.Drawing.Size(235, 30);
-            this.txtMACN.TabIndex = 56;
-            // 
-            // txtSODT
-            // 
-            this.txtSODT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "SODT", true));
-            this.txtSODT.Location = new System.Drawing.Point(865, 174);
-            this.txtSODT.Name = "txtSODT";
-            this.txtSODT.Size = new System.Drawing.Size(230, 30);
-            this.txtSODT.TabIndex = 55;
-            // 
-            // dateNgayCap
-            // 
-            this.dateNgayCap.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKH, "NGAYCAP", true));
-            this.dateNgayCap.EditValue = null;
-            this.dateNgayCap.Location = new System.Drawing.Point(858, 8);
-            this.dateNgayCap.MenuManager = this.barManager1;
-            this.dateNgayCap.Name = "dateNgayCap";
-            this.dateNgayCap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateNgayCap.Properties.Appearance.Options.UseFont = true;
-            this.dateNgayCap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgayCap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgayCap.Size = new System.Drawing.Size(223, 30);
-            this.dateNgayCap.TabIndex = 53;
-            // 
-            // cmbPhai
-            // 
-            this.cmbPhai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "PHAI", true));
-            this.cmbPhai.FormattingEnabled = true;
-            this.cmbPhai.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cmbPhai.Location = new System.Drawing.Point(217, 114);
-            this.cmbPhai.Name = "cmbPhai";
-            this.cmbPhai.Size = new System.Drawing.Size(140, 33);
-            this.cmbPhai.TabIndex = 51;
-            this.cmbPhai.Tag = "";
-            // 
-            // txtDIACHI
-            // 
-            this.txtDIACHI.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "DIACHI", true));
-            this.txtDIACHI.Location = new System.Drawing.Point(217, 171);
-            this.txtDIACHI.Name = "txtDIACHI";
-            this.txtDIACHI.Size = new System.Drawing.Size(379, 30);
-            this.txtDIACHI.TabIndex = 49;
-            // 
-            // txtTEN
-            // 
-            this.txtTEN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "TEN", true));
-            this.txtTEN.Location = new System.Drawing.Point(524, 57);
-            this.txtTEN.Name = "txtTEN";
-            this.txtTEN.Size = new System.Drawing.Size(100, 30);
-            this.txtTEN.TabIndex = 47;
-            // 
-            // txtHO
-            // 
-            this.txtHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "HO", true));
-            this.txtHO.Location = new System.Drawing.Point(222, 60);
-            this.txtHO.Name = "txtHO";
-            this.txtHO.Size = new System.Drawing.Size(265, 30);
-            this.txtHO.TabIndex = 44;
-            // 
-            // txtCMND
-            // 
-            this.txtCMND.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "CMND", true));
-            this.txtCMND.Location = new System.Drawing.Point(222, 13);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(265, 30);
-            this.txtCMND.TabIndex = 42;
-            // 
-            // barDockControl1
-            // 
-            this.barDockControl1.CausesValidation = false;
-            this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl1.Location = new System.Drawing.Point(1484, 2);
-            this.barDockControl1.Size = new System.Drawing.Size(0, 343);
-            // 
             // panelControl3
             // 
             this.panelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -592,6 +511,90 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(1189, 277);
             this.panelControl3.TabIndex = 37;
+            // 
+            // txtMACN
+            // 
+            this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "MACN", true));
+            this.txtMACN.Location = new System.Drawing.Point(217, 222);
+            this.txtMACN.Name = "txtMACN";
+            this.txtMACN.Size = new System.Drawing.Size(235, 30);
+            this.txtMACN.TabIndex = 56;
+            // 
+            // txtCMND
+            // 
+            this.txtCMND.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "CMND", true));
+            this.txtCMND.Location = new System.Drawing.Point(222, 13);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(265, 30);
+            this.txtCMND.TabIndex = 42;
+            // 
+            // txtHO
+            // 
+            this.txtHO.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "HO", true));
+            this.txtHO.Location = new System.Drawing.Point(222, 60);
+            this.txtHO.Name = "txtHO";
+            this.txtHO.Size = new System.Drawing.Size(265, 30);
+            this.txtHO.TabIndex = 44;
+            // 
+            // txtSODT
+            // 
+            this.txtSODT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "SODT", true));
+            this.txtSODT.Location = new System.Drawing.Point(865, 174);
+            this.txtSODT.Name = "txtSODT";
+            this.txtSODT.Size = new System.Drawing.Size(230, 30);
+            this.txtSODT.TabIndex = 55;
+            // 
+            // txtTEN
+            // 
+            this.txtTEN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "TEN", true));
+            this.txtTEN.Location = new System.Drawing.Point(524, 57);
+            this.txtTEN.Name = "txtTEN";
+            this.txtTEN.Size = new System.Drawing.Size(100, 30);
+            this.txtTEN.TabIndex = 47;
+            // 
+            // dateNgayCap
+            // 
+            this.dateNgayCap.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKH, "NGAYCAP", true));
+            this.dateNgayCap.EditValue = null;
+            this.dateNgayCap.Location = new System.Drawing.Point(858, 8);
+            this.dateNgayCap.MenuManager = this.barManager1;
+            this.dateNgayCap.Name = "dateNgayCap";
+            this.dateNgayCap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateNgayCap.Properties.Appearance.Options.UseFont = true;
+            this.dateNgayCap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayCap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayCap.Size = new System.Drawing.Size(223, 30);
+            this.dateNgayCap.TabIndex = 53;
+            // 
+            // txtDIACHI
+            // 
+            this.txtDIACHI.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "DIACHI", true));
+            this.txtDIACHI.Location = new System.Drawing.Point(217, 171);
+            this.txtDIACHI.Name = "txtDIACHI";
+            this.txtDIACHI.Size = new System.Drawing.Size(379, 30);
+            this.txtDIACHI.TabIndex = 49;
+            // 
+            // cmbPhai
+            // 
+            this.cmbPhai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "PHAI", true));
+            this.cmbPhai.FormattingEnabled = true;
+            this.cmbPhai.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cmbPhai.Location = new System.Drawing.Point(217, 114);
+            this.cmbPhai.Name = "cmbPhai";
+            this.cmbPhai.Size = new System.Drawing.Size(140, 33);
+            this.cmbPhai.TabIndex = 51;
+            this.cmbPhai.Tag = "";
+            // 
+            // barDockControl1
+            // 
+            this.barDockControl1.CausesValidation = false;
+            this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControl1.Location = new System.Drawing.Point(1484, 2);
+            this.barDockControl1.Size = new System.Drawing.Size(0, 343);
             // 
             // frmKhachHang
             // 
@@ -622,11 +625,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
