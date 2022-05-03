@@ -29,15 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label hOTENLabel;
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
-            this.DS = new NganHang.DS();
-            this.bdsNV = new System.Windows.Forms.BindingSource(this.components);
-            this.nhanVien1TableAdapter = new NganHang.DSTableAdapters.NhanVien1TableAdapter();
-            this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
-            this.cmbHOTEN = new System.Windows.Forms.ComboBox();
             this.cmbLoai = new System.Windows.Forms.ComboBox();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,15 +39,18 @@
             this.ketthuc = new DevExpress.XtraEditors.DateEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            hOTENLabel = new System.Windows.Forms.Label();
+            this.DS = new NganHang.DS();
+            this.bdsKH = new System.Windows.Forms.BindingSource(this.components);
+            this.khachHang1TableAdapter = new NganHang.DSTableAdapters.KhachHang1TableAdapter();
+            this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batdau.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batdau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsKH)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -83,55 +80,12 @@
             this.cmbChiNhanh.Size = new System.Drawing.Size(325, 24);
             this.cmbChiNhanh.TabIndex = 0;
             // 
-            // DS
-            // 
-            this.DS.DataSetName = "DS";
-            this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bdsNV
-            // 
-            this.bdsNV.DataMember = "NhanVien1";
-            this.bdsNV.DataSource = this.DS;
-            // 
-            // nhanVien1TableAdapter
-            // 
-            this.nhanVien1TableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.GD_CHUYENTIENTableAdapter = null;
-            this.tableAdapterManager.GD_GOIRUTTableAdapter = null;
-            this.tableAdapterManager.KhachHangTableAdapter = null;
-            this.tableAdapterManager.NhanVienTableAdapter = null;
-            this.tableAdapterManager.TaiKhoanTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = NganHang.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // hOTENLabel
-            // 
-            hOTENLabel.AutoSize = true;
-            hOTENLabel.Location = new System.Drawing.Point(40, 66);
-            hOTENLabel.Name = "hOTENLabel";
-            hOTENLabel.Size = new System.Drawing.Size(61, 17);
-            hOTENLabel.TabIndex = 7;
-            hOTENLabel.Text = "HOTEN:";
-            // 
-            // cmbHOTEN
-            // 
-            this.cmbHOTEN.FormattingEnabled = true;
-            this.cmbHOTEN.Location = new System.Drawing.Point(107, 63);
-            this.cmbHOTEN.Name = "cmbHOTEN";
-            this.cmbHOTEN.Size = new System.Drawing.Size(121, 24);
-            this.cmbHOTEN.TabIndex = 8;
-            this.cmbHOTEN.SelectedIndexChanged += new System.EventHandler(this.hOTENComboBox_SelectedIndexChanged);
-            // 
             // cmbLoai
             // 
             this.cmbLoai.FormattingEnabled = true;
             this.cmbLoai.Items.AddRange(new object[] {
-            "Chi nhánh hiện tại",
-            "Toàn bộ chi nhánh"});
+            "ALL",
+            "ONE"});
             this.cmbLoai.Location = new System.Drawing.Point(323, 63);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(121, 24);
@@ -198,6 +152,31 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Kết thúc";
             // 
+            // DS
+            // 
+            this.DS.DataSetName = "DS";
+            this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bdsKH
+            // 
+            this.bdsKH.DataMember = "KhachHang1";
+            this.bdsKH.DataSource = this.DS;
+            // 
+            // khachHang1TableAdapter
+            // 
+            this.khachHang1TableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.GD_CHUYENTIENTableAdapter = null;
+            this.tableAdapterManager.GD_GOIRUTTableAdapter = null;
+            this.tableAdapterManager.KhachHangTableAdapter = null;
+            this.tableAdapterManager.NhanVienTableAdapter = null;
+            this.tableAdapterManager.TaiKhoanTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = NganHang.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // frmLietKeTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -210,8 +189,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.cmbLoai);
-            this.Controls.Add(hOTENLabel);
-            this.Controls.Add(this.cmbHOTEN);
             this.Controls.Add(this.panelControl1);
             this.Name = "frmLietKeTaiKhoan";
             this.Text = "frmLietKeTaiKhoan";
@@ -219,12 +196,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.batdau.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.batdau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsKH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,11 +212,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbChiNhanh;
-        private DS DS;
-        private System.Windows.Forms.BindingSource bdsNV;
-        private DSTableAdapters.NhanVien1TableAdapter nhanVien1TableAdapter;
-        private DSTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.ComboBox cmbHOTEN;
         private System.Windows.Forms.ComboBox cmbLoai;
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.Label label2;
@@ -247,5 +219,9 @@
         private DevExpress.XtraEditors.DateEdit ketthuc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private DS DS;
+        private System.Windows.Forms.BindingSource bdsKH;
+        private DSTableAdapters.KhachHang1TableAdapter khachHang1TableAdapter;
+        private DSTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
