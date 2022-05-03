@@ -13,7 +13,6 @@ namespace NganHang.SimpleForm
 {
     public partial class frmLietKeTaiKhoan : Form
     {
-        int manv;
         public frmLietKeTaiKhoan()
         {
             InitializeComponent();
@@ -30,22 +29,51 @@ namespace NganHang.SimpleForm
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
+                cmbLoai.Enabled = true;
             }
             else
             {
                 cmbChiNhanh.Enabled = false;
+                cmbLoai.Enabled = false;
+                cmbLoai.Text = "ONE";
             }
-
         }
 
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            Xtrp_LietKeTaiKhoan rpt = new Xtrp_LietKeTaiKhoan(batdau.DateTime.ToString(), ketthuc.DateTime.ToString(), cmbLoai.Text.Substring(0,1));
+            MessageBox.Show(batdau.DateTime.ToString(), "", MessageBoxButtons.OK);
+            MessageBox.Show(ketthuc.DateTime.ToString(), "", MessageBoxButtons.OK);
+            MessageBox.Show(cmbLoai.Text.Substring(0, 1), "", MessageBoxButtons.OK);
+            Xtrp_LietKeTaiKhoan rpt = new Xtrp_LietKeTaiKhoan(batdau.DateTime, ketthuc.DateTime, cmbLoai.Text.Substring(0,1));
             rpt.lb_batdau.Text = batdau.DateTime.ToString();
             rpt.lb_ketthuc.Text = ketthuc.DateTime.ToString();
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();
+        }
+
+        private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbChiNhanh.SelectedValue.ToString() == "System.Data.DataRowView")
+                return;
+            Program.servername = cmbChiNhanh.SelectedValue.ToString();
+            if (cmbChiNhanh.SelectedIndex != Program.mChiNhanh)
+            {
+                Program.mlogin = Program.remotelogin;
+                Program.password = Program.remotepassword;
+                cmbLoai.Enabled = true;
+            }
+            else
+            {
+                Program.mlogin = Program.mloginDN;
+                Program.password = Program.passwordDN;
+            }
+            if (Program.KetNoi() == 0) MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
+            else
+            {
+                this.khachHang1TableAdapter.Connection.ConnectionString = Program.connstr;
+                this.khachHang1TableAdapter.Fill(this.DS.KhachHang1);
+            }
         }
     }
 }
