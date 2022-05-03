@@ -14,6 +14,7 @@ namespace NganHang.SimpleForm
     {
         String macn = "";
         int vitri = 0;
+        DataTable dt = new DataTable();
         public frmGuiRutTien()
         {
             InitializeComponent();
@@ -168,6 +169,14 @@ namespace NganHang.SimpleForm
             if (cmsTHEM.Enabled == false) bdsTK.Position = vitri;
             taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
             pnlGD.Enabled = false;
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

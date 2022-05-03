@@ -33,6 +33,7 @@
             System.Windows.Forms.Label lOAIGDLabel;
             System.Windows.Forms.Label sOTIENLabel;
             System.Windows.Forms.Label mANVLabel;
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
@@ -58,7 +59,6 @@
             this.colCMND1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSODU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.gD_GOIRUTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gD_GOIRUTGridControl = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -82,6 +82,8 @@
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.txtSoTien = new System.Windows.Forms.NumericUpDown();
             this.cmbLoaiGD = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
             lOAIGDLabel = new System.Windows.Forms.Label();
             sOTIENLabel = new System.Windows.Forms.Label();
@@ -96,7 +98,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTGridControl)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -178,9 +179,9 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.Appearance.Options.UseFont = true;
-            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 41);
@@ -188,6 +189,7 @@
             this.groupControl1.Size = new System.Drawing.Size(1586, 30);
             this.groupControl1.TabIndex = 12;
             this.groupControl1.Text = "Danh sách khách hàng thuộc chi nhánh";
+            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // DS
             // 
@@ -228,7 +230,7 @@
             this.khachHangGridControl.Location = new System.Drawing.Point(0, 71);
             this.khachHangGridControl.MainView = this.gridView1;
             this.khachHangGridControl.Name = "khachHangGridControl";
-            this.khachHangGridControl.Size = new System.Drawing.Size(1586, 174);
+            this.khachHangGridControl.Size = new System.Drawing.Size(1586, 226);
             this.khachHangGridControl.TabIndex = 13;
             this.khachHangGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -247,6 +249,10 @@
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsFind.ClearFindOnClose = false;
+            this.gridView1.OptionsFind.FindFilterColumns = "CMND";
+            this.gridView1.OptionsFind.FindNullPrompt = "Nhập CMND khách hàng...";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colCMND
@@ -299,10 +305,13 @@
             // taiKhoanGridControl
             // 
             this.taiKhoanGridControl.DataSource = this.bdsTK;
-            this.taiKhoanGridControl.Location = new System.Drawing.Point(12, 290);
+            gridLevelNode1.RelationName = "Level1";
+            this.taiKhoanGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
+            this.taiKhoanGridControl.Location = new System.Drawing.Point(12, 328);
             this.taiKhoanGridControl.MainView = this.gridView2;
             this.taiKhoanGridControl.Name = "taiKhoanGridControl";
-            this.taiKhoanGridControl.Size = new System.Drawing.Size(656, 150);
+            this.taiKhoanGridControl.Size = new System.Drawing.Size(656, 123);
             this.taiKhoanGridControl.TabIndex = 13;
             this.taiKhoanGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -316,9 +325,12 @@
             this.colMACN});
             this.gridView2.GridControl = this.taiKhoanGridControl;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.AllowIncrementalSearch = true;
             this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
+            this.gridView2.OptionsCustomization.CustomizationFormSearchBoxVisible = true;
             this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView2.OptionsFind.SearchInPreview = true;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // colSOTK
@@ -353,14 +365,6 @@
             this.colMACN.Visible = true;
             this.colMACN.VisibleIndex = 3;
             // 
-            // panelControl2
-            // 
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 245);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1586, 39);
-            this.panelControl2.TabIndex = 14;
-            // 
             // gD_GOIRUTBindingSource
             // 
             this.gD_GOIRUTBindingSource.DataMember = "FK_GD_GOIRUT_TaiKhoan";
@@ -370,10 +374,10 @@
             // 
             this.gD_GOIRUTGridControl.ContextMenuStrip = this.contextMenuStrip1;
             this.gD_GOIRUTGridControl.DataSource = this.gD_GOIRUTBindingSource;
-            this.gD_GOIRUTGridControl.Location = new System.Drawing.Point(808, 290);
+            this.gD_GOIRUTGridControl.Location = new System.Drawing.Point(843, 328);
             this.gD_GOIRUTGridControl.MainView = this.gridView3;
             this.gD_GOIRUTGridControl.Name = "gD_GOIRUTGridControl";
-            this.gD_GOIRUTGridControl.Size = new System.Drawing.Size(693, 150);
+            this.gD_GOIRUTGridControl.Size = new System.Drawing.Size(693, 123);
             this.gD_GOIRUTGridControl.TabIndex = 14;
             this.gD_GOIRUTGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -390,52 +394,52 @@
             this.cmsPHUCHOI,
             this.cmsTHOAT});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(176, 200);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 172);
             // 
             // cmsTHEM
             // 
             this.cmsTHEM.Name = "cmsTHEM";
-            this.cmsTHEM.Size = new System.Drawing.Size(175, 24);
+            this.cmsTHEM.Size = new System.Drawing.Size(157, 24);
             this.cmsTHEM.Text = "Thêm";
             this.cmsTHEM.Click += new System.EventHandler(this.cmsTHEM_Click);
             // 
             // cmsHIEUCHINH
             // 
             this.cmsHIEUCHINH.Name = "cmsHIEUCHINH";
-            this.cmsHIEUCHINH.Size = new System.Drawing.Size(175, 24);
+            this.cmsHIEUCHINH.Size = new System.Drawing.Size(157, 24);
             this.cmsHIEUCHINH.Text = "Hiệu chỉnh";
             // 
             // cmsLUU
             // 
             this.cmsLUU.Name = "cmsLUU";
-            this.cmsLUU.Size = new System.Drawing.Size(175, 24);
+            this.cmsLUU.Size = new System.Drawing.Size(157, 24);
             this.cmsLUU.Text = "Lưu";
             this.cmsLUU.Click += new System.EventHandler(this.cmsLUU_Click);
             // 
             // cmsXOA
             // 
             this.cmsXOA.Name = "cmsXOA";
-            this.cmsXOA.Size = new System.Drawing.Size(175, 24);
+            this.cmsXOA.Size = new System.Drawing.Size(157, 24);
             this.cmsXOA.Text = "Xoá";
             // 
             // cmsTAILAI
             // 
             this.cmsTAILAI.Name = "cmsTAILAI";
-            this.cmsTAILAI.Size = new System.Drawing.Size(175, 24);
+            this.cmsTAILAI.Size = new System.Drawing.Size(157, 24);
             this.cmsTAILAI.Text = "Tải lại trang";
             this.cmsTAILAI.Click += new System.EventHandler(this.cmsTAILAI_Click);
             // 
             // cmsPHUCHOI
             // 
             this.cmsPHUCHOI.Name = "cmsPHUCHOI";
-            this.cmsPHUCHOI.Size = new System.Drawing.Size(175, 24);
+            this.cmsPHUCHOI.Size = new System.Drawing.Size(157, 24);
             this.cmsPHUCHOI.Text = "Phục hồi";
             this.cmsPHUCHOI.Click += new System.EventHandler(this.cmsPHUCHOI_Click);
             // 
             // cmsTHOAT
             // 
             this.cmsTHOAT.Name = "cmsTHOAT";
-            this.cmsTHOAT.Size = new System.Drawing.Size(175, 24);
+            this.cmsTHOAT.Size = new System.Drawing.Size(157, 24);
             this.cmsTHOAT.Text = "Thoát";
             this.cmsTHOAT.Click += new System.EventHandler(this.cmsTHOAT_Click);
             // 
@@ -582,14 +586,38 @@
             this.cmbLoaiGD.TabIndex = 5;
             this.cmbLoaiGD.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiGD_SelectedIndexChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(841, 300);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(310, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Danh sách giao dịch của tài khoản";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(7, 300);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(430, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Danh sách tài khoản của khách hàng được chọn";
+            // 
             // frmGuiRutTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1586, 656);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pnlGD);
             this.Controls.Add(this.gD_GOIRUTGridControl);
-            this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.taiKhoanGridControl);
             this.Controls.Add(this.khachHangGridControl);
             this.Controls.Add(this.groupControl1);
@@ -609,7 +637,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTGridControl)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -621,6 +648,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMANV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTien)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -651,7 +679,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSODU;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
         private DSTableAdapters.GD_GOIRUTTableAdapter gD_GOIRUTTableAdapter;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
         private System.Windows.Forms.BindingSource gD_GOIRUTBindingSource;
         private DevExpress.XtraGrid.GridControl gD_GOIRUTGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
@@ -675,5 +702,7 @@
         private System.Windows.Forms.Button btnXacNhan;
         private DevExpress.XtraEditors.TextEdit txtMANV;
         private DevExpress.XtraEditors.TextEdit txtSOTK;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
