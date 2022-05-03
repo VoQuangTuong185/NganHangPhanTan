@@ -36,16 +36,28 @@ namespace NganHang.SimpleForm
             this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
             this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
             this.khachHang_TTTableAdapter.Fill(this.DS.KhachHang_TT);
+            this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
 
             cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
             panelControl2.Enabled = cmsPHUCHOI.Enabled = cmsLUU.Enabled = false ;
+            if (cmbChiNhanh.SelectedIndex == 0)
+            {
+                teMACN.EditValue = "BENTHANH";
+            }
+            else if(cmbChiNhanh.SelectedIndex == 1)
+            {
+                teMACN.EditValue = "TANDINH";
+            }
+           
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
                 cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled  = false;
+                teMACN.EditValue = "Không được sửa!!";
             }
             else
             {
@@ -89,6 +101,8 @@ namespace NganHang.SimpleForm
                 DS.EnforceConstraints = false;
                 this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.khachHang_TTTableAdapter.Fill(this.DS.KhachHang_TT);
+                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
             }
         }
 
@@ -121,8 +135,8 @@ namespace NganHang.SimpleForm
             }
             if (btn_Add_clicked == true || SOTK == txtSOTK.Text)
             {
-                //MessageBox.Show("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dateNgayMoTK.DateTime + "'", "", MessageBoxButtons.OK);
-               // Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dateNgayMoTK.DateTime + "'");
+                MessageBox.Show("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dateNgayMoTK.DateTime + "'", "", MessageBoxButtons.OK);
+                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dateNgayMoTK.DateTime + "'");
                 this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.khachHang_TTTableAdapter.Fill(this.DS.KhachHang_TT);
                 btn_Add_clicked = false;
@@ -143,7 +157,10 @@ namespace NganHang.SimpleForm
             gcTK.Enabled = gcKH.Enabled = true;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = true;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = false;
-            panelControl2.Enabled = false;            
+            panelControl2.Enabled = false;
+            this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
+            bdsTK.Position = vitri;
         }
 
         private void hiệuChỉnhToolStripMenuItem_Click(object sender, EventArgs e)
@@ -181,6 +198,7 @@ namespace NganHang.SimpleForm
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi xoá tài khoản. Bạn hãy xoá lại\n" + ex.Message, "", MessageBoxButtons.OK);
+                    this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
                     bdsTK.Position = bdsTK.Find("MANV", SOTK);
                     return;
@@ -205,6 +223,7 @@ namespace NganHang.SimpleForm
         {
             try
             {
+                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
             }
             catch (Exception ex)

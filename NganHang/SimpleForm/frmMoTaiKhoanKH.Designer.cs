@@ -41,16 +41,25 @@
             this.DS = new NganHang.DS();
             this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.gcTK = new DevExpress.XtraGrid.GridControl();
+            this.bdsTK = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsKH_TT = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colSOTK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCMND1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSODU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMACN1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNGAYMOTK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.teMACN = new DevExpress.XtraEditors.TextEdit();
             this.teCMND = new System.Windows.Forms.TextBox();
             this.numbSODU = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSOTK = new System.Windows.Forms.TextBox();
             this.dateNgayMoTK = new DevExpress.XtraEditors.DateEdit();
             this.gcKH = new DevExpress.XtraGrid.GridControl();
-            this.bdsKH_TT = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCMND = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHO = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -70,14 +79,6 @@
             this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
             this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
             this.khachHang_TTTableAdapter = new NganHang.DSTableAdapters.KhachHang_TTTableAdapter();
-            this.bdsTK = new System.Windows.Forms.BindingSource(this.components);
-            this.gcTK = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colSOTK = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCMND1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSODU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMACN1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNGAYMOTK = new DevExpress.XtraGrid.Columns.GridColumn();
             cMNDLabel = new System.Windows.Forms.Label();
             mACNLabel = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
@@ -89,22 +90,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcTK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsKH_TT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teMACN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numbSODU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcKH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsKH_TT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcTK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // cMNDLabel
@@ -164,7 +166,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1206, 41);
+            this.panelControl1.Size = new System.Drawing.Size(1558, 41);
             this.panelControl1.TabIndex = 5;
             // 
             // label1
@@ -194,7 +196,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 41);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1206, 30);
+            this.groupControl1.Size = new System.Drawing.Size(1558, 30);
             this.groupControl1.TabIndex = 11;
             this.groupControl1.Text = "Danh sách khách hàng thuộc chi nhánh";
             // 
@@ -223,14 +225,83 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 71);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1206, 612);
+            this.panelControl3.Size = new System.Drawing.Size(1558, 612);
             this.panelControl3.TabIndex = 20;
+            // 
+            // gcTK
+            // 
+            this.gcTK.DataSource = this.bdsTK;
+            this.gcTK.Location = new System.Drawing.Point(849, 308);
+            this.gcTK.MainView = this.gridView2;
+            this.gcTK.Name = "gcTK";
+            this.gcTK.Size = new System.Drawing.Size(674, 223);
+            this.gcTK.TabIndex = 16;
+            this.gcTK.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // bdsTK
+            // 
+            this.bdsTK.DataMember = "FK_KhachHang_TT_TaiKhoan";
+            this.bdsTK.DataSource = this.bdsKH_TT;
+            // 
+            // bdsKH_TT
+            // 
+            this.bdsKH_TT.DataMember = "KhachHang_TT";
+            this.bdsKH_TT.DataSource = this.DS;
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colSOTK,
+            this.colCMND1,
+            this.colSODU,
+            this.colMACN1,
+            this.colNGAYMOTK});
+            this.gridView2.GridControl = this.gcTK;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // colSOTK
+            // 
+            this.colSOTK.FieldName = "SOTK";
+            this.colSOTK.Name = "colSOTK";
+            this.colSOTK.Visible = true;
+            this.colSOTK.VisibleIndex = 0;
+            // 
+            // colCMND1
+            // 
+            this.colCMND1.FieldName = "CMND";
+            this.colCMND1.Name = "colCMND1";
+            this.colCMND1.Visible = true;
+            this.colCMND1.VisibleIndex = 1;
+            // 
+            // colSODU
+            // 
+            this.colSODU.FieldName = "SODU";
+            this.colSODU.Name = "colSODU";
+            this.colSODU.Visible = true;
+            this.colSODU.VisibleIndex = 2;
+            // 
+            // colMACN1
+            // 
+            this.colMACN1.FieldName = "MACN";
+            this.colMACN1.Name = "colMACN1";
+            this.colMACN1.Visible = true;
+            this.colMACN1.VisibleIndex = 3;
+            // 
+            // colNGAYMOTK
+            // 
+            this.colNGAYMOTK.FieldName = "NGAYMOTK";
+            this.colNGAYMOTK.Name = "colNGAYMOTK";
+            this.colNGAYMOTK.Visible = true;
+            this.colNGAYMOTK.VisibleIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(673, 261);
+            this.label3.Location = new System.Drawing.Point(845, 282);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(257, 23);
             this.label3.TabIndex = 16;
@@ -249,6 +320,7 @@
             // 
             // panelControl5
             // 
+            this.panelControl5.Controls.Add(this.teMACN);
             this.panelControl5.Controls.Add(sODULabel);
             this.panelControl5.Controls.Add(this.teCMND);
             this.panelControl5.Controls.Add(cMNDLabel);
@@ -263,6 +335,16 @@
             this.panelControl5.Name = "panelControl5";
             this.panelControl5.Size = new System.Drawing.Size(550, 235);
             this.panelControl5.TabIndex = 17;
+            // 
+            // teMACN
+            // 
+            this.teMACN.Location = new System.Drawing.Point(246, 151);
+            this.teMACN.Name = "teMACN";
+            this.teMACN.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teMACN.Properties.Appearance.Options.UseFont = true;
+            this.teMACN.Properties.ReadOnly = true;
+            this.teMACN.Size = new System.Drawing.Size(243, 24);
+            this.teMACN.TabIndex = 15;
             // 
             // teCMND
             // 
@@ -331,15 +413,10 @@
             this.gcKH.Location = new System.Drawing.Point(2, 2);
             this.gcKH.MainView = this.gridView1;
             this.gcKH.Name = "gcKH";
-            this.gcKH.Size = new System.Drawing.Size(1202, 282);
+            this.gcKH.Size = new System.Drawing.Size(1554, 282);
             this.gcKH.TabIndex = 0;
             this.gcKH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // bdsKH_TT
-            // 
-            this.bdsKH_TT.DataMember = "KhachHang_TT";
-            this.bdsKH_TT.DataSource = this.DS;
             // 
             // gridView1
             // 
@@ -472,75 +549,11 @@
             // 
             this.khachHang_TTTableAdapter.ClearBeforeFill = true;
             // 
-            // bdsTK
-            // 
-            this.bdsTK.DataMember = "FK_KhachHang_TT_TaiKhoan";
-            this.bdsTK.DataSource = this.bdsKH_TT;
-            // 
-            // gcTK
-            // 
-            this.gcTK.DataSource = this.bdsTK;
-            this.gcTK.Location = new System.Drawing.Point(665, 296);
-            this.gcTK.MainView = this.gridView2;
-            this.gcTK.Name = "gcTK";
-            this.gcTK.Size = new System.Drawing.Size(536, 241);
-            this.gcTK.TabIndex = 16;
-            this.gcTK.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            // 
-            // gridView2
-            // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colSOTK,
-            this.colCMND1,
-            this.colSODU,
-            this.colMACN1,
-            this.colNGAYMOTK});
-            this.gridView2.GridControl = this.gcTK;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
-            // 
-            // colSOTK
-            // 
-            this.colSOTK.FieldName = "SOTK";
-            this.colSOTK.Name = "colSOTK";
-            this.colSOTK.Visible = true;
-            this.colSOTK.VisibleIndex = 0;
-            // 
-            // colCMND1
-            // 
-            this.colCMND1.FieldName = "CMND";
-            this.colCMND1.Name = "colCMND1";
-            this.colCMND1.Visible = true;
-            this.colCMND1.VisibleIndex = 1;
-            // 
-            // colSODU
-            // 
-            this.colSODU.FieldName = "SODU";
-            this.colSODU.Name = "colSODU";
-            this.colSODU.Visible = true;
-            this.colSODU.VisibleIndex = 2;
-            // 
-            // colMACN1
-            // 
-            this.colMACN1.FieldName = "MACN";
-            this.colMACN1.Name = "colMACN1";
-            this.colMACN1.Visible = true;
-            this.colMACN1.VisibleIndex = 3;
-            // 
-            // colNGAYMOTK
-            // 
-            this.colNGAYMOTK.FieldName = "NGAYMOTK";
-            this.colNGAYMOTK.Name = "colNGAYMOTK";
-            this.colNGAYMOTK.Visible = true;
-            this.colNGAYMOTK.VisibleIndex = 4;
-            // 
             // frmMoTaiKhoanKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1206, 683);
+            this.ClientSize = new System.Drawing.Size(1558, 683);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.groupControl1);
@@ -557,23 +570,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcTK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsKH_TT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teMACN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numbSODU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayMoTK.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcKH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsKH_TT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcTK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -623,5 +637,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSODU;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN1;
         private DevExpress.XtraGrid.Columns.GridColumn colNGAYMOTK;
+        private DevExpress.XtraEditors.TextEdit teMACN;
     }
 }
