@@ -134,7 +134,7 @@ namespace NganHang.SimpleForm
                 MessageBox.Show("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'", "", MessageBoxButtons.OK);
                 Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'");
                 this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
+                this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
                 btn_Add_clicked = false;
             }
             else
