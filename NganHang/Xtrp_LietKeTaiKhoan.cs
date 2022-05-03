@@ -12,7 +12,7 @@ namespace NganHang
         {
             InitializeComponent();
         }
-        public Xtrp_LietKeTaiKhoan(string batdau, string ketthuc, string loai)
+        public Xtrp_LietKeTaiKhoan(DateTime batdau, DateTime ketthuc, string loai)
         {
             InitializeComponent();
             this.sqlDataSource1.Connection.ConnectionString = Program.connstr;

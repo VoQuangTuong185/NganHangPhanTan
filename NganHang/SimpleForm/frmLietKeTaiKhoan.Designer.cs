@@ -79,21 +79,25 @@
             this.cmbChiNhanh.Name = "cmbChiNhanh";
             this.cmbChiNhanh.Size = new System.Drawing.Size(325, 24);
             this.cmbChiNhanh.TabIndex = 0;
+            this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
             // 
             // cmbLoai
             // 
+            this.cmbLoai.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cmbLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLoai.FormattingEnabled = true;
             this.cmbLoai.Items.AddRange(new object[] {
             "ALL",
             "ONE"});
-            this.cmbLoai.Location = new System.Drawing.Point(323, 63);
+            this.cmbLoai.Location = new System.Drawing.Point(235, 61);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(121, 24);
             this.cmbLoai.TabIndex = 9;
+            this.cmbLoai.Tag = "";
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.Location = new System.Drawing.Point(1022, 59);
+            this.btnXacNhan.Location = new System.Drawing.Point(934, 57);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(118, 33);
             this.btnXacNhan.TabIndex = 10;
@@ -104,7 +108,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(270, 66);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(182, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 17);
             this.label2.TabIndex = 11;
@@ -113,7 +118,7 @@
             // batdau
             // 
             this.batdau.EditValue = null;
-            this.batdau.Location = new System.Drawing.Point(605, 65);
+            this.batdau.Location = new System.Drawing.Point(517, 63);
             this.batdau.Name = "batdau";
             this.batdau.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -125,7 +130,7 @@
             // ketthuc
             // 
             this.ketthuc.EditValue = null;
-            this.ketthuc.Location = new System.Drawing.Point(824, 65);
+            this.ketthuc.Location = new System.Drawing.Point(736, 63);
             this.ketthuc.Name = "ketthuc";
             this.ketthuc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -137,7 +142,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(530, 65);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(442, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 17);
             this.label3.TabIndex = 14;
@@ -146,7 +152,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(758, 66);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(670, 64);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 15;
