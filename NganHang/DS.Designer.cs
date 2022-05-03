@@ -8069,7 +8069,7 @@ SELECT CMND, HO, TEN, DIACHI, PHAI, NGAYCAP, SODT, MACN FROM KhachHang WHERE (CM
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM LINK1.NGANHANG.dbo.TaiKhoan";
+            this._commandCollection[0].CommandText = "SELECT SOTK, CMND, SODU, MACN, NGAYMOTK FROM TaiKhoan";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
