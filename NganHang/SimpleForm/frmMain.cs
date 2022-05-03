@@ -154,5 +154,17 @@ namespace NganHang
                 f.Show();
             }
         }
+
+        private void btnOpenedAccountReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmLietKeTaiKhoan));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmLietKeTaiKhoan f = new frmLietKeTaiKhoan();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }
