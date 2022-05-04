@@ -234,7 +234,7 @@
             this.gcTK.Location = new System.Drawing.Point(849, 308);
             this.gcTK.MainView = this.gridView2;
             this.gcTK.Name = "gcTK";
-            this.gcTK.Size = new System.Drawing.Size(674, 223);
+            this.gcTK.Size = new System.Drawing.Size(674, 229);
             this.gcTK.TabIndex = 16;
             this.gcTK.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -259,11 +259,13 @@
             this.colNGAYMOTK});
             this.gridView2.GridControl = this.gcTK;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // colSOTK
             // 
+            this.colSOTK.Caption = "Số tài khoản";
             this.colSOTK.FieldName = "SOTK";
             this.colSOTK.Name = "colSOTK";
             this.colSOTK.Visible = true;
@@ -278,13 +280,19 @@
             // 
             // colSODU
             // 
+            this.colSODU.Caption = "Số dư";
+            this.colSODU.DisplayFormat.FormatString = "n0";
+            this.colSODU.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSODU.FieldName = "SODU";
+            this.colSODU.GroupFormat.FormatString = "n0";
+            this.colSODU.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSODU.Name = "colSODU";
             this.colSODU.Visible = true;
             this.colSODU.VisibleIndex = 2;
             // 
             // colMACN1
             // 
+            this.colMACN1.Caption = "Chi nhánh mở";
             this.colMACN1.FieldName = "MACN";
             this.colMACN1.Name = "colMACN1";
             this.colMACN1.Visible = true;
@@ -292,6 +300,7 @@
             // 
             // colNGAYMOTK
             // 
+            this.colNGAYMOTK.Caption = "Ngày mở";
             this.colNGAYMOTK.FieldName = "NGAYMOTK";
             this.colNGAYMOTK.Name = "colNGAYMOTK";
             this.colNGAYMOTK.Visible = true;
@@ -365,8 +374,8 @@
             0});
             this.numbSODU.Location = new System.Drawing.Point(247, 72);
             this.numbSODU.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
+            1316134912,
+            2328,
             0,
             0});
             this.numbSODU.Name = "numbSODU";
