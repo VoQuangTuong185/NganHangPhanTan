@@ -72,7 +72,7 @@ namespace NganHang.SimpleForm
             gcTK.Enabled = gcKH.Enabled = false;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
-            vitri = bdsTK.Position;
+            vitri = bdsKH_TT.Position;
             bdsTK.AddNew();
             teCMND.Text = ((DataRowView)bdsTK[bdsTK.Position])["CMND"].ToString();
             //teMACN.Text = ((DataRowView)bdsTK[bdsTK.Position])["MACN"].ToString();
@@ -160,12 +160,12 @@ namespace NganHang.SimpleForm
             panelControl2.Enabled = false;
             this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
             this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
-            bdsTK.Position = vitri;
+            bdsKH_TT.Position = vitri;
         }
 
         private void hiệuChỉnhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            vitri = bdsTK.Position;
+            vitri = bdsKH_TT.Position;
             panelControl2.Enabled = true;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
@@ -185,7 +185,7 @@ namespace NganHang.SimpleForm
                 MessageBox.Show("Không thể xoá tài khoản này vì đã giao dịch phiếu chuyển tiền", "", MessageBoxButtons.OK);
                 return;
             }
-            if (MessageBox.Show("Bạn có thật sự muốn xoá nhân viên " + SOTK + " ??", "Xác nhận",
+            if (MessageBox.Show("Bạn có thật sự muốn xoá tài khoản " + SOTK + " ??", "Xác nhận",
                 MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
@@ -200,7 +200,7 @@ namespace NganHang.SimpleForm
                     MessageBox.Show("Lỗi xoá tài khoản. Bạn hãy xoá lại\n" + ex.Message, "", MessageBoxButtons.OK);
                     this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
-                    bdsTK.Position = bdsTK.Find("MANV", SOTK);
+                    //bdsTK.Position = bdsTK.Find("MANV", SOTK);
                     return;
                 }
             }
