@@ -37,6 +37,7 @@
             System.Windows.Forms.Label trangThaiXoaLabel;
             System.Windows.Forms.Label pHAILabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -473,6 +474,12 @@
             // 
             this.gcNV.DataSource = this.bdsNV;
             this.gcNV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gcNV.EmbeddedNavigator.Appearance.BackColor = System.Drawing.Color.Lime;
+            this.gcNV.EmbeddedNavigator.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.gcNV.EmbeddedNavigator.Appearance.Options.UseBackColor = true;
+            gridLevelNode2.RelationName = "Level1";
+            this.gcNV.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode2});
             this.gcNV.Location = new System.Drawing.Point(0, 71);
             this.gcNV.MainView = this.gridView1;
             this.gcNV.MenuManager = this.barManager1;
@@ -484,6 +491,20 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.Lime;
+            this.gridView1.Appearance.EvenRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.gridView1.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.FilterCloseButton.BackColor = System.Drawing.Color.Lime;
+            this.gridView1.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.Lime;
+            this.gridView1.Appearance.FilterCloseButton.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.Lime;
+            this.gridView1.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.Lime;
+            this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.SelectedRow.BackColor = System.Drawing.Color.Lime;
+            this.gridView1.Appearance.SelectedRow.Options.UseBackColor = true;
+            this.gridView1.AppearancePrint.EvenRow.BackColor = System.Drawing.Color.Lime;
+            this.gridView1.AppearancePrint.EvenRow.Options.UseBackColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMANV,
             this.colHO,
