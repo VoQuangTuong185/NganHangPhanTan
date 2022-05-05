@@ -43,6 +43,7 @@ namespace NganHang.SimpleForm
             Xtrp_LietKeTaiKhoan rpt = new Xtrp_LietKeTaiKhoan(batdau.DateTime, ketthuc.DateTime, cmbLoai.Text.Substring(0,1));
             rpt.lb_batdau.Text = batdau.DateTime.ToString();
             rpt.lb_ketthuc.Text = ketthuc.DateTime.ToString();
+
             if (cmbChiNhanh.SelectedIndex == 0)
             {
                 rpt.tlLoai.Text = "Chi nhánh Bến Thành";
@@ -55,10 +56,23 @@ namespace NganHang.SimpleForm
             {
                 rpt.tlLoai.Text = cmbLoai.Text;
             }
+
             if (cmbLoai.Text.Trim() == "")
             {
                 MessageBox.Show("Bạn chưa chọn loại báo cáo!!", "", MessageBoxButtons.OK);
                 cmbLoai.Focus();
+                return;
+            }
+            if (batdau.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn chưa chọn thời gian bắt đầu!!", "", MessageBoxButtons.OK);
+                batdau.Focus();
+                return;
+            }
+            if (ketthuc.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn chưa chọn thời gian kết thúc!!", "", MessageBoxButtons.OK);
+                ketthuc.Focus();
                 return;
             }
             ReportPrintTool print = new ReportPrintTool(rpt);
