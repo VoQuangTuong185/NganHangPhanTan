@@ -61,6 +61,10 @@
             this.sOTKTextBox = new System.Windows.Forms.TextBox();
             this.cMNDTextBox = new System.Windows.Forms.TextBox();
             this.mACNTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnChuyenTien = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             hOTENLabel = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
             cMNDLabel = new System.Windows.Forms.Label();
@@ -152,7 +156,7 @@
             // khachHangGridControl
             // 
             this.khachHangGridControl.DataSource = this.bdsKH;
-            this.khachHangGridControl.Location = new System.Drawing.Point(0, 71);
+            this.khachHangGridControl.Location = new System.Drawing.Point(0, 97);
             this.khachHangGridControl.MainView = this.gridView1;
             this.khachHangGridControl.Name = "khachHangGridControl";
             this.khachHangGridControl.Size = new System.Drawing.Size(787, 198);
@@ -211,7 +215,7 @@
             // taiKhoanGridControl
             // 
             this.taiKhoanGridControl.DataSource = this.bdsTK;
-            this.taiKhoanGridControl.Location = new System.Drawing.Point(0, 316);
+            this.taiKhoanGridControl.Location = new System.Drawing.Point(0, 357);
             this.taiKhoanGridControl.MainView = this.gridView2;
             this.taiKhoanGridControl.Name = "taiKhoanGridControl";
             this.taiKhoanGridControl.Size = new System.Drawing.Size(787, 198);
@@ -228,6 +232,10 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.btnChuyenTien);
+            this.groupControl2.Controls.Add(this.label4);
+            this.groupControl2.Controls.Add(this.textBox1);
+            this.groupControl2.Controls.Add(this.label3);
             this.groupControl2.Controls.Add(this.btnTimKiem);
             this.groupControl2.Controls.Add(mACNLabel);
             this.groupControl2.Controls.Add(this.label2);
@@ -239,10 +247,10 @@
             this.groupControl2.Controls.Add(hOTENLabel);
             this.groupControl2.Controls.Add(this.cMNDTextBox);
             this.groupControl2.Controls.Add(this.sOTKTextBox);
-            this.groupControl2.Location = new System.Drawing.Point(873, 77);
+            this.groupControl2.Location = new System.Drawing.Point(873, 71);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.ShowCaption = false;
-            this.groupControl2.Size = new System.Drawing.Size(818, 437);
+            this.groupControl2.Size = new System.Drawing.Size(833, 484);
             this.groupControl2.TabIndex = 15;
             this.groupControl2.Text = "groupControl2";
             // 
@@ -250,7 +258,7 @@
             // 
             this.txtSoTkNhanTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoTkNhanTien.ForeColor = System.Drawing.Color.Black;
-            this.txtSoTkNhanTien.Location = new System.Drawing.Point(282, 15);
+            this.txtSoTkNhanTien.Location = new System.Drawing.Point(282, 18);
             this.txtSoTkNhanTien.Name = "txtSoTkNhanTien";
             this.txtSoTkNhanTien.Size = new System.Drawing.Size(134, 30);
             this.txtSoTkNhanTien.TabIndex = 17;
@@ -260,7 +268,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(5, 15);
+            this.label2.Location = new System.Drawing.Point(5, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(271, 25);
             this.label2.TabIndex = 18;
@@ -280,7 +288,7 @@
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.btnTimKiem.Location = new System.Drawing.Point(458, 15);
+            this.btnTimKiem.Location = new System.Drawing.Point(458, 18);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(138, 33);
             this.btnTimKiem.TabIndex = 20;
@@ -293,7 +301,7 @@
             hOTENLabel.AutoSize = true;
             hOTENLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             hOTENLabel.ForeColor = System.Drawing.Color.Black;
-            hOTENLabel.Location = new System.Drawing.Point(25, 105);
+            hOTENLabel.Location = new System.Drawing.Point(43, 193);
             hOTENLabel.Name = "hOTENLabel";
             hOTENLabel.Size = new System.Drawing.Size(114, 25);
             hOTENLabel.TabIndex = 20;
@@ -304,8 +312,9 @@
             this.hOTENTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "HOTEN", true));
             this.hOTENTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hOTENTextBox.ForeColor = System.Drawing.Color.Black;
-            this.hOTENTextBox.Location = new System.Drawing.Point(159, 105);
+            this.hOTENTextBox.Location = new System.Drawing.Point(177, 193);
             this.hOTENTextBox.Name = "hOTENTextBox";
+            this.hOTENTextBox.ReadOnly = true;
             this.hOTENTextBox.Size = new System.Drawing.Size(199, 30);
             this.hOTENTextBox.TabIndex = 21;
             // 
@@ -314,19 +323,20 @@
             sOTKLabel.AutoSize = true;
             sOTKLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             sOTKLabel.ForeColor = System.Drawing.Color.Black;
-            sOTKLabel.Location = new System.Drawing.Point(25, 165);
+            sOTKLabel.Location = new System.Drawing.Point(43, 253);
             sOTKLabel.Name = "sOTKLabel";
-            sOTKLabel.Size = new System.Drawing.Size(121, 25);
+            sOTKLabel.Size = new System.Drawing.Size(127, 25);
             sOTKLabel.TabIndex = 21;
-            sOTKLabel.Text = "Số tài khoản";
+            sOTKLabel.Text = "Số tài khoản:";
             // 
             // sOTKTextBox
             // 
             this.sOTKTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "SOTK", true));
             this.sOTKTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sOTKTextBox.ForeColor = System.Drawing.Color.Black;
-            this.sOTKTextBox.Location = new System.Drawing.Point(159, 162);
+            this.sOTKTextBox.Location = new System.Drawing.Point(177, 250);
             this.sOTKTextBox.Name = "sOTKTextBox";
+            this.sOTKTextBox.ReadOnly = true;
             this.sOTKTextBox.Size = new System.Drawing.Size(199, 30);
             this.sOTKTextBox.TabIndex = 22;
             // 
@@ -335,7 +345,7 @@
             cMNDLabel.AutoSize = true;
             cMNDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             cMNDLabel.ForeColor = System.Drawing.Color.Black;
-            cMNDLabel.Location = new System.Drawing.Point(414, 108);
+            cMNDLabel.Location = new System.Drawing.Point(499, 194);
             cMNDLabel.Name = "cMNDLabel";
             cMNDLabel.Size = new System.Drawing.Size(78, 25);
             cMNDLabel.TabIndex = 22;
@@ -346,8 +356,9 @@
             this.cMNDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "CMND", true));
             this.cMNDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cMNDTextBox.ForeColor = System.Drawing.Color.Black;
-            this.cMNDTextBox.Location = new System.Drawing.Point(512, 108);
+            this.cMNDTextBox.Location = new System.Drawing.Point(610, 194);
             this.cMNDTextBox.Name = "cMNDTextBox";
+            this.cMNDTextBox.ReadOnly = true;
             this.cMNDTextBox.Size = new System.Drawing.Size(199, 30);
             this.cMNDTextBox.TabIndex = 23;
             // 
@@ -356,21 +367,63 @@
             mACNLabel.AutoSize = true;
             mACNLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             mACNLabel.ForeColor = System.Drawing.Color.Black;
-            mACNLabel.Location = new System.Drawing.Point(423, 167);
+            mACNLabel.Location = new System.Drawing.Point(499, 253);
             mACNLabel.Name = "mACNLabel";
-            mACNLabel.Size = new System.Drawing.Size(78, 25);
+            mACNLabel.Size = new System.Drawing.Size(105, 25);
             mACNLabel.TabIndex = 23;
-            mACNLabel.Text = "MACN:";
+            mACNLabel.Text = "Chi Nhánh";
             // 
             // mACNTextBox
             // 
             this.mACNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "MACN", true));
             this.mACNTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mACNTextBox.ForeColor = System.Drawing.Color.Black;
-            this.mACNTextBox.Location = new System.Drawing.Point(512, 167);
+            this.mACNTextBox.Location = new System.Drawing.Point(610, 253);
             this.mACNTextBox.Name = "mACNTextBox";
+            this.mACNTextBox.ReadOnly = true;
             this.mACNTextBox.Size = new System.Drawing.Size(199, 30);
             this.mACNTextBox.TabIndex = 24;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(4, 136);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(379, 32);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Thông tin người nhận tiền: ";
+            // 
+            // btnChuyenTien
+            // 
+            this.btnChuyenTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuyenTien.ForeColor = System.Drawing.Color.Black;
+            this.btnChuyenTien.Location = new System.Drawing.Point(561, 400);
+            this.btnChuyenTien.Name = "btnChuyenTien";
+            this.btnChuyenTien.Size = new System.Drawing.Size(175, 33);
+            this.btnChuyenTien.TabIndex = 28;
+            this.btnChuyenTien.Text = "Xác nhận chuyển";
+            this.btnChuyenTien.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(132, 408);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 25);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Nhập số tiền: ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(304, 403);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(206, 30);
+            this.textBox1.TabIndex = 26;
             // 
             // frmChuyenTien
             // 
@@ -435,5 +488,9 @@
         private System.Windows.Forms.TextBox sOTKTextBox;
         private System.Windows.Forms.TextBox cMNDTextBox;
         private System.Windows.Forms.TextBox mACNTextBox;
+        private System.Windows.Forms.Button btnChuyenTien;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
