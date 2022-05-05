@@ -39,6 +39,7 @@ namespace NganHang.SimpleForm
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
+            pnlGD.Enabled = false;
             //panelControl2.Enabled = cmsPHUCHOI.Enabled = cmsLUU.Enabled = false;
             if (Program.mGroup == "NganHang")
             {
@@ -103,8 +104,16 @@ namespace NganHang.SimpleForm
         {
             String dt = String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
             //string SOTK_CHUYEN = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
-            MessageBox.Show("EXEC frmGuiRutTien '" + txtSoTKChuyen.Text + "','" + txtSoTKNhan.Text + "','" + nuSoTien.Value + "','" + dt + "','" + Program.username + "'", "", MessageBoxButtons.OK);
-            Program.ExecSqlNonQuery("EXEC frmGuiRutTien '" + txtSoTKChuyen.Text + "','" + txtSoTKNhan.Text + "','" + nuSoTien.Value + "','" + dt + "','" + Program.username + "'");
+            MessageBox.Show("EXEC frmChuyenTien_ChuyenTien '" + txtSoTKChuyen.Text + "','" + txtSoTKNhan.Text + "','" + nuSoTien.Value + "','" + dt + "','" + Program.username + "'", "", MessageBoxButtons.OK);
+            Program.ExecSqlNonQuery("EXEC frmChuyenTien_ChuyenTien '" + txtSoTKChuyen.Text + "','" + txtSoTKNhan.Text + "','" + nuSoTien.Value + "','" + dt + "','" + Program.username + "'");
+            DS.EnforceConstraints = false;
+            this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.khachHangTableAdapter.Fill(this.DS.KhachHang);
+            this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
+            taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
+            pnlGD.Enabled = false;
+            bdsTK.Position = vitri;
         }
 
         private void cmsTHEM_Click(object sender, EventArgs e)
@@ -114,6 +123,26 @@ namespace NganHang.SimpleForm
             txtMANV.Text = Program.username;
             txtSoTKChuyen.Text = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
             vitri = bdsTK.Position;
+        }
+
+        private void txtSoTKChuyen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sODUTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mACNTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cMNDTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
