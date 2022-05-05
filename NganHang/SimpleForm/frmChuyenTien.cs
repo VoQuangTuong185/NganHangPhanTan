@@ -97,5 +97,15 @@ namespace NganHang.SimpleForm
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnChuyenTien_Click(object sender, EventArgs e)
+        {
+            String dt = String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
+            string SOTK_CHUYEN = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
+            MessageBox.Show("EXEC frmGuiRutTien '" + SOTK_CHUYEN + "','" + txtSoTKNhan.Text + "','" + nuSoTien.Value + "','" + dt + "','" + txtMANV.EditValue + "'", "", MessageBoxButtons.OK);
+            Program.ExecSqlNonQuery("EXEC frmGuiRutTien '" + SOTK_CHUYEN + "','" + txtSoTKNhan.Text + "','" + nuSoTien.Value + "','" + dt + "','" + txtMANV.EditValue + "'");
+        }
     }
 }
+
+

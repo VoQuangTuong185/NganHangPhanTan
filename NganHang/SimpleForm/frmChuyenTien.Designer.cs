@@ -58,13 +58,13 @@
             this.frmChuyenTien_InfoReceiverTableAdapter = new NganHang.DSTableAdapters.frmChuyenTien_InfoReceiverTableAdapter();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.hOTENTextBox = new System.Windows.Forms.TextBox();
-            this.sOTKTextBox = new System.Windows.Forms.TextBox();
+            this.txtSoTKNhan = new System.Windows.Forms.TextBox();
             this.cMNDTextBox = new System.Windows.Forms.TextBox();
             this.mACNTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnChuyenTien = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nuSoTien = new System.Windows.Forms.NumericUpDown();
             hOTENLabel = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
             cMNDLabel = new System.Windows.Forms.Label();
@@ -82,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frmChuyenTien_InfoReceiverBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuSoTien)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -232,9 +233,9 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.nuSoTien);
             this.groupControl2.Controls.Add(this.btnChuyenTien);
             this.groupControl2.Controls.Add(this.label4);
-            this.groupControl2.Controls.Add(this.textBox1);
             this.groupControl2.Controls.Add(this.label3);
             this.groupControl2.Controls.Add(this.btnTimKiem);
             this.groupControl2.Controls.Add(mACNLabel);
@@ -246,7 +247,7 @@
             this.groupControl2.Controls.Add(cMNDLabel);
             this.groupControl2.Controls.Add(hOTENLabel);
             this.groupControl2.Controls.Add(this.cMNDTextBox);
-            this.groupControl2.Controls.Add(this.sOTKTextBox);
+            this.groupControl2.Controls.Add(this.txtSoTKNhan);
             this.groupControl2.Location = new System.Drawing.Point(873, 71);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.ShowCaption = false;
@@ -329,16 +330,16 @@
             sOTKLabel.TabIndex = 21;
             sOTKLabel.Text = "Số tài khoản:";
             // 
-            // sOTKTextBox
+            // txtSoTKNhan
             // 
-            this.sOTKTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "SOTK", true));
-            this.sOTKTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sOTKTextBox.ForeColor = System.Drawing.Color.Black;
-            this.sOTKTextBox.Location = new System.Drawing.Point(177, 250);
-            this.sOTKTextBox.Name = "sOTKTextBox";
-            this.sOTKTextBox.ReadOnly = true;
-            this.sOTKTextBox.Size = new System.Drawing.Size(199, 30);
-            this.sOTKTextBox.TabIndex = 22;
+            this.txtSoTKNhan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "SOTK", true));
+            this.txtSoTKNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTKNhan.ForeColor = System.Drawing.Color.Black;
+            this.txtSoTKNhan.Location = new System.Drawing.Point(177, 250);
+            this.txtSoTKNhan.Name = "txtSoTKNhan";
+            this.txtSoTKNhan.ReadOnly = true;
+            this.txtSoTKNhan.Size = new System.Drawing.Size(199, 30);
+            this.txtSoTKNhan.TabIndex = 22;
             // 
             // cMNDLabel
             // 
@@ -404,6 +405,7 @@
             this.btnChuyenTien.TabIndex = 28;
             this.btnChuyenTien.Text = "Xác nhận chuyển";
             this.btnChuyenTien.UseVisualStyleBackColor = true;
+            this.btnChuyenTien.Click += new System.EventHandler(this.btnChuyenTien_Click);
             // 
             // label4
             // 
@@ -416,14 +418,13 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Nhập số tiền: ";
             // 
-            // textBox1
+            // nuSoTien
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(304, 403);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 30);
-            this.textBox1.TabIndex = 26;
+            this.nuSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nuSoTien.Location = new System.Drawing.Point(282, 408);
+            this.nuSoTien.Name = "nuSoTien";
+            this.nuSoTien.Size = new System.Drawing.Size(120, 30);
+            this.nuSoTien.TabIndex = 29;
             // 
             // frmChuyenTien
             // 
@@ -454,6 +455,7 @@
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frmChuyenTien_InfoReceiverBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuSoTien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -485,12 +487,12 @@
         private DSTableAdapters.frmChuyenTien_InfoReceiverTableAdapter frmChuyenTien_InfoReceiverTableAdapter;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox hOTENTextBox;
-        private System.Windows.Forms.TextBox sOTKTextBox;
+        private System.Windows.Forms.TextBox txtSoTKNhan;
         private System.Windows.Forms.TextBox cMNDTextBox;
         private System.Windows.Forms.TextBox mACNTextBox;
         private System.Windows.Forms.Button btnChuyenTien;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown nuSoTien;
     }
 }
