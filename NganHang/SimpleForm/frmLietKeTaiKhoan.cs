@@ -48,6 +48,26 @@ namespace NganHang.SimpleForm
             Xtrp_LietKeTaiKhoan rpt = new Xtrp_LietKeTaiKhoan(batdau.DateTime, ketthuc.DateTime, cmbLoai.Text.Substring(0,1));
             rpt.lb_batdau.Text = batdau.DateTime.ToString();
             rpt.lb_ketthuc.Text = ketthuc.DateTime.ToString();
+            if (Program.mGroup == "NganHang")
+            {
+                cmbChiNhanh.Enabled = true;
+                cmbLoai.Enabled = true;
+                rpt.tlLoai.Text = "Tất cả chi nhánh";
+            }
+            else
+            {
+                cmbChiNhanh.Enabled = false;
+                cmbLoai.Enabled = false;
+                cmbLoai.Text = "ONE";
+                if (cmbChiNhanh.SelectedIndex == 0)
+                {
+                    rpt.tlLoai.Text = "Chi nhánh Bến Thành";
+                }
+                else if (cmbChiNhanh.SelectedIndex == 1)
+                {
+                    rpt.tlLoai.Text = "Chi nhánh Tân Định";
+                }
+            }
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();
         }
