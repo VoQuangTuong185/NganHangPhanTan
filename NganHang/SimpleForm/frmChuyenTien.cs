@@ -13,6 +13,7 @@ namespace NganHang.SimpleForm
     public partial class frmChuyenTien : Form
     {
         String macn = "";
+        int vitri = 0;
         public frmChuyenTien()
         {
             InitializeComponent();
@@ -101,9 +102,18 @@ namespace NganHang.SimpleForm
         private void btnChuyenTien_Click(object sender, EventArgs e)
         {
             String dt = String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
-            string SOTK_CHUYEN = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
-            MessageBox.Show("EXEC frmGuiRutTien '" + SOTK_CHUYEN + "','" + txtSoTKNhan.Text + "','" + nuSoTien.Value + "','" + dt + "','" + txtMANV.EditValue + "'", "", MessageBoxButtons.OK);
-            Program.ExecSqlNonQuery("EXEC frmGuiRutTien '" + SOTK_CHUYEN + "','" + txtSoTKNhan.Text + "','" + nuSoTien.Value + "','" + dt + "','" + txtMANV.EditValue + "'");
+            //string SOTK_CHUYEN = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
+            MessageBox.Show("EXEC frmGuiRutTien '" + txtSoTKChuyen.Text + "','" + txtSoTKNhan.Text + "','" + nuSoTien.Value + "','" + dt + "','" + Program.username + "'", "", MessageBoxButtons.OK);
+            Program.ExecSqlNonQuery("EXEC frmGuiRutTien '" + txtSoTKChuyen.Text + "','" + txtSoTKNhan.Text + "','" + nuSoTien.Value + "','" + dt + "','" + Program.username + "'");
+        }
+
+        private void cmsTHEM_Click(object sender, EventArgs e)
+        {
+            taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = false;
+            pnlGD.Enabled = true;
+            txtMANV.Text = Program.username;
+            txtSoTKChuyen.Text = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
+            vitri = bdsTK.Position;
         }
     }
 }

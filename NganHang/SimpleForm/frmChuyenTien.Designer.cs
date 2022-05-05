@@ -33,6 +33,10 @@
             System.Windows.Forms.Label sOTKLabel;
             System.Windows.Forms.Label cMNDLabel;
             System.Windows.Forms.Label mACNLabel;
+            System.Windows.Forms.Label sOTKLabel1;
+            System.Windows.Forms.Label cMNDLabel1;
+            System.Windows.Forms.Label sODULabel;
+            System.Windows.Forms.Label mACNLabel1;
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
@@ -51,7 +55,7 @@
             this.bdsTK = new System.Windows.Forms.BindingSource(this.components);
             this.taiKhoanGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.pnlGD = new DevExpress.XtraEditors.GroupControl();
             this.txtSoTkNhanTien = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.frmChuyenTien_InfoReceiverBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -65,10 +69,31 @@
             this.btnChuyenTien = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.nuSoTien = new System.Windows.Forms.NumericUpDown();
+            this.colSOTK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSODU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCMND1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNGAYMOTK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsTHEM = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsXoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsPHUCHOI = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSoTKChuyen = new System.Windows.Forms.TextBox();
+            this.cMNDTextBox1 = new System.Windows.Forms.TextBox();
+            this.sODUTextBox = new System.Windows.Forms.TextBox();
+            this.mACNTextBox1 = new System.Windows.Forms.TextBox();
+            this.txtMANV = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             hOTENLabel = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
             cMNDLabel = new System.Windows.Forms.Label();
             mACNLabel = new System.Windows.Forms.Label();
+            sOTKLabel1 = new System.Windows.Forms.Label();
+            cMNDLabel1 = new System.Windows.Forms.Label();
+            sODULabel = new System.Windows.Forms.Label();
+            mACNLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -79,10 +104,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlGD)).BeginInit();
+            this.pnlGD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frmChuyenTien_InfoReceiverBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuSoTien)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -215,8 +241,9 @@
             // 
             // taiKhoanGridControl
             // 
+            this.taiKhoanGridControl.ContextMenuStrip = this.contextMenuStrip1;
             this.taiKhoanGridControl.DataSource = this.bdsTK;
-            this.taiKhoanGridControl.Location = new System.Drawing.Point(0, 357);
+            this.taiKhoanGridControl.Location = new System.Drawing.Point(0, 362);
             this.taiKhoanGridControl.MainView = this.gridView2;
             this.taiKhoanGridControl.Name = "taiKhoanGridControl";
             this.taiKhoanGridControl.Size = new System.Drawing.Size(787, 198);
@@ -226,34 +253,50 @@
             // 
             // gridView2
             // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colSOTK,
+            this.colSODU,
+            this.colCMND1,
+            this.colNGAYMOTK});
             this.gridView2.GridControl = this.taiKhoanGridControl;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
-            // groupControl2
+            // pnlGD
             // 
-            this.groupControl2.Controls.Add(this.nuSoTien);
-            this.groupControl2.Controls.Add(this.btnChuyenTien);
-            this.groupControl2.Controls.Add(this.label4);
-            this.groupControl2.Controls.Add(this.label3);
-            this.groupControl2.Controls.Add(this.btnTimKiem);
-            this.groupControl2.Controls.Add(mACNLabel);
-            this.groupControl2.Controls.Add(this.label2);
-            this.groupControl2.Controls.Add(this.txtSoTkNhanTien);
-            this.groupControl2.Controls.Add(sOTKLabel);
-            this.groupControl2.Controls.Add(this.mACNTextBox);
-            this.groupControl2.Controls.Add(this.hOTENTextBox);
-            this.groupControl2.Controls.Add(cMNDLabel);
-            this.groupControl2.Controls.Add(hOTENLabel);
-            this.groupControl2.Controls.Add(this.cMNDTextBox);
-            this.groupControl2.Controls.Add(this.txtSoTKNhan);
-            this.groupControl2.Location = new System.Drawing.Point(873, 71);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.ShowCaption = false;
-            this.groupControl2.Size = new System.Drawing.Size(833, 484);
-            this.groupControl2.TabIndex = 15;
-            this.groupControl2.Text = "groupControl2";
+            this.pnlGD.Controls.Add(this.label6);
+            this.pnlGD.Controls.Add(this.txtMANV);
+            this.pnlGD.Controls.Add(mACNLabel1);
+            this.pnlGD.Controls.Add(this.mACNTextBox1);
+            this.pnlGD.Controls.Add(sODULabel);
+            this.pnlGD.Controls.Add(this.sODUTextBox);
+            this.pnlGD.Controls.Add(cMNDLabel1);
+            this.pnlGD.Controls.Add(this.cMNDTextBox1);
+            this.pnlGD.Controls.Add(sOTKLabel1);
+            this.pnlGD.Controls.Add(this.txtSoTKChuyen);
+            this.pnlGD.Controls.Add(this.label5);
+            this.pnlGD.Controls.Add(this.nuSoTien);
+            this.pnlGD.Controls.Add(this.btnChuyenTien);
+            this.pnlGD.Controls.Add(this.label4);
+            this.pnlGD.Controls.Add(this.label3);
+            this.pnlGD.Controls.Add(this.btnTimKiem);
+            this.pnlGD.Controls.Add(mACNLabel);
+            this.pnlGD.Controls.Add(this.label2);
+            this.pnlGD.Controls.Add(this.txtSoTkNhanTien);
+            this.pnlGD.Controls.Add(sOTKLabel);
+            this.pnlGD.Controls.Add(this.mACNTextBox);
+            this.pnlGD.Controls.Add(this.hOTENTextBox);
+            this.pnlGD.Controls.Add(cMNDLabel);
+            this.pnlGD.Controls.Add(hOTENLabel);
+            this.pnlGD.Controls.Add(this.cMNDTextBox);
+            this.pnlGD.Controls.Add(this.txtSoTKNhan);
+            this.pnlGD.Location = new System.Drawing.Point(831, 97);
+            this.pnlGD.Name = "pnlGD";
+            this.pnlGD.ShowCaption = false;
+            this.pnlGD.Size = new System.Drawing.Size(748, 484);
+            this.pnlGD.TabIndex = 15;
+            this.pnlGD.Text = "groupControl2";
             // 
             // txtSoTkNhanTien
             // 
@@ -302,7 +345,7 @@
             hOTENLabel.AutoSize = true;
             hOTENLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             hOTENLabel.ForeColor = System.Drawing.Color.Black;
-            hOTENLabel.Location = new System.Drawing.Point(43, 193);
+            hOTENLabel.Location = new System.Drawing.Point(44, 286);
             hOTENLabel.Name = "hOTENLabel";
             hOTENLabel.Size = new System.Drawing.Size(114, 25);
             hOTENLabel.TabIndex = 20;
@@ -313,7 +356,7 @@
             this.hOTENTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "HOTEN", true));
             this.hOTENTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hOTENTextBox.ForeColor = System.Drawing.Color.Black;
-            this.hOTENTextBox.Location = new System.Drawing.Point(177, 193);
+            this.hOTENTextBox.Location = new System.Drawing.Point(178, 286);
             this.hOTENTextBox.Name = "hOTENTextBox";
             this.hOTENTextBox.ReadOnly = true;
             this.hOTENTextBox.Size = new System.Drawing.Size(199, 30);
@@ -324,7 +367,7 @@
             sOTKLabel.AutoSize = true;
             sOTKLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             sOTKLabel.ForeColor = System.Drawing.Color.Black;
-            sOTKLabel.Location = new System.Drawing.Point(43, 253);
+            sOTKLabel.Location = new System.Drawing.Point(44, 346);
             sOTKLabel.Name = "sOTKLabel";
             sOTKLabel.Size = new System.Drawing.Size(127, 25);
             sOTKLabel.TabIndex = 21;
@@ -335,7 +378,7 @@
             this.txtSoTKNhan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "SOTK", true));
             this.txtSoTKNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoTKNhan.ForeColor = System.Drawing.Color.Black;
-            this.txtSoTKNhan.Location = new System.Drawing.Point(177, 250);
+            this.txtSoTKNhan.Location = new System.Drawing.Point(178, 343);
             this.txtSoTKNhan.Name = "txtSoTKNhan";
             this.txtSoTKNhan.ReadOnly = true;
             this.txtSoTKNhan.Size = new System.Drawing.Size(199, 30);
@@ -346,7 +389,7 @@
             cMNDLabel.AutoSize = true;
             cMNDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             cMNDLabel.ForeColor = System.Drawing.Color.Black;
-            cMNDLabel.Location = new System.Drawing.Point(499, 194);
+            cMNDLabel.Location = new System.Drawing.Point(416, 284);
             cMNDLabel.Name = "cMNDLabel";
             cMNDLabel.Size = new System.Drawing.Size(78, 25);
             cMNDLabel.TabIndex = 22;
@@ -357,7 +400,7 @@
             this.cMNDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "CMND", true));
             this.cMNDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cMNDTextBox.ForeColor = System.Drawing.Color.Black;
-            this.cMNDTextBox.Location = new System.Drawing.Point(610, 194);
+            this.cMNDTextBox.Location = new System.Drawing.Point(527, 284);
             this.cMNDTextBox.Name = "cMNDTextBox";
             this.cMNDTextBox.ReadOnly = true;
             this.cMNDTextBox.Size = new System.Drawing.Size(199, 30);
@@ -368,7 +411,7 @@
             mACNLabel.AutoSize = true;
             mACNLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             mACNLabel.ForeColor = System.Drawing.Color.Black;
-            mACNLabel.Location = new System.Drawing.Point(499, 253);
+            mACNLabel.Location = new System.Drawing.Point(416, 343);
             mACNLabel.Name = "mACNLabel";
             mACNLabel.Size = new System.Drawing.Size(105, 25);
             mACNLabel.TabIndex = 23;
@@ -379,7 +422,7 @@
             this.mACNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "MACN", true));
             this.mACNTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mACNTextBox.ForeColor = System.Drawing.Color.Black;
-            this.mACNTextBox.Location = new System.Drawing.Point(610, 253);
+            this.mACNTextBox.Location = new System.Drawing.Point(527, 343);
             this.mACNTextBox.Name = "mACNTextBox";
             this.mACNTextBox.ReadOnly = true;
             this.mACNTextBox.Size = new System.Drawing.Size(199, 30);
@@ -389,7 +432,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 136);
+            this.label3.Location = new System.Drawing.Point(5, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(379, 32);
             this.label3.TabIndex = 25;
@@ -399,7 +442,7 @@
             // 
             this.btnChuyenTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChuyenTien.ForeColor = System.Drawing.Color.Black;
-            this.btnChuyenTien.Location = new System.Drawing.Point(561, 400);
+            this.btnChuyenTien.Location = new System.Drawing.Point(449, 397);
             this.btnChuyenTien.Name = "btnChuyenTien";
             this.btnChuyenTien.Size = new System.Drawing.Size(175, 33);
             this.btnChuyenTien.TabIndex = 28;
@@ -412,7 +455,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(132, 408);
+            this.label4.Location = new System.Drawing.Point(155, 401);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 25);
             this.label4.TabIndex = 27;
@@ -421,17 +464,189 @@
             // nuSoTien
             // 
             this.nuSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuSoTien.Location = new System.Drawing.Point(282, 408);
+            this.nuSoTien.Location = new System.Drawing.Point(305, 401);
+            this.nuSoTien.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
             this.nuSoTien.Name = "nuSoTien";
             this.nuSoTien.Size = new System.Drawing.Size(120, 30);
             this.nuSoTien.TabIndex = 29;
+            // 
+            // colSOTK
+            // 
+            this.colSOTK.FieldName = "SOTK";
+            this.colSOTK.Name = "colSOTK";
+            this.colSOTK.Visible = true;
+            this.colSOTK.VisibleIndex = 0;
+            // 
+            // colSODU
+            // 
+            this.colSODU.DisplayFormat.FormatString = "n0";
+            this.colSODU.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colSODU.FieldName = "SODU";
+            this.colSODU.Name = "colSODU";
+            this.colSODU.Visible = true;
+            this.colSODU.VisibleIndex = 1;
+            // 
+            // colCMND1
+            // 
+            this.colCMND1.FieldName = "CMND";
+            this.colCMND1.Name = "colCMND1";
+            this.colCMND1.Visible = true;
+            this.colCMND1.VisibleIndex = 2;
+            // 
+            // colNGAYMOTK
+            // 
+            this.colNGAYMOTK.FieldName = "NGAYMOTK";
+            this.colNGAYMOTK.Name = "colNGAYMOTK";
+            this.colNGAYMOTK.Visible = true;
+            this.colNGAYMOTK.VisibleIndex = 3;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsTHEM,
+            this.cmsXoa,
+            this.cmsTAILAI,
+            this.cmsPHUCHOI,
+            this.cmsTHOAT});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 124);
+            // 
+            // cmsTHEM
+            // 
+            this.cmsTHEM.Name = "cmsTHEM";
+            this.cmsTHEM.Size = new System.Drawing.Size(157, 24);
+            this.cmsTHEM.Text = "Thêm";
+            this.cmsTHEM.Click += new System.EventHandler(this.cmsTHEM_Click);
+            // 
+            // cmsXoa
+            // 
+            this.cmsXoa.Name = "cmsXoa";
+            this.cmsXoa.Size = new System.Drawing.Size(157, 24);
+            this.cmsXoa.Text = "Xoá ";
+            // 
+            // cmsTAILAI
+            // 
+            this.cmsTAILAI.Name = "cmsTAILAI";
+            this.cmsTAILAI.Size = new System.Drawing.Size(157, 24);
+            this.cmsTAILAI.Text = "Tải lại trang";
+            // 
+            // cmsPHUCHOI
+            // 
+            this.cmsPHUCHOI.Name = "cmsPHUCHOI";
+            this.cmsPHUCHOI.Size = new System.Drawing.Size(157, 24);
+            this.cmsPHUCHOI.Text = "Phục hồi";
+            // 
+            // cmsTHOAT
+            // 
+            this.cmsTHOAT.Name = "cmsTHOAT";
+            this.cmsTHOAT.Size = new System.Drawing.Size(157, 24);
+            this.cmsTHOAT.Text = "Thoát";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(4, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(409, 32);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Thông tin người chuyển tiền: ";
+            // 
+            // sOTKLabel1
+            // 
+            sOTKLabel1.AutoSize = true;
+            sOTKLabel1.Location = new System.Drawing.Point(20, 118);
+            sOTKLabel1.Name = "sOTKLabel1";
+            sOTKLabel1.Size = new System.Drawing.Size(47, 17);
+            sOTKLabel1.TabIndex = 30;
+            sOTKLabel1.Text = "SOTK:";
+            // 
+            // txtSoTKChuyen
+            // 
+            this.txtSoTKChuyen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "SOTK", true));
+            this.txtSoTKChuyen.Location = new System.Drawing.Point(73, 115);
+            this.txtSoTKChuyen.Name = "txtSoTKChuyen";
+            this.txtSoTKChuyen.Size = new System.Drawing.Size(100, 23);
+            this.txtSoTKChuyen.TabIndex = 31;
+            // 
+            // cMNDLabel1
+            // 
+            cMNDLabel1.AutoSize = true;
+            cMNDLabel1.Location = new System.Drawing.Point(362, 115);
+            cMNDLabel1.Name = "cMNDLabel1";
+            cMNDLabel1.Size = new System.Drawing.Size(51, 17);
+            cMNDLabel1.TabIndex = 31;
+            cMNDLabel1.Text = "CMND:";
+            // 
+            // cMNDTextBox1
+            // 
+            this.cMNDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "CMND", true));
+            this.cMNDTextBox1.Location = new System.Drawing.Point(419, 112);
+            this.cMNDTextBox1.Name = "cMNDTextBox1";
+            this.cMNDTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.cMNDTextBox1.TabIndex = 32;
+            // 
+            // sODULabel
+            // 
+            sODULabel.AutoSize = true;
+            sODULabel.Location = new System.Drawing.Point(20, 159);
+            sODULabel.Name = "sODULabel";
+            sODULabel.Size = new System.Drawing.Size(50, 17);
+            sODULabel.TabIndex = 32;
+            sODULabel.Text = "SODU:";
+            // 
+            // sODUTextBox
+            // 
+            this.sODUTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "SODU", true));
+            this.sODUTextBox.Location = new System.Drawing.Point(76, 156);
+            this.sODUTextBox.Name = "sODUTextBox";
+            this.sODUTextBox.Size = new System.Drawing.Size(100, 23);
+            this.sODUTextBox.TabIndex = 33;
+            // 
+            // mACNLabel1
+            // 
+            mACNLabel1.AutoSize = true;
+            mACNLabel1.Location = new System.Drawing.Point(362, 156);
+            mACNLabel1.Name = "mACNLabel1";
+            mACNLabel1.Size = new System.Drawing.Size(49, 17);
+            mACNLabel1.TabIndex = 33;
+            mACNLabel1.Text = "MACN:";
+            // 
+            // mACNTextBox1
+            // 
+            this.mACNTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "MACN", true));
+            this.mACNTextBox1.Location = new System.Drawing.Point(417, 153);
+            this.mACNTextBox1.Name = "mACNTextBox1";
+            this.mACNTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.mACNTextBox1.TabIndex = 34;
+            // 
+            // txtMANV
+            // 
+            this.txtMANV.Location = new System.Drawing.Point(374, 456);
+            this.txtMANV.Name = "txtMANV";
+            this.txtMANV.Size = new System.Drawing.Size(100, 23);
+            this.txtMANV.TabIndex = 35;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(208, 459);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(160, 17);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Mã nhân viên thực hiện: ";
             // 
             // frmChuyenTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1718, 717);
-            this.Controls.Add(this.groupControl2);
+            this.Controls.Add(this.pnlGD);
             this.Controls.Add(this.taiKhoanGridControl);
             this.Controls.Add(this.khachHangGridControl);
             this.Controls.Add(this.groupControl1);
@@ -451,11 +666,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlGD)).EndInit();
+            this.pnlGD.ResumeLayout(false);
+            this.pnlGD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frmChuyenTien_InfoReceiverBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuSoTien)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -480,7 +696,7 @@
         private System.Windows.Forms.BindingSource bdsTK;
         private DevExpress.XtraGrid.GridControl taiKhoanGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.GroupControl pnlGD;
         private System.Windows.Forms.TextBox txtSoTkNhanTien;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource frmChuyenTien_InfoReceiverBindingSource;
@@ -494,5 +710,22 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nuSoTien;
+        private DevExpress.XtraGrid.Columns.GridColumn colSOTK;
+        private DevExpress.XtraGrid.Columns.GridColumn colSODU;
+        private DevExpress.XtraGrid.Columns.GridColumn colCMND1;
+        private DevExpress.XtraGrid.Columns.GridColumn colNGAYMOTK;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cmsTHEM;
+        private System.Windows.Forms.ToolStripMenuItem cmsXoa;
+        private System.Windows.Forms.ToolStripMenuItem cmsTAILAI;
+        private System.Windows.Forms.ToolStripMenuItem cmsPHUCHOI;
+        private System.Windows.Forms.ToolStripMenuItem cmsTHOAT;
+        private System.Windows.Forms.TextBox mACNTextBox1;
+        private System.Windows.Forms.TextBox sODUTextBox;
+        private System.Windows.Forms.TextBox cMNDTextBox1;
+        private System.Windows.Forms.TextBox txtSoTKChuyen;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtMANV;
     }
 }
