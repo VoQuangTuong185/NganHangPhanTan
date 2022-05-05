@@ -375,7 +375,6 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.GD_CHUYENTIENTableAdapter = null;
             this.tableAdapterManager.GD_GOIRUTTableAdapter = null;
-            this.tableAdapterManager.KhachHang_BaoCaoTableAdapter = null;
             this.tableAdapterManager.KhachHangTableAdapter = this.khachHangTableAdapter;
             this.tableAdapterManager.NhanVienTableAdapter = null;
             this.tableAdapterManager.TaiKhoanTableAdapter = null;
