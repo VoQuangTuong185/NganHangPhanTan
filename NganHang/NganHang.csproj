@@ -92,12 +92,6 @@
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="SimpleForm\frmLietKeKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SimpleForm\frmLietKeKhachHang.Designer.cs">
-      <DependentUpon>frmLietKeKhachHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="SimpleForm\frmLietKeTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,9 +146,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SimpleForm\frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SimpleForm\frmLietKeKhachHang.resx">
-      <DependentUpon>frmLietKeKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SimpleForm\frmLietKeTaiKhoan.resx">
       <DependentUpon>frmLietKeTaiKhoan.cs</DependentUpon>
