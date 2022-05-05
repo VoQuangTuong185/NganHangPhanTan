@@ -14,7 +14,7 @@
     <Shape ID="DesignTable:frmCreateLogin_GetEmployeeNotHaveLogin" ZOrder="11" X="254" Y="10" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
     <Shape ID="DesignTable:frmCreateLogin_GetLoginsOfBranch" ZOrder="10" X="240" Y="105" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
     <Shape ID="DesignTable:TaiKhoan" ZOrder="9" X="601" Y="578" Height="204" Width="233" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
-    <Shape ID="DesignTable:KhachHang1" ZOrder="5" X="1401" Y="333" Height="135" Width="245" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
+    <Shape ID="DesignTable:KhachHang_BaoCao" ZOrder="5" X="1273" Y="218" Height="204" Width="245" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="124" />
     <Shape ID="DesignTable:KhachHang_TT" ZOrder="2" X="153" Y="250" Height="181" Width="247" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
   </Shapes>
   <Connectors>
@@ -47,6 +47,22 @@
         <Point>
           <X>853</X>
           <Y>415</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_KhachHang_TT_TaiKhoan" ZOrder="1" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>400</X>
+          <Y>289</Y>
+        </Point>
+        <Point>
+          <X>619</X>
+          <Y>289</Y>
+        </Point>
+        <Point>
+          <X>619</X>
+          <Y>578</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -103,22 +119,6 @@
         <Point>
           <X>853</X>
           <Y>457</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:FK_KhachHang_TT_TaiKhoan" ZOrder="1" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>400</X>
-          <Y>289</Y>
-        </Point>
-        <Point>
-          <X>619</X>
-          <Y>289</Y>
-        </Point>
-        <Point>
-          <X>619</X>
-          <Y>578</Y>
         </Point>
       </RoutePoints>
     </Connector>

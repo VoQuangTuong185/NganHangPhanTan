@@ -166,5 +166,17 @@ namespace NganHang
                 f.Show();
             }
         }
+
+        private void btnCustomerInfoReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmLietKeKhachHang));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmLietKeKhachHang f = new frmLietKeKhachHang();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

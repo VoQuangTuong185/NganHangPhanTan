@@ -203,6 +203,7 @@
             this.btnCustomerInfoReport.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnCustomerInfoReport.LargeGlyph")));
             this.btnCustomerInfoReport.LargeWidth = 120;
             this.btnCustomerInfoReport.Name = "btnCustomerInfoReport";
+            this.btnCustomerInfoReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCustomerInfoReport_ItemClick);
             // 
             // frmLogin
             // 
