@@ -193,6 +193,7 @@
             this.btnOpenedAccountReport.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnOpenedAccountReport.LargeGlyph")));
             this.btnOpenedAccountReport.LargeWidth = 100;
             this.btnOpenedAccountReport.Name = "btnOpenedAccountReport";
+            this.btnOpenedAccountReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnOpenedAccountReport_ItemClick);
             // 
             // btnCustomerInfoReport
             // 

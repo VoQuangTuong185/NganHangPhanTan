@@ -13,7 +13,6 @@ namespace NganHang.SimpleForm
     public partial class frmMoTaiKhoanKH : Form
     {
         int vitri = 0;
-        String macn = "";
         bool btn_Add_clicked = false;
         public frmMoTaiKhoanKH()
         {
@@ -23,34 +22,42 @@ namespace NganHang.SimpleForm
         private void khachHangBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.bdsKH.EndEdit();
+            this.bdsKH_TT.EndEdit();
             this.tableAdapterManager.UpdateAll(this.DS);
         }
 
         private void frmMoTaiKhoanKH_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'DS.KhachHang_TT' table. You can move, or remove it, as needed.
             DS.EnforceConstraints = false;
-            this.dS_CHINHANHTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.dS_CHINHANHTableAdapter.Fill(this.DS.DS_CHINHANH);
             this.gD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gD_CHUYENTIENTableAdapter.Fill(this.DS.GD_CHUYENTIEN);
             this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);        
-            this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.khachHangTableAdapter.Fill(this.DS.KhachHang);
+            this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
+            this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.khachHang_TTTableAdapter.Fill(this.DS.KhachHang_TT);
             this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
             this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
 
-            macn = ((DataRowView)bdsKH[0])["MACN"].ToString(); //**VẪN CÒN TIỀM ẨN LỖI CHƯA FIX**
             cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
             panelControl2.Enabled = cmsPHUCHOI.Enabled = cmsLUU.Enabled = false ;
+            if (cmbChiNhanh.SelectedIndex == 0)
+            {
+                teMACN.EditValue = "BENTHANH";
+            }
+            else if(cmbChiNhanh.SelectedIndex == 1)
+            {
+                teMACN.EditValue = "TANDINH";
+            }
+           
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
                 cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled  = false;
+                teMACN.EditValue = "Không được sửa!!";
             }
             else
             {
@@ -65,11 +72,12 @@ namespace NganHang.SimpleForm
             gcTK.Enabled = gcKH.Enabled = false;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
-            vitri = bdsTK.Position;
+            vitri = bdsKH_TT.Position;
             bdsTK.AddNew();
             teCMND.Text = ((DataRowView)bdsTK[bdsTK.Position])["CMND"].ToString();
-            macn = ((DataRowView)bdsTK[bdsTK.Position])["MACN"].ToString();
+            //teMACN.Text = ((DataRowView)bdsTK[bdsTK.Position])["MACN"].ToString();
             numbSODU.Value = 0;
+            MessageBox.Show(cmbChiNhanh.SelectedValue.ToString(), "", MessageBoxButtons.OK);
         }
 
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
@@ -91,20 +99,16 @@ namespace NganHang.SimpleForm
             else
             {
                 DS.EnforceConstraints = false;
-                this.dS_CHINHANHTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.dS_CHINHANHTableAdapter.Fill(this.DS.DS_CHINHANH);
-                this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.khachHangTableAdapter.Fill(this.DS.KhachHang);
+                this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.khachHang_TTTableAdapter.Fill(this.DS.KhachHang_TT);
                 this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
-                //macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
             }
         }
 
         private void lưuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            String SOTK = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
-            string MACN = cmbCNFinal.SelectedValue.ToString();
+        {           
+            String SOTK = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();           
             if (txtSOTK.Text.Trim() == "")
             {
                 MessageBox.Show("Mã nhân viên không được trống", "", MessageBoxButtons.OK);
@@ -131,10 +135,10 @@ namespace NganHang.SimpleForm
             }
             if (btn_Add_clicked == true || SOTK == txtSOTK.Text)
             {
-                MessageBox.Show("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'", "", MessageBoxButtons.OK);
-                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + SOTK + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + MACN + "','" + dateNgayMoTK.DateTime + "'");
-                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
+                MessageBox.Show("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dateNgayMoTK.DateTime + "'", "", MessageBoxButtons.OK);
+                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dateNgayMoTK.DateTime + "'");
+                this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.khachHang_TTTableAdapter.Fill(this.DS.KhachHang_TT);
                 btn_Add_clicked = false;
             }
             else
@@ -150,15 +154,18 @@ namespace NganHang.SimpleForm
                 }
                 Program.myReader.Close();
             }
-            gcTK.Enabled = gcKH.Enabled = cmbCNFinal.Enabled = true;
+            gcTK.Enabled = gcKH.Enabled = true;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = true;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = false;
-            panelControl2.Enabled = false;            
+            panelControl2.Enabled = false;
+            this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
+            bdsKH_TT.Position = vitri;
         }
 
         private void hiệuChỉnhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            vitri = bdsTK.Position;
+            vitri = bdsKH_TT.Position;
             panelControl2.Enabled = true;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
@@ -178,7 +185,7 @@ namespace NganHang.SimpleForm
                 MessageBox.Show("Không thể xoá tài khoản này vì đã giao dịch phiếu chuyển tiền", "", MessageBoxButtons.OK);
                 return;
             }
-            if (MessageBox.Show("Bạn có thật sự muốn xoá nhân viên " + SOTK + " ??", "Xác nhận",
+            if (MessageBox.Show("Bạn có thật sự muốn xoá tài khoản " + SOTK + " ??", "Xác nhận",
                 MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
@@ -191,8 +198,9 @@ namespace NganHang.SimpleForm
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi xoá tài khoản. Bạn hãy xoá lại\n" + ex.Message, "", MessageBoxButtons.OK);
+                    this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
-                    bdsTK.Position = bdsTK.Find("MANV", SOTK);
+                    //bdsTK.Position = bdsTK.Find("MANV", SOTK);
                     return;
                 }
             }
@@ -215,6 +223,7 @@ namespace NganHang.SimpleForm
         {
             try
             {
+                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
             }
             catch (Exception ex)
