@@ -174,5 +174,17 @@ namespace NganHang
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();
         }
+
+        private void btnTransferService_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmChuyenTien));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmChuyenTien f = new frmChuyenTien();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

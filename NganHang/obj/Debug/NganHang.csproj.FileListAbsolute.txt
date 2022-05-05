@@ -811,3 +811,4 @@ C:\Users\Vo Quang Tuong\Downloads\NganHangPhanTan-main (2)\NganHangPhanTan-main\
 C:\Users\Vo Quang Tuong\Downloads\NganHangPhanTan-main (2)\NganHangPhanTan-main\NganHang\obj\Debug\NganHang.SimpleForm.frmLietKeTaiKhoan.resources
 C:\Users\Vo Quang Tuong\Downloads\NganHangPhanTan-main (2)\NganHangPhanTan-main\NganHang\obj\Debug\NganHang.exe.licenses
 E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.Xtrp_LietKeKhachHang.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.SimpleForm.frmChuyenTien.resources

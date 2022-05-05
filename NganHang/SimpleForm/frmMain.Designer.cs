@@ -176,6 +176,7 @@
             this.btnTransferService.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnTransferService.LargeGlyph")));
             this.btnTransferService.LargeWidth = 100;
             this.btnTransferService.Name = "btnTransferService";
+            this.btnTransferService.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTransferService_ItemClick);
             // 
             // btnTransactionReport
             // 
