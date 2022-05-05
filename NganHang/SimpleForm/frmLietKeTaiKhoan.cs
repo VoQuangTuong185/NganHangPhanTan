@@ -20,8 +20,6 @@ namespace NganHang.SimpleForm
 
         private void frmLietKeTaiKhoan_Load(object sender, EventArgs e)
         {
-            this.khachHang1TableAdapter.Connection.ConnectionString = Program.connstr;
-            this.khachHang1TableAdapter.Fill(this.DS.KhachHang1);
             cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
@@ -86,11 +84,6 @@ namespace NganHang.SimpleForm
                 Program.password = Program.passwordDN;
             }
             if (Program.KetNoi() == 0) MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
-            else
-            {
-                this.khachHang1TableAdapter.Connection.ConnectionString = Program.connstr;
-                this.khachHang1TableAdapter.Fill(this.DS.KhachHang1);
-            }
         }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
@@ -40,8 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.DS = new NganHang.DS();
-            this.bdsKH = new System.Windows.Forms.BindingSource(this.components);
-            this.khachHang1TableAdapter = new NganHang.DSTableAdapters.KhachHang1TableAdapter();
             this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -50,7 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsKH)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -176,15 +172,6 @@
             this.DS.DataSetName = "DS";
             this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // bdsKH
-            // 
-            this.bdsKH.DataMember = "KhachHang1";
-            this.bdsKH.DataSource = this.DS;
-            // 
-            // khachHang1TableAdapter
-            // 
-            this.khachHang1TableAdapter.ClearBeforeFill = true;
-            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
@@ -220,7 +207,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsKH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,8 +225,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private DS DS;
-        private System.Windows.Forms.BindingSource bdsKH;
-        private DSTableAdapters.KhachHang1TableAdapter khachHang1TableAdapter;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

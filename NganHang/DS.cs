@@ -17,9 +17,12 @@ namespace NganHang {
     }
 }
 
-namespace NganHang.DSTableAdapters {
-    
-    
+namespace NganHang.DSTableAdapters
+{
+    partial class KhachHang1TableAdapter
+    {
+    }
+
     public partial class frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter {
     }
 }
