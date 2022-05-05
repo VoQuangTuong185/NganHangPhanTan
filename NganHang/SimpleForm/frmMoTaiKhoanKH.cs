@@ -135,7 +135,6 @@ namespace NganHang.SimpleForm
             }
             if (btn_Add_clicked == true || SOTK == txtSOTK.Text)
             {
-                MessageBox.Show("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dateNgayMoTK.DateTime + "'", "", MessageBoxButtons.OK);
                 Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dateNgayMoTK.DateTime + "'");
                 this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.khachHang_TTTableAdapter.Fill(this.DS.KhachHang_TT);
