@@ -60,24 +60,26 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1263, 41);
+            this.panelControl1.Size = new System.Drawing.Size(1244, 54);
             this.panelControl1.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(36, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.Size = new System.Drawing.Size(149, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chi Nhánh";
             // 
             // cmbChiNhanh
             // 
+            this.cmbChiNhanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbChiNhanh.FormattingEnabled = true;
-            this.cmbChiNhanh.Location = new System.Drawing.Point(134, 9);
+            this.cmbChiNhanh.Location = new System.Drawing.Point(191, 9);
             this.cmbChiNhanh.Name = "cmbChiNhanh";
-            this.cmbChiNhanh.Size = new System.Drawing.Size(325, 24);
+            this.cmbChiNhanh.Size = new System.Drawing.Size(325, 39);
             this.cmbChiNhanh.TabIndex = 0;
             this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
             // 
@@ -85,21 +87,24 @@
             // 
             this.cmbLoai.Cursor = System.Windows.Forms.Cursors.Default;
             this.cmbLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLoai.FormattingEnabled = true;
             this.cmbLoai.Items.AddRange(new object[] {
             "ALL",
             "ONE"});
-            this.cmbLoai.Location = new System.Drawing.Point(235, 61);
+            this.cmbLoai.Location = new System.Drawing.Point(229, 109);
             this.cmbLoai.Name = "cmbLoai";
-            this.cmbLoai.Size = new System.Drawing.Size(121, 24);
+            this.cmbLoai.Size = new System.Drawing.Size(168, 37);
             this.cmbLoai.TabIndex = 9;
             this.cmbLoai.Tag = "";
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.Location = new System.Drawing.Point(934, 57);
+            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.ForeColor = System.Drawing.Color.Black;
+            this.btnXacNhan.Location = new System.Drawing.Point(565, 186);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(118, 33);
+            this.btnXacNhan.Size = new System.Drawing.Size(176, 37);
             this.btnXacNhan.TabIndex = 10;
             this.btnXacNhan.Text = "Xem trước";
             this.btnXacNhan.UseVisualStyleBackColor = true;
@@ -108,54 +113,61 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(182, 64);
+            this.label2.Location = new System.Drawing.Point(164, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 17);
+            this.label2.Size = new System.Drawing.Size(59, 29);
             this.label2.TabIndex = 11;
             this.label2.Text = "Loại";
             // 
             // batdau
             // 
             this.batdau.EditValue = null;
-            this.batdau.Location = new System.Drawing.Point(517, 63);
+            this.batdau.Location = new System.Drawing.Point(554, 109);
             this.batdau.Name = "batdau";
+            this.batdau.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.batdau.Properties.Appearance.Options.UseFont = true;
             this.batdau.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.batdau.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.batdau.Size = new System.Drawing.Size(100, 22);
+            this.batdau.Size = new System.Drawing.Size(204, 36);
             this.batdau.TabIndex = 12;
             // 
             // ketthuc
             // 
             this.ketthuc.EditValue = null;
-            this.ketthuc.Location = new System.Drawing.Point(736, 63);
+            this.ketthuc.Location = new System.Drawing.Point(911, 109);
             this.ketthuc.Name = "ketthuc";
+            this.ketthuc.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ketthuc.Properties.Appearance.Options.UseFont = true;
             this.ketthuc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ketthuc.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ketthuc.Size = new System.Drawing.Size(100, 22);
+            this.ketthuc.Size = new System.Drawing.Size(204, 36);
             this.ketthuc.TabIndex = 13;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(442, 63);
+            this.label3.Location = new System.Drawing.Point(454, 109);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 17);
+            this.label3.Size = new System.Drawing.Size(94, 29);
             this.label3.TabIndex = 14;
             this.label3.Text = "Bắt đầu";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(670, 64);
+            this.label4.Location = new System.Drawing.Point(806, 109);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 17);
+            this.label4.Size = new System.Drawing.Size(99, 29);
             this.label4.TabIndex = 15;
             this.label4.Text = "Kết thúc";
             // 
@@ -188,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 392);
+            this.ClientSize = new System.Drawing.Size(1244, 401);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ketthuc);

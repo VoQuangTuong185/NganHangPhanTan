@@ -42,9 +42,6 @@ namespace NganHang.SimpleForm
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(batdau.DateTime.ToString(), "", MessageBoxButtons.OK);
-            MessageBox.Show(ketthuc.DateTime.ToString(), "", MessageBoxButtons.OK);
-            MessageBox.Show(cmbLoai.Text.Substring(0, 1), "", MessageBoxButtons.OK);
             Xtrp_LietKeTaiKhoan rpt = new Xtrp_LietKeTaiKhoan(batdau.DateTime, ketthuc.DateTime, cmbLoai.Text.Substring(0,1));
             rpt.lb_batdau.Text = batdau.DateTime.ToString();
             rpt.lb_ketthuc.Text = ketthuc.DateTime.ToString();
