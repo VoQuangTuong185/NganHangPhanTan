@@ -33,7 +33,7 @@ namespace NganHang.SimpleForm
             {
                 cmbChiNhanh.Enabled = false;
                 cmbLoai.Enabled = false;
-                cmbLoai.Text = "ONE";
+                cmbLoai.Text = "Chi nhánh hiện tại";
             }
         }
 
@@ -43,25 +43,23 @@ namespace NganHang.SimpleForm
             Xtrp_LietKeTaiKhoan rpt = new Xtrp_LietKeTaiKhoan(batdau.DateTime, ketthuc.DateTime, cmbLoai.Text.Substring(0,1));
             rpt.lb_batdau.Text = batdau.DateTime.ToString();
             rpt.lb_ketthuc.Text = ketthuc.DateTime.ToString();
-            if (Program.mGroup == "NganHang")
+            if (cmbChiNhanh.SelectedIndex == 0)
             {
-                cmbChiNhanh.Enabled = true;
-                cmbLoai.Enabled = true;
-                rpt.tlLoai.Text = "Tất cả chi nhánh";
+                rpt.tlLoai.Text = "Chi nhánh Bến Thành";
             }
-            else
+            else if (cmbChiNhanh.SelectedIndex == 1)
             {
-                cmbChiNhanh.Enabled = false;
-                cmbLoai.Enabled = false;
-                cmbLoai.Text = "ONE";
-                if (cmbChiNhanh.SelectedIndex == 0)
-                {
-                    rpt.tlLoai.Text = "Chi nhánh Bến Thành";
-                }
-                else if (cmbChiNhanh.SelectedIndex == 1)
-                {
-                    rpt.tlLoai.Text = "Chi nhánh Tân Định";
-                }
+                rpt.tlLoai.Text = "Chi nhánh Tân Định";
+            }
+            else if (cmbLoai.Text == "Tất cả các chi nhánh")
+            {
+                rpt.tlLoai.Text = cmbLoai.Text;
+            }
+            if (cmbLoai.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn chưa chọn loại báo cáo!!", "", MessageBoxButtons.OK);
+                cmbLoai.Focus();
+                return;
             }
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();

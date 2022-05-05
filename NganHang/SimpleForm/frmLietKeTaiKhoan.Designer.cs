@@ -86,8 +86,8 @@
             this.cmbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLoai.FormattingEnabled = true;
             this.cmbLoai.Items.AddRange(new object[] {
-            "ALL",
-            "ONE"});
+            "Tất cả các chi nhánh",
+            "Chi nhánh hiện tại"});
             this.cmbLoai.Location = new System.Drawing.Point(229, 109);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(168, 37);
@@ -178,6 +178,7 @@
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.GD_CHUYENTIENTableAdapter = null;
             this.tableAdapterManager.GD_GOIRUTTableAdapter = null;
+            this.tableAdapterManager.KhachHang_BaoCaoTableAdapter = null;
             this.tableAdapterManager.KhachHangTableAdapter = null;
             this.tableAdapterManager.NhanVienTableAdapter = null;
             this.tableAdapterManager.TaiKhoanTableAdapter = null;
