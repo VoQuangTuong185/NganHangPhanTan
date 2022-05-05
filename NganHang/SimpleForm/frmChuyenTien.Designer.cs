@@ -440,7 +440,7 @@
             // 
             // btnChuyenTien
             // 
-            this.btnChuyenTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuyenTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChuyenTien.ForeColor = System.Drawing.Color.Black;
             this.btnChuyenTien.Location = new System.Drawing.Point(449, 397);
             this.btnChuyenTien.Name = "btnChuyenTien";
@@ -571,6 +571,7 @@
             this.txtSoTKChuyen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "SOTK", true));
             this.txtSoTKChuyen.Location = new System.Drawing.Point(73, 115);
             this.txtSoTKChuyen.Name = "txtSoTKChuyen";
+            this.txtSoTKChuyen.ReadOnly = true;
             this.txtSoTKChuyen.Size = new System.Drawing.Size(100, 23);
             this.txtSoTKChuyen.TabIndex = 31;
             // 
@@ -588,6 +589,7 @@
             this.cMNDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "CMND", true));
             this.cMNDTextBox1.Location = new System.Drawing.Point(419, 112);
             this.cMNDTextBox1.Name = "cMNDTextBox1";
+            this.cMNDTextBox1.ReadOnly = true;
             this.cMNDTextBox1.Size = new System.Drawing.Size(100, 23);
             this.cMNDTextBox1.TabIndex = 32;
             // 
@@ -605,6 +607,7 @@
             this.sODUTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "SODU", true));
             this.sODUTextBox.Location = new System.Drawing.Point(76, 156);
             this.sODUTextBox.Name = "sODUTextBox";
+            this.sODUTextBox.ReadOnly = true;
             this.sODUTextBox.Size = new System.Drawing.Size(100, 23);
             this.sODUTextBox.TabIndex = 33;
             // 
@@ -622,20 +625,22 @@
             this.mACNTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "MACN", true));
             this.mACNTextBox1.Location = new System.Drawing.Point(417, 153);
             this.mACNTextBox1.Name = "mACNTextBox1";
+            this.mACNTextBox1.ReadOnly = true;
             this.mACNTextBox1.Size = new System.Drawing.Size(100, 23);
             this.mACNTextBox1.TabIndex = 34;
             // 
             // txtMANV
             // 
-            this.txtMANV.Location = new System.Drawing.Point(374, 456);
+            this.txtMANV.Location = new System.Drawing.Point(394, 456);
             this.txtMANV.Name = "txtMANV";
+            this.txtMANV.ReadOnly = true;
             this.txtMANV.Size = new System.Drawing.Size(100, 23);
             this.txtMANV.TabIndex = 35;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(208, 459);
+            this.label6.Location = new System.Drawing.Point(228, 459);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(160, 17);
             this.label6.TabIndex = 36;

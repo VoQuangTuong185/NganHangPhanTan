@@ -14,7 +14,6 @@ namespace NganHang.SimpleForm
     {
         String macn = "";
         int vitri = 0;
-        DataTable dt = new DataTable();
         public frmGuiRutTien()
         {
             InitializeComponent();
