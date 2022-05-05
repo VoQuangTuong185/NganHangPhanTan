@@ -47,11 +47,11 @@ namespace NganHang.SimpleForm
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
-                cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = false;
+                cmsTHEM.Enabled = false;
             }
             else
             {
-                cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = true;
+                cmsTHEM.Enabled = true;
                 cmbChiNhanh.Enabled = false;
             }
         }
@@ -103,9 +103,9 @@ namespace NganHang.SimpleForm
            
             String dt = String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
             String loaiGD = (cmbLoaiGD.SelectedIndex == 0) ? "GT" : "RT";
-            if (txtSoTien.Value <= 0)
+            if (txtSoTien.Value < 100000)
             {
-                MessageBox.Show("Số dư không được trống hoặc bằng 0", "", MessageBoxButtons.OK);
+                MessageBox.Show("Số tiền giao dịch thấp nhất là 100.000đ\nBạn hãy nhập lại...", "", MessageBoxButtons.OK);
                 txtSoTien.Focus();
                 return;
             }
@@ -145,11 +145,6 @@ namespace NganHang.SimpleForm
             }
         }
 
-        private void mANVTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cmsTAILAI_Click(object sender, EventArgs e)
         {
             try
@@ -170,13 +165,23 @@ namespace NganHang.SimpleForm
             taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
             pnlGD.Enabled = false;
         }
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-        }
 
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        private void cmsXoa_Click(object sender, EventArgs e)
         {
+            taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = false;
+            pnlGD.Enabled = true;
+            string MAGD = ((DataRowView)bdsGuiRut[bdsGuiRut.Position])["MAGD"].ToString();
+            vitri = bdsGuiRut.Position;
 
+            MessageBox.Show("EXEC frmGuiRutTien_DeleteGD '" + MAGD + "'", "", MessageBoxButtons.OK);
+            Program.ExecSqlNonQuery("EXEC frmGuiRutTien_DeleteGD '" + MAGD + "'");
+            this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
+            this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
+            taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
+            pnlGD.Enabled = false;
+            bdsTK.Position = vitri;
         }
     }
 }
