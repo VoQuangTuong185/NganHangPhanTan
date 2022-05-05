@@ -33,7 +33,7 @@
             System.Windows.Forms.Label lOAIGDLabel;
             System.Windows.Forms.Label sOTIENLabel;
             System.Windows.Forms.Label mANVLabel;
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
@@ -59,13 +59,11 @@
             this.colCMND1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSODU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gD_GOIRUTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsGuiRut = new System.Windows.Forms.BindingSource(this.components);
             this.gD_GOIRUTGridControl = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsTHEM = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsHIEUCHINH = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsLUU = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsXOA = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsPHUCHOI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,7 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGuiRut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTGridControl)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
@@ -189,7 +187,6 @@
             this.groupControl1.Size = new System.Drawing.Size(1586, 30);
             this.groupControl1.TabIndex = 12;
             this.groupControl1.Text = "Danh sách khách hàng thuộc chi nhánh";
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // DS
             // 
@@ -309,9 +306,9 @@
             // taiKhoanGridControl
             // 
             this.taiKhoanGridControl.DataSource = this.bdsTK;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.taiKhoanGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.taiKhoanGridControl.Location = new System.Drawing.Point(12, 328);
             this.taiKhoanGridControl.MainView = this.gridView2;
             this.taiKhoanGridControl.Name = "taiKhoanGridControl";
@@ -373,15 +370,15 @@
             this.colMACN.Visible = true;
             this.colMACN.VisibleIndex = 3;
             // 
-            // gD_GOIRUTBindingSource
+            // bdsGuiRut
             // 
-            this.gD_GOIRUTBindingSource.DataMember = "FK_GD_GOIRUT_TaiKhoan";
-            this.gD_GOIRUTBindingSource.DataSource = this.bdsTK;
+            this.bdsGuiRut.DataMember = "FK_GD_GOIRUT_TaiKhoan";
+            this.bdsGuiRut.DataSource = this.bdsTK;
             // 
             // gD_GOIRUTGridControl
             // 
             this.gD_GOIRUTGridControl.ContextMenuStrip = this.contextMenuStrip1;
-            this.gD_GOIRUTGridControl.DataSource = this.gD_GOIRUTBindingSource;
+            this.gD_GOIRUTGridControl.DataSource = this.bdsGuiRut;
             this.gD_GOIRUTGridControl.Location = new System.Drawing.Point(843, 328);
             this.gD_GOIRUTGridControl.MainView = this.gridView3;
             this.gD_GOIRUTGridControl.Name = "gD_GOIRUTGridControl";
@@ -395,14 +392,12 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsTHEM,
-            this.cmsHIEUCHINH,
-            this.cmsLUU,
-            this.cmsXOA,
+            this.cmsXoa,
             this.cmsTAILAI,
             this.cmsPHUCHOI,
             this.cmsTHOAT});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 172);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 124);
             // 
             // cmsTHEM
             // 
@@ -411,24 +406,12 @@
             this.cmsTHEM.Text = "Thêm";
             this.cmsTHEM.Click += new System.EventHandler(this.cmsTHEM_Click);
             // 
-            // cmsHIEUCHINH
+            // cmsXoa
             // 
-            this.cmsHIEUCHINH.Name = "cmsHIEUCHINH";
-            this.cmsHIEUCHINH.Size = new System.Drawing.Size(157, 24);
-            this.cmsHIEUCHINH.Text = "Hiệu chỉnh";
-            // 
-            // cmsLUU
-            // 
-            this.cmsLUU.Name = "cmsLUU";
-            this.cmsLUU.Size = new System.Drawing.Size(157, 24);
-            this.cmsLUU.Text = "Lưu";
-            this.cmsLUU.Click += new System.EventHandler(this.cmsLUU_Click);
-            // 
-            // cmsXOA
-            // 
-            this.cmsXOA.Name = "cmsXOA";
-            this.cmsXOA.Size = new System.Drawing.Size(157, 24);
-            this.cmsXOA.Text = "Xoá";
+            this.cmsXoa.Name = "cmsXoa";
+            this.cmsXoa.Size = new System.Drawing.Size(157, 24);
+            this.cmsXoa.Text = "Xoá ";
+            this.cmsXoa.Click += new System.EventHandler(this.cmsXoa_Click);
             // 
             // cmsTAILAI
             // 
@@ -533,7 +516,7 @@
             // 
             // txtSOTK
             // 
-            this.txtSOTK.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gD_GOIRUTBindingSource, "SOTK", true));
+            this.txtSOTK.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsGuiRut, "SOTK", true));
             this.txtSOTK.Location = new System.Drawing.Point(126, 21);
             this.txtSOTK.Name = "txtSOTK";
             this.txtSOTK.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -544,7 +527,7 @@
             // 
             // txtMANV
             // 
-            this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.gD_GOIRUTBindingSource, "MANV", true));
+            this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsGuiRut, "MANV", true));
             this.txtMANV.Location = new System.Drawing.Point(497, 63);
             this.txtMANV.Name = "txtMANV";
             this.txtMANV.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -565,7 +548,6 @@
             // 
             // txtSoTien
             // 
-            this.txtSoTien.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.gD_GOIRUTBindingSource, "SOTIEN", true));
             this.txtSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoTien.Increment = new decimal(new int[] {
             50000,
@@ -578,14 +560,24 @@
             0,
             0,
             0});
+            this.txtSoTien.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.txtSoTien.Name = "txtSoTien";
             this.txtSoTien.Size = new System.Drawing.Size(120, 27);
             this.txtSoTien.TabIndex = 9;
             this.txtSoTien.ThousandsSeparator = true;
+            this.txtSoTien.Value = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             // 
             // cmbLoaiGD
             // 
-            this.cmbLoaiGD.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gD_GOIRUTBindingSource, "LOAIGD", true));
+            this.cmbLoaiGD.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsGuiRut, "LOAIGD", true));
             this.cmbLoaiGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLoaiGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLoaiGD.FormattingEnabled = true;
@@ -649,7 +641,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGuiRut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD_GOIRUTGridControl)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
@@ -691,7 +683,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSODU;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
         private DSTableAdapters.GD_GOIRUTTableAdapter gD_GOIRUTTableAdapter;
-        private System.Windows.Forms.BindingSource gD_GOIRUTBindingSource;
+        private System.Windows.Forms.BindingSource bdsGuiRut;
         private DevExpress.XtraGrid.GridControl gD_GOIRUTGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraGrid.Columns.GridColumn colMAGD;
@@ -705,9 +697,6 @@
         private System.Windows.Forms.ComboBox cmbLoaiGD;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cmsTHEM;
-        private System.Windows.Forms.ToolStripMenuItem cmsHIEUCHINH;
-        private System.Windows.Forms.ToolStripMenuItem cmsLUU;
-        private System.Windows.Forms.ToolStripMenuItem cmsXOA;
         private System.Windows.Forms.ToolStripMenuItem cmsTAILAI;
         private System.Windows.Forms.ToolStripMenuItem cmsPHUCHOI;
         private System.Windows.Forms.ToolStripMenuItem cmsTHOAT;
@@ -716,5 +705,6 @@
         private DevExpress.XtraEditors.TextEdit txtSOTK;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem cmsXoa;
     }
 }
