@@ -52,7 +52,7 @@ namespace NganHang.SimpleForm
             {
                 rpt.tlLoai.Text = "Chi nhánh Tân Định";
             }
-            else if (cmbLoai.Text == "Tất cả các chi nhánh")
+            if (cmbLoai.Text == "Tất cả các chi nhánh")
             {
                 rpt.tlLoai.Text = cmbLoai.Text;
             }

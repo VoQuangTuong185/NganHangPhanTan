@@ -33,7 +33,7 @@
             System.Windows.Forms.Label lOAIGDLabel;
             System.Windows.Forms.Label sOTIENLabel;
             System.Windows.Forms.Label mANVLabel;
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
@@ -306,9 +306,9 @@
             // taiKhoanGridControl
             // 
             this.taiKhoanGridControl.DataSource = this.bdsTK;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.taiKhoanGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.taiKhoanGridControl.Location = new System.Drawing.Point(12, 328);
             this.taiKhoanGridControl.MainView = this.gridView2;
             this.taiKhoanGridControl.Name = "taiKhoanGridControl";
@@ -627,7 +627,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);
             this.Name = "frmGuiRutTien";
-            this.Text = "frmGuiRutTien";
+            this.Text = "Giao dịch gửi và rút tiền";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmGuiRutTien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

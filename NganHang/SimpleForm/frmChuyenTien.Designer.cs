@@ -54,39 +54,39 @@
             this.colNGAYCAP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bdsTK = new System.Windows.Forms.BindingSource(this.components);
             this.taiKhoanGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.pnlGD = new DevExpress.XtraEditors.GroupControl();
-            this.txtSoTkNhanTien = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.frmChuyenTien_InfoReceiverBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.frmChuyenTien_InfoReceiverTableAdapter = new NganHang.DSTableAdapters.frmChuyenTien_InfoReceiverTableAdapter();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.hOTENTextBox = new System.Windows.Forms.TextBox();
-            this.txtSoTKNhan = new System.Windows.Forms.TextBox();
-            this.cMNDTextBox = new System.Windows.Forms.TextBox();
-            this.mACNTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnChuyenTien = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.nuSoTien = new System.Windows.Forms.NumericUpDown();
-            this.colSOTK = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSODU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCMND1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNGAYMOTK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsTHEM = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsPHUCHOI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtSoTKChuyen = new System.Windows.Forms.TextBox();
-            this.cMNDTextBox1 = new System.Windows.Forms.TextBox();
-            this.sODUTextBox = new System.Windows.Forms.TextBox();
-            this.txtMANV = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.hOTextBox = new System.Windows.Forms.TextBox();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colSOTK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSODU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCMND1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNGAYMOTK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.pnlGD = new DevExpress.XtraEditors.GroupControl();
             this.tENTextBox = new System.Windows.Forms.TextBox();
+            this.hOTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMANV = new System.Windows.Forms.TextBox();
+            this.sODUTextBox = new System.Windows.Forms.TextBox();
+            this.cMNDTextBox1 = new System.Windows.Forms.TextBox();
+            this.txtSoTKChuyen = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.nuSoTien = new System.Windows.Forms.NumericUpDown();
+            this.btnChuyenTien = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSoTkNhanTien = new System.Windows.Forms.TextBox();
+            this.mACNTextBox = new System.Windows.Forms.TextBox();
+            this.frmChuyenTien_InfoReceiverBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hOTENTextBox = new System.Windows.Forms.TextBox();
+            this.cMNDTextBox = new System.Windows.Forms.TextBox();
+            this.txtSoTKNhan = new System.Windows.Forms.TextBox();
+            this.frmChuyenTien_InfoReceiverTableAdapter = new NganHang.DSTableAdapters.frmChuyenTien_InfoReceiverTableAdapter();
             this.label8 = new System.Windows.Forms.Label();
             hOTENLabel = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
@@ -105,13 +105,98 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanGridControl)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlGD)).BeginInit();
             this.pnlGD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.frmChuyenTien_InfoReceiverBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuSoTien)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frmChuyenTien_InfoReceiverBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // hOTENLabel
+            // 
+            hOTENLabel.AutoSize = true;
+            hOTENLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            hOTENLabel.ForeColor = System.Drawing.Color.Black;
+            hOTENLabel.Location = new System.Drawing.Point(22, 286);
+            hOTENLabel.Name = "hOTENLabel";
+            hOTENLabel.Size = new System.Drawing.Size(114, 25);
+            hOTENLabel.TabIndex = 20;
+            hOTENLabel.Text = "Họ và Tên: ";
+            // 
+            // sOTKLabel
+            // 
+            sOTKLabel.AutoSize = true;
+            sOTKLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sOTKLabel.ForeColor = System.Drawing.Color.Black;
+            sOTKLabel.Location = new System.Drawing.Point(22, 346);
+            sOTKLabel.Name = "sOTKLabel";
+            sOTKLabel.Size = new System.Drawing.Size(127, 25);
+            sOTKLabel.TabIndex = 21;
+            sOTKLabel.Text = "Số tài khoản:";
+            // 
+            // cMNDLabel
+            // 
+            cMNDLabel.AutoSize = true;
+            cMNDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cMNDLabel.ForeColor = System.Drawing.Color.Black;
+            cMNDLabel.Location = new System.Drawing.Point(394, 284);
+            cMNDLabel.Name = "cMNDLabel";
+            cMNDLabel.Size = new System.Drawing.Size(78, 25);
+            cMNDLabel.TabIndex = 22;
+            cMNDLabel.Text = "CMND:";
+            // 
+            // mACNLabel
+            // 
+            mACNLabel.AutoSize = true;
+            mACNLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mACNLabel.ForeColor = System.Drawing.Color.Black;
+            mACNLabel.Location = new System.Drawing.Point(394, 343);
+            mACNLabel.Name = "mACNLabel";
+            mACNLabel.Size = new System.Drawing.Size(105, 25);
+            mACNLabel.TabIndex = 23;
+            mACNLabel.Text = "Chi Nhánh";
+            // 
+            // cMNDLabel1
+            // 
+            cMNDLabel1.AutoSize = true;
+            cMNDLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cMNDLabel1.Location = new System.Drawing.Point(394, 121);
+            cMNDLabel1.Name = "cMNDLabel1";
+            cMNDLabel1.Size = new System.Drawing.Size(78, 25);
+            cMNDLabel1.TabIndex = 31;
+            cMNDLabel1.Text = "CMND:";
+            // 
+            // sODULabel
+            // 
+            sODULabel.AutoSize = true;
+            sODULabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sODULabel.Location = new System.Drawing.Point(395, 173);
+            sODULabel.Name = "sODULabel";
+            sODULabel.Size = new System.Drawing.Size(70, 25);
+            sODULabel.TabIndex = 32;
+            sODULabel.Text = "Số dư:";
+            // 
+            // hOLabel
+            // 
+            hOLabel.AutoSize = true;
+            hOLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            hOLabel.Location = new System.Drawing.Point(19, 121);
+            hOLabel.Name = "hOLabel";
+            hOLabel.Size = new System.Drawing.Size(109, 25);
+            hOLabel.TabIndex = 36;
+            hOLabel.Text = "Họ và Tên:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label7.ForeColor = System.Drawing.Color.Black;
+            label7.Location = new System.Drawing.Point(19, 171);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(127, 25);
+            label7.TabIndex = 39;
+            label7.Text = "Số tài khoản:";
             // 
             // panelControl1
             // 
@@ -261,279 +346,6 @@
             this.taiKhoanGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
-            // gridView2
-            // 
-            this.gridView2.Appearance.FocusedCell.BackColor = System.Drawing.Color.Lime;
-            this.gridView2.Appearance.FocusedCell.Options.UseBackColor = true;
-            this.gridView2.Appearance.FocusedRow.BackColor = System.Drawing.Color.Lime;
-            this.gridView2.Appearance.FocusedRow.Options.UseBackColor = true;
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colSOTK,
-            this.colSODU,
-            this.colCMND1,
-            this.colNGAYMOTK});
-            this.gridView2.GridControl = this.taiKhoanGridControl;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsBehavior.Editable = false;
-            this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.gridView2.OptionsFind.AlwaysVisible = true;
-            this.gridView2.OptionsFind.FindFilterColumns = "SOTK";
-            this.gridView2.OptionsFind.FindNullPrompt = "Nhập vào số tài khoản....";
-            this.gridView2.OptionsView.ShowGroupPanel = false;
-            // 
-            // pnlGD
-            // 
-            this.pnlGD.Controls.Add(label7);
-            this.pnlGD.Controls.Add(this.tENTextBox);
-            this.pnlGD.Controls.Add(hOLabel);
-            this.pnlGD.Controls.Add(this.hOTextBox);
-            this.pnlGD.Controls.Add(this.label6);
-            this.pnlGD.Controls.Add(this.txtMANV);
-            this.pnlGD.Controls.Add(sODULabel);
-            this.pnlGD.Controls.Add(this.sODUTextBox);
-            this.pnlGD.Controls.Add(cMNDLabel1);
-            this.pnlGD.Controls.Add(this.cMNDTextBox1);
-            this.pnlGD.Controls.Add(this.txtSoTKChuyen);
-            this.pnlGD.Controls.Add(this.label5);
-            this.pnlGD.Controls.Add(this.nuSoTien);
-            this.pnlGD.Controls.Add(this.btnChuyenTien);
-            this.pnlGD.Controls.Add(this.label4);
-            this.pnlGD.Controls.Add(this.label3);
-            this.pnlGD.Controls.Add(this.btnTimKiem);
-            this.pnlGD.Controls.Add(mACNLabel);
-            this.pnlGD.Controls.Add(this.label2);
-            this.pnlGD.Controls.Add(this.txtSoTkNhanTien);
-            this.pnlGD.Controls.Add(sOTKLabel);
-            this.pnlGD.Controls.Add(this.mACNTextBox);
-            this.pnlGD.Controls.Add(this.hOTENTextBox);
-            this.pnlGD.Controls.Add(cMNDLabel);
-            this.pnlGD.Controls.Add(hOTENLabel);
-            this.pnlGD.Controls.Add(this.cMNDTextBox);
-            this.pnlGD.Controls.Add(this.txtSoTKNhan);
-            this.pnlGD.Location = new System.Drawing.Point(762, 97);
-            this.pnlGD.Name = "pnlGD";
-            this.pnlGD.ShowCaption = false;
-            this.pnlGD.Size = new System.Drawing.Size(734, 499);
-            this.pnlGD.TabIndex = 15;
-            this.pnlGD.Text = "groupControl2";
-            // 
-            // txtSoTkNhanTien
-            // 
-            this.txtSoTkNhanTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoTkNhanTien.ForeColor = System.Drawing.Color.Black;
-            this.txtSoTkNhanTien.Location = new System.Drawing.Point(412, 21);
-            this.txtSoTkNhanTien.Name = "txtSoTkNhanTien";
-            this.txtSoTkNhanTien.Size = new System.Drawing.Size(170, 30);
-            this.txtSoTkNhanTien.TabIndex = 17;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(5, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(392, 32);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Nhập số tài khoản người nhận";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // frmChuyenTien_InfoReceiverBindingSource
-            // 
-            this.frmChuyenTien_InfoReceiverBindingSource.DataMember = "frmChuyenTien_InfoReceiver";
-            this.frmChuyenTien_InfoReceiverBindingSource.DataSource = this.DS;
-            // 
-            // frmChuyenTien_InfoReceiverTableAdapter
-            // 
-            this.frmChuyenTien_InfoReceiverTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.btnTimKiem.Location = new System.Drawing.Point(588, 20);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(138, 33);
-            this.btnTimKiem.TabIndex = 20;
-            this.btnTimKiem.Text = "Tìm kiếm...";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // hOTENLabel
-            // 
-            hOTENLabel.AutoSize = true;
-            hOTENLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            hOTENLabel.ForeColor = System.Drawing.Color.Black;
-            hOTENLabel.Location = new System.Drawing.Point(22, 286);
-            hOTENLabel.Name = "hOTENLabel";
-            hOTENLabel.Size = new System.Drawing.Size(114, 25);
-            hOTENLabel.TabIndex = 20;
-            hOTENLabel.Text = "Họ và Tên: ";
-            // 
-            // hOTENTextBox
-            // 
-            this.hOTENTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "HOTEN", true));
-            this.hOTENTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hOTENTextBox.ForeColor = System.Drawing.Color.Black;
-            this.hOTENTextBox.Location = new System.Drawing.Point(156, 286);
-            this.hOTENTextBox.Name = "hOTENTextBox";
-            this.hOTENTextBox.ReadOnly = true;
-            this.hOTENTextBox.Size = new System.Drawing.Size(171, 30);
-            this.hOTENTextBox.TabIndex = 21;
-            // 
-            // sOTKLabel
-            // 
-            sOTKLabel.AutoSize = true;
-            sOTKLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sOTKLabel.ForeColor = System.Drawing.Color.Black;
-            sOTKLabel.Location = new System.Drawing.Point(22, 346);
-            sOTKLabel.Name = "sOTKLabel";
-            sOTKLabel.Size = new System.Drawing.Size(127, 25);
-            sOTKLabel.TabIndex = 21;
-            sOTKLabel.Text = "Số tài khoản:";
-            // 
-            // txtSoTKNhan
-            // 
-            this.txtSoTKNhan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "SOTK", true));
-            this.txtSoTKNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoTKNhan.ForeColor = System.Drawing.Color.Black;
-            this.txtSoTKNhan.Location = new System.Drawing.Point(156, 343);
-            this.txtSoTKNhan.Name = "txtSoTKNhan";
-            this.txtSoTKNhan.ReadOnly = true;
-            this.txtSoTKNhan.Size = new System.Drawing.Size(171, 30);
-            this.txtSoTKNhan.TabIndex = 22;
-            // 
-            // cMNDLabel
-            // 
-            cMNDLabel.AutoSize = true;
-            cMNDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cMNDLabel.ForeColor = System.Drawing.Color.Black;
-            cMNDLabel.Location = new System.Drawing.Point(394, 284);
-            cMNDLabel.Name = "cMNDLabel";
-            cMNDLabel.Size = new System.Drawing.Size(78, 25);
-            cMNDLabel.TabIndex = 22;
-            cMNDLabel.Text = "CMND:";
-            // 
-            // cMNDTextBox
-            // 
-            this.cMNDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "CMND", true));
-            this.cMNDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cMNDTextBox.ForeColor = System.Drawing.Color.Black;
-            this.cMNDTextBox.Location = new System.Drawing.Point(505, 284);
-            this.cMNDTextBox.Name = "cMNDTextBox";
-            this.cMNDTextBox.ReadOnly = true;
-            this.cMNDTextBox.Size = new System.Drawing.Size(171, 30);
-            this.cMNDTextBox.TabIndex = 23;
-            // 
-            // mACNLabel
-            // 
-            mACNLabel.AutoSize = true;
-            mACNLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mACNLabel.ForeColor = System.Drawing.Color.Black;
-            mACNLabel.Location = new System.Drawing.Point(394, 343);
-            mACNLabel.Name = "mACNLabel";
-            mACNLabel.Size = new System.Drawing.Size(105, 25);
-            mACNLabel.TabIndex = 23;
-            mACNLabel.Text = "Chi Nhánh";
-            // 
-            // mACNTextBox
-            // 
-            this.mACNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "MACN", true));
-            this.mACNTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mACNTextBox.ForeColor = System.Drawing.Color.Black;
-            this.mACNTextBox.Location = new System.Drawing.Point(505, 343);
-            this.mACNTextBox.Name = "mACNTextBox";
-            this.mACNTextBox.ReadOnly = true;
-            this.mACNTextBox.Size = new System.Drawing.Size(171, 30);
-            this.mACNTextBox.TabIndex = 24;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 229);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(379, 32);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Thông tin người nhận tiền: ";
-            // 
-            // btnChuyenTien
-            // 
-            this.btnChuyenTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChuyenTien.ForeColor = System.Drawing.Color.Black;
-            this.btnChuyenTien.Location = new System.Drawing.Point(421, 404);
-            this.btnChuyenTien.Name = "btnChuyenTien";
-            this.btnChuyenTien.Size = new System.Drawing.Size(175, 33);
-            this.btnChuyenTien.TabIndex = 28;
-            this.btnChuyenTien.Text = "Xác nhận chuyển";
-            this.btnChuyenTien.UseVisualStyleBackColor = true;
-            this.btnChuyenTien.Click += new System.EventHandler(this.btnChuyenTien_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(127, 408);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 25);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Nhập số tiền: ";
-            // 
-            // nuSoTien
-            // 
-            this.nuSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuSoTien.Increment = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nuSoTien.Location = new System.Drawing.Point(277, 408);
-            this.nuSoTien.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.nuSoTien.Name = "nuSoTien";
-            this.nuSoTien.Size = new System.Drawing.Size(120, 30);
-            this.nuSoTien.TabIndex = 29;
-            this.nuSoTien.ThousandsSeparator = true;
-            // 
-            // colSOTK
-            // 
-            this.colSOTK.Caption = "Số tài khoản";
-            this.colSOTK.FieldName = "SOTK";
-            this.colSOTK.Name = "colSOTK";
-            this.colSOTK.Visible = true;
-            this.colSOTK.VisibleIndex = 0;
-            // 
-            // colSODU
-            // 
-            this.colSODU.Caption = "Số dư";
-            this.colSODU.DisplayFormat.FormatString = "n0";
-            this.colSODU.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colSODU.FieldName = "SODU";
-            this.colSODU.GroupFormat.FormatString = "n0";
-            this.colSODU.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colSODU.Name = "colSODU";
-            this.colSODU.Visible = true;
-            this.colSODU.VisibleIndex = 1;
-            // 
-            // colCMND1
-            // 
-            this.colCMND1.FieldName = "CMND";
-            this.colCMND1.Name = "colCMND1";
-            this.colCMND1.Visible = true;
-            this.colCMND1.VisibleIndex = 2;
-            // 
-            // colNGAYMOTK
-            // 
-            this.colNGAYMOTK.Caption = "Ngày mở ";
-            this.colNGAYMOTK.FieldName = "NGAYMOTK";
-            this.colNGAYMOTK.Name = "colNGAYMOTK";
-            this.colNGAYMOTK.Visible = true;
-            this.colNGAYMOTK.VisibleIndex = 3;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -577,57 +389,135 @@
             this.cmsTHOAT.Size = new System.Drawing.Size(157, 24);
             this.cmsTHOAT.Text = "Thoát";
             // 
-            // label5
+            // gridView2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(4, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(409, 32);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Thông tin người chuyển tiền: ";
+            this.gridView2.Appearance.FocusedCell.BackColor = System.Drawing.Color.Lime;
+            this.gridView2.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView2.Appearance.FocusedRow.BackColor = System.Drawing.Color.Lime;
+            this.gridView2.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colSOTK,
+            this.colSODU,
+            this.colCMND1,
+            this.colNGAYMOTK});
+            this.gridView2.GridControl = this.taiKhoanGridControl;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView2.OptionsFind.AlwaysVisible = true;
+            this.gridView2.OptionsFind.FindFilterColumns = "SOTK";
+            this.gridView2.OptionsFind.FindNullPrompt = "Nhập vào số tài khoản....";
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
-            // txtSoTKChuyen
+            // colSOTK
             // 
-            this.txtSoTKChuyen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "SOTK", true));
-            this.txtSoTKChuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoTKChuyen.Location = new System.Drawing.Point(153, 168);
-            this.txtSoTKChuyen.Name = "txtSoTKChuyen";
-            this.txtSoTKChuyen.ReadOnly = true;
-            this.txtSoTKChuyen.Size = new System.Drawing.Size(174, 30);
-            this.txtSoTKChuyen.TabIndex = 31;
-            this.txtSoTKChuyen.TextChanged += new System.EventHandler(this.txtSoTKChuyen_TextChanged);
+            this.colSOTK.Caption = "Số tài khoản";
+            this.colSOTK.FieldName = "SOTK";
+            this.colSOTK.Name = "colSOTK";
+            this.colSOTK.Visible = true;
+            this.colSOTK.VisibleIndex = 0;
             // 
-            // cMNDLabel1
+            // colSODU
             // 
-            cMNDLabel1.AutoSize = true;
-            cMNDLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cMNDLabel1.Location = new System.Drawing.Point(394, 121);
-            cMNDLabel1.Name = "cMNDLabel1";
-            cMNDLabel1.Size = new System.Drawing.Size(78, 25);
-            cMNDLabel1.TabIndex = 31;
-            cMNDLabel1.Text = "CMND:";
+            this.colSODU.Caption = "Số dư";
+            this.colSODU.DisplayFormat.FormatString = "n0";
+            this.colSODU.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colSODU.FieldName = "SODU";
+            this.colSODU.GroupFormat.FormatString = "n0";
+            this.colSODU.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colSODU.Name = "colSODU";
+            this.colSODU.Visible = true;
+            this.colSODU.VisibleIndex = 1;
             // 
-            // cMNDTextBox1
+            // colCMND1
             // 
-            this.cMNDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "CMND", true));
-            this.cMNDTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cMNDTextBox1.Location = new System.Drawing.Point(502, 115);
-            this.cMNDTextBox1.Name = "cMNDTextBox1";
-            this.cMNDTextBox1.ReadOnly = true;
-            this.cMNDTextBox1.Size = new System.Drawing.Size(174, 30);
-            this.cMNDTextBox1.TabIndex = 32;
-            this.cMNDTextBox1.TextChanged += new System.EventHandler(this.cMNDTextBox1_TextChanged);
+            this.colCMND1.FieldName = "CMND";
+            this.colCMND1.Name = "colCMND1";
+            this.colCMND1.Visible = true;
+            this.colCMND1.VisibleIndex = 2;
             // 
-            // sODULabel
+            // colNGAYMOTK
             // 
-            sODULabel.AutoSize = true;
-            sODULabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sODULabel.Location = new System.Drawing.Point(395, 173);
-            sODULabel.Name = "sODULabel";
-            sODULabel.Size = new System.Drawing.Size(70, 25);
-            sODULabel.TabIndex = 32;
-            sODULabel.Text = "Số dư:";
+            this.colNGAYMOTK.Caption = "Ngày mở ";
+            this.colNGAYMOTK.FieldName = "NGAYMOTK";
+            this.colNGAYMOTK.Name = "colNGAYMOTK";
+            this.colNGAYMOTK.Visible = true;
+            this.colNGAYMOTK.VisibleIndex = 3;
+            // 
+            // pnlGD
+            // 
+            this.pnlGD.Controls.Add(label7);
+            this.pnlGD.Controls.Add(this.tENTextBox);
+            this.pnlGD.Controls.Add(hOLabel);
+            this.pnlGD.Controls.Add(this.hOTextBox);
+            this.pnlGD.Controls.Add(this.label6);
+            this.pnlGD.Controls.Add(this.txtMANV);
+            this.pnlGD.Controls.Add(sODULabel);
+            this.pnlGD.Controls.Add(this.sODUTextBox);
+            this.pnlGD.Controls.Add(cMNDLabel1);
+            this.pnlGD.Controls.Add(this.cMNDTextBox1);
+            this.pnlGD.Controls.Add(this.txtSoTKChuyen);
+            this.pnlGD.Controls.Add(this.label5);
+            this.pnlGD.Controls.Add(this.nuSoTien);
+            this.pnlGD.Controls.Add(this.btnChuyenTien);
+            this.pnlGD.Controls.Add(this.label4);
+            this.pnlGD.Controls.Add(this.label3);
+            this.pnlGD.Controls.Add(this.btnTimKiem);
+            this.pnlGD.Controls.Add(mACNLabel);
+            this.pnlGD.Controls.Add(this.label2);
+            this.pnlGD.Controls.Add(this.txtSoTkNhanTien);
+            this.pnlGD.Controls.Add(sOTKLabel);
+            this.pnlGD.Controls.Add(this.mACNTextBox);
+            this.pnlGD.Controls.Add(this.hOTENTextBox);
+            this.pnlGD.Controls.Add(cMNDLabel);
+            this.pnlGD.Controls.Add(hOTENLabel);
+            this.pnlGD.Controls.Add(this.cMNDTextBox);
+            this.pnlGD.Controls.Add(this.txtSoTKNhan);
+            this.pnlGD.Location = new System.Drawing.Point(762, 97);
+            this.pnlGD.Name = "pnlGD";
+            this.pnlGD.ShowCaption = false;
+            this.pnlGD.Size = new System.Drawing.Size(734, 499);
+            this.pnlGD.TabIndex = 15;
+            this.pnlGD.Text = "groupControl2";
+            // 
+            // tENTextBox
+            // 
+            this.tENTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "TEN", true));
+            this.tENTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tENTextBox.Location = new System.Drawing.Point(321, 118);
+            this.tENTextBox.Name = "tENTextBox";
+            this.tENTextBox.ReadOnly = true;
+            this.tENTextBox.Size = new System.Drawing.Size(67, 30);
+            this.tENTextBox.TabIndex = 38;
+            // 
+            // hOTextBox
+            // 
+            this.hOTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "HO", true));
+            this.hOTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hOTextBox.Location = new System.Drawing.Point(155, 118);
+            this.hOTextBox.Name = "hOTextBox";
+            this.hOTextBox.ReadOnly = true;
+            this.hOTextBox.Size = new System.Drawing.Size(160, 30);
+            this.hOTextBox.TabIndex = 37;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(217, 468);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(160, 17);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Mã nhân viên thực hiện: ";
+            // 
+            // txtMANV
+            // 
+            this.txtMANV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtMANV.Location = new System.Drawing.Point(383, 465);
+            this.txtMANV.Name = "txtMANV";
+            this.txtMANV.ReadOnly = true;
+            this.txtMANV.Size = new System.Drawing.Size(58, 23);
+            this.txtMANV.TabIndex = 35;
             // 
             // sODUTextBox
             // 
@@ -640,65 +530,175 @@
             this.sODUTextBox.TabIndex = 33;
             this.sODUTextBox.TextChanged += new System.EventHandler(this.sODUTextBox_TextChanged);
             // 
-            // txtMANV
+            // cMNDTextBox1
             // 
-            this.txtMANV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.txtMANV.Location = new System.Drawing.Point(383, 465);
-            this.txtMANV.Name = "txtMANV";
-            this.txtMANV.ReadOnly = true;
-            this.txtMANV.Size = new System.Drawing.Size(58, 23);
-            this.txtMANV.TabIndex = 35;
+            this.cMNDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "CMND", true));
+            this.cMNDTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cMNDTextBox1.Location = new System.Drawing.Point(502, 115);
+            this.cMNDTextBox1.Name = "cMNDTextBox1";
+            this.cMNDTextBox1.ReadOnly = true;
+            this.cMNDTextBox1.Size = new System.Drawing.Size(174, 30);
+            this.cMNDTextBox1.TabIndex = 32;
+            this.cMNDTextBox1.TextChanged += new System.EventHandler(this.cMNDTextBox1_TextChanged);
             // 
-            // label6
+            // txtSoTKChuyen
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(217, 468);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 17);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Mã nhân viên thực hiện: ";
+            this.txtSoTKChuyen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "SOTK", true));
+            this.txtSoTKChuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTKChuyen.Location = new System.Drawing.Point(153, 168);
+            this.txtSoTKChuyen.Name = "txtSoTKChuyen";
+            this.txtSoTKChuyen.ReadOnly = true;
+            this.txtSoTKChuyen.Size = new System.Drawing.Size(174, 30);
+            this.txtSoTKChuyen.TabIndex = 31;
+            this.txtSoTKChuyen.TextChanged += new System.EventHandler(this.txtSoTKChuyen_TextChanged);
             // 
-            // hOLabel
+            // label5
             // 
-            hOLabel.AutoSize = true;
-            hOLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            hOLabel.Location = new System.Drawing.Point(19, 121);
-            hOLabel.Name = "hOLabel";
-            hOLabel.Size = new System.Drawing.Size(109, 25);
-            hOLabel.TabIndex = 36;
-            hOLabel.Text = "Họ và Tên:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(4, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(409, 32);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Thông tin người chuyển tiền: ";
             // 
-            // hOTextBox
+            // nuSoTien
             // 
-            this.hOTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "HO", true));
-            this.hOTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hOTextBox.Location = new System.Drawing.Point(155, 118);
-            this.hOTextBox.Name = "hOTextBox";
-            this.hOTextBox.ReadOnly = true;
-            this.hOTextBox.Size = new System.Drawing.Size(160, 30);
-            this.hOTextBox.TabIndex = 37;
+            this.nuSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nuSoTien.Increment = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nuSoTien.Location = new System.Drawing.Point(277, 408);
+            this.nuSoTien.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.nuSoTien.Name = "nuSoTien";
+            this.nuSoTien.Size = new System.Drawing.Size(120, 30);
+            this.nuSoTien.TabIndex = 29;
+            this.nuSoTien.ThousandsSeparator = true;
             // 
-            // tENTextBox
+            // btnChuyenTien
             // 
-            this.tENTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "TEN", true));
-            this.tENTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tENTextBox.Location = new System.Drawing.Point(321, 118);
-            this.tENTextBox.Name = "tENTextBox";
-            this.tENTextBox.ReadOnly = true;
-            this.tENTextBox.Size = new System.Drawing.Size(67, 30);
-            this.tENTextBox.TabIndex = 38;
+            this.btnChuyenTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuyenTien.ForeColor = System.Drawing.Color.Black;
+            this.btnChuyenTien.Location = new System.Drawing.Point(421, 404);
+            this.btnChuyenTien.Name = "btnChuyenTien";
+            this.btnChuyenTien.Size = new System.Drawing.Size(175, 33);
+            this.btnChuyenTien.TabIndex = 28;
+            this.btnChuyenTien.Text = "Xác nhận chuyển";
+            this.btnChuyenTien.UseVisualStyleBackColor = true;
+            this.btnChuyenTien.Click += new System.EventHandler(this.btnChuyenTien_Click);
             // 
-            // label7
+            // label4
             // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label7.ForeColor = System.Drawing.Color.Black;
-            label7.Location = new System.Drawing.Point(19, 171);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(127, 25);
-            label7.TabIndex = 39;
-            label7.Text = "Số tài khoản:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(127, 408);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 25);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Nhập số tiền: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(5, 229);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(379, 32);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Thông tin người nhận tiền: ";
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.btnTimKiem.Location = new System.Drawing.Point(588, 20);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(138, 33);
+            this.btnTimKiem.TabIndex = 20;
+            this.btnTimKiem.Text = "Tìm kiếm...";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(5, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(392, 32);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Nhập số tài khoản người nhận";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // txtSoTkNhanTien
+            // 
+            this.txtSoTkNhanTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTkNhanTien.ForeColor = System.Drawing.Color.Black;
+            this.txtSoTkNhanTien.Location = new System.Drawing.Point(412, 21);
+            this.txtSoTkNhanTien.Name = "txtSoTkNhanTien";
+            this.txtSoTkNhanTien.Size = new System.Drawing.Size(170, 30);
+            this.txtSoTkNhanTien.TabIndex = 17;
+            // 
+            // mACNTextBox
+            // 
+            this.mACNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "MACN", true));
+            this.mACNTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mACNTextBox.ForeColor = System.Drawing.Color.Black;
+            this.mACNTextBox.Location = new System.Drawing.Point(505, 343);
+            this.mACNTextBox.Name = "mACNTextBox";
+            this.mACNTextBox.ReadOnly = true;
+            this.mACNTextBox.Size = new System.Drawing.Size(171, 30);
+            this.mACNTextBox.TabIndex = 24;
+            // 
+            // frmChuyenTien_InfoReceiverBindingSource
+            // 
+            this.frmChuyenTien_InfoReceiverBindingSource.DataMember = "frmChuyenTien_InfoReceiver";
+            this.frmChuyenTien_InfoReceiverBindingSource.DataSource = this.DS;
+            // 
+            // hOTENTextBox
+            // 
+            this.hOTENTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "HOTEN", true));
+            this.hOTENTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hOTENTextBox.ForeColor = System.Drawing.Color.Black;
+            this.hOTENTextBox.Location = new System.Drawing.Point(156, 286);
+            this.hOTENTextBox.Name = "hOTENTextBox";
+            this.hOTENTextBox.ReadOnly = true;
+            this.hOTENTextBox.Size = new System.Drawing.Size(171, 30);
+            this.hOTENTextBox.TabIndex = 21;
+            // 
+            // cMNDTextBox
+            // 
+            this.cMNDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "CMND", true));
+            this.cMNDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cMNDTextBox.ForeColor = System.Drawing.Color.Black;
+            this.cMNDTextBox.Location = new System.Drawing.Point(505, 284);
+            this.cMNDTextBox.Name = "cMNDTextBox";
+            this.cMNDTextBox.ReadOnly = true;
+            this.cMNDTextBox.Size = new System.Drawing.Size(171, 30);
+            this.cMNDTextBox.TabIndex = 23;
+            // 
+            // txtSoTKNhan
+            // 
+            this.txtSoTKNhan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.frmChuyenTien_InfoReceiverBindingSource, "SOTK", true));
+            this.txtSoTKNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTKNhan.ForeColor = System.Drawing.Color.Black;
+            this.txtSoTKNhan.Location = new System.Drawing.Point(156, 343);
+            this.txtSoTKNhan.Name = "txtSoTKNhan";
+            this.txtSoTKNhan.ReadOnly = true;
+            this.txtSoTKNhan.Size = new System.Drawing.Size(171, 30);
+            this.txtSoTKNhan.TabIndex = 22;
+            // 
+            // frmChuyenTien_InfoReceiverTableAdapter
+            // 
+            this.frmChuyenTien_InfoReceiverTableAdapter.ClearBeforeFill = true;
             // 
             // label8
             // 
@@ -723,7 +723,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);
             this.Name = "frmChuyenTien";
-            this.Text = "frmChuyenTien";
+            this.Text = "Giao dịch chuyển khoản";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmChuyenTien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -736,13 +736,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanGridControl)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlGD)).EndInit();
             this.pnlGD.ResumeLayout(false);
             this.pnlGD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.frmChuyenTien_InfoReceiverBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuSoTien)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.frmChuyenTien_InfoReceiverBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

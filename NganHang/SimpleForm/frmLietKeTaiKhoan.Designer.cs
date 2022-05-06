@@ -88,9 +88,9 @@
             this.cmbLoai.Items.AddRange(new object[] {
             "Tất cả các chi nhánh",
             "Chi nhánh hiện tại"});
-            this.cmbLoai.Location = new System.Drawing.Point(229, 109);
+            this.cmbLoai.Location = new System.Drawing.Point(168, 101);
             this.cmbLoai.Name = "cmbLoai";
-            this.cmbLoai.Size = new System.Drawing.Size(168, 37);
+            this.cmbLoai.Size = new System.Drawing.Size(219, 37);
             this.cmbLoai.TabIndex = 9;
             this.cmbLoai.Tag = "";
             // 
@@ -98,7 +98,7 @@
             // 
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.Black;
-            this.btnXacNhan.Location = new System.Drawing.Point(565, 186);
+            this.btnXacNhan.Location = new System.Drawing.Point(502, 182);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(176, 37);
             this.btnXacNhan.TabIndex = 10;
@@ -111,7 +111,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(164, 109);
+            this.label2.Location = new System.Drawing.Point(103, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 29);
             this.label2.TabIndex = 11;
@@ -120,7 +120,7 @@
             // batdau
             // 
             this.batdau.EditValue = null;
-            this.batdau.Location = new System.Drawing.Point(554, 109);
+            this.batdau.Location = new System.Drawing.Point(554, 106);
             this.batdau.Name = "batdau";
             this.batdau.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.batdau.Properties.Appearance.Options.UseFont = true;
@@ -134,7 +134,7 @@
             // ketthuc
             // 
             this.ketthuc.EditValue = null;
-            this.ketthuc.Location = new System.Drawing.Point(911, 109);
+            this.ketthuc.Location = new System.Drawing.Point(911, 106);
             this.ketthuc.Name = "ketthuc";
             this.ketthuc.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ketthuc.Properties.Appearance.Options.UseFont = true;
@@ -197,7 +197,7 @@
             this.Controls.Add(this.cmbLoai);
             this.Controls.Add(this.panelControl1);
             this.Name = "frmLietKeTaiKhoan";
-            this.Text = "frmLietKeTaiKhoan";
+            this.Text = "Liệt kê tài khoản khách hàng trong khoản thời gian";
             this.Load += new System.EventHandler(this.frmLietKeTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
