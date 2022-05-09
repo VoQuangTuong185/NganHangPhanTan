@@ -40,7 +40,7 @@
             this.panInput = new DevExpress.XtraEditors.PanelControl();
             this.label3 = new System.Windows.Forms.Label();
             this.memoLuuY = new DevExpress.XtraEditors.MemoEdit();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grFormTaoLogin = new System.Windows.Forms.GroupBox();
             this.txtLoginName = new System.Windows.Forms.TextBox();
             this.nPass = new System.Windows.Forms.Label();
             this.btnCreateLogin = new System.Windows.Forms.Button();
@@ -92,7 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panInput)).BeginInit();
             this.panInput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoLuuY.Properties)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grFormTaoLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_LGINFO1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bds_LGINFO)).BeginInit();
@@ -143,7 +143,6 @@
             this.label2.Size = new System.Drawing.Size(532, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "Danh sách nhân viên chưa có tài khoản của chi nhánh";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtTrangThai
             // 
@@ -166,7 +165,7 @@
             // 
             this.panInput.Controls.Add(this.label3);
             this.panInput.Controls.Add(this.memoLuuY);
-            this.panInput.Controls.Add(this.groupBox1);
+            this.panInput.Controls.Add(this.grFormTaoLogin);
             this.panInput.Controls.Add(this.gc_LGINFO1);
             this.panInput.Controls.Add(this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl);
             this.panInput.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -174,7 +173,6 @@
             this.panInput.Name = "panInput";
             this.panInput.Size = new System.Drawing.Size(1523, 683);
             this.panInput.TabIndex = 7;
-            this.panInput.Paint += new System.Windows.Forms.PaintEventHandler(this.panInput_Paint);
             // 
             // label3
             // 
@@ -203,22 +201,22 @@
             this.memoLuuY.Size = new System.Drawing.Size(528, 92);
             this.memoLuuY.TabIndex = 0;
             // 
-            // groupBox1
+            // grFormTaoLogin
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox1.Controls.Add(this.txtLoginName);
-            this.groupBox1.Controls.Add(this.nPass);
-            this.groupBox1.Controls.Add(this.btnCreateLogin);
-            this.groupBox1.Controls.Add(this.nName);
-            this.groupBox1.Controls.Add(this.txtPass);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.groupBox1.Location = new System.Drawing.Point(974, 228);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(549, 179);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
+            this.grFormTaoLogin.BackColor = System.Drawing.Color.Gainsboro;
+            this.grFormTaoLogin.Controls.Add(this.txtLoginName);
+            this.grFormTaoLogin.Controls.Add(this.nPass);
+            this.grFormTaoLogin.Controls.Add(this.btnCreateLogin);
+            this.grFormTaoLogin.Controls.Add(this.nName);
+            this.grFormTaoLogin.Controls.Add(this.txtPass);
+            this.grFormTaoLogin.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.grFormTaoLogin.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grFormTaoLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.grFormTaoLogin.Location = new System.Drawing.Point(974, 228);
+            this.grFormTaoLogin.Name = "grFormTaoLogin";
+            this.grFormTaoLogin.Size = new System.Drawing.Size(549, 179);
+            this.grFormTaoLogin.TabIndex = 12;
+            this.grFormTaoLogin.TabStop = false;
             // 
             // txtLoginName
             // 
@@ -652,8 +650,8 @@
             this.panInput.ResumeLayout(false);
             this.panInput.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoLuuY.Properties)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grFormTaoLogin.ResumeLayout(false);
+            this.grFormTaoLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_LGINFO1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bds_LGINFO)).EndInit();
@@ -676,7 +674,7 @@
         private DevExpress.XtraEditors.PanelControl panInput;
         private DevExpress.XtraEditors.TextEdit txtTrangThai;
         private DevExpress.XtraEditors.MemoEdit memoLuuY;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grFormTaoLogin;
         private System.Windows.Forms.TextBox txtLoginName;
         private System.Windows.Forms.Label nPass;
         private System.Windows.Forms.Button btnCreateLogin;

@@ -99,14 +99,6 @@ namespace NganHang.SimpleForm
             LayDSPM("SELECT * FROM Get_Subcribers");
             cmbChiNhanh.SelectedIndex = 1; cmbChiNhanh.SelectedIndex = 0;
         }
-        private void textPass_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
         {
             try

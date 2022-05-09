@@ -48,11 +48,10 @@ namespace NganHang.SimpleForm
                 cmbChiNhanh.ValueMember = "TENSERVER";
                 cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
                 gc_LGINFO1.Enabled = true;
-                groupBox1.Enabled = false;
-                btnCreateAccount.Enabled = cmsXOA.Enabled = false;
+                grFormTaoLogin.Enabled = false;
+                cmbChiNhanh.Enabled = false;
                 if (Program.mGroup == "NganHang")
                 {
-                    cmbChiNhanh.Enabled = true;
                     memoLuuY.EditValue += "Tài khoản có thể: \r\n";
                     memoLuuY.EditValue += "- Xem các báo cáo trên tất cả chi nhánh\r\n";
                     memoLuuY.EditValue += "- Tra cứu dữ liệu trên tất cả chi nhánh\r\n";
@@ -65,7 +64,6 @@ namespace NganHang.SimpleForm
                     memoLuuY.EditValue += "- Toàn quyền cập nhật dữ liệu trên chi nhánh thuộc về\r\n";
                     memoLuuY.EditValue += "- Tra cứu dữ liệu trên chi nhánh thuộc về\r\n";
                     memoLuuY.EditValue += "- Tạo tài khoản đăng nhập hệ thống thuộc cùng nhóm (CHINHANH)";
-                    cmbChiNhanh.Enabled = false;
                 }
                 Reload();
             }
@@ -73,28 +71,6 @@ namespace NganHang.SimpleForm
 
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbChiNhanh.SelectedValue.ToString() == "System.Data.DataRowView")
-                return;
-            Program.servername = cmbChiNhanh.SelectedValue.ToString();
-            if (cmbChiNhanh.SelectedIndex != Program.mChiNhanh)
-            {
-                Program.mlogin = Program.remotelogin;
-                Program.password = Program.remotepassword;
-            }
-            else
-            {
-                Program.mlogin = Program.mloginDN;
-                Program.password = Program.passwordDN;
-            }
-            if (Program.KetNoi() == 0) MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
-            else
-            {
-                DS.EnforceConstraints = false;
-                this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Fill(this.DS.frmCreateLogin_GetEmployeeNotHaveLogin);
-                this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
-            }
         }
         private bool CHECK_LOGIN_TRUNG(string txtLoginName)
         {
@@ -130,7 +106,7 @@ namespace NganHang.SimpleForm
             frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Enabled = gc_LGINFO1.Enabled = true;
             this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Fill(this.DS.frmCreateLogin_GetEmployeeNotHaveLogin);
             this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
-            groupBox1.Enabled = false;
+            grFormTaoLogin.Enabled = false;
         }
         private void cmsXOA_Click(object sender, EventArgs e)
         {
@@ -148,7 +124,7 @@ namespace NganHang.SimpleForm
                 Program.ExecSqlNonQuery(command);
             }
             gc_LGINFO1.Enabled = true;
-            gc_LGINFO1.Enabled = groupBox1.Enabled = gc_LGINFO1.Enabled = true;
+            gc_LGINFO1.Enabled = grFormTaoLogin.Enabled = gc_LGINFO1.Enabled = true;
             this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Fill(this.DS.frmCreateLogin_GetEmployeeNotHaveLogin);
             this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
         }
@@ -189,7 +165,7 @@ namespace NganHang.SimpleForm
             string MANV = ((DataRowView)bdsNV_X_LOGIN[bdsNV_X_LOGIN.Position])["MANV"].ToString();
             vitri = bdsNV_X_LOGIN.Position;
             txtTrangThai.EditValue = "Mã nhân viên được chọn để tạo login: '" + MANV+" '";
-            groupBox1.Enabled = true;
+            grFormTaoLogin.Enabled = true;
             frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Enabled = gc_LGINFO1.Enabled = false;
         }
 
@@ -202,21 +178,6 @@ namespace NganHang.SimpleForm
             txtTrangThai.EditValue = "Chọn nhân viên để tạo tài khoản đăng nhập hệ thống!!";
         }
 
-        private void rOLEToolStripLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rOLEToolStripTextBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gcNV_X_LOGIN_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void fillToolStripButton_Click(object sender, EventArgs e)
         {
             try
@@ -227,16 +188,6 @@ namespace NganHang.SimpleForm
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private void panInput_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
 
         }
     }

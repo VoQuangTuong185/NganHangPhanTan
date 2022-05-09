@@ -37,7 +37,7 @@
             System.Windows.Forms.Label trangThaiXoaLabel;
             System.Windows.Forms.Label pHAILabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -477,9 +477,9 @@
             this.gcNV.EmbeddedNavigator.Appearance.BackColor = System.Drawing.Color.Lime;
             this.gcNV.EmbeddedNavigator.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.gcNV.EmbeddedNavigator.Appearance.Options.UseBackColor = true;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gcNV.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gcNV.Location = new System.Drawing.Point(0, 71);
             this.gcNV.MainView = this.gridView1;
             this.gcNV.MenuManager = this.barManager1;

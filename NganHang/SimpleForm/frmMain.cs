@@ -60,7 +60,7 @@ namespace NganHang
         public void HienThiMenu()
         {
             MANV.Text = "MÃ NV: " + Program.username;
-            HOTEN.Text = "Họ tên nhân viên: " + Program.mHoten;
+            HOTEN.Text = "Họ tên nhân viên: " + Program.mHoten.Trim('\r', '\n');//remove newlines from both sides of a string
             NHOM.Text = "Nhóm: " + Program.mGroup;
             //phân quyền
             rib_BaoCao.Visible = rib_DanhMuc.Visible = rib_NghiepVu.Visible = btnCreateLogin.Enabled = btnLogout.Enabled = true;

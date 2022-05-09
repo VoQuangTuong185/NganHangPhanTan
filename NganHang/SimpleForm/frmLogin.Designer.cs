@@ -56,7 +56,6 @@ namespace NganHang.SimpleForm
             this.groupBox1.Size = new System.Drawing.Size(503, 209);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtPass
             // 
@@ -67,7 +66,6 @@ namespace NganHang.SimpleForm
             this.txtPass.TabIndex = 5;
             this.txtPass.Text = "123";
             this.txtPass.UseSystemPasswordChar = true;
-            this.txtPass.TextChanged += new System.EventHandler(this.textPass_TextChanged);
             // 
             // txtLogin
             // 
