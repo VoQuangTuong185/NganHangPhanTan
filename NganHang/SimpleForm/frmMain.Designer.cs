@@ -104,7 +104,6 @@
             this.btnLogin.Id = 19;
             this.btnLogin.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnLogin.LargeGlyph")));
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLogin_ItemClick);
             // 
             // btnCreateLogin
             // 

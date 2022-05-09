@@ -73,15 +73,15 @@ namespace NganHang.SimpleForm
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
-            panelControl2.Enabled = btnUndo.Enabled = btnSave.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = txtMANVMOI.Enabled = false;
+            panelControl2.Enabled = btnUndo.Enabled = btnSave.Enabled = cmbCNFinal.Enabled = btnMoveEmployee.Enabled = txtMANVMOI.Enabled = false;
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
-                btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnChuyenNV.Enabled = false;
+                btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnMoveEmployee.Enabled = false;
             }
             else
             {
-                btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnChuyenNV.Enabled = true;
+                btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnMoveEmployee.Enabled = true;
                 cmbChiNhanh.Enabled = false;
             }
         }

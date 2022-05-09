@@ -46,7 +46,7 @@ namespace NganHang.SimpleForm
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
-                cmsTHEM.Enabled = false;
+                cmsTHEM.Enabled = cmsXoa.Enabled = false;
             }
             else
             {

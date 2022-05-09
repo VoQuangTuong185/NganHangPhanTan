@@ -41,10 +41,6 @@ namespace NganHang
                     return f;
             return null;
         }
-        private void btnLogin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            
-        }
 
         private void frmLogin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
