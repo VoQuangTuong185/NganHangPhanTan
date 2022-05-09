@@ -182,5 +182,17 @@ namespace NganHang
                 f.Show();
             }
         }
+
+        private void btnTransactionReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmSaoKeTaiKhoan));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmSaoKeTaiKhoan f = new frmSaoKeTaiKhoan();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

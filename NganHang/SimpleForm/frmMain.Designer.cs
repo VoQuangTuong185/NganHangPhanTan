@@ -184,6 +184,7 @@
             this.btnTransactionReport.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnTransactionReport.LargeGlyph")));
             this.btnTransactionReport.LargeWidth = 100;
             this.btnTransactionReport.Name = "btnTransactionReport";
+            this.btnTransactionReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTransactionReport_ItemClick);
             // 
             // btnOpenedAccountReport
             // 

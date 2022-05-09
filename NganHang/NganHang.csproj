@@ -79,6 +79,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmSaoKeTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaoKeTaiKhoan.Designer.cs">
+      <DependentUpon>frmSaoKeTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="SimpleForm\frmChuyenTien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     <Compile Include="Xtrp_LietKeTaiKhoan.Designer.cs">
       <DependentUpon>Xtrp_LietKeTaiKhoan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmSaoKeTaiKhoan.resx">
+      <DependentUpon>frmSaoKeTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SimpleForm\frmChuyenTien.resx">
       <DependentUpon>frmChuyenTien.cs</DependentUpon>
     </EmbeddedResource>
