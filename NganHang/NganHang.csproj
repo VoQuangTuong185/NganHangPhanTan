@@ -141,6 +141,12 @@
     <Compile Include="SimpleForm\frmCreateLogin.Designer.cs">
       <DependentUpon>frmCreateLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="XtrpSaoKeTaiKhoan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtrpSaoKeTaiKhoan.Designer.cs">
+      <DependentUpon>XtrpSaoKeTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Xtrp_LietKeKhachHang.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SimpleForm\frmCreateLogin.resx">
       <DependentUpon>frmCreateLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtrpSaoKeTaiKhoan.resx">
+      <DependentUpon>XtrpSaoKeTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xtrp_LietKeKhachHang.resx">
       <DependentUpon>Xtrp_LietKeKhachHang.cs</DependentUpon>

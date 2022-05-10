@@ -481,6 +481,26 @@ SELECT CMND, HO, TEN, DIACHI, PHAI, NGAYCAP, SODT, MACN FROM KhachHang WHERE (CM
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ThongTinKH_TKSaoKeTableAdapter" GeneratorDataComponentClassName="ThongTinKH_TKSaoKeTableAdapter" Name="ThongTinKH_TKSaoKe" UserDataComponentName="ThongTinKH_TKSaoKeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NGANHANGConnectionString (Settings)" DbObjectName="NGANHANG.dbo.TaiKhoan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT KH.CMND + ' - ' + KH.HO + ' ' + KH.TEN AS HOTEN, TK.SOTK
+FROM     LINK3.NGANHANG.DBO.KhachHang AS KH LEFT OUTER JOIN
+                  dbo.TaiKhoan AS TK ON KH.CMND = TK.CMND
+WHERE  (TK.SOTK &lt;&gt; 'NULL')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HOTEN" DataSetColumn="HOTEN" />
+              <Mapping SourceColumn="SOTK" DataSetColumn="SOTK" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -868,6 +888,26 @@ SELECT CMND, HO, TEN, DIACHI, PHAI, NGAYCAP, SODT, MACN FROM KhachHang WHERE (CM
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ThongTinKH_TKSaoKe" msprop:Generator_TableClassName="ThongTinKH_TKSaoKeDataTable" msprop:Generator_TableVarName="tableThongTinKH_TKSaoKe" msprop:Generator_RowChangedName="ThongTinKH_TKSaoKeRowChanged" msprop:Generator_TablePropName="ThongTinKH_TKSaoKe" msprop:Generator_RowDeletingName="ThongTinKH_TKSaoKeRowDeleting" msprop:Generator_RowChangingName="ThongTinKH_TKSaoKeRowChanging" msprop:Generator_RowEvHandlerName="ThongTinKH_TKSaoKeRowChangeEventHandler" msprop:Generator_RowDeletedName="ThongTinKH_TKSaoKeRowDeleted" msprop:Generator_RowClassName="ThongTinKH_TKSaoKeRow" msprop:Generator_UserTableName="ThongTinKH_TKSaoKe" msprop:Generator_RowEvArgName="ThongTinKH_TKSaoKeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HOTEN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHOTEN" msprop:Generator_ColumnPropNameInRow="HOTEN" msprop:Generator_ColumnPropNameInTable="HOTENColumn" msprop:Generator_UserColumnName="HOTEN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="74" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOTK" msprop:Generator_ColumnVarNameInTable="columnSOTK" msprop:Generator_ColumnPropNameInRow="SOTK" msprop:Generator_ColumnPropNameInTable="SOTKColumn" msprop:Generator_UserColumnName="SOTK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -904,6 +944,10 @@ SELECT CMND, HO, TEN, DIACHI, PHAI, NGAYCAP, SODT, MACN FROM KhachHang WHERE (CM
     </xs:unique>
     <xs:unique name="frmChuyenTien_InfoReceiver_Constraint1" msdata:ConstraintName="Constraint1">
       <xs:selector xpath=".//mstns:frmChuyenTien_InfoReceiver" />
+      <xs:field xpath="mstns:SOTK" />
+    </xs:unique>
+    <xs:unique name="ThongTinKH_TKSaoKe_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:ThongTinKH_TKSaoKe" />
       <xs:field xpath="mstns:SOTK" />
     </xs:unique>
     <xs:keyref name="FK_KhachHang_TaiKhoan" refer="KhachHang_Constraint1" msprop:rel_Generator_UserChildTable="TaiKhoan" msprop:rel_Generator_ChildPropName="GetTaiKhoanRows" msprop:rel_Generator_UserRelationName="FK_KhachHang_TaiKhoan" msprop:rel_Generator_ParentPropName="KhachHangRow" msprop:rel_Generator_RelationVarName="relationFK_KhachHang_TaiKhoan" msprop:rel_Generator_UserParentTable="KhachHang">
