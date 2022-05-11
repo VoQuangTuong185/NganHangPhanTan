@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,7 @@ namespace NganHang
 
         private void frmSaoKeTaiKhoan_Load(object sender, EventArgs e)
         {
+            DS.EnforceConstraints = false;
             this.thongTinKH_TKSaoKeTableAdapter.Connection.ConnectionString = Program.connstr;
             this.thongTinKH_TKSaoKeTableAdapter.Fill(this.DS.ThongTinKH_TKSaoKe);
             cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
@@ -61,7 +63,13 @@ namespace NganHang
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            XtrpSaoKeTaiKhoan rpt = new XtrpSaoKeTaiKhoan(batdau.DateTime, ketthuc.DateTime, cmbHoTenKhSk.Text);
+            MessageBox.Show(SoTKSaoKe.Text, "", MessageBoxButtons.OK);
+            XtrpSaoKeTaiKhoan rpt = new XtrpSaoKeTaiKhoan(SoTKSaoKe.Text,batdau.DateTime, ketthuc.DateTime);
+            rpt.lbBatDau.Text = batdau.DateTime.ToString();
+            rpt.lbKetThuc.Text = ketthuc.DateTime.ToString();
+            rpt.lbSoTkSaoKe.Text = SoTKSaoKe.Text;
+            ReportPrintTool print = new ReportPrintTool(rpt);
+            print.ShowPreviewDialog();
         }
     }
 }

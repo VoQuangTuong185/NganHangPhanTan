@@ -3998,6 +3998,8 @@ namespace NganHang {
             
             private global::System.Data.DataColumn columnHOTEN;
             
+            private global::System.Data.DataColumn columnCMND;
+            
             private global::System.Data.DataColumn columnSOTK;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4038,6 +4040,14 @@ namespace NganHang {
             public global::System.Data.DataColumn HOTENColumn {
                 get {
                     return this.columnHOTEN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CMNDColumn {
+                get {
+                    return this.columnCMND;
                 }
             }
             
@@ -4086,14 +4096,22 @@ namespace NganHang {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ThongTinKH_TKSaoKeRow AddThongTinKH_TKSaoKeRow(string HOTEN, string SOTK) {
+            public ThongTinKH_TKSaoKeRow AddThongTinKH_TKSaoKeRow(string HOTEN, string CMND, string SOTK) {
                 ThongTinKH_TKSaoKeRow rowThongTinKH_TKSaoKeRow = ((ThongTinKH_TKSaoKeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         HOTEN,
+                        CMND,
                         SOTK};
                 rowThongTinKH_TKSaoKeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowThongTinKH_TKSaoKeRow);
                 return rowThongTinKH_TKSaoKeRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ThongTinKH_TKSaoKeRow FindByCMND(string CMND) {
+                return ((ThongTinKH_TKSaoKeRow)(this.Rows.Find(new object[] {
+                            CMND})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4114,6 +4132,7 @@ namespace NganHang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnHOTEN = base.Columns["HOTEN"];
+                this.columnCMND = base.Columns["CMND"];
                 this.columnSOTK = base.Columns["SOTK"];
             }
             
@@ -4122,13 +4141,17 @@ namespace NganHang {
             private void InitClass() {
                 this.columnHOTEN = new global::System.Data.DataColumn("HOTEN", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHOTEN);
+                this.columnCMND = new global::System.Data.DataColumn("CMND", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCMND);
                 this.columnSOTK = new global::System.Data.DataColumn("SOTK", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSOTK);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnSOTK}, false));
+                                this.columnCMND}, true));
                 this.columnHOTEN.ReadOnly = true;
                 this.columnHOTEN.MaxLength = 74;
-                this.columnSOTK.Unique = true;
+                this.columnCMND.AllowDBNull = false;
+                this.columnCMND.Unique = true;
+                this.columnCMND.MaxLength = 10;
                 this.columnSOTK.MaxLength = 9;
             }
             
@@ -5573,6 +5596,17 @@ namespace NganHang {
                 }
                 set {
                     this[this.tableThongTinKH_TKSaoKe.HOTENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CMND {
+                get {
+                    return ((string)(this[this.tableThongTinKH_TKSaoKe.CMNDColumn]));
+                }
+                set {
+                    this[this.tableThongTinKH_TKSaoKe.CMNDColumn] = value;
                 }
             }
             
@@ -9260,6 +9294,7 @@ SELECT CMND, HO, TEN, DIACHI, PHAI, NGAYCAP, SODT, MACN FROM KhachHang WHERE (CM
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "ThongTinKH_TKSaoKe";
             tableMapping.ColumnMappings.Add("HOTEN", "HOTEN");
+            tableMapping.ColumnMappings.Add("CMND", "CMND");
             tableMapping.ColumnMappings.Add("SOTK", "SOTK");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -9277,9 +9312,9 @@ SELECT CMND, HO, TEN, DIACHI, PHAI, NGAYCAP, SODT, MACN FROM KhachHang WHERE (CM
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT KH.CMND + \' - \' + KH.HO + \' \' + KH.TEN AS HOTEN, TK.SOTK\r\nFROM     LINK3.N" +
-                "GANHANG.DBO.KhachHang AS KH LEFT OUTER JOIN\r\n                  dbo.TaiKhoan AS T" +
-                "K ON KH.CMND = TK.CMND\r\nWHERE  (TK.SOTK <> \'NULL\')";
+            this._commandCollection[0].CommandText = "SELECT KH.HO + \' \' + KH.TEN + \' - \'  + TK.SOTK AS HOTEN , KH.CMND,TK.SOTK\r\nFROM  " +
+                "   LINK3.NGANHANG.DBO.KhachHang AS KH LEFT OUTER JOIN\r\n                  dbo.Tai" +
+                "Khoan AS TK ON KH.CMND = TK.CMND\r\nWHERE  (TK.SOTK <> \'NULL\')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
