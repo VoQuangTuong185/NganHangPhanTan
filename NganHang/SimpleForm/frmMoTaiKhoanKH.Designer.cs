@@ -361,6 +361,7 @@
             // 
             // teCMND
             // 
+            this.teCMND.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "CMND", true));
             this.teCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teCMND.Location = new System.Drawing.Point(246, 111);
             this.teCMND.Name = "teCMND";
@@ -370,6 +371,7 @@
             // 
             // numbSODU
             // 
+            this.numbSODU.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdsTK, "SODU", true));
             this.numbSODU.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numbSODU.Increment = new decimal(new int[] {
             1000,
@@ -399,6 +401,7 @@
             // 
             // txtSOTK
             // 
+            this.txtSOTK.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.bdsTK, "SOTK", true));
             this.txtSOTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSOTK.Location = new System.Drawing.Point(246, 35);
             this.txtSOTK.Name = "txtSOTK";
@@ -407,6 +410,7 @@
             // 
             // dateNgayMoTK
             // 
+            this.dateNgayMoTK.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsTK, "NGAYMOTK", true));
             this.dateNgayMoTK.EditValue = null;
             this.dateNgayMoTK.Location = new System.Drawing.Point(246, 189);
             this.dateNgayMoTK.Name = "dateNgayMoTK";

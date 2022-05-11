@@ -225,6 +225,7 @@
             this.cMNDTextEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.cMNDTextEdit.Properties.Appearance.Options.UseFont = true;
             this.cMNDTextEdit.Properties.Appearance.Options.UseForeColor = true;
+            this.cMNDTextEdit.Properties.ReadOnly = true;
             this.cMNDTextEdit.Size = new System.Drawing.Size(219, 32);
             this.cMNDTextEdit.TabIndex = 25;
             // 
