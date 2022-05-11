@@ -528,7 +528,6 @@
             this.sODUTextBox.ReadOnly = true;
             this.sODUTextBox.Size = new System.Drawing.Size(174, 30);
             this.sODUTextBox.TabIndex = 33;
-            this.sODUTextBox.TextChanged += new System.EventHandler(this.sODUTextBox_TextChanged);
             // 
             // cMNDTextBox1
             // 
@@ -539,7 +538,6 @@
             this.cMNDTextBox1.ReadOnly = true;
             this.cMNDTextBox1.Size = new System.Drawing.Size(174, 30);
             this.cMNDTextBox1.TabIndex = 32;
-            this.cMNDTextBox1.TextChanged += new System.EventHandler(this.cMNDTextBox1_TextChanged);
             // 
             // txtSoTKChuyen
             // 
@@ -550,7 +548,6 @@
             this.txtSoTKChuyen.ReadOnly = true;
             this.txtSoTKChuyen.Size = new System.Drawing.Size(174, 30);
             this.txtSoTKChuyen.TabIndex = 31;
-            this.txtSoTKChuyen.TextChanged += new System.EventHandler(this.txtSoTKChuyen_TextChanged);
             // 
             // label5
             // 

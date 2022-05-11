@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -60,10 +61,32 @@ namespace NganHang
                 this.thongTinKH_TKSaoKeTableAdapter.Fill(this.DS.ThongTinKH_TKSaoKe);
             }
         }
-
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (txtSoTaiKhoanKhachHang.Text.Trim() == "")
+            {
+                MessageBox.Show("Mã nhân viên không được trống", "", MessageBoxButtons.OK);
+                txtSoTaiKhoanKhachHang.Focus();
+                textHoTenKhSk.Text = "";
+                return;
+            }
+            if (Program.KetNoi() == 0) return;
+            string strlenh = "EXEC frmSaoKeTaiKhoan_ThongTinTKSaoKe '" + txtSoTaiKhoanKhachHang.Text + "'";
+            Program.myReader = Program.ExecSqlDataReader(strlenh);
+            if (Program.myReader == null) return;
+            Program.myReader.Read();
+            if (!Program.myReader.HasRows)
+            {
+                MessageBox.Show("Số tài khoản không tồn tại \nVui lòng nhập lại", "", MessageBoxButtons.OK);
+                return;
+            }
+            textHoTenKhSk.Text = Program.myReader.GetString(0);
+            SoTKSaoKe.Text = Program.myReader.GetString(2);
+            Program.myReader.Close();
+            Program.conn.Close();
+        }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(SoTKSaoKe.Text, "", MessageBoxButtons.OK);
             XtrpSaoKeTaiKhoan rpt = new XtrpSaoKeTaiKhoan(SoTKSaoKe.Text,batdau.DateTime, ketthuc.DateTime);
             rpt.lbBatDau.Text = batdau.DateTime.ToString();
             rpt.lbKetThuc.Text = ketthuc.DateTime.ToString();

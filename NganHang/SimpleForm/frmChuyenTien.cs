@@ -104,8 +104,6 @@ namespace NganHang.SimpleForm
         private void btnChuyenTien_Click(object sender, EventArgs e)
         {
             String dt = String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
-            //string SOTK_CHUYEN = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
-            MessageBox.Show("EXEC frmChuyenTien_ChuyenTien '" + txtSoTKChuyen.Text + "','" + txtSoTKNhan.Text + "','" + nuSoTien.Value + "','" + dt + "','" + Program.username + "'", "", MessageBoxButtons.OK);
             Program.ExecSqlNonQuery("EXEC frmChuyenTien_ChuyenTien '" + txtSoTKChuyen.Text + "','" + txtSoTKNhan.Text + "','" + nuSoTien.Value + "','" + dt + "','" + Program.username + "'");
             DS.EnforceConstraints = false;
             this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
@@ -124,26 +122,6 @@ namespace NganHang.SimpleForm
             txtMANV.Text = Program.username;
             txtSoTKChuyen.Text = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
             vitri = bdsTK.Position;
-        }
-
-        private void txtSoTKChuyen_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sODUTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mACNTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cMNDTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

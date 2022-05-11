@@ -42,10 +42,13 @@
             this.DS = new NganHang.DS();
             this.thongTinKH_TKSaoKeTableAdapter = new NganHang.DSTableAdapters.ThongTinKH_TKSaoKeTableAdapter();
             this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
-            this.cmbHoTenKhSk = new System.Windows.Forms.ComboBox();
             this.thongTinKHTKSaoKeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cMNDTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.SoTKSaoKe = new DevExpress.XtraEditors.TextEdit();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSoTaiKhoanKhachHang = new System.Windows.Forms.TextBox();
+            this.textHoTenKhSk = new System.Windows.Forms.TextBox();
             hOTENLabel = new System.Windows.Forms.Label();
             cMNDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -65,7 +68,7 @@
             hOTENLabel.AutoSize = true;
             hOTENLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             hOTENLabel.ForeColor = System.Drawing.Color.Black;
-            hOTENLabel.Location = new System.Drawing.Point(571, 78);
+            hOTENLabel.Location = new System.Drawing.Point(569, 160);
             hOTENLabel.Name = "hOTENLabel";
             hOTENLabel.Size = new System.Drawing.Size(416, 25);
             hOTENLabel.TabIndex = 23;
@@ -76,7 +79,7 @@
             cMNDLabel.AutoSize = true;
             cMNDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             cMNDLabel.ForeColor = System.Drawing.Color.Black;
-            cMNDLabel.Location = new System.Drawing.Point(711, 148);
+            cMNDLabel.Location = new System.Drawing.Point(709, 230);
             cMNDLabel.Name = "cMNDLabel";
             cMNDLabel.Size = new System.Drawing.Size(72, 25);
             cMNDLabel.TabIndex = 24;
@@ -117,7 +120,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(711, 312);
+            this.label4.Location = new System.Drawing.Point(709, 394);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 25);
             this.label4.TabIndex = 22;
@@ -128,7 +131,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(711, 225);
+            this.label3.Location = new System.Drawing.Point(709, 307);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 25);
             this.label3.TabIndex = 21;
@@ -137,7 +140,7 @@
             // ketthuc
             // 
             this.ketthuc.EditValue = null;
-            this.ketthuc.Location = new System.Drawing.Point(638, 340);
+            this.ketthuc.Location = new System.Drawing.Point(636, 422);
             this.ketthuc.Name = "ketthuc";
             this.ketthuc.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ketthuc.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -153,7 +156,7 @@
             // batdau
             // 
             this.batdau.EditValue = null;
-            this.batdau.Location = new System.Drawing.Point(638, 253);
+            this.batdau.Location = new System.Drawing.Point(636, 335);
             this.batdau.Name = "batdau";
             this.batdau.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.batdau.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -170,7 +173,7 @@
             // 
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.Black;
-            this.btnXacNhan.Location = new System.Drawing.Point(683, 401);
+            this.btnXacNhan.Location = new System.Drawing.Point(681, 483);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(143, 37);
             this.btnXacNhan.TabIndex = 17;
@@ -198,19 +201,6 @@
             this.tableAdapterManager.TaiKhoanTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = NganHang.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // cmbHoTenKhSk
-            // 
-            this.cmbHoTenKhSk.DataSource = this.thongTinKHTKSaoKeBindingSource;
-            this.cmbHoTenKhSk.DisplayMember = "HOTEN";
-            this.cmbHoTenKhSk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbHoTenKhSk.ForeColor = System.Drawing.Color.Black;
-            this.cmbHoTenKhSk.FormattingEnabled = true;
-            this.cmbHoTenKhSk.Location = new System.Drawing.Point(548, 106);
-            this.cmbHoTenKhSk.Name = "cmbHoTenKhSk";
-            this.cmbHoTenKhSk.Size = new System.Drawing.Size(451, 33);
-            this.cmbHoTenKhSk.TabIndex = 24;
-            this.cmbHoTenKhSk.ValueMember = "HOTEN";
-            // 
             // thongTinKHTKSaoKeBindingSource
             // 
             this.thongTinKHTKSaoKeBindingSource.DataMember = "ThongTinKH_TKSaoKe";
@@ -219,7 +209,7 @@
             // cMNDTextEdit
             // 
             this.cMNDTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.thongTinKHTKSaoKeBindingSource, "CMND", true));
-            this.cMNDTextEdit.Location = new System.Drawing.Point(638, 176);
+            this.cMNDTextEdit.Location = new System.Drawing.Point(636, 258);
             this.cMNDTextEdit.Name = "cMNDTextEdit";
             this.cMNDTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cMNDTextEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -237,16 +227,59 @@
             this.SoTKSaoKe.Size = new System.Drawing.Size(10, 22);
             this.SoTKSaoKe.TabIndex = 26;
             // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.btnTimKiem.Location = new System.Drawing.Point(877, 113);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(125, 33);
+            this.btnTimKiem.TabIndex = 29;
+            this.btnTimKiem.Text = "Tìm kiếm...";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(630, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(276, 25);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Nhập số tài khoản khách hàng";
+            // 
+            // txtSoTaiKhoanKhachHang
+            // 
+            this.txtSoTaiKhoanKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTaiKhoanKhachHang.ForeColor = System.Drawing.Color.Black;
+            this.txtSoTaiKhoanKhachHang.Location = new System.Drawing.Point(546, 114);
+            this.txtSoTaiKhoanKhachHang.Name = "txtSoTaiKhoanKhachHang";
+            this.txtSoTaiKhoanKhachHang.Size = new System.Drawing.Size(312, 30);
+            this.txtSoTaiKhoanKhachHang.TabIndex = 27;
+            // 
+            // textHoTenKhSk
+            // 
+            this.textHoTenKhSk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textHoTenKhSk.Location = new System.Drawing.Point(546, 197);
+            this.textHoTenKhSk.Name = "textHoTenKhSk";
+            this.textHoTenKhSk.Size = new System.Drawing.Size(456, 30);
+            this.textHoTenKhSk.TabIndex = 30;
+            // 
             // frmSaoKeTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1528, 633);
+            this.Controls.Add(this.textHoTenKhSk);
+            this.Controls.Add(this.btnTimKiem);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtSoTaiKhoanKhachHang);
             this.Controls.Add(this.SoTKSaoKe);
             this.Controls.Add(this.cMNDTextEdit);
             this.Controls.Add(cMNDLabel);
             this.Controls.Add(hOTENLabel);
-            this.Controls.Add(this.cmbHoTenKhSk);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.label3);
@@ -286,9 +319,12 @@
         private DS DS;
         private DSTableAdapters.ThongTinKH_TKSaoKeTableAdapter thongTinKH_TKSaoKeTableAdapter;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.ComboBox cmbHoTenKhSk;
         private System.Windows.Forms.BindingSource thongTinKHTKSaoKeBindingSource;
         private DevExpress.XtraEditors.TextEdit cMNDTextEdit;
         private DevExpress.XtraEditors.TextEdit SoTKSaoKe;
+        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtSoTaiKhoanKhachHang;
+        private System.Windows.Forms.TextBox textHoTenKhSk;
     }
 }

@@ -16,7 +16,7 @@
     <Shape ID="DesignTable:TaiKhoan" ZOrder="10" X="601" Y="578" Height="204" Width="233" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
     <Shape ID="DesignTable:KhachHang_TT" ZOrder="4" X="153" Y="250" Height="181" Width="247" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
     <Shape ID="DesignTable:frmChuyenTien_InfoReceiver" ZOrder="2" X="1391" Y="10" Height="181" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
-    <Shape ID="DesignTable:ThongTinKH_TKSaoKe" ZOrder="1" X="1357" Y="279" Height="158" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
+    <Shape ID="DesignTable:ThongTinKH_TKSaoKe" ZOrder="1" X="1174" Y="262" Height="158" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_GD_CHUYENTIEN_NhanVien" ZOrder="18" LineWidth="11">
@@ -51,22 +51,6 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_KhachHang_TaiKhoan" ZOrder="5" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>980</X>
-          <Y>553</Y>
-        </Point>
-        <Point>
-          <X>616</X>
-          <Y>553</Y>
-        </Point>
-        <Point>
-          <X>616</X>
-          <Y>578</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
     <Connector ID="DesignRelation:FK_KhachHang_TT_TaiKhoan" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
@@ -79,6 +63,22 @@
         </Point>
         <Point>
           <X>619</X>
+          <Y>578</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_KhachHang_TaiKhoan" ZOrder="5" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>980</X>
+          <Y>553</Y>
+        </Point>
+        <Point>
+          <X>616</X>
+          <Y>553</Y>
+        </Point>
+        <Point>
+          <X>616</X>
           <Y>578</Y>
         </Point>
       </RoutePoints>

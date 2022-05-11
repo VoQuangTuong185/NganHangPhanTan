@@ -111,7 +111,7 @@ namespace NganHang.SimpleForm
             String SOTK = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();           
             if (txtSOTK.Text.Trim() == "")
             {
-                MessageBox.Show("Mã nhân viên không được trống", "", MessageBoxButtons.OK);
+                MessageBox.Show("Số tài khoản không được trống", "", MessageBoxButtons.OK);
                 txtSOTK.Focus();
                 return;
             }
