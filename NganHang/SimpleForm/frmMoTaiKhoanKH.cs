@@ -28,14 +28,11 @@ namespace NganHang.SimpleForm
 
         private void frmMoTaiKhoanKH_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DS.KhachHang_TT' table. You can move, or remove it, as needed.
             DS.EnforceConstraints = false;
             this.gD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gD_CHUYENTIENTableAdapter.Fill(this.DS.GD_CHUYENTIEN);
             this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
-            this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.khachHang_TTTableAdapter.Fill(this.DS.KhachHang_TT);
             this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
             this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
 
@@ -43,7 +40,7 @@ namespace NganHang.SimpleForm
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
-            panelControl2.Enabled = cmsPHUCHOI.Enabled = cmsLUU.Enabled = false ;
+            panelControl2.Enabled = cmsPHUCHOI.Enabled = cmsLUU.Enabled = grbThongTinKH.Enabled = pnlThongTinTaiKhoan.Enabled = false ;
             if (cmbChiNhanh.SelectedIndex == 0)
             {
                 teMACN.EditValue = "BENTHANH";
@@ -67,9 +64,8 @@ namespace NganHang.SimpleForm
         }
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panelControl2.Enabled = true;
-            btn_Add_clicked = true;
-            gcTK.Enabled = gcKH.Enabled = false;
+            btn_Add_clicked = pnlThongTinTaiKhoan.Enabled = true;
+            gcTK.Enabled =  false;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
             vitri = bdsKH_TT.Position;
@@ -100,7 +96,7 @@ namespace NganHang.SimpleForm
             {
                 DS.EnforceConstraints = false;
                 this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.khachHang_TTTableAdapter.Fill(this.DS.KhachHang_TT);
+                this.khachHang_TTTableAdapter.Fill(this.DS.frmMoTaiKhoanKH_InfoCustomer, txtCMNDKhachHang.Text);
                 this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
             }
@@ -133,11 +129,11 @@ namespace NganHang.SimpleForm
                 dateNgayMoTK.Focus();
                 return;
             }
-            if (btn_Add_clicked == true || SOTK == txtSOTK.Text)
+            if (btn_Add_clicked == true || SOTK != txtSOTK.Text)
             {
                 Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dateNgayMoTK.DateTime + "'");
                 this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.khachHang_TTTableAdapter.Fill(this.DS.KhachHang_TT);
+                this.khachHang_TTTableAdapter.Fill(this.DS.frmMoTaiKhoanKH_InfoCustomer, txtCMNDKhachHang.Text);
                 btn_Add_clicked = false;
             }
             else
@@ -153,7 +149,7 @@ namespace NganHang.SimpleForm
                 }
                 Program.myReader.Close();
             }
-            gcTK.Enabled = gcKH.Enabled = true;
+            gcTK.Enabled = true;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = true;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = false;
             panelControl2.Enabled = false;
@@ -165,10 +161,9 @@ namespace NganHang.SimpleForm
         private void hiệuChỉnhToolStripMenuItem_Click(object sender, EventArgs e)
         {
             vitri = bdsKH_TT.Position;
-            panelControl2.Enabled = true;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
-            cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
-            gcTK.Enabled = gcKH.Enabled = false; 
+            cmsLUU.Enabled = cmsPHUCHOI.Enabled = pnlThongTinTaiKhoan.Enabled = true;
+            gcTK.Enabled = false; 
         }
 
         private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
@@ -212,10 +207,10 @@ namespace NganHang.SimpleForm
             if (cmsTHEM.Enabled == false) bdsTK.Position = vitri;
             gcTK.Enabled = true;
 
-            panelControl2.Enabled = false;
+            panelControl2.Enabled = pnlThongTinTaiKhoan.Enabled = false;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = true;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = false;
-            gcTK.Enabled = gcKH.Enabled = true;
+            gcTK.Enabled = true;
         }
 
         private void cmsTAILAI_Click(object sender, EventArgs e)
@@ -235,6 +230,19 @@ namespace NganHang.SimpleForm
         private void cmsTHOAT_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pnlThongTinTaiKhoan.Enabled = false;
+                this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.khachHang_TTTableAdapter.Fill(this.DS.frmMoTaiKhoanKH_InfoCustomer, txtCMNDKhachHang.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
     }
 }
