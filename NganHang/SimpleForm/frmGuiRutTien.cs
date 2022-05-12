@@ -108,23 +108,15 @@ namespace NganHang.SimpleForm
                 txtSoTien.Focus();
                 return;
             }
-            try
-            {
-                MessageBox.Show("EXEC frmGuiRutTien '" + txtSOTK.EditValue + "','" + loaiGD + "','" + dt + "','" + txtSoTien.Value + "','" + txtMANV.EditValue + "'", "", MessageBoxButtons.OK);
-                Program.ExecSqlNonQuery("EXEC frmGuiRutTien '" + txtSOTK.EditValue + "','" + loaiGD + "','" + dt + "','" + txtSoTien.Value + "','" + txtMANV.EditValue + "'");
-                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
-                this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
-                taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
-                pnlGD.Enabled = false;
-                bdsTK.Position = vitri;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi ghi nhân viên. \n" + ex.Message, "", MessageBoxButtons.OK);
-                return;
-            }
+            MessageBox.Show("EXEC frmGuiRutTien '" + txtSOTK.EditValue + "','" + loaiGD + "','" + dt + "','" + txtSoTien.Value + "','" + txtMANV.EditValue + "'", "", MessageBoxButtons.OK);
+            Program.ExecSqlNonQuery("EXEC frmGuiRutTien '" + txtSOTK.EditValue + "','" + loaiGD + "','" + dt + "','" + txtSoTien.Value + "','" + txtMANV.EditValue + "'");
+            this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
+            this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
+            taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
+            pnlGD.Enabled = false;
+            bdsTK.Position = vitri;
         }
 
         private void cmsLUU_Click(object sender, EventArgs e)

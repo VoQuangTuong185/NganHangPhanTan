@@ -101,6 +101,7 @@ namespace NganHang
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+                return;
             }
             finally
             {

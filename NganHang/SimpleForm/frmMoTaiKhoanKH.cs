@@ -64,16 +64,32 @@ namespace NganHang.SimpleForm
         }
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            btn_Add_clicked = pnlThongTinTaiKhoan.Enabled = true;
-            gcTK.Enabled =  false;
-            cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
-            cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
-            vitri = bdsKH_TT.Position;
-            bdsTK.AddNew();
-            teCMND.Text = ((DataRowView)bdsTK[bdsTK.Position])["CMND"].ToString();
-            //teMACN.Text = ((DataRowView)bdsTK[bdsTK.Position])["MACN"].ToString();
-            numbSODU.Value = 0;
-            MessageBox.Show(cmbChiNhanh.SelectedValue.ToString(), "", MessageBoxButtons.OK);
+
+            if (Program.KetNoi() == 0) return;
+            string strlenh = "EXEC frmMoTaiKhoanKH_ExistAllBranch '" + txtCMND.Text + "'";
+            Program.myReader = Program.ExecSqlDataReader(strlenh);
+            if (Program.myReader == null) return;
+            Program.myReader.Read();
+            if (Int32.Parse(Program.myReader["KT"].ToString()) == 2)
+            {
+                MessageBox.Show("Khách hàng đã có tài khoản ở tất cả chi nhánh!! Không thể tạo thêm", "", MessageBoxButtons.OK);
+                return;
+            }
+            else
+            {
+                btn_Add_clicked = pnlThongTinTaiKhoan.Enabled = true;
+                gcTK.Enabled = false;
+                cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
+                cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
+                vitri = bdsKH_TT.Position;
+                bdsTK.AddNew();
+                teCMND.Text = ((DataRowView)bdsTK[bdsTK.Position])["CMND"].ToString();
+                //teMACN.Text = ((DataRowView)bdsTK[bdsTK.Position])["MACN"].ToString();
+                numbSODU.Value = 0;
+                MessageBox.Show(cmbChiNhanh.SelectedValue.ToString(), "", MessageBoxButtons.OK);
+            }
+            Program.myReader.Close();
+            Program.conn.Close();
         }
 
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
@@ -129,7 +145,7 @@ namespace NganHang.SimpleForm
                 dateNgayMoTK.Focus();
                 return;
             }
-            if (btn_Add_clicked == true || SOTK != txtSOTK.Text)
+            if (btn_Add_clicked == true || SOTK == txtSOTK.Text)
             {
                 Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dateNgayMoTK.DateTime + "'");
                 this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
@@ -152,7 +168,7 @@ namespace NganHang.SimpleForm
             gcTK.Enabled = true;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = true;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = false;
-            panelControl2.Enabled = false;
+            panelControl2.Enabled = pnlThongTinTaiKhoan.Enabled = false;
             this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
             this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
             bdsKH_TT.Position = vitri;
@@ -169,16 +185,6 @@ namespace NganHang.SimpleForm
         private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int SOTK = int.Parse(((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString());
-            if (bdsGR.Count > 0)
-            {
-                MessageBox.Show("Không thể xoá tài khoản này vì đã giao dịch phiếu gửi rút tiền", "", MessageBoxButtons.OK);
-                return;
-            }
-            if (bdsCT.Count > 0)
-            {
-                MessageBox.Show("Không thể xoá tài khoản này vì đã giao dịch phiếu chuyển tiền", "", MessageBoxButtons.OK);
-                return;
-            }
             if (MessageBox.Show("Bạn có thật sự muốn xoá tài khoản " + SOTK + " ??", "Xác nhận",
                 MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
@@ -233,6 +239,12 @@ namespace NganHang.SimpleForm
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
+            if (txtCMNDKhachHang.Text.Trim() == "")
+            {
+                MessageBox.Show("CMND không được trống", "", MessageBoxButtons.OK);
+                txtCMNDKhachHang.Focus();
+                return;
+            }
             try
             {
                 pnlThongTinTaiKhoan.Enabled = false;

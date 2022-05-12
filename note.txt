@@ -14,3 +14,12 @@
 
 -Còn các chức năng chưa làm: 
   + Sao kê tài khoản (Sao kê giao dịch của 1 tài khoản trong 1 khoảng thời gian)
+
+
+MỚI NHẤT:
+Thêm tính năng xoá nhân viên khi đã có loginname (đặt thông báo và hỏi người dùng có muốn xoá hay không)
+thực sự là tất cả nhân viên đều có loginname => cho xoá
+thêm tính năng xoá tài khoản khác khi nó đang đăng nhập ở nơi khác
+
+thêm tính năng xoá tài khoản của khách hàng khi đã giao dịch gửi rút tiền ( xoá trên table GD_GOIRUT where SOTK = @SOTK) và GD_CHUYENTIEN (nếu là stk chuyển thì 
+update nó thành 0000000000, còn nếu là stk nhận thì update nó thành 0000000000)
