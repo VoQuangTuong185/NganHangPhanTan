@@ -43,12 +43,12 @@
             this.thongTinKH_TKSaoKeTableAdapter = new NganHang.DSTableAdapters.ThongTinKH_TKSaoKeTableAdapter();
             this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
             this.thongTinKHTKSaoKeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cMNDTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.SoTKSaoKe = new DevExpress.XtraEditors.TextEdit();
+            this.teCMND = new DevExpress.XtraEditors.TextEdit();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSoTaiKhoanKhachHang = new System.Windows.Forms.TextBox();
             this.textHoTenKhSk = new System.Windows.Forms.TextBox();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             hOTENLabel = new System.Windows.Forms.Label();
             cMNDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -59,8 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.batdau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thongTinKHTKSaoKeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cMNDTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoTKSaoKe.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teCMND.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // hOTENLabel
@@ -206,26 +205,17 @@
             this.thongTinKHTKSaoKeBindingSource.DataMember = "ThongTinKH_TKSaoKe";
             this.thongTinKHTKSaoKeBindingSource.DataSource = this.DS;
             // 
-            // cMNDTextEdit
+            // teCMND
             // 
-            this.cMNDTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.thongTinKHTKSaoKeBindingSource, "CMND", true));
-            this.cMNDTextEdit.Location = new System.Drawing.Point(636, 258);
-            this.cMNDTextEdit.Name = "cMNDTextEdit";
-            this.cMNDTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cMNDTextEdit.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cMNDTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.cMNDTextEdit.Properties.Appearance.Options.UseForeColor = true;
-            this.cMNDTextEdit.Properties.ReadOnly = true;
-            this.cMNDTextEdit.Size = new System.Drawing.Size(219, 32);
-            this.cMNDTextEdit.TabIndex = 25;
-            // 
-            // SoTKSaoKe
-            // 
-            this.SoTKSaoKe.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.thongTinKHTKSaoKeBindingSource, "SOTK", true));
-            this.SoTKSaoKe.Location = new System.Drawing.Point(0, 609);
-            this.SoTKSaoKe.Name = "SoTKSaoKe";
-            this.SoTKSaoKe.Size = new System.Drawing.Size(10, 22);
-            this.SoTKSaoKe.TabIndex = 26;
+            this.teCMND.Location = new System.Drawing.Point(636, 258);
+            this.teCMND.Name = "teCMND";
+            this.teCMND.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teCMND.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.teCMND.Properties.Appearance.Options.UseFont = true;
+            this.teCMND.Properties.Appearance.Options.UseForeColor = true;
+            this.teCMND.Properties.ReadOnly = true;
+            this.teCMND.Size = new System.Drawing.Size(219, 32);
+            this.teCMND.TabIndex = 25;
             // 
             // btnTimKiem
             // 
@@ -235,7 +225,7 @@
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(125, 33);
             this.btnTimKiem.TabIndex = 29;
-            this.btnTimKiem.Text = "Tìm kiếm...";
+            this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -264,20 +254,33 @@
             this.textHoTenKhSk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textHoTenKhSk.Location = new System.Drawing.Point(546, 197);
             this.textHoTenKhSk.Name = "textHoTenKhSk";
+            this.textHoTenKhSk.ReadOnly = true;
             this.textHoTenKhSk.Size = new System.Drawing.Size(456, 30);
             this.textHoTenKhSk.TabIndex = 30;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.ForeColor = System.Drawing.Color.Black;
+            this.btnLamMoi.Location = new System.Drawing.Point(1021, 112);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(125, 33);
+            this.btnLamMoi.TabIndex = 31;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // frmSaoKeTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1528, 633);
+            this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.textHoTenKhSk);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSoTaiKhoanKhachHang);
-            this.Controls.Add(this.SoTKSaoKe);
-            this.Controls.Add(this.cMNDTextEdit);
+            this.Controls.Add(this.teCMND);
             this.Controls.Add(cMNDLabel);
             this.Controls.Add(hOTENLabel);
             this.Controls.Add(this.label4);
@@ -299,8 +302,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.batdau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thongTinKHTKSaoKeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cMNDTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoTKSaoKe.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teCMND.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,11 +322,11 @@
         private DSTableAdapters.ThongTinKH_TKSaoKeTableAdapter thongTinKH_TKSaoKeTableAdapter;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource thongTinKHTKSaoKeBindingSource;
-        private DevExpress.XtraEditors.TextEdit cMNDTextEdit;
-        private DevExpress.XtraEditors.TextEdit SoTKSaoKe;
+        private DevExpress.XtraEditors.TextEdit teCMND;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSoTaiKhoanKhachHang;
         private System.Windows.Forms.TextBox textHoTenKhSk;
+        private System.Windows.Forms.Button btnLamMoi;
     }
 }

@@ -1,13 +1,6 @@
-﻿using DevExpress.Xpo;
-using DevExpress.XtraReports.UI;
+﻿using DevExpress.XtraReports.UI;
 using NganHang.SimpleForm;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace NganHang

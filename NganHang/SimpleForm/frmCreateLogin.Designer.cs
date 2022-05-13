@@ -64,14 +64,14 @@
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnCreateAccount = new DevExpress.XtraBars.BarButtonItem();
             this.btnReload = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnUndo = new DevExpress.XtraBars.BarButtonItem();
             this.btnExit = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gcNV_X_LOGIN = new DevExpress.XtraGrid.GridControl();
             this.bdsNV_X_LOGIN = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -98,7 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bds_LGINFO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcNV_X_LOGIN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNV_X_LOGIN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -167,7 +167,7 @@
             this.panInput.Controls.Add(this.memoLuuY);
             this.panInput.Controls.Add(this.grFormTaoLogin);
             this.panInput.Controls.Add(this.gc_LGINFO1);
-            this.panInput.Controls.Add(this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl);
+            this.panInput.Controls.Add(this.gcNV_X_LOGIN);
             this.panInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panInput.Location = new System.Drawing.Point(0, 102);
             this.panInput.Name = "panInput";
@@ -380,7 +380,7 @@
             this.btnReload,
             this.btnExit,
             this.btnCreateAccount,
-            this.barButtonItem3});
+            this.btnUndo});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 6;
             this.barManager1.StatusBar = this.bar3;
@@ -419,7 +419,7 @@
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnCreateAccount, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnReload, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnUndo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnExit, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
@@ -443,14 +443,14 @@
             this.btnReload.Name = "btnReload";
             this.btnReload.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReload_ItemClick);
             // 
-            // barButtonItem3
+            // btnUndo
             // 
-            this.barButtonItem3.Caption = "Phục hồi";
-            this.barButtonItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.Glyph")));
-            this.barButtonItem3.Id = 5;
-            this.barButtonItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.LargeGlyph")));
-            this.barButtonItem3.Name = "barButtonItem3";
-            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            this.btnUndo.Caption = "Phục hồi";
+            this.btnUndo.Glyph = ((System.Drawing.Image)(resources.GetObject("btnUndo.Glyph")));
+            this.btnUndo.Id = 5;
+            this.btnUndo.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnUndo.LargeGlyph")));
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUndo_ItemClick);
             // 
             // btnExit
             // 
@@ -502,20 +502,20 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1523, 30);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 755);
             // 
-            // frmCreateLogin_GetEmployeeNotHaveLoginGridControl
+            // gcNV_X_LOGIN
             // 
-            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.DataSource = this.bdsNV_X_LOGIN;
-            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gcNV_X_LOGIN.DataSource = this.bdsNV_X_LOGIN;
+            this.gcNV_X_LOGIN.Dock = System.Windows.Forms.DockStyle.Top;
             gridLevelNode1.RelationName = "Level1";
-            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            this.gcNV_X_LOGIN.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Location = new System.Drawing.Point(2, 2);
-            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.MainView = this.gridView1;
-            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.MenuManager = this.barManager1;
-            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Name = "frmCreateLogin_GetEmployeeNotHaveLoginGridControl";
-            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Size = new System.Drawing.Size(1519, 220);
-            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.TabIndex = 12;
-            this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gcNV_X_LOGIN.Location = new System.Drawing.Point(2, 2);
+            this.gcNV_X_LOGIN.MainView = this.gridView1;
+            this.gcNV_X_LOGIN.MenuManager = this.barManager1;
+            this.gcNV_X_LOGIN.Name = "gcNV_X_LOGIN";
+            this.gcNV_X_LOGIN.Size = new System.Drawing.Size(1519, 220);
+            this.gcNV_X_LOGIN.TabIndex = 12;
+            this.gcNV_X_LOGIN.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // bdsNV_X_LOGIN
@@ -538,7 +538,7 @@
             this.colSODT,
             this.colMACN,
             this.colTrangThaiXoa});
-            this.gridView1.GridControl = this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl;
+            this.gridView1.GridControl = this.gcNV_X_LOGIN;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
@@ -657,7 +657,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bds_LGINFO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frmCreateLogin_GetEmployeeNotHaveLoginGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcNV_X_LOGIN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNV_X_LOGIN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -698,11 +698,11 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnReload;
         private DevExpress.XtraBars.BarButtonItem btnExit;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem btnUndo;
         private System.Windows.Forms.BindingSource bdsNV_X_LOGIN;
         private DSTableAdapters.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
-        private DevExpress.XtraGrid.GridControl frmCreateLogin_GetEmployeeNotHaveLoginGridControl;
+        private DevExpress.XtraGrid.GridControl gcNV_X_LOGIN;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.BindingSource bds_LGINFO;
         private DSTableAdapters.frmCreateLogin_GetLoginsOfBranchTableAdapter frmCreateLogin_GetLoginsOfBranchTableAdapter;

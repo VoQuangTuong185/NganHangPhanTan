@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NganHang.SimpleForm
@@ -211,19 +206,18 @@ namespace NganHang.SimpleForm
             manv = int.Parse(((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString());
             if (bdsGR.Count > 0)
             {
-                MessageBox.Show("Không thể xoá nhân viên này vì đã giao dịch phiếu gửi rút tiền", "", MessageBoxButtons.OK);
+                MessageBox.Show("Không thể xoá nhân viên, vì đã thực hiện giao dịch gửi rút tiền cho khách hàng", "", MessageBoxButtons.OK);
                 return;
             }
             if (bdsCT.Count > 0)
             {
-                MessageBox.Show("Không thể xoá nhân viên này vì đã giao dịch phiếu chuyển tiền", "", MessageBoxButtons.OK);
+                MessageBox.Show("Không thể xoá nhân viên, vì đã thực hiện giao dịch chuyển tiền cho khách hàng", "", MessageBoxButtons.OK);
                 return;
             }
             if (KT_NV_Co_TK())
             {
-                MessageBox.Show("Nhân viên không thể xoá vì đã mở tài khoản login!!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Nhân viên này đã mở tài khoản login!!", "", MessageBoxButtons.OK);
                 Program.myReader.Close();
-                return;
             }
             if (MessageBox.Show("Bạn có thật sự muốn xoá nhân viên "+ manv +" ??", "Xác nhận",
                 MessageBoxButtons.OKCancel) == DialogResult.OK)

@@ -433,7 +433,7 @@
             this.lbSoTkSaoKe,
             this.xrLabel1});
             this.reportHeaderBand1.Dpi = 100F;
-            this.reportHeaderBand1.HeightF = 81.00001F;
+            this.reportHeaderBand1.HeightF = 136F;
             this.reportHeaderBand1.Name = "reportHeaderBand1";
             // 
             // lbKetThuc

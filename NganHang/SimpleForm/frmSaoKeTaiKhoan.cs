@@ -1,19 +1,12 @@
 ﻿using DevExpress.XtraReports.UI;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NganHang
 {
     public partial class frmSaoKeTaiKhoan : Form
     {
+        string SoTKSaoKe = "";
         public frmSaoKeTaiKhoan()
         {
             InitializeComponent();
@@ -65,7 +58,7 @@ namespace NganHang
         {
             if (txtSoTaiKhoanKhachHang.Text.Trim() == "")
             {
-                MessageBox.Show("Mã nhân viên không được trống", "", MessageBoxButtons.OK);
+                MessageBox.Show("Số tài khoản không được trống", "", MessageBoxButtons.OK);
                 txtSoTaiKhoanKhachHang.Focus();
                 textHoTenKhSk.Text = "";
                 return;
@@ -81,18 +74,24 @@ namespace NganHang
                 return;
             }
             textHoTenKhSk.Text = Program.myReader.GetString(0);
-            SoTKSaoKe.Text = Program.myReader.GetString(2);
+            teCMND.Text = Program.myReader.GetString(1);
+            SoTKSaoKe = Program.myReader.GetString(2);
             Program.myReader.Close();
             Program.conn.Close();
         }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            XtrpSaoKeTaiKhoan rpt = new XtrpSaoKeTaiKhoan(SoTKSaoKe.Text,batdau.DateTime, ketthuc.DateTime);
+            XtrpSaoKeTaiKhoan rpt = new XtrpSaoKeTaiKhoan(SoTKSaoKe,batdau.DateTime, ketthuc.DateTime);
             rpt.lbBatDau.Text = batdau.DateTime.ToString();
             rpt.lbKetThuc.Text = ketthuc.DateTime.ToString();
-            rpt.lbSoTkSaoKe.Text = SoTKSaoKe.Text;
+            rpt.lbSoTkSaoKe.Text = SoTKSaoKe;
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            textHoTenKhSk.Text = teCMND.Text = txtSoTaiKhoanKhachHang.Text = batdau.Text = ketthuc.Text = ""; 
         }
     }
 }

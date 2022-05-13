@@ -107,7 +107,7 @@
             // 
             // btnCreateLogin
             // 
-            this.btnCreateLogin.Caption = "Tạo tài khoản";
+            this.btnCreateLogin.Caption = "Tạo tài khoản đăng nhập";
             this.btnCreateLogin.Glyph = ((System.Drawing.Image)(resources.GetObject("btnCreateLogin.Glyph")));
             this.btnCreateLogin.Id = 6;
             this.btnCreateLogin.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnCreateLogin.LargeGlyph")));
@@ -148,7 +148,7 @@
             // 
             // btnOpenCustomerAccount
             // 
-            this.btnOpenCustomerAccount.Caption = "Mở tài khoản";
+            this.btnOpenCustomerAccount.Caption = "Mở tài khoản khách hàng";
             this.btnOpenCustomerAccount.Glyph = ((System.Drawing.Image)(resources.GetObject("btnOpenCustomerAccount.Glyph")));
             this.btnOpenCustomerAccount.Id = 13;
             this.btnOpenCustomerAccount.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnOpenCustomerAccount.LargeGlyph")));

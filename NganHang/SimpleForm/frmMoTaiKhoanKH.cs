@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NganHang.SimpleForm
@@ -200,7 +194,7 @@ namespace NganHang.SimpleForm
                     MessageBox.Show("Lỗi xoá tài khoản. Bạn hãy xoá lại\n" + ex.Message, "", MessageBoxButtons.OK);
                     this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
-                    //bdsTK.Position = bdsTK.Find("MANV", SOTK);
+                    bdsTK.Position = bdsTK.Find("SOTK", SOTK);
                     return;
                 }
             }

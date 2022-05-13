@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NganHang.SimpleForm
@@ -103,7 +96,7 @@ namespace NganHang.SimpleForm
             MessageBox.Show(cmd, "", MessageBoxButtons.OK);
             Program.ExecSqlNonQuery(cmd);
 
-            frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Enabled = gc_LGINFO1.Enabled = true;
+            gcNV_X_LOGIN.Enabled = gc_LGINFO1.Enabled = true;
             this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Fill(this.DS.frmCreateLogin_GetEmployeeNotHaveLogin);
             this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
             grFormTaoLogin.Enabled = false;
@@ -166,29 +159,17 @@ namespace NganHang.SimpleForm
             vitri = bdsNV_X_LOGIN.Position;
             txtTrangThai.EditValue = "Mã nhân viên được chọn để tạo login: '" + MANV+" '";
             grFormTaoLogin.Enabled = true;
-            frmCreateLogin_GetEmployeeNotHaveLoginGridControl.Enabled = gc_LGINFO1.Enabled = false;
+            gcNV_X_LOGIN.Enabled = gc_LGINFO1.Enabled = false;
         }
 
-        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnUndo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bdsNV_X_LOGIN.CancelEdit();
             bds_LGINFO.CancelEdit();
-            gc_LGINFO1.Enabled = gc_LGINFO1.Enabled = true;
+            gcNV_X_LOGIN.Enabled = gc_LGINFO1.Enabled = true;
+            grFormTaoLogin.Enabled = false;
             bdsNV_X_LOGIN.Position = vitri;
             txtTrangThai.EditValue = "Chọn nhân viên để tạo tài khoản đăng nhập hệ thống!!";
-        }
-
-        private void fillToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
         }
     }
 }

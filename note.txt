@@ -23,3 +23,5 @@ thêm tính năng xoá tài khoản khác khi nó đang đăng nhập ở nơi k
 
 thêm tính năng xoá tài khoản của khách hàng khi đã giao dịch gửi rút tiền ( xoá trên table GD_GOIRUT where SOTK = @SOTK) và GD_CHUYENTIEN (nếu là stk chuyển thì 
 update nó thành 0000000000, còn nếu là stk nhận thì update nó thành 0000000000)
+
+có một lỗi ở "String CMND = ((DataRowView)bdsKH[bdsKH.Position])["CMND"].ToString();" khi khởi động chưa có dữ liệu, nó bị lỗi, chưa fix
