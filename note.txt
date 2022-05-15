@@ -25,3 +25,5 @@ thêm tính năng xoá tài khoản của khách hàng khi đã giao dịch gử
 update nó thành 0000000000, còn nếu là stk nhận thì update nó thành 0000000000)
 
 có một lỗi ở "String CMND = ((DataRowView)bdsKH[bdsKH.Position])["CMND"].ToString();" khi khởi động chưa có dữ liệu, nó bị lỗi, chưa fix
+
+-chưa fix lỗi xoá tài khoản ở form MOTAIKHOAN khi user vừa login rồi dùng tài khoản khác xoá tk đó đi (vẫn xoá đc user nhưng login_name vẫn còn, phải kill session (trong form chuyển nhân viên có sẵn, cursor)
