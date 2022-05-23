@@ -58,7 +58,6 @@
             this.cmsTHEM = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsPHUCHOI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSOTK = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -66,6 +65,7 @@
             this.colCMND1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNGAYMOTK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnlGD = new DevExpress.XtraEditors.GroupControl();
+            this.btnUndo = new System.Windows.Forms.Button();
             this.tENTextBox = new System.Windows.Forms.TextBox();
             this.hOTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -353,35 +353,28 @@
             this.cmsTHEM,
             this.cmsXoa,
             this.cmsTAILAI,
-            this.cmsPHUCHOI,
             this.cmsTHOAT});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 124);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(261, 100);
             // 
             // cmsTHEM
             // 
             this.cmsTHEM.Name = "cmsTHEM";
-            this.cmsTHEM.Size = new System.Drawing.Size(157, 24);
-            this.cmsTHEM.Text = "Thêm";
+            this.cmsTHEM.Size = new System.Drawing.Size(260, 24);
+            this.cmsTHEM.Text = "Thêm giao dịch chuyển tiền";
             this.cmsTHEM.Click += new System.EventHandler(this.cmsTHEM_Click);
             // 
             // cmsXoa
             // 
             this.cmsXoa.Name = "cmsXoa";
-            this.cmsXoa.Size = new System.Drawing.Size(157, 24);
-            this.cmsXoa.Text = "Xoá ";
+            this.cmsXoa.Size = new System.Drawing.Size(260, 24);
+            this.cmsXoa.Text = "Xoá tài khoản (tạm bỏ)";
             // 
             // cmsTAILAI
             // 
             this.cmsTAILAI.Name = "cmsTAILAI";
             this.cmsTAILAI.Size = new System.Drawing.Size(157, 24);
             this.cmsTAILAI.Text = "Tải lại trang";
-            // 
-            // cmsPHUCHOI
-            // 
-            this.cmsPHUCHOI.Name = "cmsPHUCHOI";
-            this.cmsPHUCHOI.Size = new System.Drawing.Size(157, 24);
-            this.cmsPHUCHOI.Text = "Phục hồi";
             // 
             // cmsTHOAT
             // 
@@ -446,6 +439,7 @@
             // 
             // pnlGD
             // 
+            this.pnlGD.Controls.Add(this.btnUndo);
             this.pnlGD.Controls.Add(label7);
             this.pnlGD.Controls.Add(this.tENTextBox);
             this.pnlGD.Controls.Add(hOLabel);
@@ -480,6 +474,18 @@
             this.pnlGD.TabIndex = 15;
             this.pnlGD.Text = "groupControl2";
             // 
+            // btnUndo
+            // 
+            this.btnUndo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUndo.ForeColor = System.Drawing.Color.Black;
+            this.btnUndo.Location = new System.Drawing.Point(533, 412);
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(143, 33);
+            this.btnUndo.TabIndex = 40;
+            this.btnUndo.Text = "Thoát giao dịch";
+            this.btnUndo.UseVisualStyleBackColor = true;
+            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
+            // 
             // tENTextBox
             // 
             this.tENTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "TEN", true));
@@ -504,7 +510,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(217, 468);
+            this.label6.Location = new System.Drawing.Point(253, 466);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(160, 17);
             this.label6.TabIndex = 36;
@@ -513,10 +519,10 @@
             // txtMANV
             // 
             this.txtMANV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.txtMANV.Location = new System.Drawing.Point(383, 465);
+            this.txtMANV.Location = new System.Drawing.Point(419, 463);
             this.txtMANV.Name = "txtMANV";
             this.txtMANV.ReadOnly = true;
-            this.txtMANV.Size = new System.Drawing.Size(58, 23);
+            this.txtMANV.Size = new System.Drawing.Size(80, 23);
             this.txtMANV.TabIndex = 35;
             // 
             // sODUTextBox
@@ -567,7 +573,7 @@
             0,
             0,
             0});
-            this.nuSoTien.Location = new System.Drawing.Point(277, 408);
+            this.nuSoTien.Location = new System.Drawing.Point(218, 416);
             this.nuSoTien.Maximum = new decimal(new int[] {
             1410065408,
             2,
@@ -582,9 +588,9 @@
             // 
             this.btnChuyenTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChuyenTien.ForeColor = System.Drawing.Color.Black;
-            this.btnChuyenTien.Location = new System.Drawing.Point(421, 404);
+            this.btnChuyenTien.Location = new System.Drawing.Point(368, 412);
             this.btnChuyenTien.Name = "btnChuyenTien";
-            this.btnChuyenTien.Size = new System.Drawing.Size(175, 33);
+            this.btnChuyenTien.Size = new System.Drawing.Size(149, 33);
             this.btnChuyenTien.TabIndex = 28;
             this.btnChuyenTien.Text = "Xác nhận chuyển";
             this.btnChuyenTien.UseVisualStyleBackColor = true;
@@ -595,7 +601,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(127, 408);
+            this.label4.Location = new System.Drawing.Point(68, 416);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 25);
             this.label4.TabIndex = 27;
@@ -633,7 +639,6 @@
             this.label2.Size = new System.Drawing.Size(392, 32);
             this.label2.TabIndex = 18;
             this.label2.Text = "Nhập số tài khoản người nhận";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtSoTkNhanTien
             // 
@@ -787,7 +792,6 @@
         private System.Windows.Forms.ToolStripMenuItem cmsTHEM;
         private System.Windows.Forms.ToolStripMenuItem cmsXoa;
         private System.Windows.Forms.ToolStripMenuItem cmsTAILAI;
-        private System.Windows.Forms.ToolStripMenuItem cmsPHUCHOI;
         private System.Windows.Forms.ToolStripMenuItem cmsTHOAT;
         private System.Windows.Forms.TextBox sODUTextBox;
         private System.Windows.Forms.TextBox cMNDTextBox1;
@@ -798,5 +802,6 @@
         private System.Windows.Forms.TextBox tENTextBox;
         private System.Windows.Forms.TextBox hOTextBox;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnUndo;
     }
 }

@@ -46,8 +46,13 @@ namespace NganHang
         }
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
+            DS.EnforceConstraints = false;
             this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
             this.khachHangTableAdapter.Fill(this.DS.KhachHang);
+            this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
+            this.gD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.gD_CHUYENTIENTableAdapter.Fill(this.DS.GD_CHUYENTIEN);
 
             /*VẪN CÒN TIỀM ẨN LỖI CHƯA FIX*/
             macn = ((DataRowView)bdsKH[0])["MACN"].ToString(); //**VẪN CÒN TIỀM ẨN LỖI CHƯA FIX**
@@ -183,14 +188,23 @@ namespace NganHang
         }
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)//CHƯA LÀM
         {
-            Double cmnd = 0;
-            cmnd = Double.Parse(((DataRowView)bdsKH[bdsKH.Position])["CMND"].ToString());
-            if (KT_KH_Co_TK())
+            Double cmnd = Double.Parse(((DataRowView)bdsKH[bdsKH.Position])["CMND"].ToString());
+            if (bdsGR.Count > 0)
+            {
+                MessageBox.Show("Không thể xoá khách hàng, vì đã thực hiện giao dịch gửi rút tiền", "", MessageBoxButtons.OK);
+                return;
+            }
+            if (bdsCT.Count > 0)
+            {
+                MessageBox.Show("Không thể xoá khách hàng, vì đã thực hiện giao dịch chuyển tiền", "", MessageBoxButtons.OK);
+                return;
+            }
+            /*if (KT_KH_Co_TK())
             {
                 MessageBox.Show("Khách hàng không thể xoá vì đã mở tài khoản!!", "", MessageBoxButtons.OK);
                 Program.myReader.Close();
                 return;
-            }
+            }*/
             if (MessageBox.Show("Bạn có thật sự muốn xoá nhân viên " + cmnd + " ??", "Xác nhận",
     MessageBoxButtons.OKCancel) == DialogResult.OK)
             {

@@ -38,7 +38,7 @@ namespace NganHang.SimpleForm
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
-                cmsTHEM.Enabled = cmsXoa.Enabled = cmsPHUCHOI.Enabled = false;
+                cmsTHEM.Enabled = cmsXoa.Enabled = false;
             }
             else
             {
@@ -70,17 +70,7 @@ namespace NganHang.SimpleForm
                 this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
             }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fillToolStripButton_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        }     
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
@@ -116,6 +106,19 @@ namespace NganHang.SimpleForm
             txtMANV.Text = Program.username;
             txtSoTKChuyen.Text = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();
             vitri = bdsTK.Position;
+        }
+
+        private void cmsPHUCHOI_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            bdsTK.Position = vitri;
+            bdsTK.CancelEdit();//hai trường hợp: đang thêm bỏ thêm, đang sửa bỏ sửa
+            pnlGD.Enabled = false;
+            khachHangGridControl.Enabled = taiKhoanGridControl.Enabled = true;
         }
     }
 }
