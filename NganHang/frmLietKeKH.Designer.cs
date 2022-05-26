@@ -73,7 +73,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(390, 82);
+            this.label2.Location = new System.Drawing.Point(424, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 29);
             this.label2.TabIndex = 13;
@@ -88,7 +88,7 @@
             this.cmbLoai.Items.AddRange(new object[] {
             "Tất cả các chi nhánh",
             "Chi nhánh hiện tại"});
-            this.cmbLoai.Location = new System.Drawing.Point(472, 79);
+            this.cmbLoai.Location = new System.Drawing.Point(506, 78);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(349, 37);
             this.cmbLoai.TabIndex = 12;
@@ -96,11 +96,11 @@
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.Black;
-            this.btnXacNhan.Location = new System.Drawing.Point(524, 142);
+            this.btnXacNhan.Location = new System.Drawing.Point(887, 81);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(176, 37);
+            this.btnXacNhan.Size = new System.Drawing.Size(114, 35);
             this.btnXacNhan.TabIndex = 14;
             this.btnXacNhan.Text = "Xem trước";
             this.btnXacNhan.UseVisualStyleBackColor = true;
