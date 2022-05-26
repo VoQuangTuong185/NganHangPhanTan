@@ -17,6 +17,7 @@ namespace NganHang.SimpleForm
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
+            cmbChiNhanh.Enabled = false;
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
@@ -24,7 +25,6 @@ namespace NganHang.SimpleForm
             }
             else
             {
-                cmbChiNhanh.Enabled = false;
                 cmbLoai.Enabled = false;
                 cmbLoai.Text = "Chi nhánh hiện tại";
             }

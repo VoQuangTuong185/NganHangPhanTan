@@ -35,17 +35,15 @@ namespace NganHang.SimpleForm
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
+            cmbChiNhanh.Enabled = false;
             panelControl2.Enabled = cmsPHUCHOI.Enabled = cmsLUU.Enabled = grbThongTinKH.Enabled = pnlThongTinTaiKhoan.Enabled = false ;       
             if (Program.mGroup == "NganHang")
-            {
-                cmbChiNhanh.Enabled = true;
+            {              
                 cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled  = false;
-                teMACN.EditValue = "Không được sửa!!";
             }
             else
             {
                 cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled  = true;
-                cmbChiNhanh.Enabled = false;
             }
         }
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)

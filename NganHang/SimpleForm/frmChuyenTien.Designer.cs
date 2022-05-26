@@ -56,7 +56,6 @@
             this.taiKhoanGridControl = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsTHEM = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -64,6 +63,7 @@
             this.colSODU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCMND1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNGAYMOTK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnlGD = new DevExpress.XtraEditors.GroupControl();
             this.btnUndo = new System.Windows.Forms.Button();
             this.tENTextBox = new System.Windows.Forms.TextBox();
@@ -88,7 +88,6 @@
             this.txtSoTKNhan = new System.Windows.Forms.TextBox();
             this.frmChuyenTien_InfoReceiverTableAdapter = new NganHang.DSTableAdapters.frmChuyenTien_InfoReceiverTableAdapter();
             this.label8 = new System.Windows.Forms.Label();
-            this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             hOTENLabel = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
             cMNDLabel = new System.Windows.Forms.Label();
@@ -352,11 +351,10 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsTHEM,
-            this.cmsXoa,
             this.cmsTAILAI,
             this.cmsTHOAT});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(261, 100);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(261, 104);
             // 
             // cmsTHEM
             // 
@@ -365,17 +363,12 @@
             this.cmsTHEM.Text = "Thêm giao dịch chuyển tiền";
             this.cmsTHEM.Click += new System.EventHandler(this.cmsTHEM_Click);
             // 
-            // cmsXoa
-            // 
-            this.cmsXoa.Name = "cmsXoa";
-            this.cmsXoa.Size = new System.Drawing.Size(260, 24);
-            this.cmsXoa.Text = "Xoá tài khoản (tạm bỏ)";
-            // 
             // cmsTAILAI
             // 
             this.cmsTAILAI.Name = "cmsTAILAI";
             this.cmsTAILAI.Size = new System.Drawing.Size(260, 24);
             this.cmsTAILAI.Text = "Tải lại trang";
+            this.cmsTAILAI.Click += new System.EventHandler(this.cmsTAILAI_Click);
             // 
             // cmsTHOAT
             // 
@@ -438,6 +431,14 @@
             this.colNGAYMOTK.Name = "colNGAYMOTK";
             this.colNGAYMOTK.Visible = true;
             this.colNGAYMOTK.VisibleIndex = 3;
+            // 
+            // colMACN
+            // 
+            this.colMACN.Caption = "Chi nhánh mở ";
+            this.colMACN.FieldName = "MACN";
+            this.colMACN.Name = "colMACN";
+            this.colMACN.Visible = true;
+            this.colMACN.VisibleIndex = 4;
             // 
             // pnlGD
             // 
@@ -715,14 +716,6 @@
             this.label8.TabIndex = 40;
             this.label8.Text = "Chọn tài khoản chuyển tiền";
             // 
-            // colMACN
-            // 
-            this.colMACN.Caption = "Chi nhánh mở ";
-            this.colMACN.FieldName = "MACN";
-            this.colMACN.Name = "colMACN";
-            this.colMACN.Visible = true;
-            this.colMACN.VisibleIndex = 4;
-            // 
             // frmChuyenTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -800,7 +793,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colNGAYMOTK;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cmsTHEM;
-        private System.Windows.Forms.ToolStripMenuItem cmsXoa;
         private System.Windows.Forms.ToolStripMenuItem cmsTAILAI;
         private System.Windows.Forms.ToolStripMenuItem cmsTHOAT;
         private System.Windows.Forms.TextBox sODUTextBox;

@@ -38,7 +38,7 @@ namespace NganHang.SimpleForm
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
-                cmsTHEM.Enabled = cmsXoa.Enabled = false;
+                cmsTHEM.Enabled =  false;
             }
             else
             {
@@ -119,6 +119,19 @@ namespace NganHang.SimpleForm
             bdsTK.CancelEdit();//hai trường hợp: đang thêm bỏ thêm, đang sửa bỏ sửa
             pnlGD.Enabled = false;
             khachHangGridControl.Enabled = taiKhoanGridControl.Enabled = true;
+        }
+
+        private void cmsTAILAI_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi reload: " + ex.Message, "", MessageBoxButtons.OK);
+                return;
+            }
         }
     }
 }
