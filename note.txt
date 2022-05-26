@@ -27,6 +27,6 @@ có một lỗi ở "String CMND = ((DataRowView)bdsKH[bdsKH.Position])["CMND"].
 
 - thêm chức năng chuyển nhân viên đi, chuyển về lại site cũ đã bị chuyển
 
-- ÁNH: Tạo tài khoản đăng nhập (cho nhân viên), Quản lý khách hàng, Mở tài khoản khách hàng (tài khoản ngân hàng)
+- ÁNH: Quản lý nhân viên, Quản lý khách hàng, Mở tài khoản khách hàng (tài khoản ngân hàng)
 - ANH: Gửi và rút tiền, Thống kê thông tin khách hàng, Danh sách tài khoản mở
-- TƯỜNG: Quản lý nhân viên, Sao kê tài khoản, Chuyển khoản
+- TƯỜNG: Chuyển nhân viên , Sao kê tài khoản, Chuyển khoản,Tạo tài khoản đăng nhập (cho nhân viên)
