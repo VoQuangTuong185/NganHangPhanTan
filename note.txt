@@ -17,9 +17,6 @@ Thêm tính năng xoá nhân viên khi đã có loginname (đặt thông báo v�
 thực sự là tất cả nhân viên đều có loginname => cho xoá
 thêm tính năng xoá tài khoản khác khi nó đang đăng nhập ở nơi khác
 
-thêm tính năng xoá tài khoản của khách hàng khi đã giao dịch gửi rút tiền ( xoá trên table GD_GOIRUT where SOTK = @SOTK) và GD_CHUYENTIEN (nếu là stk chuyển thì 
-update nó thành 0000000000, còn nếu là stk nhận thì update nó thành 0000000000)
-
 có một lỗi ở "String CMND = ((DataRowView)bdsKH[bdsKH.Position])["CMND"].ToString();" khi khởi động chưa có dữ liệu, nó bị lỗi, chưa fix
 
 -thêm chuyển login cho nhân viên khi chuyển nhân viên qua chi nhánh khác
@@ -27,3 +24,7 @@ có một lỗi ở "String CMND = ((DataRowView)bdsKH[bdsKH.Position])["CMND"].
 - net start msdtc :mở giao tác
 
 - chỉnh sp [SP_LietKeTaiKhoan2] ưu tiên tra cứu dữ liệu ở site tra cứu, k có thì về site chủ
+
+- ÁNH: Tạo tài khoản đăng nhập (cho nhân viên), Quản lý khách hàng, Mở tài khoản khách hàng (tài khoản ngân hàng)
+- ANH: Gửi và rút tiền, Thống kê thông tin khách hàng, Danh sách tài khoản mở
+- TƯỜNG: Quản lý nhân viên, Sao kê tài khoản, Chuyển khoản
