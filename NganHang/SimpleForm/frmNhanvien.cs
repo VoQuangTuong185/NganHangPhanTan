@@ -269,6 +269,7 @@ namespace NganHang.SimpleForm
 
         private void btnMoveEmployee_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
             btnUndo.Enabled = btnExit.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = txtMANVMOI.Enabled = true;
             panelControl2.Enabled = btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled  = btnSave.Enabled = gcNV.Enabled = false;
         }
@@ -296,7 +297,7 @@ namespace NganHang.SimpleForm
             }
             if (MessageBox.Show("Bạn muốn chuyển nhân viên " + manv + " sang chi nhánh " + MACN + "??", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                Program.ExecSqlNonQuery("EXEC frmChuyenNV_MoveEmployee '" + manv + "','" + MACN + "','" + txtMANVMOI.Text + "'");   
+                Program.ExecSqlNonQuery("EXEC frmChuyenNV_MoveEmployee '" + manv + "','" + txtMANVMOI.Text + "','" + MACN + "'");   
             }
             btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled = btnExit.Enabled = gcNV.Enabled = txtMANVMOI.Enabled = true;
             btnSave.Enabled = btnUndo.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = false;

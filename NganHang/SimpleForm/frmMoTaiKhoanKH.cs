@@ -45,18 +45,19 @@ namespace NganHang.SimpleForm
             {
                 cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled  = true;
             }
+            grbThongTinKH.Enabled = gcTK.Enabled = pnlThongTinTaiKhoan.Enabled = false;
         }
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Program.KetNoi() == 0) return;
-            if (cmbChiNhanh.SelectedIndex == 0)
-            {
-                teMACN.EditValue = "BENTHANH";
-            }
-            else if (cmbChiNhanh.SelectedIndex == 1)
-            {
-                teMACN.EditValue = "TANDINH";
-            }        
+            //if (cmbChiNhanh.SelectedIndex == 0)
+            //{
+            //    teMACN.EditValue = "BENTHANH";
+            //}
+            //else if (cmbChiNhanh.SelectedIndex == 1)
+            //{
+            //    teMACN.EditValue = "TANDINH";
+            //}        
             pnlThongTinTaiKhoan.Enabled = true;
             gcTK.Enabled = false;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
@@ -66,7 +67,6 @@ namespace NganHang.SimpleForm
             numbSODU.Value = 0;              
             Program.myReader.Close();
             Program.conn.Close();
-            MessageBox.Show(DateTime.Now.ToString(), "", MessageBoxButtons.OK);
         }
 
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,9 +104,9 @@ namespace NganHang.SimpleForm
                 txtSOTK.Focus();
                 return;
             }
-            if (teCMND.Text.Trim() == "")
+            if (teCMND.Text.Trim() == "" || teCMND.Text.Length!=10)
             {
-                MessageBox.Show("CMND không được trống", "", MessageBoxButtons.OK);
+                MessageBox.Show("CMND không được trống hoặc không đủ 10 số", "", MessageBoxButtons.OK);
                 teCMND.Focus();
                 return;
             }
@@ -183,8 +183,8 @@ namespace NganHang.SimpleForm
                 {
                     Program.myReader.Close();
                     Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_DeleteTaiKhoanKH '" + SOTK + "'");
-                    this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
-                    this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
+                    this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.khachHang_TTTableAdapter.Fill(this.DS.frmMoTaiKhoanKH_InfoCustomer, txtCMNDKhachHang.Text);
                 }
                 catch (Exception ex)
                 {
@@ -229,15 +229,17 @@ namespace NganHang.SimpleForm
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (txtCMNDKhachHang.Text.Trim() == "")
+            if (txtCMNDKhachHang.Text.Trim() == "" || txtCMNDKhachHang.Text.Length != 10)
             {
-                MessageBox.Show("CMND không được trống", "", MessageBoxButtons.OK);
+                MessageBox.Show("CMND không được trống hoặc không đủ 10 số", "", MessageBoxButtons.OK);
                 txtCMNDKhachHang.Focus();
+                grbThongTinKH.Enabled = gcTK.Enabled = pnlThongTinTaiKhoan.Enabled = false;
                 return;
             }
             try
             {
                 pnlThongTinTaiKhoan.Enabled = false;
+                grbThongTinKH.Enabled = gcTK.Enabled = true;
                 this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.khachHang_TTTableAdapter.Fill(this.DS.frmMoTaiKhoanKH_InfoCustomer, txtCMNDKhachHang.Text);
             }
@@ -248,6 +250,11 @@ namespace NganHang.SimpleForm
         }
 
         private void panelControl3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void teMACN_EditValueChanged(object sender, EventArgs e)
         {
 
         }

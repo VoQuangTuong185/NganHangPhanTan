@@ -814,3 +814,5 @@ E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.Xtrp_Liet
 E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.SimpleForm.frmChuyenTien.resources
 E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.frmSaoKeTaiKhoan.resources
 E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.XtrpSaoKeTaiKhoan.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.frmLietKeKH.resources
+E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.Xtrp_LietKeKH.resources

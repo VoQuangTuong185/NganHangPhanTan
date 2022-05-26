@@ -34,7 +34,6 @@ namespace NganHang.SimpleForm
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
             pnlGD.Enabled = false;
-            //panelControl2.Enabled = cmsPHUCHOI.Enabled = cmsLUU.Enabled = false;
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;

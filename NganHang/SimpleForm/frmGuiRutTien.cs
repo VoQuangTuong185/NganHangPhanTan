@@ -30,17 +30,16 @@ namespace NganHang.SimpleForm
             this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
             this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
-            macn = ((DataRowView)bdsKH[0])["MACN"].ToString(); //**VẪN CÒN TIỀM ẨN LỖI CHƯA FIX**
+            macn = ((DataRowView)bdsKH[0])["MACN"].ToString(); 
             cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
             pnlGD.Enabled = false;
-            //panelControl2.Enabled = cmsPHUCHOI.Enabled = cmsLUU.Enabled = false;
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
-                cmsTHEM.Enabled = cmsXoa.Enabled = false;
+                cmsTHEM.Enabled  = false;
             }
             else
             {
@@ -101,8 +100,7 @@ namespace NganHang.SimpleForm
                 MessageBox.Show("Số tiền giao dịch thấp nhất là 100.000đ\nBạn hãy nhập lại...", "", MessageBoxButtons.OK);
                 txtSoTien.Focus();
                 return;
-            }
-            MessageBox.Show("EXEC frmGuiRutTien '" + txtSOTK.EditValue + "','" + loaiGD + "','" + dt + "','" + txtSoTien.Value + "','" + txtMANV.EditValue + "'", "", MessageBoxButtons.OK);
+            }         
             Program.ExecSqlNonQuery("EXEC frmGuiRutTien '" + txtSOTK.EditValue + "','" + loaiGD + "','" + dt + "','" + txtSoTien.Value + "','" + txtMANV.EditValue + "'");
             this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
             this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
@@ -149,24 +147,6 @@ namespace NganHang.SimpleForm
             if (cmsTHEM.Enabled == false) bdsTK.Position = vitri;
             taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
             pnlGD.Enabled = false;
-        }
-
-        private void cmsXoa_Click(object sender, EventArgs e)
-        {
-            taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = false;
-            pnlGD.Enabled = true;
-            string MAGD = ((DataRowView)bdsGuiRut[bdsGuiRut.Position])["MAGD"].ToString();
-            vitri = bdsGuiRut.Position;
-
-            MessageBox.Show("EXEC frmGuiRutTien_DeleteGD '" + MAGD + "'", "", MessageBoxButtons.OK);
-            Program.ExecSqlNonQuery("EXEC frmGuiRutTien_DeleteGD '" + MAGD + "'");
-            this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
-            this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
-            taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
-            pnlGD.Enabled = false;
-            bdsTK.Position = vitri;
         }
     }
 }

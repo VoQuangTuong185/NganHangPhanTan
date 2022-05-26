@@ -35,7 +35,7 @@ namespace NganHang.SimpleForm
                 this.frmCreateLogin_GetEmployeeNotHaveLoginTableAdapter.Fill(this.DS.frmCreateLogin_GetEmployeeNotHaveLogin);
                 this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.frmCreateLogin_GetLoginsOfBranchTableAdapter.Fill(this.DS.frmCreateLogin_GetLoginsOfBranch, Program.mGroup);
-                macn = ((DataRowView)bdsNV_X_LOGIN[0])["MACN"].ToString(); //**VẪN CÒN TIỀM ẨN LỖI CHƯA FIX**
+                macn = ((DataRowView)bdsNV_X_LOGIN[0])["MACN"].ToString(); 
                 cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
                 cmbChiNhanh.DisplayMember = "TENCN";
                 cmbChiNhanh.ValueMember = "TENSERVER";
@@ -69,7 +69,6 @@ namespace NganHang.SimpleForm
         {
             Program.myReader.Close();
             string strlenh1 = "EXEC frmCreateLogin_DuplicateLOGIN '" + txtLoginName + "','" + Program.mGroup + "'";
-            MessageBox.Show(strlenh1, "", MessageBoxButtons.OK);
             Program.myReader = Program.ExecSqlDataReader(strlenh1);
             Program.myReader.Read();
             if (Program.myReader.HasRows)
@@ -93,7 +92,6 @@ namespace NganHang.SimpleForm
             }          
             Program.myReader.Close();
             string cmd = "EXEC frmCreateLogin_CreateLoginForEmployee '" + txtLoginName.Text + "','" + txtPass.Text + "','" + MANV + "','" + Program.mGroup + "'";
-            MessageBox.Show(cmd, "", MessageBoxButtons.OK);
             Program.ExecSqlNonQuery(cmd);
 
             gcNV_X_LOGIN.Enabled = gc_LGINFO1.Enabled = true;

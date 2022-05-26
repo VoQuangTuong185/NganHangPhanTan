@@ -172,21 +172,7 @@ namespace NganHang
             btnSave.Enabled = btnUndo.Enabled = false;
             panelControl2.Enabled = false;
         }
-        private bool KT_KH_Co_TK()
-        {
-            Program.myReader.Close();
-            string strlenh1 = "EXEC frmKhachHang_ExistsAccount '" + txtCMND.Text + "'";
-            Program.myReader = Program.ExecSqlDataReader(strlenh1);
-            Program.myReader.Read();
-            if (Program.myReader.HasRows)
-            {
-                Program.myReader.Close();
-                return true;
-            }
-            Program.myReader.Close();
-            return false;
-        }
-        private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)//CHƯA LÀM
+        private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Double cmnd = Double.Parse(((DataRowView)bdsKH[bdsKH.Position])["CMND"].ToString());
             if (bdsGR.Count > 0)
@@ -199,12 +185,6 @@ namespace NganHang
                 MessageBox.Show("Không thể xoá khách hàng, vì đã thực hiện giao dịch chuyển tiền", "", MessageBoxButtons.OK);
                 return;
             }
-            /*if (KT_KH_Co_TK())
-            {
-                MessageBox.Show("Khách hàng không thể xoá vì đã mở tài khoản!!", "", MessageBoxButtons.OK);
-                Program.myReader.Close();
-                return;
-            }*/
             if (MessageBox.Show("Bạn có thật sự muốn xoá nhân viên " + cmnd + " ??", "Xác nhận",
     MessageBoxButtons.OKCancel) == DialogResult.OK)
             {

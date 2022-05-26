@@ -63,7 +63,6 @@
             this.gD_GOIRUTGridControl = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsTHEM = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTAILAI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsPHUCHOI = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTHOAT = new System.Windows.Forms.ToolStripMenuItem();
@@ -392,12 +391,11 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsTHEM,
-            this.cmsXoa,
             this.cmsTAILAI,
             this.cmsPHUCHOI,
             this.cmsTHOAT});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 124);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 100);
             // 
             // cmsTHEM
             // 
@@ -405,13 +403,6 @@
             this.cmsTHEM.Size = new System.Drawing.Size(157, 24);
             this.cmsTHEM.Text = "Thêm";
             this.cmsTHEM.Click += new System.EventHandler(this.cmsTHEM_Click);
-            // 
-            // cmsXoa
-            // 
-            this.cmsXoa.Name = "cmsXoa";
-            this.cmsXoa.Size = new System.Drawing.Size(157, 24);
-            this.cmsXoa.Text = "Xoá ";
-            this.cmsXoa.Click += new System.EventHandler(this.cmsXoa_Click);
             // 
             // cmsTAILAI
             // 
@@ -705,6 +696,5 @@
         private DevExpress.XtraEditors.TextEdit txtSOTK;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripMenuItem cmsXoa;
     }
 }

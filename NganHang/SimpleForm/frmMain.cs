@@ -158,9 +158,17 @@ namespace NganHang
 
         private void btnCustomerInfoReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Xtrp_LietKeKhachHang rpt = new Xtrp_LietKeKhachHang();
-            ReportPrintTool print = new ReportPrintTool(rpt);
-            print.ShowPreviewDialog();
+            Form frm = this.CheckExists(typeof(frmLietKeKH));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmLietKeKH f = new frmLietKeKH();
+                f.MdiParent = this;
+                f.Show();
+            }        
+            //Xtrp_LietKeKhachHang rpt = new Xtrp_LietKeKhachHang();
+            //ReportPrintTool print = new ReportPrintTool(rpt);
+            //print.ShowPreviewDialog();
         }
 
         private void btnTransferService_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

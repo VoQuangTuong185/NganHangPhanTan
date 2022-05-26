@@ -499,6 +499,7 @@
             // 
             // teMACN
             // 
+            this.teMACN.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsTK, "MACN", true));
             this.teMACN.Location = new System.Drawing.Point(663, 45);
             this.teMACN.Name = "teMACN";
             this.teMACN.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -506,6 +507,7 @@
             this.teMACN.Properties.ReadOnly = true;
             this.teMACN.Size = new System.Drawing.Size(245, 26);
             this.teMACN.TabIndex = 17;
+            this.teMACN.EditValueChanged += new System.EventHandler(this.teMACN_EditValueChanged);
             // 
             // txtSOTK
             // 

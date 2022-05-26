@@ -354,7 +354,7 @@
             this.cmsTAILAI,
             this.cmsTHOAT});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(261, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(261, 76);
             // 
             // cmsTHEM
             // 
