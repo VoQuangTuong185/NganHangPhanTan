@@ -290,7 +290,7 @@
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.batdau);
             this.Name = "frmSaoKeTaiKhoan";
-            this.Text = "frmSaoKeTaiKhoan";
+            this.Text = "Sao kê 1 tài khoản trong khoản thời gian";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmSaoKeTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

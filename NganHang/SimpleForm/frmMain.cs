@@ -54,7 +54,6 @@ namespace NganHang
             //phân quyền
             rib_BaoCao.Visible = rib_DanhMuc.Visible = rib_NghiepVu.Visible = btnCreateLogin.Enabled = btnLogout.Enabled = true;
             frmLogin.Enabled = false;
-            //tiếp tục "if" trên Program.mGroup để bật/tắt các nút lệnh trên menu chính
         }
 
         private void btnEmployeeManage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -84,6 +84,7 @@ namespace NganHang.SimpleForm
             Program.mGroup = Program.myReader.GetString(2);
             Program.myReader.Close();
             Program.conn.Close();
+            Close();
             MessageBox.Show("Đăng nhập thành công tài khoản \n- Mã NV: "+ Program.username+"\n- Tên: "+ Program.mHoten+"\n- Nhóm: "+ Program.mGroup, "", MessageBoxButtons.OK);
             Program.frmChinh.HienThiMenu();
         }

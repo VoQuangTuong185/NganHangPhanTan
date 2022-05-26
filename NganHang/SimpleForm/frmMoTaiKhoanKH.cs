@@ -7,7 +7,7 @@ namespace NganHang.SimpleForm
     public partial class frmMoTaiKhoanKH : Form
     {
         int vitri = 0;
-        bool btn_Add_clicked = false;
+        bool btn_Edit_clicked = false;
         public frmMoTaiKhoanKH()
         {
             InitializeComponent();
@@ -22,6 +22,7 @@ namespace NganHang.SimpleForm
 
         private void frmMoTaiKhoanKH_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'DS.GD_CHUYENTIEN' table. You can move, or remove it, as needed.
             DS.EnforceConstraints = false;
             this.gD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gD_CHUYENTIENTableAdapter.Fill(this.DS.GD_CHUYENTIEN);
@@ -34,16 +35,7 @@ namespace NganHang.SimpleForm
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
-            panelControl2.Enabled = cmsPHUCHOI.Enabled = cmsLUU.Enabled = grbThongTinKH.Enabled = pnlThongTinTaiKhoan.Enabled = false ;
-            if (cmbChiNhanh.SelectedIndex == 0)
-            {
-                teMACN.EditValue = "BENTHANH";
-            }
-            else if(cmbChiNhanh.SelectedIndex == 1)
-            {
-                teMACN.EditValue = "TANDINH";
-            }
-           
+            panelControl2.Enabled = cmsPHUCHOI.Enabled = cmsLUU.Enabled = grbThongTinKH.Enabled = pnlThongTinTaiKhoan.Enabled = false ;       
             if (Program.mGroup == "NganHang")
             {
                 cmbChiNhanh.Enabled = true;
@@ -58,32 +50,25 @@ namespace NganHang.SimpleForm
         }
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             if (Program.KetNoi() == 0) return;
-            string strlenh = "EXEC frmMoTaiKhoanKH_ExistAllBranch '" + txtCMND.Text + "'";
-            Program.myReader = Program.ExecSqlDataReader(strlenh);
-            if (Program.myReader == null) return;
-            Program.myReader.Read();
-            if (Int32.Parse(Program.myReader["KT"].ToString()) == 2)
+            if (cmbChiNhanh.SelectedIndex == 0)
             {
-                MessageBox.Show("Khách hàng đã có tài khoản ở tất cả chi nhánh!! Không thể tạo thêm", "", MessageBoxButtons.OK);
-                return;
+                teMACN.EditValue = "BENTHANH";
             }
-            else
+            else if (cmbChiNhanh.SelectedIndex == 1)
             {
-                btn_Add_clicked = pnlThongTinTaiKhoan.Enabled = true;
-                gcTK.Enabled = false;
-                cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
-                cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
-                vitri = bdsKH_TT.Position;
-                bdsTK.AddNew();
-                teCMND.Text = ((DataRowView)bdsTK[bdsTK.Position])["CMND"].ToString();
-                //teMACN.Text = ((DataRowView)bdsTK[bdsTK.Position])["MACN"].ToString();
-                numbSODU.Value = 0;
-                MessageBox.Show(cmbChiNhanh.SelectedValue.ToString(), "", MessageBoxButtons.OK);
-            }
+                teMACN.EditValue = "TANDINH";
+            }        
+            pnlThongTinTaiKhoan.Enabled = true;
+            gcTK.Enabled = false;
+            cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
+            cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
+            bdsTK.AddNew();
+            teCMND.Text = txtCMNDKhachHang.Text;
+            numbSODU.Value = 0;              
             Program.myReader.Close();
             Program.conn.Close();
+            MessageBox.Show(DateTime.Now.ToString(), "", MessageBoxButtons.OK);
         }
 
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,7 +99,7 @@ namespace NganHang.SimpleForm
 
         private void lưuToolStripMenuItem_Click(object sender, EventArgs e)
         {           
-            String SOTK = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();           
+            String SOTK = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();                      
             if (txtSOTK.Text.Trim() == "")
             {
                 MessageBox.Show("Số tài khoản không được trống", "", MessageBoxButtons.OK);
@@ -133,18 +118,13 @@ namespace NganHang.SimpleForm
                 numbSODU.Focus();
                 return;
             }
-            if (dateNgayMoTK.DateTime > DateTime.Now || dateNgayMoTK.Text.Trim() == "")
+            String dt = String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
+            if (btn_Edit_clicked == true && SOTK == txtSOTK.Text)
             {
-                MessageBox.Show("Ngày cấp CMND khách hàng trống hoặc mốc thời gian là trước hiện tại", "", MessageBoxButtons.OK);
-                dateNgayMoTK.Focus();
-                return;
-            }
-            if (btn_Add_clicked == true || SOTK == txtSOTK.Text)
-            {
-                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dateNgayMoTK.DateTime + "'");
+                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dt + "'");
                 this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.khachHang_TTTableAdapter.Fill(this.DS.frmMoTaiKhoanKH_InfoCustomer, txtCMNDKhachHang.Text);
-                btn_Add_clicked = false;
+                btn_Edit_clicked = false;
             }
             else
             {
@@ -158,6 +138,9 @@ namespace NganHang.SimpleForm
                     return;
                 }
                 Program.myReader.Close();
+                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dt + "'");
+                this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.khachHang_TTTableAdapter.Fill(this.DS.frmMoTaiKhoanKH_InfoCustomer, txtCMNDKhachHang.Text);
             }
             gcTK.Enabled = true;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = true;
@@ -173,28 +156,43 @@ namespace NganHang.SimpleForm
             vitri = bdsKH_TT.Position;
             cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
             cmsLUU.Enabled = cmsPHUCHOI.Enabled = pnlThongTinTaiKhoan.Enabled = true;
+            btn_Edit_clicked = true;
             gcTK.Enabled = false; 
         }
 
         private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int SOTK = int.Parse(((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString());
+            if (bds_GR.Count > 0)
+            {
+                MessageBox.Show("Không thể xoá tài khoản ngân hàng, vì đã thực hiện giao dịch gửi rút tiền ", "", MessageBoxButtons.OK);
+                return;
+            }
+            if (bds_CTC.Count > 0)
+            {
+                MessageBox.Show("Không thể xoá tài khoản ngân hàng, vì đã thực hiện giao dịch chuyển tiền", "", MessageBoxButtons.OK);
+                return;
+            }
+            if (bds_CTN.Count > 0)
+            {
+                MessageBox.Show("Không thể xoá tài khoản ngân hàng, vì đã thực hiện giao dịch nhận tiền", "", MessageBoxButtons.OK);
+                return;
+            }
             if (MessageBox.Show("Bạn có thật sự muốn xoá tài khoản " + SOTK + " ??", "Xác nhận",
                 MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
                 {
-                    bdsTK.RemoveCurrent();
+                    Program.myReader.Close();
+                    Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_DeleteTaiKhoanKH '" + SOTK + "'");
                     this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.taiKhoanTableAdapter.Update(this.DS.TaiKhoan);
-                    MessageBox.Show("Xoá thành công tài khoản " + SOTK, "", MessageBoxButtons.OK);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi xoá tài khoản. Bạn hãy xoá lại\n" + ex.Message, "", MessageBoxButtons.OK);
                     this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
-                    bdsTK.Position = bdsTK.Find("SOTK", SOTK);
                     return;
                 }
             }
@@ -249,6 +247,11 @@ namespace NganHang.SimpleForm
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+        }
+
+        private void panelControl3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

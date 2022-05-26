@@ -88,6 +88,7 @@
             this.txtSoTKNhan = new System.Windows.Forms.TextBox();
             this.frmChuyenTien_InfoReceiverTableAdapter = new NganHang.DSTableAdapters.frmChuyenTien_InfoReceiverTableAdapter();
             this.label8 = new System.Windows.Forms.Label();
+            this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             hOTENLabel = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
             cMNDLabel = new System.Windows.Forms.Label();
@@ -373,13 +374,13 @@
             // cmsTAILAI
             // 
             this.cmsTAILAI.Name = "cmsTAILAI";
-            this.cmsTAILAI.Size = new System.Drawing.Size(157, 24);
+            this.cmsTAILAI.Size = new System.Drawing.Size(260, 24);
             this.cmsTAILAI.Text = "Tải lại trang";
             // 
             // cmsTHOAT
             // 
             this.cmsTHOAT.Name = "cmsTHOAT";
-            this.cmsTHOAT.Size = new System.Drawing.Size(157, 24);
+            this.cmsTHOAT.Size = new System.Drawing.Size(260, 24);
             this.cmsTHOAT.Text = "Thoát";
             // 
             // gridView2
@@ -392,7 +393,8 @@
             this.colSOTK,
             this.colSODU,
             this.colCMND1,
-            this.colNGAYMOTK});
+            this.colNGAYMOTK,
+            this.colMACN});
             this.gridView2.GridControl = this.taiKhoanGridControl;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
@@ -713,6 +715,14 @@
             this.label8.TabIndex = 40;
             this.label8.Text = "Chọn tài khoản chuyển tiền";
             // 
+            // colMACN
+            // 
+            this.colMACN.Caption = "Chi nhánh mở ";
+            this.colMACN.FieldName = "MACN";
+            this.colMACN.Name = "colMACN";
+            this.colMACN.Visible = true;
+            this.colMACN.VisibleIndex = 4;
+            // 
             // frmChuyenTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -803,5 +813,6 @@
         private System.Windows.Forms.TextBox hOTextBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnUndo;
+        private DevExpress.XtraGrid.Columns.GridColumn colMACN;
     }
 }

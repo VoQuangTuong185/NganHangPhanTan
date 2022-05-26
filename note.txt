@@ -12,10 +12,6 @@
 
 - thêm quyền 'SecurityAdmin' cho tài khoản HTKN để xem được tài khoản ở site khác với site đã đăng nhập (combobox chi nhánh) khi vào bằng tài khoản nhóm NganHang
 
--Còn các chức năng chưa làm: 
-  + Sao kê tài khoản (Sao kê giao dịch của 1 tài khoản trong 1 khoảng thời gian)
-
-
 MỚI NHẤT:
 Thêm tính năng xoá nhân viên khi đã có loginname (đặt thông báo và hỏi người dùng có muốn xoá hay không)
 thực sự là tất cả nhân viên đều có loginname => cho xoá
