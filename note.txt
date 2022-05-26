@@ -27,3 +27,7 @@ có một lỗi ở "String CMND = ((DataRowView)bdsKH[bdsKH.Position])["CMND"].
 -thêm chuyển login cho nhân viên khi chuyển nhân viên qua chi nhánh khác
 
 - thêm tính năng gửi tiền cho cùng khách hàng - khác tài khoản
+
+- net start msdtc :mở giao tác
+
+- chỉnh sp [SP_LietKeTaiKhoan2] ưu tiên tra cứu dữ liệu ở site tra cứu, k có thì về site chủ
