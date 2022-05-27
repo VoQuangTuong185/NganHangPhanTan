@@ -22,7 +22,6 @@ namespace NganHang.SimpleForm
 
         private void frmMoTaiKhoanKH_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DS.GD_CHUYENTIEN' table. You can move, or remove it, as needed.
             DS.EnforceConstraints = false;
             this.gD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gD_CHUYENTIENTableAdapter.Fill(this.DS.GD_CHUYENTIEN);

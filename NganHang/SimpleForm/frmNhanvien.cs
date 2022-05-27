@@ -63,7 +63,7 @@ namespace NganHang.SimpleForm
             this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
             /*VẪN CÒN TIỀM ẨN LỖI CHƯA FIX*/
-            macn = ((DataRowView)bdsNV[0])["MACN"].ToString(); //**VẪN CÒN TIỀM ẨN LỖI CHƯA FIX**
+            macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
             cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
