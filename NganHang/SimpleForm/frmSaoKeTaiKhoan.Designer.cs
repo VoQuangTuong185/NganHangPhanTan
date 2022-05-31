@@ -97,20 +97,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(36, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 32);
+            this.label1.Size = new System.Drawing.Size(105, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chi Nhánh";
             // 
             // cmbChiNhanh
             // 
-            this.cmbChiNhanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbChiNhanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbChiNhanh.FormattingEnabled = true;
             this.cmbChiNhanh.Location = new System.Drawing.Point(191, 9);
             this.cmbChiNhanh.Name = "cmbChiNhanh";
-            this.cmbChiNhanh.Size = new System.Drawing.Size(325, 39);
+            this.cmbChiNhanh.Size = new System.Drawing.Size(325, 33);
             this.cmbChiNhanh.TabIndex = 0;
             this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
             // 
@@ -221,7 +221,7 @@
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.btnTimKiem.Location = new System.Drawing.Point(877, 113);
+            this.btnTimKiem.Location = new System.Drawing.Point(730, 115);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(125, 33);
             this.btnTimKiem.TabIndex = 29;
@@ -244,25 +244,26 @@
             // 
             this.txtSoTaiKhoanKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoTaiKhoanKhachHang.ForeColor = System.Drawing.Color.Black;
-            this.txtSoTaiKhoanKhachHang.Location = new System.Drawing.Point(546, 114);
+            this.txtSoTaiKhoanKhachHang.Location = new System.Drawing.Point(549, 117);
             this.txtSoTaiKhoanKhachHang.Name = "txtSoTaiKhoanKhachHang";
-            this.txtSoTaiKhoanKhachHang.Size = new System.Drawing.Size(312, 30);
+            this.txtSoTaiKhoanKhachHang.Size = new System.Drawing.Size(149, 30);
             this.txtSoTaiKhoanKhachHang.TabIndex = 27;
             // 
             // textHoTenKhSk
             // 
             this.textHoTenKhSk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textHoTenKhSk.Location = new System.Drawing.Point(546, 197);
+            this.textHoTenKhSk.Location = new System.Drawing.Point(531, 197);
             this.textHoTenKhSk.Name = "textHoTenKhSk";
             this.textHoTenKhSk.ReadOnly = true;
-            this.textHoTenKhSk.Size = new System.Drawing.Size(456, 30);
+            this.textHoTenKhSk.Size = new System.Drawing.Size(486, 30);
             this.textHoTenKhSk.TabIndex = 30;
+            this.textHoTenKhSk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnLamMoi
             // 
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.Color.Black;
-            this.btnLamMoi.Location = new System.Drawing.Point(1021, 112);
+            this.btnLamMoi.Location = new System.Drawing.Point(881, 114);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(125, 33);
             this.btnLamMoi.TabIndex = 31;

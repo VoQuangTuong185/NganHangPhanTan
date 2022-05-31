@@ -118,6 +118,8 @@ namespace NganHang.SimpleForm
             bdsTK.CancelEdit();//hai trường hợp: đang thêm bỏ thêm, đang sửa bỏ sửa
             pnlGD.Enabled = false;
             khachHangGridControl.Enabled = taiKhoanGridControl.Enabled = true;
+            hOTENTextBox.Text = cMNDTextBox.Text = txtSoTKNhan.Text = mACNTextBox.Text = "";
+
         }
 
         private void cmsTAILAI_Click(object sender, EventArgs e)

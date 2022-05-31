@@ -186,19 +186,6 @@ namespace NganHang.SimpleForm
             btnSave.Enabled = btnUndo.Enabled = true;
             gcNV.Enabled = false; txtMACN.Enabled = false;
         }
-        private bool KT_NV_Co_TK()
-        {
-            Program.myReader.Close();
-            string strlenh1 = "EXEC frmNhanVien_ExistsAccount '" + txtMANV.Text.TrimEnd() + "'";
-            Program.myReader = Program.ExecSqlDataReader(strlenh1);
-            Program.myReader.Read();
-            if (Program.myReader.HasRows)
-            {
-                return true;
-            }
-            Program.myReader.Close();
-            return false;
-        }
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Int32 manv = 0;
@@ -212,11 +199,6 @@ namespace NganHang.SimpleForm
             {
                 MessageBox.Show("Không thể xoá nhân viên, vì đã thực hiện giao dịch chuyển tiền cho khách hàng", "", MessageBoxButtons.OK);
                 return;
-            }
-            if (KT_NV_Co_TK())
-            {
-                MessageBox.Show("Nhân viên này đã mở tài khoản login!!", "", MessageBoxButtons.OK);
-                Program.myReader.Close();
             }
             if (MessageBox.Show("Bạn có thật sự muốn xoá nhân viên "+ manv +" ??", "Xác nhận",
                 MessageBoxButtons.OKCancel) == DialogResult.OK)
