@@ -94,6 +94,7 @@ namespace NganHang.SimpleForm
             this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
             this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
             taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
+            hOTENTextBox.Text = cMNDTextBox.Text = txtSoTKNhan.Text = mACNTextBox.Text = "";
             pnlGD.Enabled = false;
             bdsTK.Position = vitri;
         }
@@ -126,6 +127,7 @@ namespace NganHang.SimpleForm
         {
             try
             {
+                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
             }
             catch (Exception ex)
