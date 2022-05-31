@@ -19,8 +19,8 @@ namespace NganHang
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
-        {          
-            Xtrp_LietKeKH rpt = new Xtrp_LietKeKH(cmbLoai.Text.Substring(0, 1));
+        {
+            Xtrp_LietKeKH rpt = new Xtrp_LietKeKH(cmbLoai.Text.Substring(0, 1), cmbCN.SelectedValue.ToString());
             if (cmbLoai.Text.Trim() == "")
             {
                 MessageBox.Show("Bạn chưa chọn loại báo cáo!!", "", MessageBoxButtons.OK);
@@ -33,14 +33,13 @@ namespace NganHang
 
         private void frmLietKeKH_Load(object sender, EventArgs e)
         {
-            cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
-            cmbChiNhanh.DisplayMember = "TENCN";
-            cmbChiNhanh.ValueMember = "TENSERVER";
-            cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
-            cmbChiNhanh.Enabled = false;
+            this.dS_CHINHANHTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.dS_CHINHANHTableAdapter.Fill(this.dS.DS_CHINHANH);
+            cmbCN.SelectedIndex = Program.mChiNhanh;
+            cmbCN.Enabled = false;
             if (Program.mGroup == "NganHang")
             {
-                cmbChiNhanh.Enabled = true;
+                cmbCN.Enabled = true;
                 cmbLoai.Enabled = true;
             }
             else
@@ -52,10 +51,10 @@ namespace NganHang
 
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbChiNhanh.SelectedValue.ToString() == "System.Data.DataRowView")
+            if (cmbCN.SelectedValue.ToString() == "System.Data.DataRowView")
                 return;
-            Program.servername = cmbChiNhanh.SelectedValue.ToString();
-            if (cmbChiNhanh.SelectedIndex != Program.mChiNhanh)
+            Program.servername = cmbCN.SelectedValue.ToString();
+            if (cmbCN.SelectedIndex != Program.mChiNhanh)
             {
                 Program.mlogin = Program.remotelogin;
                 Program.password = Program.remotepassword;
@@ -67,6 +66,26 @@ namespace NganHang
                 Program.password = Program.passwordDN;
             }
             if (Program.KetNoi() == 0) MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
+        }
+
+        private void mACNComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cmbCNFinal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -406,6 +406,7 @@
             // xrPageInfo1
             // 
             this.xrPageInfo1.Dpi = 100F;
+            this.xrPageInfo1.Format = "{0:yyyy-MM-dd HH:mm:ss}";
             this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(5F, 5F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -416,11 +417,11 @@
             // xrPageInfo2
             // 
             this.xrPageInfo2.Dpi = 100F;
-            this.xrPageInfo2.Format = "Page {0} of {1}";
-            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(330F, 5F);
+            this.xrPageInfo2.Format = "Trang {0} / {1}";
+            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(329.8333F, 5F);
             this.xrPageInfo2.Name = "xrPageInfo2";
             this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrPageInfo2.SizeF = new System.Drawing.SizeF(315F, 23F);
+            this.xrPageInfo2.SizeF = new System.Drawing.SizeF(419.6667F, 23F);
             this.xrPageInfo2.StyleName = "PageInfo";
             this.xrPageInfo2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 

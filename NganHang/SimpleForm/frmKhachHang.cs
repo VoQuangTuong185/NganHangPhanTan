@@ -209,6 +209,7 @@ namespace NganHang
         {
             try
             {
+                this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.khachHangTableAdapter.Fill(this.DS.KhachHang);
             }
             catch (Exception ex)

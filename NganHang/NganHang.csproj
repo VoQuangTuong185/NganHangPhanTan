@@ -79,10 +79,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmLietKeKH.cs">
+    <Compile Include="SimpleForm\frmLietKeKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLietKeKH.Designer.cs">
+    <Compile Include="SimpleForm\frmLietKeKH.Designer.cs">
       <DependentUpon>frmLietKeKH.cs</DependentUpon>
     </Compile>
     <Compile Include="SimpleForm\frmSaoKeTaiKhoan.cs">
@@ -159,19 +159,13 @@
     <Compile Include="Xtrp_LietKeKH.Designer.cs">
       <DependentUpon>Xtrp_LietKeKH.cs</DependentUpon>
     </Compile>
-    <Compile Include="Xtrp_LietKeKhachHang.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Xtrp_LietKeKhachHang.Designer.cs">
-      <DependentUpon>Xtrp_LietKeKhachHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="Xtrp_LietKeTaiKhoan.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Xtrp_LietKeTaiKhoan.Designer.cs">
       <DependentUpon>Xtrp_LietKeTaiKhoan.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmLietKeKH.resx">
+    <EmbeddedResource Include="SimpleForm\frmLietKeKH.resx">
       <DependentUpon>frmLietKeKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SimpleForm\frmSaoKeTaiKhoan.resx">
@@ -220,9 +214,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Xtrp_LietKeKH.resx">
       <DependentUpon>Xtrp_LietKeKH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Xtrp_LietKeKhachHang.resx">
-      <DependentUpon>Xtrp_LietKeKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xtrp_LietKeTaiKhoan.resx">
       <DependentUpon>Xtrp_LietKeTaiKhoan.cs</DependentUpon>

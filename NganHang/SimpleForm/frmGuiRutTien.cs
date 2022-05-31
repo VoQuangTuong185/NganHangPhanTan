@@ -132,6 +132,7 @@ namespace NganHang.SimpleForm
         {
             try
             {
+                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
             }
             catch (Exception ex)
@@ -147,6 +148,23 @@ namespace NganHang.SimpleForm
             if (cmsTHEM.Enabled == false) bdsTK.Position = vitri;
             taiKhoanGridControl.Enabled = khachHangGridControl.Enabled = true;
             pnlGD.Enabled = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DS.EnforceConstraints = false;
+                this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.khachHangTableAdapter.Fill(this.DS.KhachHang);
+                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi reload: " + ex.Message, "", MessageBoxButtons.OK);
+                return;
+            }
         }
     }
 }

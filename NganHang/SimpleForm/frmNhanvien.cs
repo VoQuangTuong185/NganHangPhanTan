@@ -62,7 +62,6 @@ namespace NganHang.SimpleForm
                      
             this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
-            /*VẪN CÒN TIỀM ẨN LỖI CHƯA FIX*/
             macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
             cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
             cmbChiNhanh.DisplayMember = "TENCN";
@@ -102,7 +101,7 @@ namespace NganHang.SimpleForm
         }
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            String manv = ((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString();
+            String manv = ((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().TrimEnd();
             if (txtMANV.Text.Trim() == "")
             {
                 MessageBox.Show("Mã nhân viên không được trống", "", MessageBoxButtons.OK);
@@ -141,10 +140,10 @@ namespace NganHang.SimpleForm
             }
             // Kiểm tra mã nhân viên tồn tại trên site chủ
             //viết 1 SP kiểm tra mã trùng. gọi SP đó thông qua hàm ExecSqlDataReader dưới dạng có hay không!! 
-            if (btn_Add_clicked == true || manv != txtMANV.Text)
+            if (btn_Add_clicked == true || manv != txtMANV.Text.TrimEnd())
             {
                 Program.myReader.Close();
-                string strlenh1 = "EXEC frmNhanVien_duplicateMANV '" + txtMANV.Text + "'";
+                string strlenh1 = "EXEC frmNhanVien_duplicateMANV '" + txtMANV.Text.TrimEnd() + "'";
                 Program.myReader = Program.ExecSqlDataReader(strlenh1);
                 Program.myReader.Read();
                 Program.myReader.Close();
@@ -190,7 +189,7 @@ namespace NganHang.SimpleForm
         private bool KT_NV_Co_TK()
         {
             Program.myReader.Close();
-            string strlenh1 = "EXEC frmNhanVien_ExistsAccount '" + txtMANV.Text + "'";
+            string strlenh1 = "EXEC frmNhanVien_ExistsAccount '" + txtMANV.Text.TrimEnd() + "'";
             Program.myReader = Program.ExecSqlDataReader(strlenh1);
             Program.myReader.Read();
             if (Program.myReader.HasRows)
@@ -203,7 +202,7 @@ namespace NganHang.SimpleForm
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Int32 manv = 0;
-            manv = int.Parse(((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString());
+            manv = int.Parse(((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().TrimEnd());
             if (bdsGR.Count > 0)
             {
                 MessageBox.Show("Không thể xoá nhân viên, vì đã thực hiện giao dịch gửi rút tiền cho khách hàng", "", MessageBoxButtons.OK);
@@ -243,6 +242,7 @@ namespace NganHang.SimpleForm
         {
             try
             {
+                this.nhanVienTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.nhanVienTableAdapter.Fill(this.DS.NhanVien);
             }
             catch (Exception ex)
@@ -277,7 +277,7 @@ namespace NganHang.SimpleForm
         private void btnChuyenEmployee_Click(object sender, EventArgs e)
         {
             vitri = bdsNV.Position;
-            int manv = int.Parse(((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString());
+            int manv = int.Parse(((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString().TrimEnd());
             string MACN = cmbCNFinal.SelectedValue.ToString();
             if (cmbCNFinal.SelectedIndex == Program.mChiNhanh)
             {
@@ -290,18 +290,23 @@ namespace NganHang.SimpleForm
                 txtMANV.Focus();
                 return;
             }
-            if (txtMANVMOI.Text == manv.ToString())
+            if (txtMANVMOI.Text.TrimEnd() == manv.ToString())
             {
                 MessageBox.Show("Mã nhân viên đã tồn tại\nVui lòng nhập mã nhân viên khác!!", "", MessageBoxButtons.OK);
                 return;
             }
             if (MessageBox.Show("Bạn muốn chuyển nhân viên " + manv + " sang chi nhánh " + MACN + "??", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                Program.ExecSqlNonQuery("EXEC frmChuyenNV_MoveEmployee '" + manv + "','" + txtMANVMOI.Text + "','" + MACN + "'");   
+                Program.ExecSqlNonQuery("EXEC frmChuyenNV_MoveEmployee '" + manv + "','" + txtMANVMOI.Text.TrimEnd() + "','" + MACN + "'");   
             }
             btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled = btnExit.Enabled = gcNV.Enabled = txtMANVMOI.Enabled = true;
             btnSave.Enabled = btnUndo.Enabled = cmbCNFinal.Enabled = btnChuyenEmployee.Enabled = false;
             this.nhanVienTableAdapter.Fill(this.DS.NhanVien);
+        }
+
+        private void cmbCNFinal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

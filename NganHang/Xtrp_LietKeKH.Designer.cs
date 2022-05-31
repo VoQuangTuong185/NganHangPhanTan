@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Xtrp_LietKeKH));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
@@ -48,9 +50,9 @@
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
@@ -183,13 +185,18 @@
             this.sqlDataSource1.ConnectionName = "NganHang.Properties.Settings.NGANHANGConnectionString1";
             this.sqlDataSource1.Name = "sqlDataSource1";
             storedProcQuery1.Name = "SP_LietKeKhachHang2";
-            queryParameter1.Name = "@loai";
+            queryParameter1.Name = "@LOAI";
             queryParameter1.Type = typeof(string);
+            queryParameter1.ValueInfo = "C";
+            queryParameter2.Name = "@MACN";
+            queryParameter2.Type = typeof(string);
+            queryParameter2.ValueInfo = "BENTHANH";
             storedProcQuery1.Parameters.Add(queryParameter1);
+            storedProcQuery1.Parameters.Add(queryParameter2);
             storedProcQuery1.StoredProcName = "SP_LietKeKhachHang2";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
-            this.sqlDataSource1.ResultSchemaSerializable = "PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiIC8+";
+            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // groupHeaderBand1
             // 
@@ -306,6 +313,20 @@
             this.xrLabel6.Text = "Ngày cấp";
             this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
+            // xrLine1
+            // 
+            this.xrLine1.Dpi = 100F;
+            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(30.33333F, 0F);
+            this.xrLine1.Name = "xrLine1";
+            this.xrLine1.SizeF = new System.Drawing.SizeF(721.6667F, 2F);
+            // 
+            // xrLine2
+            // 
+            this.xrLine2.Dpi = 100F;
+            this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(30.33333F, 24.00002F);
+            this.xrLine2.Name = "xrLine2";
+            this.xrLine2.SizeF = new System.Drawing.SizeF(721.6667F, 2F);
+            // 
             // xrLabel7
             // 
             this.xrLabel7.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
@@ -321,20 +342,6 @@
             this.xrLabel7.Text = "Số ĐT";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLine1
-            // 
-            this.xrLine1.Dpi = 100F;
-            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(30.33333F, 0F);
-            this.xrLine1.Name = "xrLine1";
-            this.xrLine1.SizeF = new System.Drawing.SizeF(721.6667F, 2F);
-            // 
-            // xrLine2
-            // 
-            this.xrLine2.Dpi = 100F;
-            this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(30.33333F, 24.00002F);
-            this.xrLine2.Name = "xrLine2";
-            this.xrLine2.SizeF = new System.Drawing.SizeF(721.6667F, 2F);
-            // 
             // pageFooterBand1
             // 
             this.pageFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -347,7 +354,7 @@
             // xrPageInfo1
             // 
             this.xrPageInfo1.Dpi = 100F;
-            this.xrPageInfo1.Format = "{0:dd/MM/yyyy}";
+            this.xrPageInfo1.Format = "{0:yyyy-MM-dd HH:mm:ss}";
             this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(5F, 5F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);

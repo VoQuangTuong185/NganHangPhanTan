@@ -13,14 +13,12 @@ namespace NganHang.SimpleForm
 
         private void frmLietKeTaiKhoan_Load(object sender, EventArgs e)
         {
-            cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
-            cmbChiNhanh.DisplayMember = "TENCN";
-            cmbChiNhanh.ValueMember = "TENSERVER";
-            cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
-            cmbChiNhanh.Enabled = false;
+            this.dS_CHINHANHTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.dS_CHINHANHTableAdapter.Fill(this.DS.DS_CHINHANH);
+            cmbCN.Enabled = false;
             if (Program.mGroup == "NganHang")
             {
-                cmbChiNhanh.Enabled = true;
+                cmbCN.Enabled = true;
                 cmbLoai.Enabled = true;
             }
             else
@@ -33,15 +31,15 @@ namespace NganHang.SimpleForm
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            Xtrp_LietKeTaiKhoan rpt = new Xtrp_LietKeTaiKhoan(batdau.DateTime, ketthuc.DateTime, cmbLoai.Text.Substring(0,1));
+            Xtrp_LietKeTaiKhoan rpt = new Xtrp_LietKeTaiKhoan(batdau.DateTime, ketthuc.DateTime, cmbLoai.Text.Substring(0,1), cmbCN.SelectedValue.ToString());
             rpt.lb_batdau.Text = batdau.DateTime.ToString();
             rpt.lb_ketthuc.Text = ketthuc.DateTime.ToString();
 
-            if (cmbChiNhanh.SelectedIndex == 0)
+            if (cmbCN.SelectedIndex == 0)
             {
                 rpt.tlLoai.Text = "Chi nhánh Bến Thành";
             }
-            else if (cmbChiNhanh.SelectedIndex == 1)
+            else if (cmbCN.SelectedIndex == 1)
             {
                 rpt.tlLoai.Text = "Chi nhánh Tân Định";
             }
@@ -74,10 +72,9 @@ namespace NganHang.SimpleForm
 
         private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbChiNhanh.SelectedValue.ToString() == "System.Data.DataRowView")
+            if (cmbCN.SelectedValue.ToString() == "System.Data.DataRowView")
                 return;
-            Program.servername = cmbChiNhanh.SelectedValue.ToString();
-            if (cmbChiNhanh.SelectedIndex != Program.mChiNhanh)
+            if (cmbCN.SelectedIndex != Program.mChiNhanh)
             {
                 Program.mlogin = Program.remotelogin;
                 Program.password = Program.remotepassword;

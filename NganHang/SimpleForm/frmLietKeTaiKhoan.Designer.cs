@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             this.cmbLoai = new System.Windows.Forms.ComboBox();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,6 +40,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.DS = new NganHang.DS();
             this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
+            this.cmbCN = new System.Windows.Forms.ComboBox();
+            this.dSCHINHANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_CHINHANHTableAdapter = new NganHang.DSTableAdapters.DS_CHINHANHTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.batdau.Properties.CalendarTimeProperties)).BeginInit();
@@ -47,37 +50,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSCHINHANHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.cmbCN);
             this.panelControl1.Controls.Add(this.label1);
-            this.panelControl1.Controls.Add(this.cmbChiNhanh);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1244, 54);
+            this.panelControl1.Size = new System.Drawing.Size(1582, 54);
             this.panelControl1.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(36, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 32);
+            this.label1.Size = new System.Drawing.Size(105, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chi Nhánh";
-            // 
-            // cmbChiNhanh
-            // 
-            this.cmbChiNhanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbChiNhanh.FormattingEnabled = true;
-            this.cmbChiNhanh.Location = new System.Drawing.Point(191, 9);
-            this.cmbChiNhanh.Name = "cmbChiNhanh";
-            this.cmbChiNhanh.Size = new System.Drawing.Size(325, 39);
-            this.cmbChiNhanh.TabIndex = 0;
-            this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
             // 
             // cmbLoai
             // 
@@ -88,7 +82,7 @@
             this.cmbLoai.Items.AddRange(new object[] {
             "Tất cả các chi nhánh",
             "Chi nhánh hiện tại"});
-            this.cmbLoai.Location = new System.Drawing.Point(168, 101);
+            this.cmbLoai.Location = new System.Drawing.Point(724, 77);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(219, 37);
             this.cmbLoai.TabIndex = 9;
@@ -98,7 +92,7 @@
             // 
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.Black;
-            this.btnXacNhan.Location = new System.Drawing.Point(502, 182);
+            this.btnXacNhan.Location = new System.Drawing.Point(724, 263);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(176, 37);
             this.btnXacNhan.TabIndex = 10;
@@ -111,7 +105,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(103, 106);
+            this.label2.Location = new System.Drawing.Point(619, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 29);
             this.label2.TabIndex = 11;
@@ -120,7 +114,7 @@
             // batdau
             // 
             this.batdau.EditValue = null;
-            this.batdau.Location = new System.Drawing.Point(554, 106);
+            this.batdau.Location = new System.Drawing.Point(724, 141);
             this.batdau.Name = "batdau";
             this.batdau.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.batdau.Properties.Appearance.Options.UseFont = true;
@@ -128,13 +122,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.batdau.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.batdau.Size = new System.Drawing.Size(204, 36);
+            this.batdau.Size = new System.Drawing.Size(219, 36);
             this.batdau.TabIndex = 12;
             // 
             // ketthuc
             // 
             this.ketthuc.EditValue = null;
-            this.ketthuc.Location = new System.Drawing.Point(911, 106);
+            this.ketthuc.Location = new System.Drawing.Point(724, 205);
             this.ketthuc.Name = "ketthuc";
             this.ketthuc.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ketthuc.Properties.Appearance.Options.UseFont = true;
@@ -142,7 +136,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ketthuc.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ketthuc.Size = new System.Drawing.Size(204, 36);
+            this.ketthuc.Size = new System.Drawing.Size(219, 36);
             this.ketthuc.TabIndex = 13;
             // 
             // label3
@@ -150,7 +144,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(454, 109);
+            this.label3.Location = new System.Drawing.Point(617, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 29);
             this.label3.TabIndex = 14;
@@ -161,7 +155,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(806, 109);
+            this.label4.Location = new System.Drawing.Point(619, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 29);
             this.label4.TabIndex = 15;
@@ -183,11 +177,32 @@
             this.tableAdapterManager.TaiKhoanTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = NganHang.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // cmbCN
+            // 
+            this.cmbCN.DataSource = this.dSCHINHANHBindingSource;
+            this.cmbCN.DisplayMember = "TENCN";
+            this.cmbCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCN.FormattingEnabled = true;
+            this.cmbCN.Location = new System.Drawing.Point(161, 13);
+            this.cmbCN.Name = "cmbCN";
+            this.cmbCN.Size = new System.Drawing.Size(213, 28);
+            this.cmbCN.TabIndex = 3;
+            this.cmbCN.ValueMember = "MACN";
+            // 
+            // dSCHINHANHBindingSource
+            // 
+            this.dSCHINHANHBindingSource.DataMember = "DS_CHINHANH";
+            this.dSCHINHANHBindingSource.DataSource = this.DS;
+            // 
+            // dS_CHINHANHTableAdapter
+            // 
+            this.dS_CHINHANHTableAdapter.ClearBeforeFill = true;
+            // 
             // frmLietKeTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 401);
+            this.ClientSize = new System.Drawing.Size(1582, 580);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ketthuc);
@@ -207,6 +222,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSCHINHANHBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,7 +232,6 @@
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbChiNhanh;
         private System.Windows.Forms.ComboBox cmbLoai;
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.Label label2;
@@ -226,5 +241,8 @@
         private System.Windows.Forms.Label label4;
         private DS DS;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ComboBox cmbCN;
+        private System.Windows.Forms.BindingSource dSCHINHANHBindingSource;
+        private DSTableAdapters.DS_CHINHANHTableAdapter dS_CHINHANHTableAdapter;
     }
 }

@@ -29,13 +29,11 @@ namespace NganHang.SimpleForm
             this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
             this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
             this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
-
             cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER";
             cmbChiNhanh.SelectedIndex = Program.mChiNhanh;
-            cmbChiNhanh.Enabled = false;
-            panelControl2.Enabled = cmsPHUCHOI.Enabled = cmsLUU.Enabled = grbThongTinKH.Enabled = pnlThongTinTaiKhoan.Enabled = false ;       
+            cmbChiNhanh.Enabled = false;     
             if (Program.mGroup == "NganHang")
             {              
                 cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled  = false;
@@ -48,20 +46,19 @@ namespace NganHang.SimpleForm
         }
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Program.KetNoi() == 0) return;
-            //if (cmbChiNhanh.SelectedIndex == 0)
-            //{
-            //    teMACN.EditValue = "BENTHANH";
-            //}
-            //else if (cmbChiNhanh.SelectedIndex == 1)
-            //{
-            //    teMACN.EditValue = "TANDINH";
-            //}        
             pnlThongTinTaiKhoan.Enabled = true;
             gcTK.Enabled = false;
-            cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = false;
-            cmsLUU.Enabled = cmsPHUCHOI.Enabled = true;
             bdsTK.AddNew();
+            cmsTHEM.Enabled =cmsHIEUCHINH.Enabled = cmsXOA.Enabled= cmsTAILAI.Enabled= false;
+            cmsLUU.Enabled = cmsPHUCHOI.Enabled = cmsTHOAT.Enabled = true;
+            if (cmbChiNhanh.SelectedIndex == 0)
+            {
+                txtMACNSet.Text = "BENTHANH";
+            }
+            else if (cmbChiNhanh.SelectedIndex == 1)
+            {
+                txtMACNSet.Text = "TANDINH";
+            }
             teCMND.Text = txtCMNDKhachHang.Text;
             numbSODU.Value = 0;              
             Program.myReader.Close();
@@ -96,7 +93,7 @@ namespace NganHang.SimpleForm
 
         private void lưuToolStripMenuItem_Click(object sender, EventArgs e)
         {           
-            String SOTK = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString();                      
+            String SOTK = ((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString().TrimEnd();                      
             if (txtSOTK.Text.Trim() == "")
             {
                 MessageBox.Show("Số tài khoản không được trống", "", MessageBoxButtons.OK);
@@ -116,9 +113,9 @@ namespace NganHang.SimpleForm
                 return;
             }
             String dt = String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
-            if (btn_Edit_clicked == true && SOTK == txtSOTK.Text)
+            if (btn_Edit_clicked == true && SOTK.TrimEnd() == txtSOTK.Text.TrimEnd())
             {
-                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dt + "'");
+                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text.TrimEnd() + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + txtMACNSet.Text + "','" + dt + "'");
                 this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.khachHang_TTTableAdapter.Fill(this.DS.frmMoTaiKhoanKH_InfoCustomer, txtCMNDKhachHang.Text);
                 btn_Edit_clicked = false;
@@ -126,7 +123,7 @@ namespace NganHang.SimpleForm
             else
             {
                 Program.myReader.Close();
-                string strlenh1 = "EXEC frmMoTaiKhoanKH_duplicateSoTK '" + txtSOTK.Text + "'";
+                string strlenh1 = "EXEC frmMoTaiKhoanKH_duplicateSoTK '" + txtSOTK.Text.TrimEnd() + "'";
                 Program.myReader = Program.ExecSqlDataReader(strlenh1);
                 Program.myReader.Read();
                 if (Program.myReader.HasRows)
@@ -135,7 +132,7 @@ namespace NganHang.SimpleForm
                     return;
                 }
                 Program.myReader.Close();
-                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + teMACN.Text + "','" + dt + "'");
+                Program.ExecSqlNonQuery("EXEC frmMoTaiKhoanKH_OpenAccount '" + txtSOTK.Text.TrimEnd() + "','" + teCMND.Text + "','" + numbSODU.Value + "','" + txtMACNSet.Text + "','" + dt + "'");
                 this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.khachHang_TTTableAdapter.Fill(this.DS.frmMoTaiKhoanKH_InfoCustomer, txtCMNDKhachHang.Text);
             }
@@ -159,7 +156,7 @@ namespace NganHang.SimpleForm
 
         private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int SOTK = int.Parse(((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString());
+            int SOTK = int.Parse(((DataRowView)bdsTK[bdsTK.Position])["SOTK"].ToString().TrimEnd());
             if (bds_GR.Count > 0)
             {
                 MessageBox.Show("Không thể xoá tài khoản ngân hàng, vì đã thực hiện giao dịch gửi rút tiền ", "", MessageBoxButtons.OK);
@@ -203,8 +200,16 @@ namespace NganHang.SimpleForm
             gcTK.Enabled = true;
 
             panelControl2.Enabled = pnlThongTinTaiKhoan.Enabled = false;
-            cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTAILAI.Enabled = cmsTHOAT.Enabled = true;
-            cmsLUU.Enabled = cmsPHUCHOI.Enabled = false;
+            if (bdsTK.Count > 0)
+            {
+                cmsPHUCHOI.Enabled = cmsTHEM.Enabled =cmsLUU.Enabled = false;
+                cmsTHEM.Enabled = cmsTAILAI.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTHOAT.Enabled = true;
+            }
+            else
+            {
+                cmsTHEM.Enabled = cmsTAILAI.Enabled = true;
+                cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTHOAT.Enabled = cmsPHUCHOI.Enabled =cmsLUU.Enabled= false;
+            }
             gcTK.Enabled = true;
         }
 
@@ -241,6 +246,16 @@ namespace NganHang.SimpleForm
                 grbThongTinKH.Enabled = gcTK.Enabled = true;
                 this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.khachHang_TTTableAdapter.Fill(this.DS.frmMoTaiKhoanKH_InfoCustomer, txtCMNDKhachHang.Text);
+                if (bdsTK.Count > 0)
+                {
+                    cmsLUU.Enabled = cmsPHUCHOI.Enabled = false;
+                     cmsTHEM.Enabled = cmsTAILAI.Enabled= cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTHOAT.Enabled = true;
+                }
+                else
+                {
+                    cmsTHEM.Enabled = cmsTAILAI.Enabled = true;
+                    cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTHOAT.Enabled = cmsPHUCHOI.Enabled= cmsLUU.Enabled = false;
+                }
             }
             catch (System.Exception ex)
             {
@@ -254,6 +269,11 @@ namespace NganHang.SimpleForm
         }
 
         private void teMACN_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
         {
 
         }

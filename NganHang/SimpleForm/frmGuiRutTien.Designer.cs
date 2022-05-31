@@ -33,7 +33,7 @@
             System.Windows.Forms.Label lOAIGDLabel;
             System.Windows.Forms.Label sOTIENLabel;
             System.Windows.Forms.Label mANVLabel;
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
@@ -81,6 +81,7 @@
             this.cmbLoaiGD = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnReload = new System.Windows.Forms.Button();
             sOTKLabel = new System.Windows.Forms.Label();
             lOAIGDLabel = new System.Windows.Forms.Label();
             sOTIENLabel = new System.Windows.Forms.Label();
@@ -305,9 +306,9 @@
             // taiKhoanGridControl
             // 
             this.taiKhoanGridControl.DataSource = this.bdsTK;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.taiKhoanGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.taiKhoanGridControl.Location = new System.Drawing.Point(12, 328);
             this.taiKhoanGridControl.MainView = this.gridView2;
             this.taiKhoanGridControl.Name = "taiKhoanGridControl";
@@ -604,11 +605,25 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Danh sách tài khoản của khách hàng được chọn";
             // 
+            // btnReload
+            // 
+            this.btnReload.BackColor = System.Drawing.Color.White;
+            this.btnReload.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReload.ForeColor = System.Drawing.Color.Black;
+            this.btnReload.Location = new System.Drawing.Point(575, 82);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(114, 34);
+            this.btnReload.TabIndex = 15;
+            this.btnReload.Text = "Làm mới";
+            this.btnReload.UseVisualStyleBackColor = false;
+            this.btnReload.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmGuiRutTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1586, 656);
+            this.Controls.Add(this.btnReload);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pnlGD);
@@ -696,5 +711,6 @@
         private DevExpress.XtraEditors.TextEdit txtSOTK;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnReload;
     }
 }

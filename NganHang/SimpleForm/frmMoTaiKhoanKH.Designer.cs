@@ -67,7 +67,6 @@
             this.colNGAYMOTK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlThongTinTaiKhoan = new System.Windows.Forms.GroupBox();
-            this.teMACN = new DevExpress.XtraEditors.TextEdit();
             this.txtSOTK = new System.Windows.Forms.TextBox();
             this.teCMND = new System.Windows.Forms.TextBox();
             this.numbSODU = new System.Windows.Forms.NumericUpDown();
@@ -78,9 +77,10 @@
             this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
             this.bds_CTN = new System.Windows.Forms.BindingSource(this.components);
             this.bds_GR = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.txtMACNSet = new System.Windows.Forms.TextBox();
+            this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             cMNDLabel = new System.Windows.Forms.Label();
             mACNLabel = new System.Windows.Forms.Label();
             sOTKLabel = new System.Windows.Forms.Label();
@@ -102,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsTK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.pnlThongTinTaiKhoan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teMACN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numbSODU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bds_CTC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bds_CTN)).BeginInit();
@@ -481,7 +480,7 @@
             // 
             // pnlThongTinTaiKhoan
             // 
-            this.pnlThongTinTaiKhoan.Controls.Add(this.teMACN);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.txtMACNSet);
             this.pnlThongTinTaiKhoan.Controls.Add(this.txtSOTK);
             this.pnlThongTinTaiKhoan.Controls.Add(sOTKLabel);
             this.pnlThongTinTaiKhoan.Controls.Add(sODULabel);
@@ -496,18 +495,6 @@
             this.pnlThongTinTaiKhoan.TabIndex = 21;
             this.pnlThongTinTaiKhoan.TabStop = false;
             this.pnlThongTinTaiKhoan.Text = "Thông tin tài khoản";
-            // 
-            // teMACN
-            // 
-            this.teMACN.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsTK, "MACN", true));
-            this.teMACN.Location = new System.Drawing.Point(663, 45);
-            this.teMACN.Name = "teMACN";
-            this.teMACN.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teMACN.Properties.Appearance.Options.UseFont = true;
-            this.teMACN.Properties.ReadOnly = true;
-            this.teMACN.Size = new System.Drawing.Size(245, 26);
-            this.teMACN.TabIndex = 17;
-            this.teMACN.EditValueChanged += new System.EventHandler(this.teMACN_EditValueChanged);
             // 
             // txtSOTK
             // 
@@ -578,16 +565,6 @@
             this.bds_GR.DataMember = "FK_GD_GOIRUT_TaiKhoan";
             this.bds_GR.DataSource = this.bdsTK;
             // 
-            // cmbChiNhanh
-            // 
-            this.cmbChiNhanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbChiNhanh.FormattingEnabled = true;
-            this.cmbChiNhanh.Location = new System.Drawing.Point(129, 7);
-            this.cmbChiNhanh.Name = "cmbChiNhanh";
-            this.cmbChiNhanh.Size = new System.Drawing.Size(325, 30);
-            this.cmbChiNhanh.TabIndex = 0;
-            this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -600,13 +577,31 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.cmbChiNhanh);
+            this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1573, 43);
             this.panelControl1.TabIndex = 5;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            // 
+            // txtMACNSet
+            // 
+            this.txtMACNSet.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "MACN", true));
+            this.txtMACNSet.Location = new System.Drawing.Point(663, 40);
+            this.txtMACNSet.Name = "txtMACNSet";
+            this.txtMACNSet.ReadOnly = true;
+            this.txtMACNSet.Size = new System.Drawing.Size(245, 30);
+            this.txtMACNSet.TabIndex = 17;
+            // 
+            // cmbChiNhanh
+            // 
+            this.cmbChiNhanh.FormattingEnabled = true;
+            this.cmbChiNhanh.Location = new System.Drawing.Point(119, 11);
+            this.cmbChiNhanh.Name = "cmbChiNhanh";
+            this.cmbChiNhanh.Size = new System.Drawing.Size(223, 24);
+            this.cmbChiNhanh.TabIndex = 2;
             // 
             // frmMoTaiKhoanKH
             // 
@@ -639,7 +634,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.pnlThongTinTaiKhoan.ResumeLayout(false);
             this.pnlThongTinTaiKhoan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teMACN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numbSODU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bds_CTC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bds_CTN)).EndInit();
@@ -689,13 +683,13 @@
         private System.Windows.Forms.GroupBox grbThongTinKH;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private System.Windows.Forms.GroupBox pnlThongTinTaiKhoan;
-        private DevExpress.XtraEditors.TextEdit teMACN;
         private System.Windows.Forms.BindingSource bds_CTC;
         private DSTableAdapters.GD_CHUYENTIENTableAdapter gD_CHUYENTIENTableAdapter;
         private System.Windows.Forms.BindingSource bds_CTN;
         private System.Windows.Forms.BindingSource bds_GR;
-        private System.Windows.Forms.ComboBox cmbChiNhanh;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private System.Windows.Forms.TextBox txtMACNSet;
+        private System.Windows.Forms.ComboBox cmbChiNhanh;
     }
 }
