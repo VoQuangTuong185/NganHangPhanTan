@@ -256,6 +256,14 @@ namespace NganHang.SimpleForm
                     cmsTHEM.Enabled = cmsTAILAI.Enabled = true;
                     cmsHIEUCHINH.Enabled = cmsXOA.Enabled = cmsTHOAT.Enabled = cmsPHUCHOI.Enabled= cmsLUU.Enabled = false;
                 }
+                if (Program.mGroup == "NganHang")
+                {
+                    cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = false;
+                }
+                else
+                {
+                    cmsTHEM.Enabled = cmsHIEUCHINH.Enabled = cmsXOA.Enabled = true;
+                }
             }
             catch (System.Exception ex)
             {

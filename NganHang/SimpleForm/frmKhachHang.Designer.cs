@@ -422,6 +422,8 @@
             this.gridView1.OptionsFind.FindFilterColumns = "CMND";
             this.gridView1.OptionsFind.FindNullPrompt = "Nhập CMND khách hàng...";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTEN, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // colCMND
             // 

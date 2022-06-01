@@ -33,7 +33,7 @@
             System.Windows.Forms.Label lOAIGDLabel;
             System.Windows.Forms.Label sOTIENLabel;
             System.Windows.Forms.Label mANVLabel;
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
@@ -255,6 +255,8 @@
             this.gridView1.OptionsFind.FindFilterColumns = "CMND";
             this.gridView1.OptionsFind.FindNullPrompt = "Nhập CMND khách hàng...";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTEN, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // colCMND
             // 
@@ -306,9 +308,9 @@
             // taiKhoanGridControl
             // 
             this.taiKhoanGridControl.DataSource = this.bdsTK;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.taiKhoanGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.taiKhoanGridControl.Location = new System.Drawing.Point(12, 328);
             this.taiKhoanGridControl.MainView = this.gridView2;
             this.taiKhoanGridControl.Name = "taiKhoanGridControl";
@@ -396,33 +398,34 @@
             this.cmsPHUCHOI,
             this.cmsTHOAT});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 100);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(182, 100);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // cmsTHEM
             // 
             this.cmsTHEM.Name = "cmsTHEM";
-            this.cmsTHEM.Size = new System.Drawing.Size(157, 24);
-            this.cmsTHEM.Text = "Thêm";
+            this.cmsTHEM.Size = new System.Drawing.Size(181, 24);
+            this.cmsTHEM.Text = "Thêm giao dịch";
             this.cmsTHEM.Click += new System.EventHandler(this.cmsTHEM_Click);
             // 
             // cmsTAILAI
             // 
             this.cmsTAILAI.Name = "cmsTAILAI";
-            this.cmsTAILAI.Size = new System.Drawing.Size(157, 24);
+            this.cmsTAILAI.Size = new System.Drawing.Size(181, 24);
             this.cmsTAILAI.Text = "Tải lại trang";
             this.cmsTAILAI.Click += new System.EventHandler(this.cmsTAILAI_Click);
             // 
             // cmsPHUCHOI
             // 
             this.cmsPHUCHOI.Name = "cmsPHUCHOI";
-            this.cmsPHUCHOI.Size = new System.Drawing.Size(157, 24);
+            this.cmsPHUCHOI.Size = new System.Drawing.Size(181, 24);
             this.cmsPHUCHOI.Text = "Phục hồi";
             this.cmsPHUCHOI.Click += new System.EventHandler(this.cmsPHUCHOI_Click);
             // 
             // cmsTHOAT
             // 
             this.cmsTHOAT.Name = "cmsTHOAT";
-            this.cmsTHOAT.Size = new System.Drawing.Size(157, 24);
+            this.cmsTHOAT.Size = new System.Drawing.Size(181, 24);
             this.cmsTHOAT.Text = "Thoát";
             this.cmsTHOAT.Click += new System.EventHandler(this.cmsTHOAT_Click);
             // 
@@ -441,8 +444,11 @@
             this.colMANV});
             this.gridView3.GridControl = this.gD_GOIRUTGridControl;
             this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsBehavior.Editable = false;
             this.gridView3.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridView3.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colNGAYGD, DevExpress.Data.ColumnSortOrder.Descending)});
             // 
             // colMAGD
             // 

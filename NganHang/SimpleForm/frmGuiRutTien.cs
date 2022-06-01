@@ -12,15 +12,6 @@ namespace NganHang.SimpleForm
         {
             InitializeComponent();
         }
-
-        private void khachHangBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bdsKH.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.DS);
-
-        }
-
         private void frmGuiRutTien_Load(object sender, EventArgs e)
         {
             DS.EnforceConstraints = false;
@@ -95,6 +86,10 @@ namespace NganHang.SimpleForm
            
             String dt = String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
             String loaiGD = (cmbLoaiGD.SelectedIndex == 0) ? "GT" : "RT";
+            if (loaiGD == "")
+            {
+                MessageBox.Show("Bạn chưa chọn loại giao dịch", "", MessageBoxButtons.OK);
+            }
             if (txtSoTien.Value < 100000)
             {
                 MessageBox.Show("Số tiền giao dịch thấp nhất là 100.000đ\nBạn hãy nhập lại...", "", MessageBoxButtons.OK);
@@ -165,6 +160,11 @@ namespace NganHang.SimpleForm
                 MessageBox.Show("Lỗi reload: " + ex.Message, "", MessageBoxButtons.OK);
                 return;
             }
+        }
+
+        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }

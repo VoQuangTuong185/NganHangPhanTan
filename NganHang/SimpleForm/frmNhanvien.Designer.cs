@@ -37,7 +37,7 @@
             System.Windows.Forms.Label trangThaiXoaLabel;
             System.Windows.Forms.Label pHAILabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -216,9 +216,9 @@
             this.bar1.BarName = "Tools";
             this.bar1.DockCol = 0;
             this.bar1.DockRow = 0;
-            this.bar1.FloatLocation = new System.Drawing.Point(20, 308);
+            this.bar1.FloatLocation = new System.Drawing.Point(156, 325);
             this.bar1.FloatSize = new System.Drawing.Size(46, 31);
-            this.bar1.Offset = 207;
+            this.bar1.Offset = 105;
             this.bar1.Text = "Tools";
             this.bar1.Visible = false;
             // 
@@ -478,9 +478,9 @@
             this.gcNV.EmbeddedNavigator.Appearance.BackColor = System.Drawing.Color.Lime;
             this.gcNV.EmbeddedNavigator.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.gcNV.EmbeddedNavigator.Appearance.Options.UseBackColor = true;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gcNV.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gcNV.Location = new System.Drawing.Point(0, 71);
             this.gcNV.MainView = this.gridView1;
             this.gcNV.MenuManager = this.barManager1;
@@ -523,6 +523,8 @@
             this.gridView1.OptionsFind.FindFilterColumns = "MANV";
             this.gridView1.OptionsFind.FindNullPrompt = "Nhập mã nhân viên...";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTEN, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // colMANV
             // 

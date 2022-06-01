@@ -19,8 +19,6 @@ namespace NganHang
         public static String connstr_publisher = "Data Source= DESKTOP-00M8FPR;Initial Catalog=NGANHANG;integrated security=true";
         public static SqlDataReader myReader;
         public static String servername = "";
-        public static String servername1 = "DESKTOP-00M8FPR\\SERVER1";
-        public static String servername2 = "DESKTOP-00M8FPR\\SERVER2";
         public static String username = "";
         public static String password = "";
         public static String database = "NGANHANG";
