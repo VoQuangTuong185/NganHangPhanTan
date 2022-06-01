@@ -277,6 +277,12 @@ namespace NganHang.SimpleForm
                 MessageBox.Show("Mã nhân viên đã tồn tại\nVui lòng nhập mã nhân viên khác!!", "", MessageBoxButtons.OK);
                 return;
             }
+            if (manv.ToString().TrimEnd().Equals(Program.username.TrimEnd()))
+            {
+                MessageBox.Show("Không thể chuyển chính bạn sang chi nhánh khác, hãy nhờ nhân viên khác", "", MessageBoxButtons.OK);
+                return;
+            }
+
             if (MessageBox.Show("Bạn muốn chuyển nhân viên " + manv + " sang chi nhánh " + MACN + "??", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 Program.ExecSqlNonQuery("EXEC frmChuyenNV_MoveEmployee '" + manv + "','" + txtMANVMOI.Text.TrimEnd() + "','" + MACN + "'");   
