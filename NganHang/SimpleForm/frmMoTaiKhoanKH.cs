@@ -70,25 +70,7 @@ namespace NganHang.SimpleForm
             if (cmbChiNhanh.SelectedValue.ToString() == "System.Data.DataRowView")
                 return;
             Program.servername = cmbChiNhanh.SelectedValue.ToString();
-            if (cmbChiNhanh.SelectedIndex != Program.mChiNhanh)
-            {
-                Program.mlogin = Program.remotelogin;
-                Program.password = Program.remotepassword;
-            }
-            else
-            {
-                Program.mlogin = Program.mloginDN;
-                Program.password = Program.passwordDN;
-            }
-            if (Program.KetNoi() == 0) MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
-            else
-            {
-                DS.EnforceConstraints = false;
-                this.khachHang_TTTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.khachHang_TTTableAdapter.Fill(this.DS.frmMoTaiKhoanKH_InfoCustomer, txtCMNDKhachHang.Text);
-                this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.taiKhoanTableAdapter.Fill(this.DS.TaiKhoan);
-            }
+
         }
 
         private void lưuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -269,21 +251,6 @@ namespace NganHang.SimpleForm
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-        }
-
-        private void panelControl3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void teMACN_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

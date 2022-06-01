@@ -67,6 +67,7 @@
             this.colNGAYMOTK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlThongTinTaiKhoan = new System.Windows.Forms.GroupBox();
+            this.txtMACNSet = new System.Windows.Forms.TextBox();
             this.txtSOTK = new System.Windows.Forms.TextBox();
             this.teCMND = new System.Windows.Forms.TextBox();
             this.numbSODU = new System.Windows.Forms.NumericUpDown();
@@ -79,7 +80,6 @@
             this.bds_GR = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.txtMACNSet = new System.Windows.Forms.TextBox();
             this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             cMNDLabel = new System.Windows.Forms.Label();
             mACNLabel = new System.Windows.Forms.Label();
@@ -265,7 +265,6 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(1573, 612);
             this.panelControl3.TabIndex = 20;
-            this.panelControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl3_Paint);
             // 
             // panelControl2
             // 
@@ -496,6 +495,15 @@
             this.pnlThongTinTaiKhoan.TabStop = false;
             this.pnlThongTinTaiKhoan.Text = "Thông tin tài khoản";
             // 
+            // txtMACNSet
+            // 
+            this.txtMACNSet.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "MACN", true));
+            this.txtMACNSet.Location = new System.Drawing.Point(663, 40);
+            this.txtMACNSet.Name = "txtMACNSet";
+            this.txtMACNSet.ReadOnly = true;
+            this.txtMACNSet.Size = new System.Drawing.Size(245, 30);
+            this.txtMACNSet.TabIndex = 17;
+            // 
             // txtSOTK
             // 
             this.txtSOTK.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "SOTK", true));
@@ -584,16 +592,6 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1573, 43);
             this.panelControl1.TabIndex = 5;
-            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
-            // 
-            // txtMACNSet
-            // 
-            this.txtMACNSet.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "MACN", true));
-            this.txtMACNSet.Location = new System.Drawing.Point(663, 40);
-            this.txtMACNSet.Name = "txtMACNSet";
-            this.txtMACNSet.ReadOnly = true;
-            this.txtMACNSet.Size = new System.Drawing.Size(245, 30);
-            this.txtMACNSet.TabIndex = 17;
             // 
             // cmbChiNhanh
             // 

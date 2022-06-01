@@ -81,10 +81,6 @@
             this.txtDIACHI = new System.Windows.Forms.TextBox();
             this.cmbPhai = new System.Windows.Forms.ComboBox();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
-            this.bdsCT = new System.Windows.Forms.BindingSource(this.components);
-            this.gD_CHUYENTIENTableAdapter = new NganHang.DSTableAdapters.GD_CHUYENTIENTableAdapter();
-            this.bdsGR = new System.Windows.Forms.BindingSource(this.components);
-            this.gD_GOIRUTTableAdapter = new NganHang.DSTableAdapters.GD_GOIRUTTableAdapter();
             mACNLabel = new System.Windows.Forms.Label();
             sODTLabel = new System.Windows.Forms.Label();
             nGAYCAPLabel = new System.Windows.Forms.Label();
@@ -105,8 +101,6 @@
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).BeginInit();
             this.SuspendLayout();
             // 
             // mACNLabel
@@ -608,24 +602,6 @@
             this.barDockControl1.Location = new System.Drawing.Point(1484, 2);
             this.barDockControl1.Size = new System.Drawing.Size(0, 343);
             // 
-            // bdsCT
-            // 
-            this.bdsCT.DataMember = "GD_CHUYENTIEN";
-            this.bdsCT.DataSource = this.DS;
-            // 
-            // gD_CHUYENTIENTableAdapter
-            // 
-            this.gD_CHUYENTIENTableAdapter.ClearBeforeFill = true;
-            // 
-            // bdsGR
-            // 
-            this.bdsGR.DataMember = "GD_GOIRUT";
-            this.bdsGR.DataSource = this.DS;
-            // 
-            // gD_GOIRUTTableAdapter
-            // 
-            this.gD_GOIRUTTableAdapter.ClearBeforeFill = true;
-            // 
             // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -660,8 +636,6 @@
             this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayCap.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsGR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -713,9 +687,5 @@
         private System.Windows.Forms.TextBox txtCMND;
         private DevExpress.XtraBars.BarDockControl barDockControl1;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private System.Windows.Forms.BindingSource bdsCT;
-        private DSTableAdapters.GD_CHUYENTIENTableAdapter gD_CHUYENTIENTableAdapter;
-        private System.Windows.Forms.BindingSource bdsGR;
-        private DSTableAdapters.GD_GOIRUTTableAdapter gD_GOIRUTTableAdapter;
     }
 }

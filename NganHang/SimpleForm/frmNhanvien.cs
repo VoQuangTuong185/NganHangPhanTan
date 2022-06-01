@@ -146,7 +146,6 @@ namespace NganHang.SimpleForm
                 string strlenh1 = "EXEC frmNhanVien_duplicateMANV '" + txtMANV.Text.TrimEnd() + "'";
                 Program.myReader = Program.ExecSqlDataReader(strlenh1);
                 Program.myReader.Read();
-                Program.myReader.Close();
                 if (Program.myReader.HasRows)
                 {
                     MessageBox.Show("Mã nhân viên đã tồn tại \nVui lòng nhập lại", "", MessageBoxButtons.OK);

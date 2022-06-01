@@ -49,10 +49,6 @@ namespace NganHang
             DS.EnforceConstraints = false;
             this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
             this.khachHangTableAdapter.Fill(this.DS.KhachHang);
-            this.gD_GOIRUTTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.gD_GOIRUTTableAdapter.Fill(this.DS.GD_GOIRUT);
-            this.gD_CHUYENTIENTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.gD_CHUYENTIENTableAdapter.Fill(this.DS.GD_CHUYENTIEN);
 
             macn = ((DataRowView)bdsKH[0])["MACN"].ToString();
             cmbChiNhanh.DataSource = Program.bds_dspm; // sao chép bds_ds đã load ở form đăng nhập
@@ -96,6 +92,12 @@ namespace NganHang
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             String CMND = ((DataRowView)bdsKH[bdsKH.Position])["CMND"].ToString();
+            if (txtCMND.Text.Length !=10)
+            {
+                MessageBox.Show("CMND của khách hàng không đúng định dạng (10 số)", "", MessageBoxButtons.OK);
+                txtCMND.Focus();
+                return;
+            }
             if (txtCMND.Text.Trim() == "")
             {
                 MessageBox.Show("CMND của khách hàng không được trống", "", MessageBoxButtons.OK);
@@ -153,19 +155,10 @@ namespace NganHang
                 }
                 Program.myReader.Close();
             }
-            try
-            {
-                bdsKH.EndEdit(); //kết thúc quá trình hiệu chỉnh (ghi vào datasource)
-                bdsKH.ResetCurrentItem();//đưa thông tin lên lưới
-                this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.khachHangTableAdapter.Update(this.DS.KhachHang);
-                MessageBox.Show("Lưu thành công!!", "", MessageBoxButtons.OK);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi ghi khách hàng. \n" + ex.Message, "", MessageBoxButtons.OK);
-                return;
-            }
+            String dt = String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
+            Program.ExecSqlNonQuery("EXEC frmKhachHang_CreateCustomer '" + txtCMND.Text + "','" + txtHO.Text + "','" + txtTEN.Text + "','" + txtDIACHI.Text + "','" + cmbPhai.SelectedItem.ToString() + "','" + dt + "','" + txtSODT.Text + "','" + macn + "'");
+            this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.khachHangTableAdapter.Update(this.DS.KhachHang);
             gcKH.Enabled = true;
             btnAdd.Enabled = btnUpdate.Enabled = btnDelete.Enabled = btnReload.Enabled = btnExit.Enabled = true;
             btnSave.Enabled = btnUndo.Enabled = false;
@@ -173,18 +166,18 @@ namespace NganHang
         }
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Double cmnd = Double.Parse(((DataRowView)bdsKH[bdsKH.Position])["CMND"].ToString());
-            if (bdsGR.Count > 0)
+            Double cmnd = Double.Parse(((DataRowView)bdsKH[bdsKH.Position])["CMND"].ToString().TrimEnd());
+            Program.myReader.Close();
+            string strlenh1 = "EXEC frmKhachHang_ExistsGD '" + txtCMND.Text + "'";
+            Program.myReader = Program.ExecSqlDataReader(strlenh1);
+            Program.myReader.Read();
+            if (Program.myReader.HasRows)
             {
-                MessageBox.Show("Không thể xoá khách hàng, vì đã thực hiện giao dịch gửi rút tiền", "", MessageBoxButtons.OK);
+                MessageBox.Show("Khách hàng đã thực hiện giao dịch \nKhông thể xoá", "", MessageBoxButtons.OK);
                 return;
             }
-            if (bdsCT.Count > 0)
-            {
-                MessageBox.Show("Không thể xoá khách hàng, vì đã thực hiện giao dịch chuyển tiền", "", MessageBoxButtons.OK);
-                return;
-            }
-            if (MessageBox.Show("Bạn có thật sự muốn xoá nhân viên " + cmnd + " ??", "Xác nhận",
+            Program.myReader.Close();
+            if (MessageBox.Show("Bạn có thật sự muốn xoá khách hàng có CMND " + cmnd + " ??", "Xác nhận",
     MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
@@ -192,17 +185,18 @@ namespace NganHang
                     bdsKH.RemoveCurrent();
                     this.khachHangTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.khachHangTableAdapter.Update(this.DS.KhachHang);
-                    MessageBox.Show("Xoá thành công nhân viên " + cmnd, "", MessageBoxButtons.OK);
+                    Program.ExecSqlNonQuery("EXEC frmKhachHang_DeleteAccountNonGD '" + cmnd + "'");
+                    MessageBox.Show("Xoá thành công khánh hàng có CMND " + cmnd, "", MessageBoxButtons.OK);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi xoá nhân viên. Bạn hãy xoá lại\n" + ex.Message, "", MessageBoxButtons.OK);
+                    MessageBox.Show("Lỗi xoá CMND. Bạn hãy xoá lại\n" + ex.Message, "", MessageBoxButtons.OK);
                     this.khachHangTableAdapter.Fill(this.DS.KhachHang);
                     bdsKH.Position = bdsKH.Find("CMND", cmnd);
                     return;
                 }
             }
-            if (bdsKH.Count == 0) btnDelete.Enabled = false; //hết nhân viên rồi thì k xoá đc nữa
+            if (bdsKH.Count == 0) btnDelete.Enabled = false; //hết khách hàng rồi thì k xoá đc nữa
         }
 
         private void btnReload_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
