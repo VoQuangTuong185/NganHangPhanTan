@@ -172,7 +172,7 @@ namespace NganHang.SimpleForm
                     return;
                 }
             }
-            if (bdsTK.Count == 0) cmsXOA.Enabled = false; //hết nhân viên rồi thì k xoá đc nữa
+            if (bdsTK.Count == 0) cmsXOA.Enabled = false; //hết tài khoản rồi thì k xoá đc nữa
         }
 
         private void phụcHồiToolStripMenuItem_Click(object sender, EventArgs e)

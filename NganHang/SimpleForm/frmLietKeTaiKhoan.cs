@@ -31,9 +31,21 @@ namespace NganHang.SimpleForm
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
+            if (batdau.DateTime > DateTime.Now || batdau.Text.Trim() == "")
+            {
+                MessageBox.Show("Ngày bắt đầu trống hoặc mốc thời gian là trước hiện tại", "", MessageBoxButtons.OK);
+                batdau.Focus();
+                return;
+            }
+            if (ketthuc.DateTime > DateTime.Now || ketthuc.Text.Trim() == "")
+            {
+                MessageBox.Show("Ngày kết thúc trống hoặc mốc thời gian là trước hiện tại", "", MessageBoxButtons.OK);
+                ketthuc.Focus();
+                return;
+            }
             Xtrp_LietKeTaiKhoan rpt = new Xtrp_LietKeTaiKhoan(batdau.DateTime, ketthuc.DateTime, cmbLoai.Text.Substring(0,1), cmbCN.SelectedValue.ToString());
-            rpt.lb_batdau.Text = batdau.DateTime.ToString();
-            rpt.lb_ketthuc.Text = ketthuc.DateTime.ToString();
+            rpt.lb_batdau.Text = batdau.DateTime.ToString("dd/M/yyyy");
+            rpt.lb_ketthuc.Text = ketthuc.DateTime.ToString("dd/M/yyyy");
 
             if (cmbCN.SelectedIndex == 0)
             {
@@ -86,6 +98,16 @@ namespace NganHang.SimpleForm
                 Program.password = Program.passwordDN;
             }
             if (Program.KetNoi() == 0) MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
+        }
+
+        private void batdau_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ketthuc_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

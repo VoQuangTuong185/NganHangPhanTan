@@ -81,9 +81,21 @@ namespace NganHang
         }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
+            if (batdau.DateTime > DateTime.Now || batdau.Text.Trim() == "")
+            {
+                MessageBox.Show("Ngày bắt đầu trống hoặc mốc thời gian là trước hiện tại", "", MessageBoxButtons.OK);
+                batdau.Focus();
+                return;
+            }
+            if (ketthuc.DateTime > DateTime.Now || ketthuc.Text.Trim() == "")
+            {
+                MessageBox.Show("Ngày kết thúc trống hoặc mốc thời gian là trước hiện tại", "", MessageBoxButtons.OK);
+                ketthuc.Focus();
+                return;
+            }
             XtrpSaoKeTaiKhoan rpt = new XtrpSaoKeTaiKhoan(SoTKSaoKe,batdau.DateTime, ketthuc.DateTime);
-            rpt.lbBatDau.Text = batdau.DateTime.ToString();
-            rpt.lbKetThuc.Text = ketthuc.DateTime.ToString();
+            rpt.lbBatDau.Text = batdau.DateTime.ToString("dd/M/yyyy");
+            rpt.lbKetThuc.Text = ketthuc.DateTime.ToString("dd/M/yyyy");
             rpt.lbSoTkSaoKe.Text = SoTKSaoKe;
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();

@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.cmbCN = new System.Windows.Forms.ComboBox();
+            this.dSCHINHANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DS = new NganHang.DS();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbLoai = new System.Windows.Forms.ComboBox();
             this.btnXacNhan = new System.Windows.Forms.Button();
@@ -38,19 +41,16 @@
             this.ketthuc = new DevExpress.XtraEditors.DateEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.DS = new NganHang.DS();
             this.tableAdapterManager = new NganHang.DSTableAdapters.TableAdapterManager();
-            this.cmbCN = new System.Windows.Forms.ComboBox();
-            this.dSCHINHANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dS_CHINHANHTableAdapter = new NganHang.DSTableAdapters.DS_CHINHANHTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dSCHINHANHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batdau.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batdau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSCHINHANHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -62,6 +62,28 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1582, 54);
             this.panelControl1.TabIndex = 6;
+            // 
+            // cmbCN
+            // 
+            this.cmbCN.DataSource = this.dSCHINHANHBindingSource;
+            this.cmbCN.DisplayMember = "TENCN";
+            this.cmbCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCN.FormattingEnabled = true;
+            this.cmbCN.Location = new System.Drawing.Point(161, 13);
+            this.cmbCN.Name = "cmbCN";
+            this.cmbCN.Size = new System.Drawing.Size(213, 28);
+            this.cmbCN.TabIndex = 3;
+            this.cmbCN.ValueMember = "MACN";
+            // 
+            // dSCHINHANHBindingSource
+            // 
+            this.dSCHINHANHBindingSource.DataMember = "DS_CHINHANH";
+            this.dSCHINHANHBindingSource.DataSource = this.DS;
+            // 
+            // DS
+            // 
+            this.DS.DataSetName = "DS";
+            this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -124,6 +146,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.batdau.Size = new System.Drawing.Size(219, 36);
             this.batdau.TabIndex = 12;
+            this.batdau.EditValueChanged += new System.EventHandler(this.batdau_EditValueChanged);
             // 
             // ketthuc
             // 
@@ -138,6 +161,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ketthuc.Size = new System.Drawing.Size(219, 36);
             this.ketthuc.TabIndex = 13;
+            this.ketthuc.EditValueChanged += new System.EventHandler(this.ketthuc_EditValueChanged);
             // 
             // label3
             // 
@@ -161,11 +185,6 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Kết thúc";
             // 
-            // DS
-            // 
-            this.DS.DataSetName = "DS";
-            this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
@@ -176,23 +195,6 @@
             this.tableAdapterManager.NhanVienTableAdapter = null;
             this.tableAdapterManager.TaiKhoanTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = NganHang.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // cmbCN
-            // 
-            this.cmbCN.DataSource = this.dSCHINHANHBindingSource;
-            this.cmbCN.DisplayMember = "TENCN";
-            this.cmbCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCN.FormattingEnabled = true;
-            this.cmbCN.Location = new System.Drawing.Point(161, 13);
-            this.cmbCN.Name = "cmbCN";
-            this.cmbCN.Size = new System.Drawing.Size(213, 28);
-            this.cmbCN.TabIndex = 3;
-            this.cmbCN.ValueMember = "MACN";
-            // 
-            // dSCHINHANHBindingSource
-            // 
-            this.dSCHINHANHBindingSource.DataMember = "DS_CHINHANH";
-            this.dSCHINHANHBindingSource.DataSource = this.DS;
             // 
             // dS_CHINHANHTableAdapter
             // 
@@ -217,12 +219,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dSCHINHANHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.batdau.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.batdau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ketthuc.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSCHINHANHBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
