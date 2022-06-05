@@ -815,3 +815,6 @@ E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.frmSaoKeT
 E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.XtrpSaoKeTaiKhoan.resources
 E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.frmLietKeKH.resources
 E:\HOC_KY_6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.Xtrp_LietKeKH.resources
+E:\(old)HocKy6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\bin\Debug\NganHang.exe.config
+E:\(old)HocKy6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.exe
+E:\(old)HocKy6\CO SO DU LIEU PHAN TAN\CURRENT\NganHang\obj\Debug\NganHang.pdb

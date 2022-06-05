@@ -20,13 +20,13 @@ namespace NganHang
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            Xtrp_LietKeKH rpt = new Xtrp_LietKeKH(cmbLoai.Text.Substring(0, 1), cmbCN.SelectedValue.ToString());
             if (cmbLoai.Text.Trim() == "")
             {
                 MessageBox.Show("Bạn chưa chọn loại báo cáo!!", "", MessageBoxButtons.OK);
                 cmbLoai.Focus();
                 return;
             }
+            Xtrp_LietKeKH rpt = new Xtrp_LietKeKH(cmbLoai.Text.Substring(0, 1), cmbCN.SelectedValue.ToString());
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();
         }
