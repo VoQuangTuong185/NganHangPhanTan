@@ -2,6 +2,8 @@
 
 + Đồ án kết thúc học phần môn: Cơ Sở Dữ Liệu Phân Tán (PTITHCM)
 + Võ Quang Tường - N19DCCN185
++ Lê Hoàng Anh - N19DCCN005
++ Thẩm Ngọc Ánh - N19DCCN012
 + Đề tài : Ngân Hàng
 
 #Ngôn ngữ
